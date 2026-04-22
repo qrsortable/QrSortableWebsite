@@ -8,7 +8,7 @@ import { Currency } from '../types';
 import { SHIP_COUNTRIES } from '../constants/shipping';
 import { checkRateLimit, recordSubmission, sanitizeInput } from '../services/utils';
 
-const APPS_SCRIPT_CHECKOUT_URL = 'https://script.google.com/macros/s/AKfycbwOOncRkXZ8iO1Z8ajEka_vNaNyvFNy7GJLUMrOZxwHwBD0dEXtVEoK0G6GsY5cFZva6w/exec';
+const APPS_SCRIPT_CHECKOUT_URL = 'https://script.google.com/macros/s/AKfycbzi1gSHlXeOUAmtvYOcvLXMIW7ypPLSQ5uBlRjCc6nfKpE8D9QOqRGCZxwbfBw1lQGDEA/exec';
 
 export const Checkout: React.FC = () => {
   const { cart, cartTotal, clearCart } = useCart();
