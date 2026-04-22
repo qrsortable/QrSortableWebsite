@@ -6,13 +6,14 @@ import { useCart } from '../contexts/CartContext';
 import { Header } from '../components/Header';
 import { Currency } from '../types';
 import { SHIP_COUNTRIES } from '../constants/shipping';
+import { PRODUCT_TRANSLATIONS } from '../constants/products';
 import { checkRateLimit, recordSubmission, sanitizeInput } from '../services/utils';
 
 const APPS_SCRIPT_CHECKOUT_URL = 'https://script.google.com/macros/s/AKfycbzi1gSHlXeOUAmtvYOcvLXMIW7ypPLSQ5uBlRjCc6nfKpE8D9QOqRGCZxwbfBw1lQGDEA/exec';
 
 export const Checkout: React.FC = () => {
   const { cart, cartTotal, clearCart } = useCart();
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
   const navigate = useNavigate();
 
   const [shippingInfo, setShippingInfo] = useState({ fullName: '', email: '', street: '', city: '', zip: '', country: '' });
@@ -327,14 +328,18 @@ export const Checkout: React.FC = () => {
                     <div key={item.id} className="flex items-center justify-between">
                       <div className="flex items-center space-x-5">
                         <div className="relative">
-                           <img src={item.image} alt={item.name} className="h-20 w-20 object-cover rounded-2xl border border-gray-100 shadow-sm" />
+                           <img src={item.image} alt={PRODUCT_TRANSLATIONS[item.id]?.[language]?.name || item.name} className="h-20 w-20 object-cover rounded-2xl border border-gray-100 shadow-sm" />
                            <span className="absolute -top-3 -right-3 bg-gray-900 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-black border-4 border-white">
                              {item.quantity}
                            </span>
                         </div>
-                        <div className="font-black text-xl text-gray-900 min-w-0 break-words">{item.name}</div>
+                        <div className="font-black text-xl text-gray-900 min-w-0 break-words">
+                          {PRODUCT_TRANSLATIONS[item.id]?.[language]?.name || item.name}
+                        </div>
                       </div>
-                      <div className="font-black text-xl whitespace-nowrap ml-4">€{(item.price * item.quantity).toFixed(2)}</div>
+                      <div className="font-black text-xl whitespace-nowrap ml-4">
+                        {currencyMap[currency].symbol}{(item.price * item.quantity * currencyMap[currency].rate).toFixed(2)}
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -342,11 +347,11 @@ export const Checkout: React.FC = () => {
                 <div className="mt-10 pt-10 border-t-4 border-gray-100 border-dashed space-y-5">
                   <div className="flex justify-between text-xl font-bold text-gray-500">
                     <span>{t('cart', 'subtotal')}</span>
-                    <span>€{cartTotal.toFixed(2)}</span>
+                    <span>{currencyMap[currency].symbol}{(cartTotal * currencyMap[currency].rate).toFixed(2)}</span>
                   </div>
                   <div className="flex justify-between text-xl font-bold text-gray-500">
                     <span>{t('cart', 'shipping')}</span>
-                    <span>€{shippingCostEuro.toFixed(2)}</span>
+                    <span>{currencyMap[currency].symbol}{shippingCostDisplay.toFixed(2)}</span>
                   </div>
                   <div className="flex justify-between items-center text-[#FDB623] pt-4">
                     <div>

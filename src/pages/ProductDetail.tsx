@@ -46,7 +46,7 @@ export const ProductDetail: React.FC = () => {
             <div className="aspect-square bg-white rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white relative group">
                <img 
                  src={productImages[selectedImage]} 
-                 alt={product.name} 
+                 alt={localized.name || product.name} 
                  className="w-full h-full object-cover"
                />
             </div>
@@ -57,7 +57,7 @@ export const ProductDetail: React.FC = () => {
                   onClick={() => setSelectedImage(i)}
                   className={`aspect-square rounded-2xl overflow-hidden border-4 transition-all ${selectedImage === i ? 'border-[#FDB623] scale-105' : 'border-transparent hover:border-gray-200'}`}
                 >
-                  <img src={img} alt={`${product.name} ${i}`} className="w-full h-full object-cover" />
+                  <img src={img} alt={`${localized.name || product.name} ${i}`} className="w-full h-full object-cover" />
                 </button>
               ))}
               {/* Video Thumbnail */}

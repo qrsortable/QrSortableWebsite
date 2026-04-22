@@ -3,11 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import { X, ShoppingCart, Minus, Plus, Trash2, ArrowRight } from 'lucide-react';
 import { useCart } from '../contexts/CartContext';
 import { useTranslation } from '../contexts/LanguageContext';
+import { PRODUCT_TRANSLATIONS } from '../constants/products';
 
 export const CartDrawer: React.FC = () => {
   const { isCartOpen, toggleCart, cart, removeFromCart, updateQuantity, cartTotal } = useCart();
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
 
   if (!isCartOpen) return null;
   return (
@@ -31,9 +32,11 @@ export const CartDrawer: React.FC = () => {
             <div className="space-y-8">
               {cart.map(item => (
                 <div key={item.id} className="flex items-center space-x-6 bg-gray-50 p-5 rounded-[2rem]">
-                  <img src={item.image} alt={item.name} className="h-24 w-24 object-cover rounded-2xl border border-gray-200" />
+                  <img src={item.image} alt={PRODUCT_TRANSLATIONS[item.id]?.[language]?.name || item.name} className="h-24 w-24 object-cover rounded-2xl border border-gray-200" />
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-black text-xl text-gray-900 break-words">{item.name}</h3>
+                    <h3 className="font-black text-xl text-gray-900 break-words">
+                      {PRODUCT_TRANSLATIONS[item.id]?.[language]?.name || item.name}
+                    </h3>
                     <p className="text-[#FDB623] font-black text-lg">€{item.price.toFixed(2)}</p>
                     <div className="flex items-center mt-3 space-x-5">
                       <div className="flex items-center bg-white rounded-xl border-2 border-gray-100">
