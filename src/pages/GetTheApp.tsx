@@ -1,0 +1,65 @@
+import React from 'react';
+import { useTranslation } from '../contexts/LanguageContext';
+import { Header } from '../components/Header';
+import { Footer } from '../components/Footer';
+
+export const GetTheApp: React.FC = () => {
+  const { t } = useTranslation();
+  
+  return (
+    <div className="min-h-screen bg-gray-50 flex flex-col">
+      <Header />
+      <main className="flex-grow flex items-center justify-center p-4 py-20">
+        <div className="max-w-4xl w-full">
+          <div className="text-center mb-16">
+            <h1 className="text-6xl font-black text-gray-900 mb-6">{t('nav', 'getApp')}</h1>
+            <p className="text-2xl text-gray-600 font-bold max-w-2xl mx-auto">{t('nav', 'getAppSubtitle')}</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {/* App Store */}
+            <div className="bg-white p-10 rounded-[3rem] shadow-2xl border border-gray-100 flex flex-col items-center text-center hover:scale-[1.02] transition-transform duration-300">
+              <div className="mb-8">
+                <a 
+                  href="https://apps.apple.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <img 
+                    src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" 
+                    alt="Download on the App Store" 
+                    className="h-24"
+                    referrerPolicy="no-referrer"
+                  />
+                </a>
+              </div>
+              <p className="text-gray-600 text-xl font-bold">{t('nav', 'appleStoreDesc')}</p>
+            </div>
+
+            {/* Google Play */}
+            <div className="bg-white p-10 rounded-[3rem] shadow-2xl border border-gray-100 flex flex-col items-center text-center hover:scale-[1.02] transition-transform duration-300">
+              <div className="mb-8">
+                <a 
+                  href="https://play.google.com/store" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <img 
+                    src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
+                    alt="Get it on Google Play" 
+                    className="h-24"
+                    referrerPolicy="no-referrer"
+                  />
+                </a>
+              </div>
+              <p className="text-gray-600 text-xl font-bold">{t('nav', 'googlePlayDesc')}</p>
+            </div>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
+};

@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-yellow: #FDB623;
+  --color-brand-dark: #1a1a1a;
+  --color-brand-gray: #2d2d2d;
+  --font-sans: 'Itim', cursive, sans-serif;
+  
+  --animate-fadeIn: fadeIn 0.5s ease-out forwards;
+  --animate-slideUp: slideUp 0.5s ease-out forwards;
+  --animate-slideDown: slideDown 0.4s ease-out forwards;
+  --animate-bounceIn: bounceIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  @keyframes slideDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  @keyframes bounceIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.05); opacity: 1; }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased selection:bg-[#FDB623] selection:text-black font-sans;
+  }
+}
+
+/* Custom patterns from index.html */
+.bg-abstract-dark {
+  background-color: #1a1a1a;
+  background-image: 
+    radial-gradient(circle at 100% 0%, transparent 39.9%, rgba(253, 182, 35, 0.12) 40%, transparent 40.2%),
+    radial-gradient(circle at 100% 0%, transparent 54.9%, rgba(253, 182, 35, 0.08) 55%, transparent 55.2%),
+    radial-gradient(circle at 100% 0%, transparent 69.9%, rgba(253, 182, 35, 0.05) 70%, transparent 70.2%),
+    radial-gradient(circle at 0% 100%, transparent 29.9%, rgba(253, 182, 35, 0.12) 30%, transparent 30.2%),
+    radial-gradient(circle at 0% 100%, transparent 44.9%, rgba(253, 182, 35, 0.08) 45%, transparent 45.2%),
+    radial-gradient(circle at 0% 100%, transparent 59.9%, rgba(253, 182, 35, 0.05) 60%, transparent 60.2%),
+    linear-gradient(135deg, #1f1f1f 0%, #0f0f0f 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes drift {
+  from { transform: translateY(0px) translateX(0px); opacity: 0.1; }
+  to { transform: translateY(-40px) translateX(20px); opacity: 0.4; }
+}
+
+.floating-dot {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: drift var(--duration) linear infinite alternate;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(253, 182, 35, 0.2);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(253, 182, 35, 0.4);
+}
