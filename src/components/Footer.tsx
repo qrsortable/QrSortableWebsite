@@ -94,7 +94,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-white/5 font-bold text-sm text-gray-500">
-          <p>© 2026 QrSortable LLC. {t('footer', 'rights')}</p>
+          <p>© 2026 QrSortable. {t('footer', 'rights')}</p>
           <div className="mt-6 md:mt-0 flex items-center space-x-8">
             <Link to="/about" className="hover:text-white transition-colors uppercase tracking-widest text-[11px] font-black">{t('footer', 'about')}</Link>
             <Link to="/privacy" className="hover:text-white transition-colors uppercase tracking-widest text-[11px] font-black">{t('footer', 'privacy')}</Link>

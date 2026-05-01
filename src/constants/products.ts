@@ -84,7 +84,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'pro-pack',
     name: 'Standard Pack (48 QR Labels)',
-    price: 29.99,
+    price: 14.99,
     description: 'A multi-purpose organization kit for home, storage, or moving.',
     features: ['48 Unique QR Codes', 'Black, blue, yellow, pink color-coded', 'Priority Support', 'Free App Access', 'Highly secure system', 'Inventory Export (PDF/CSV) (Coming Soon)','Multi-user Sharing(required subscription)'],
     image: 'https://lh3.googleusercontent.com/d/1KMkk7zFMkMXXF40zllqPNOZASgT39GRd',
@@ -96,7 +96,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'business-pack',
     name: 'Large Pack (100 QR Labels)',
-    price: 49.99,
+    price: 29.99,
     description: 'Ideal for small businesses, large estates, or professional organizers.',
     features: ['100 Heavy Duty Labels', 'black color coded', 'Priority Support', 'Free App Access', 'Highly secure system', 'Inventory Export (PDF/CSV) (Coming Soon)','Multi-user Sharing(required subscription)', 'Custom Branding'],
     image: 'https://lh3.googleusercontent.com/d/12dbFsmeQOr3HmTM4CZB375zZv2JxXVSW',

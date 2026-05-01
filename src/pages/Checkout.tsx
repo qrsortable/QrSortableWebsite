@@ -9,7 +9,7 @@ import { SHIP_COUNTRIES } from '../constants/shipping';
 import { PRODUCT_TRANSLATIONS } from '../constants/products';
 import { checkRateLimit, recordSubmission, sanitizeInput } from '../services/utils';
 
-const APPS_SCRIPT_CHECKOUT_URL = 'https://script.google.com/macros/s/AKfycbzi1gSHlXeOUAmtvYOcvLXMIW7ypPLSQ5uBlRjCc6nfKpE8D9QOqRGCZxwbfBw1lQGDEA/exec';
+const APPS_SCRIPT_CHECKOUT_URL = 'https://script.google.com/macros/s/AKfycbwiznYG1x8kFdI_Y28nAmJmUt2VBNC1xBkOOLuz0wI0nvcb02NLqTrFEA1GJ9yBO0NF5w/exec';
 
 export const Checkout: React.FC = () => {
   const { cart, cartTotal, clearCart } = useCart();
@@ -42,9 +42,9 @@ export const Checkout: React.FC = () => {
     const country = SHIP_COUNTRIES.find(c => c.name === shippingInfo.country);
     if (!country) return 0;
     if (country.group === 'DE') return 0;
-    if (country.group === 'EU') return 9.90;
-    if (country.group === 'UK') return 12.90;
-    return 19.90;
+    if (country.group === 'EU') return 15.00;
+    if (country.group === 'UK') return 20.00;
+    return 25.00;
   }, [shippingInfo.country]);
 
   const shippingCostDisplay = useMemo(() => {

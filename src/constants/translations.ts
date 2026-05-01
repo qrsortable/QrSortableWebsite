@@ -193,7 +193,7 @@ export const TRANSLATIONS: any = {
       intro: 'By using our website and products, you agree to these terms. Please read them carefully.',
       section1: { title: 'Product Usage', desc: 'QrSortable labels are provided "as-is". While our labels are durable and high-quality, we are not responsible for any damage to belongings stored in containers using our labels. The companion app is free to use but requires an internet connection for cloud syncing.' },
       section2: { title: 'Payments & Refunds', desc: 'To request a refund, email us at qrsortable@gmail.com, and we’ll respond within a few hours. All prices include VAT where applicable. You may request a refund within 30 days of purchase for unused label packs. Labels that have been scanned and linked to a user account are considered used and are not eligible for refunds.' },
-      section3: { title: 'Intellectual Property', desc: 'The "QrSortable" name, brand logo, and unique QR generation algorithms are the exclusive property of QrSortable LLC. Any unauthorized reproduction is strictly prohibited.' },
+      section3: { title: 'Intellectual Property', desc: 'The "QrSortable" name, brand logo, and unique QR generation algorithms are the exclusive property of QrSortable. Any unauthorized reproduction is strictly prohibited.' },
       section4: { title: 'Governing Law', desc: 'These terms are governed by the laws of the European Union and the United States. Any disputes will be resolved through arbitration in a neutral jurisdiction.' }
     },
     cookies: {
@@ -397,7 +397,7 @@ export const TRANSLATIONS: any = {
       intro: 'Durch die Nutzung unserer Website stimmen Sie diesen Bedingungen zu.',
       section1: { title: 'Produktnutzung', desc: 'QrSortable-Etiketten werden "wie besehen" bereitgestellt. Wir haften nicht für Schäden an gelagerten Gegenständen.' },
       section2: { title: 'Zahlungen & Erstattungen', desc: 'Um eine Erstattung zu beantragen, schreiben Sie an qrsortable@gmail.com. Erstattungen innerhalb von 30 Tagen für unbenutzte Pakete.' },
-      section3: { title: 'Geistiges Eigentum', desc: 'Der Name "QrSortable" und das Logo sind Eigentum von QrSortable LLC.' },
+      section3: { title: 'Geistiges Eigentum', desc: 'Der Name "QrSortable" und das Logo sind Eigentum von QrSortable.' },
       section4: { title: 'Geltendes Recht', desc: 'Diese Bedingungen unterliegen den Gesetzen der EU und der USA.' }
     },
     cookies: {
@@ -601,7 +601,7 @@ export const TRANSLATIONS: any = {
       intro: 'En utilisant notre site, vous acceptez ces conditions.',
       section1: { title: 'Utilisation du produit', desc: 'Les étiquettes sont fournies "telles quelles". Nous ne sommes pas responsables des dommages aux objets stockés.' },
       section2: { title: 'Paiements & Remboursements', desc: 'Remboursement sous 30 jours pour les packs non utilisés. Contact : qrsortable@gmail.com.' },
-      section3: { title: 'Propriété Intellectuelle', desc: 'Le nom et le logo "QrSortable" sont la propriété exclusive de QrSortable LLC.' },
+      section3: { title: 'Propriété Intellectuelle', desc: 'Le nom et le logo "QrSortable" sont la propriété exclusive de QrSortable.' },
       section4: { title: 'Loi Applicable', desc: 'Ces conditions sont régies par les lois de l\'UE et des États-Unis.' }
     },
     cookies: {
@@ -805,7 +805,7 @@ export const TRANSLATIONS: any = {
       intro: 'Al usar nuestro sitio, aceptas estos términos.',
       section1: { title: 'Uso del Producto', desc: 'Las etiquetas QrSortable se proporcionan "tal cual". No somos responsables de daños a los artículos almacenados.' },
       section2: { title: 'Pagos y Reembolsos', desc: 'Reembolsos en 30 días para paquetes no usados. Contacto: qrsortable@gmail.com.' },
-      section3: { title: 'Propiedad Intelectual', desc: 'El nombre y el logotipo de "QrSortable" son propiedad exclusiva de QrSortable LLC.' },
+      section3: { title: 'Propiedad Intelectual', desc: 'El nombre y el logotipo de "QrSortable" son propiedad exclusiva de QrSortable.' },
       section4: { title: 'Ley Aplicable', desc: 'Estos términos se rigen por las leyes de la UE y los Estados Unidos.' }
     },
     cookies: {
