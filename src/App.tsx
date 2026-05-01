@@ -8,6 +8,7 @@ import { Privacy } from './pages/Privacy';
 import { Terms } from './pages/Terms';
 import { Success } from './pages/Success';
 import { GetTheApp } from './pages/GetTheApp';
+import { MollieReturn } from './pages/MollieReturn';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { CookieProvider } from './contexts/CookieContext';
 import { FeedbackProvider } from './contexts/FeedbackContext';
@@ -40,6 +41,7 @@ const App: React.FC = () => {
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/success" element={<Success />} />
                 <Route path="/get-the-app" element={<GetTheApp />} />
+                <Route path="/mollie-return" element={<MollieReturn />} />
               </Routes>
               <CartDrawer />
               <CookieBanner />
