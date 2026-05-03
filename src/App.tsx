@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { ProductDetail } from './pages/ProductDetail';
 import { Checkout } from './pages/Checkout';
@@ -26,7 +26,7 @@ const ScrollToTop = () => {
 
 const App: React.FC = () => {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <LanguageProvider>
         <CookieProvider>
           <FeedbackProvider>
@@ -49,7 +49,7 @@ const App: React.FC = () => {
           </FeedbackProvider>
         </CookieProvider>
       </LanguageProvider>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 
