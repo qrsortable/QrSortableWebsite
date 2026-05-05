@@ -22,7 +22,7 @@ export const StarRating: React.FC<StarRatingProps> = ({ rating, size = 20, showL
       </div>
       {showLabel && (
         <span className="ml-2 text-lg font-black text-gray-900">
-          {rating > 0 ? rating : 'New'}
+          {rating > 0 ? rating.toFixed(1) : 'New'}
           {count !== undefined && <span className="text-gray-400 font-bold ml-1">({count})</span>}
         </span>
       )}
