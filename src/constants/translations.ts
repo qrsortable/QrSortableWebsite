@@ -208,6 +208,30 @@ export const TRANSLATIONS: any = {
       title: 'Success!',
       message: 'Your labels are on the way.',
       backHome: 'Back to Home'
+    },
+    appFeedback: {
+      title: 'QrShortable Feedback / Feature Request',
+      intro1: 'Our smart, color-coded QR label system transforms the way you organize and store your belongings. Simply attach a unique QR label to each box, scan it using our free iOS or Android app, and instantly view what\'s inside – no opening required.',
+      intro2: 'Whether you\'re moving, organizing your home, managing storage rooms, or decluttering closets, our system keeps everything digitally cataloged and easy to find.',
+      howItWorks: 'How It Works',
+      step1: 'Attach a QR label to your box',
+      step2: 'Scan it with the mobile app',
+      step3: 'Instantly see stored contents, location, and details',
+      contact: 'Contact us at',
+      ratingQuestion: 'How do you rate your experience with QrShortable product?',
+      ratingNote: '(Please rate from 1 to 5, with 1 being very dissatisfied and 5 being very satisfied)',
+      frequencyQuestion: 'How often do you use QrShortable product?',
+      frequencyOptions: ['Daily', 'A few times a week', 'Once a month', 'Just got the app'],
+      featureQuestion: 'Would you like to suggest a feature?',
+      bugsQuestion: 'Have you noticed any bugs?',
+      commentsQuestion: 'Here is some room for general comments you wish to make:',
+      emailQuestion: 'Please provide your email address so we can get back to you! *',
+      submit: 'Submit Feedback',
+      successTitle: 'Feedback Sent!',
+      successDesc: 'Thank you for helping us improve QrSortable. We read every message!',
+      sendAnother: 'Send Another',
+      placeholderLong: 'Long-answer text',
+      placeholderShort: 'Short-answer text'
     }
   },
   DE: {
@@ -412,6 +436,30 @@ export const TRANSLATIONS: any = {
       title: 'Erfolg!',
       message: 'Ihre Etiketten sind auf dem Weg.',
       backHome: 'Zurück zur Startseite'
+    },
+    appFeedback: {
+      title: 'QrSortable Feedback / Funktionsanfrage',
+      intro1: 'Unser intelligentes, farbcodiertes QR-Etikettensystem transformiert die Art und Weise, wie Sie Ihr Hab und Gut organisieren und lagern. Kleben Sie einfach ein eindeutiges QR-Etikett auf jeden Karton, scannen Sie es mit unserer kostenlosen App und sehen Sie sofort, was sich darin befindet – kein Öffnen erforderlich.',
+      intro2: 'Egal ob Sie umziehen, Ihr Zuhause organisieren, Lagerräume verwalten oder Schränke ausmisten, unser System hält alles digital katalogisiert und leicht auffindbar.',
+      howItWorks: 'Wie es funktioniert',
+      step1: 'Bringen Sie ein QR-Etikett an Ihrem Karton an',
+      step2: 'Scannen Sie es mit der mobilen App',
+      step3: 'Inhaltsliste, Standort und Details sofort sehen',
+      contact: 'Kontaktieren Sie uns unter',
+      ratingQuestion: 'Wie bewerten Sie Ihre Erfahrung mit dem QrSortable-Produkt?',
+      ratingNote: '(Bitte bewerten Sie von 1 bis 5, wobei 1 sehr unzufrieden und 5 sehr zufrieden ist)',
+      frequencyQuestion: 'Wie oft nutzen Sie das QrSortable-Produkt?',
+      frequencyOptions: ['Täglich', 'Ein paar Mal pro Woche', 'Einmal im Monat', 'Gerade erst die App bekommen'],
+      featureQuestion: 'Möchten Sie eine Funktion vorschlagen?',
+      bugsQuestion: 'Sind Ihnen Fehler aufgefallen?',
+      commentsQuestion: 'Hier ist Platz für allgemeine Anmerkungen:',
+      emailQuestion: 'Bitte geben Sie Ihre E-Mail-Adresse an, damit wir uns bei Ihnen melden können! *',
+      submit: 'Feedback absenden',
+      successTitle: 'Feedback gesendet!',
+      successDesc: 'Vielen Dank, dass Sie uns helfen, QrSortable zu verbessern. Wir lesen jede Nachricht!',
+      sendAnother: 'Weiteres senden',
+      placeholderLong: 'Langer Antworttext',
+      placeholderShort: 'Kurzer Antworttext'
     }
   },
   FR: {
@@ -616,6 +664,30 @@ export const TRANSLATIONS: any = {
       title: 'Succès !',
       message: 'Vos étiquettes sont en route.',
       backHome: 'Retour à l\'accueil'
+    },
+    appFeedback: {
+      title: 'Commentaires QrSortable / Demande de fonctionnalité',
+      intro1: 'Notre système d\'étiquettes QR intelligentes et codées par couleur transforme la façon dont vous organisez et stockez vos affaires. Collez simplement une étiquette QR unique sur chaque boîte, scannez-la avec notre application gratuite et visualisez instantanément ce qu\'il y a à l\'intérieur - sans rien ouvrir.',
+      intro2: 'Que vous déménagiez, organisiez votre maison, gériez des pièces de stockage ou désencombriez des placards, notre système garde tout catalogué numériquement et facile à trouver.',
+      howItWorks: 'Comment ça marche',
+      step1: 'Collez une étiquette QR sur votre boîte',
+      step2: 'Scannez-la avec l\'application mobile',
+      step3: 'Visualisez instantanément le contenu, l\'emplacement et les détails',
+      contact: 'Contactez-nous à',
+      ratingQuestion: 'Comment évaluez-vous votre expérience avec le produit QrSortable ?',
+      ratingNote: '(Veuillez noter de 1 à 5, 1 étant très insatisfait et 5 étant très satisfait)',
+      frequencyQuestion: 'À quelle fréquence utilisez-vous le produit QrSortable ?',
+      frequencyOptions: ['Quotidiennement', 'Quelques fois par semaine', 'Une fois par mois', 'Je viens d\'avoir l\'application'],
+      featureQuestion: 'Souhaitez-vous suggérer une fonctionnalité ?',
+      bugsQuestion: 'Avez-vous remarqué des bugs ?',
+      commentsQuestion: 'Espace pour des commentaires généraux :',
+      emailQuestion: 'Veuillez fournir votre adresse e-mail afin que nous puissions vous recontacter ! *',
+      submit: 'Envoyer le commentaire',
+      successTitle: 'Commentaire envoyé !',
+      successDesc: 'Merci de nous aider à améliorer QrSortable. Nous lisons chaque message !',
+      sendAnother: 'Envoyer un autre',
+      placeholderLong: 'Texte de réponse long',
+      placeholderShort: 'Texte de réponse court'
     }
   },
   ES: {
@@ -820,6 +892,30 @@ export const TRANSLATIONS: any = {
       title: '¡Éxito!',
       message: 'Tus etiquetas están en camino.',
       backHome: 'Volver al Inicio'
+    },
+    appFeedback: {
+      title: 'Comentarios de QrSortable / Sugerencia de funciones',
+      intro1: 'Nuestro sistema de etiquetas QR inteligentes y codificadas por colores transforma la forma en que organiza y almacena sus pertenencias. Simplemente pegue una etiqueta QR única en cada caja, escanéela con nuestra aplicación gratuita y vea instantáneamente lo que hay dentro, sin tener que abrirla.',
+      intro2: 'Ya sea que se esté mudando, organizando su hogar, administrando trasteros o despejando armarios, nuestro sistema mantiene todo catalogado digitalmente y fácil de encontrar.',
+      howItWorks: 'Cómo funciona',
+      step1: 'Pegue una etiqueta QR en su caja',
+      step2: 'Escanéela con la aplicación móvil',
+      step3: 'Vea al instante el contenido, la ubicación y los detalles',
+      contact: 'Contáctenos en',
+      ratingQuestion: '¿Cómo calificaría su experiencia con el producto QrSortable?',
+      ratingNote: '(Califique del 1 al 5, donde 1 es muy insatisfecho y 5 es muy satisfecho)',
+      frequencyQuestion: '¿Con qué frecuencia utiliza el producto QrSortable?',
+      frequencyOptions: ['Diariamente', 'Unas cuantas veces por semana', 'Una vez al mes', 'Recién bajé la app'],
+      featureQuestion: '¿Le gustaría sugerir alguna función?',
+      bugsQuestion: '¿Ha notado algún error (bug)?',
+      commentsQuestion: 'Espacio para comentarios generales:',
+      emailQuestion: 'Por favor, proporcione su dirección de correo electrónico para que podamos ponernos en contacto con usted. *',
+      submit: 'Enviar comentarios',
+      successTitle: '¡Comentarios enviados!',
+      successDesc: 'Gracias por ayudarnos a mejorar QrSortable. ¡Leemos todos los mensajes!',
+      sendAnother: 'Enviar otro',
+      placeholderLong: 'Texto de respuesta larga',
+      placeholderShort: 'Texto de respuesta corta'
     }
   }
 };

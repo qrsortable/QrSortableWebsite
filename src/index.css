@@ -5,6 +5,7 @@
   --color-brand-dark: #1a1a1a;
   --color-brand-gray: #2d2d2d;
   --font-sans: 'Itim', cursive, sans-serif;
+  --font-itim: 'Itim', cursive, sans-serif;
   
   --animate-fadeIn: fadeIn 0.5s ease-out forwards;
   --animate-slideUp: slideUp 0.5s ease-out forwards;

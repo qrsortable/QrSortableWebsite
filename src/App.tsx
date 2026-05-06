@@ -9,6 +9,7 @@ import { Terms } from './pages/Terms';
 import { Success } from './pages/Success';
 import { GetTheApp } from './pages/GetTheApp';
 import { MollieReturn } from './pages/MollieReturn';
+import { AppFeedback } from './pages/AppFeedback';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { CookieProvider } from './contexts/CookieContext';
 import { FeedbackProvider } from './contexts/FeedbackContext';
@@ -42,6 +43,7 @@ const App: React.FC = () => {
                 <Route path="/success" element={<Success />} />
                 <Route path="/get-the-app" element={<GetTheApp />} />
                 <Route path="/mollie-return" element={<MollieReturn />} />
+                <Route path="/app-feedback" element={<AppFeedback />} />
               </Routes>
               <CartDrawer />
               <CookieBanner />
