@@ -20,10 +20,27 @@ export const AppFeedback: React.FC = () => {
   const [honeypot, setHoneypot] = useState(''); // Bots will try to fill this
   const [startTime] = useState(Date.now()); // Track when user started filling
   const [captchaAnswer, setCaptchaAnswer] = useState('');
-  const [captchaNums] = useState(() => ({
+  const [captchaNums, setCaptchaNums] = useState(() => ({
     a: Math.floor(Math.random() * 9) + 1,
     b: Math.floor(Math.random() * 9) + 1
   }));
+
+  const resetForm = () => {
+    setRating(0);
+    setFrequency('');
+    setSuggestion('');
+    setBugs('');
+    setComments('');
+    setEmail('');
+    setCaptchaAnswer('');
+    setHoneypot('');
+    setCaptchaNums({
+      a: Math.floor(Math.random() * 9) + 1,
+      b: Math.floor(Math.random() * 9) + 1
+    });
+    setSubmitted(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -101,7 +118,7 @@ export const AppFeedback: React.FC = () => {
       <div className="min-h-screen bg-[#fff8e1] flex items-center justify-center p-4 font-sans">
         <div className="max-w-2xl w-full bg-white rounded-2xl shadow-xl p-8 sm:p-12 text-center border-t-8 border-[#FDB623] relative">
           <button 
-            onClick={() => navigate('/')}
+            onClick={resetForm}
             className="absolute top-4 right-4 p-2 text-gray-400 hover:text-black hover:bg-gray-100 rounded-full transition-colors"
             aria-label="Close"
           >
@@ -113,7 +130,7 @@ export const AppFeedback: React.FC = () => {
           <h1 className="text-4xl font-black text-gray-900 mb-4">{t('appFeedback', 'successTitle')}</h1>
           <p className="text-xl text-gray-600 font-medium mb-8">{t('appFeedback', 'successDesc')}</p>
           <button 
-            onClick={() => setSubmitted(false)}
+            onClick={resetForm}
             className="bg-[#FDB623] text-gray-900 font-black px-10 py-4 rounded-xl hover:scale-105 transition-transform text-xl"
           >
             {t('appFeedback', 'sendAnother')}
