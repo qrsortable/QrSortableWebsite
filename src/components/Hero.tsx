@@ -18,6 +18,25 @@ export const Hero: React.FC = () => {
   return (
     <div className="relative bg-abstract-dark text-white overflow-hidden min-h-[85vh] flex items-center">
       <BackgroundDots scale={1.5} />
+      
+      {/* Made in Germany Badge */}
+      <div className="absolute top-28 right-8 lg:top-36 lg:right-12 z-30 animate-fadeIn pointer-events-none hidden md:block">
+        <div className="flex flex-col items-center">
+          <span className="text-sm font-black tracking-tight text-white mb-2 font-itim">{t('hero', 'madeInGermany')}</span>
+          <div className="flex gap-1.5 mb-2">
+            <div className="w-10 h-6 bg-black rounded-sm shadow-md" />
+            <div className="w-10 h-6 bg-red-600 rounded-sm shadow-md" />
+            <div className="w-10 h-6 bg-[#FFCC00] rounded-sm shadow-md" />
+          </div>
+          <div className="flex gap-1 mb-1.5">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="h-3.5 w-3.5 text-[#FDB623] fill-current" />
+            ))}
+          </div>
+          <span className="text-xs font-bold text-white uppercase tracking-wider opacity-90">{t('hero', 'premiumQuality')}</span>
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 flex flex-col lg:flex-row items-center gap-20 relative z-20">
         <div className="lg:w-1/2 text-center lg:text-left animate-fadeIn">
           <div className="inline-flex items-center px-5 py-2 rounded-full bg-white/10 text-[#FDB623] text-lg font-bold mb-8 border border-[#FDB623]/30">

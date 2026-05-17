@@ -27,7 +27,9 @@ export const TRANSLATIONS: any = {
       secondaryCta: 'How It Works',
       app: 'Free iOS/Android App',
       searchPlaceholder: 'Find ..',
-      storageRoom: 'Storage room'
+      storageRoom: 'Storage room',
+      madeInGermany: 'Made in Germany',
+      premiumQuality: 'Premium quality'
     },
     features: {
       title: 'Why QrSortable?',
@@ -255,7 +257,9 @@ export const TRANSLATIONS: any = {
       secondaryCta: 'So geht\'s',
       app: 'Kostenlose App',
       searchPlaceholder: 'Suchen ..',
-      storageRoom: 'Lagerraum'
+      storageRoom: 'Lagerraum',
+      madeInGermany: 'Hergestellt in Deutschland',
+      premiumQuality: 'Premium-Qualität'
     },
     features: {
       title: 'Warum QrSortable?',
@@ -483,7 +487,9 @@ export const TRANSLATIONS: any = {
       secondaryCta: 'Découvrir',
       app: 'App Gratuite',
       searchPlaceholder: 'Chercher ..',
-      storageRoom: 'Débarras'
+      storageRoom: 'Débarras',
+      madeInGermany: 'Fabriqué en Allemagne',
+      premiumQuality: 'Qualité supérieure'
     },
     features: {
       title: 'Pourquoi QrSortable ?',
@@ -711,7 +717,9 @@ export const TRANSLATIONS: any = {
       secondaryCta: 'Cómo funciona',
       app: 'App Gratis',
       searchPlaceholder: 'Buscar ..',
-      storageRoom: 'Trastero'
+      storageRoom: 'Trastero',
+      madeInGermany: 'Hecho en Alemania',
+      premiumQuality: 'Calidad premium'
     },
     features: {
       title: '¿Por qué QrSortable?',
