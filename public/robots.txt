@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ais-pre-dsit6zrobukjtjwvdoys5g-585433535986.europe-west2.run.app/sitemap.xml
+Sitemap: https://qrsortable.app/sitemap.xml

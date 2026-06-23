@@ -13,23 +13,53 @@ export const TRANSLATIONS: any = {
       shop: 'Shop', 
       language: 'Language', 
       getApp: 'Get the App',
+      articles: 'Articles',
       getAppSubtitle: 'Download QrSortable and start organizing your storage today.',
       appleStoreDesc: 'Download QrSortable on the Apple App Store.',
       googlePlayDesc: 'Download QrSortable on the Google Play Store.'
     },
     hero: {
-      badge: 'Move Smarter. Store Safer.',
-      title1: 'Never Wonder',
-      title2: "What's Inside",
-      title3: 'Again.',
-      subtitle: 'Smart color-coded QR labels. Scan with our free app to instantly peek inside your boxes.',
-      cta: 'Get Your Labels',
-      secondaryCta: 'How It Works',
-      app: 'Free iOS/Android App',
-      searchPlaceholder: 'Find ..',
-      storageRoom: 'Storage room',
-      madeInGermany: 'Made in Germany',
-      premiumQuality: 'Premium quality'
+      badge: 'Professional Storage Made Simple',
+      title1: 'The Easiest',
+      title2: 'Way to Track',
+      title3: 'Your Boxes.',
+      subtitle: 'Premium color-coded labels that connect to your phone. Scan to see high-res photos and detailed lists of everything you’ve stored.',
+      cta: 'Shop Label Packs',
+      secondaryCta: 'See How It Works',
+      app: 'Free App for iOS & Android',
+      searchPlaceholder: 'Search inventory..',
+      storageRoom: 'Main Storage',
+      madeInGermany: 'Sustainably Made',
+      premiumQuality: 'Premium Quality'
+    },
+    articles: {
+      title: 'Expert Organization Guides',
+      highlight: 'Learn',
+      subtitle: 'Practical tips from professional organizers and logistics experts to help you reclaim your space and simplify your next move.',
+      readMore: 'Continue Reading',
+      back: 'All Articles',
+      readTime: 'min read',
+      ctaTitle: 'Ready for a Stress-Free Home?',
+      ctaDesc: 'Our smart labels are designed to save you hours of searching. Order yours today.',
+      getApp: 'Download Free App',
+      browseLabels: 'View the Shop',
+      seoTitle: 'Expert Home Organization & Moving Tips | QrSortable Blog',
+      seoDesc: 'Professional advice on decluttering, stress-free moving, and small business inventory management using smart QR technology.',
+      ctaText: 'Discover the power of digital organization. Explore our',
+      ctaLink: 'premium storage labels',
+      ctaSuffix: 'and take control of your space.',
+      faq: {
+        title: 'Frequently Asked Questions',
+        q1: 'How do QR code storage labels help with moving?',
+        a1: 'QR code storage labels allow you to digitize your moving inventory. By scanning a label, you can see high-res photos and lists of what is inside a box without opening it, making the unpacking process much faster.',
+        q2: 'Are these labels compatible with any smartphone?',
+        a2: 'Yes, our QR labels are standard format and can be scanned by any smartphone camera. For the best experience and full inventory features, we recommend using the free QrSortable app.'
+      }
+    },
+    seo: {
+      homeTitle: 'QrSortable | The Smart Way to Organize Home & Moving Storage',
+      homeDesc: 'Modernize your storage with smart QR labels. Perfect for moving, seasonal storage, and small business inventory. See what\'s inside without opening the box.',
+      keywords: 'QR storage labels, moving inventory app, home organization system, smart box labels, warehouse tracking'
     },
     features: {
       title: 'Why QrSortable?',
@@ -162,6 +192,7 @@ export const TRANSLATIONS: any = {
       slogan: 'Simplifying moves and home organization one scan at a time.',
       company: 'Company',
       about: 'About Us',
+      articles: 'Articles',
       privacy: 'Privacy Policy',
       terms: 'Terms of Service',
       cookies: 'Cookie Settings',
@@ -234,6 +265,11 @@ export const TRANSLATIONS: any = {
       sendAnother: 'Send Another',
       placeholderLong: 'Long-answer text',
       placeholderShort: 'Short-answer text'
+    },
+    categories: {
+      Organization: 'Organization',
+      Moving: 'Moving',
+      Business: 'Business'
     }
   },
   DE: {
@@ -243,6 +279,7 @@ export const TRANSLATIONS: any = {
       shop: 'Shop', 
       language: 'Sprache', 
       getApp: 'App holen',
+      articles: 'Artikel',
       getAppSubtitle: 'Laden Sie QrSortable herunter und fangen Sie noch heute an zu organisieren.',
       appleStoreDesc: 'Laden Sie QrSortable im Apple App Store herunter.',
       googlePlayDesc: 'Laden Sie QrSortable im Google Play Store herunter.'
@@ -260,6 +297,35 @@ export const TRANSLATIONS: any = {
       storageRoom: 'Lagerraum',
       madeInGermany: 'Hergestellt in Deutschland',
       premiumQuality: 'Premium-Qualität'
+    },
+    articles: {
+      title: 'Lagerung & Organisation',
+      highlight: 'Einblicke',
+      subtitle: 'Expertentipps und Leitfäden, die Ihnen helfen, Ihren Platz zu meistern und Ihren nächsten Umzug mit QR-Code Etiketten zu vereinfachen.',
+      readMore: 'Jetzt lesen',
+      back: 'Zurück zu den Artikeln',
+      readTime: 'Lesen',
+      ctaTitle: 'Vereinfachen Sie Ihr Zuhause heute',
+      ctaDesc: 'Laden Sie die kostenlose App herunter und fangen Sie an, mit unseren intelligenten Etiketten zu organisieren.',
+      getApp: 'App holen',
+      browseLabels: 'Etiketten durchsuchen',
+      seoTitle: 'Heimorganisation & Lagerung | Einblicke in QR-Code Etiketten',
+      seoDesc: 'Erfahren Sie, wie Sie Ihren Platz mit QR-Code Etiketten meistern. Expertenleitfäden zu Umzug, Entrümpeln und digitaler Bestandsverwaltung.',
+      ctaText: 'Bereit, Ihre Heimorganisation zu transformieren? Schauen Sie sich unsere',
+      ctaLink: 'Premium-QR-Code-Etiketten',
+      ctaSuffix: 'an und fangen Sie noch heute an zu organisieren.',
+      faq: {
+        title: 'Häufig gestellte Fragen',
+        q1: 'Wie helfen QR-Code-Lageretiketten beim Umzug?',
+        a1: 'QR-Code-Etiketten ermöglichen es Ihnen, Ihr Umzugsinventar zu digitalisieren. Durch Scannen eines Etiketts können Sie Fotos und Listen des Inhalts sehen, ohne den Karton zu öffnen.',
+        q2: 'Sind diese Etiketten mit jedem Smartphone kompatibel?',
+        a2: 'Ja, unsere QR-Etiketten haben ein Standardformat und können mit jeder Smartphone-Kamera gescannt werden.'
+      }
+    },
+    seo: {
+      homeTitle: 'QrSortable | Premium QR-Code Etiketten für Haushalt & Umzug',
+      homeDesc: 'Organisieren Sie Ihr Zuhause und vereinfachen Sie Ihren Umzug mit QrSortable QR-Code Etiketten. Farbcodierte, intelligente Etiketten.',
+      keywords: 'QR-Code Etiketten, Heimorganisation, Umzugszubehör, intelligente Lagerung'
     },
     features: {
       title: 'Warum QrSortable?',
@@ -392,6 +458,7 @@ export const TRANSLATIONS: any = {
       slogan: 'Umzüge und Heimorganisation vereinfachen – ein Scan nach dem anderen.',
       company: 'Firma',
       about: 'Über Uns',
+      articles: 'Artikel',
       privacy: 'Datenschutz',
       terms: 'AGB',
       cookies: 'Cookie-Einstellungen',
@@ -464,6 +531,11 @@ export const TRANSLATIONS: any = {
       sendAnother: 'Weiteres senden',
       placeholderLong: 'Langer Antworttext',
       placeholderShort: 'Kurzer Antworttext'
+    },
+    categories: {
+      Organization: 'Organisation',
+      Moving: 'Umzug',
+      Business: 'Geschäft'
     }
   },
   FR: {
@@ -473,6 +545,7 @@ export const TRANSLATIONS: any = {
       shop: 'Boutique', 
       language: 'Langue', 
       getApp: 'Obtenir l\'App',
+      articles: 'Articles',
       getAppSubtitle: 'Téléchargez QrSortable et commencez à organiser votre stockage dès aujourd\'hui.',
       appleStoreDesc: 'Téléchargez QrSortable sur l\'Apple App Store.',
       googlePlayDesc: 'Téléchargez QrSortable sur le Google Play Store.'
@@ -489,7 +562,36 @@ export const TRANSLATIONS: any = {
       searchPlaceholder: 'Chercher ..',
       storageRoom: 'Débarras',
       madeInGermany: 'Fabriqué en Allemagne',
-      premiumQuality: 'Qualité supérieure'
+      premiumQuality: 'Qualité Premium'
+    },
+    articles: {
+      title: 'Stockage & Organisation',
+      highlight: 'Conseils',
+      subtitle: 'Conseils d\'experts et guides pour vous aider à maîtriser votre espace et à simplifier votre prochain déménagement avec des étiquettes QR code.',
+      readMore: 'Lire maintenant',
+      back: 'Retour aux articles',
+      readTime: 'Lecture',
+      ctaTitle: 'Simplifiez votre maison dès aujourd\'hui',
+      ctaDesc: 'Téléchargez l\'application gratuite et commencez à organiser avec nos étiquettes intelligentes.',
+      getApp: 'Obtenir l\'App',
+      browseLabels: 'Parcourir les étiquettes',
+      seoTitle: 'Organisation de la Maison | Conseils sur les étiquettes QR code',
+      seoDesc: 'Apprenez à maîtriser votre espace avec des étiquettes QR code. Guides d\'experts sur le déménagement, le désencombrement et l\'inventaire numérique.',
+      ctaText: 'Prêt à transformer l\'organisation de votre maison ? Découvrez nos',
+      ctaLink: 'étiquettes de stockage QR code haut de gamme',
+      ctaSuffix: 'et commencez à organiser dès aujourd\'hui.',
+      faq: {
+        title: 'Foire Aux Questions',
+        q1: 'Comment les étiquettes QR code aident-elles pour le déménagement ?',
+        a1: 'Les étiquettes QR code vous permettent de numériser votre inventaire de déménagement. En scannant une étiquette, vous pouvez voir des photos et des listes de ce qui est à l\'intérieur sans ouvrir le carton.',
+        q2: 'Ces étiquettes sont-elles compatibles avec n\'importe quel smartphone ?',
+        a2: 'Oui, nos étiquettes QR sont au format standard et peuvent être scannées par n\'importe quel appareil photo de smartphone.'
+      }
+    },
+    seo: {
+      homeTitle: 'QrSortable | Étiquettes QR code haut de gamme pour la maison et le déménagement',
+      homeDesc: 'Organisez votre maison et simplifiez votre déménagement avec les étiquettes QR code QrSortable. Étiquettes intelligentes avec code couleur.',
+      keywords: 'étiquettes QR code, organisation de la maison, fournitures de déménagement, stockage intelligent'
     },
     features: {
       title: 'Pourquoi QrSortable ?',
@@ -622,6 +724,7 @@ export const TRANSLATIONS: any = {
       slogan: 'Simplifier les déménagements et l\'organisation de la maison.',
       company: 'Entreprise',
       about: 'À propos',
+      articles: 'Articles',
       privacy: 'Confidentialité',
       terms: 'Conditions',
       cookies: 'Cookies',
@@ -694,6 +797,11 @@ export const TRANSLATIONS: any = {
       sendAnother: 'Envoyer un autre',
       placeholderLong: 'Texte de réponse long',
       placeholderShort: 'Texte de réponse court'
+    },
+    categories: {
+      Organization: 'Organisation',
+      Moving: 'Déménagement',
+      Business: 'Entreprise'
     }
   },
   ES: {
@@ -703,6 +811,7 @@ export const TRANSLATIONS: any = {
       shop: 'Tienda', 
       language: 'Idioma', 
       getApp: 'Obtener la App',
+      articles: 'Artículos',
       getAppSubtitle: 'Descarga QrSortable y comienza a organizar tu almacenamiento hoy mismo.',
       appleStoreDesc: 'Descarga QrSortable en el Apple App Store.',
       googlePlayDesc: 'Descarga QrSortable en el Google Play Store.'
@@ -719,7 +828,36 @@ export const TRANSLATIONS: any = {
       searchPlaceholder: 'Buscar ..',
       storageRoom: 'Trastero',
       madeInGermany: 'Hecho en Alemania',
-      premiumQuality: 'Calidad premium'
+      premiumQuality: 'Calidad Premium'
+    },
+    articles: {
+      title: 'Almacenamiento y Organización',
+      highlight: 'Ideas',
+      subtitle: 'Consejos de expertos y guías para ayudarte a dominar tu espacio y simplificar tu próxima mudanza con etiquetas QR.',
+      readMore: 'Leer ahora',
+      back: 'Volver a los artículos',
+      readTime: 'Lectura',
+      ctaTitle: 'Simplifica tu hogar hoy',
+      ctaDesc: 'Descarga la aplicación gratuita y comienza a organizar con nuestras etiquetas inteligentes.',
+      getApp: 'Obtener la App',
+      browseLabels: 'Explorar etiquetas',
+      seoTitle: 'Organización del Hogar | Ideas sobre etiquetas QR',
+      seoDesc: 'Aprenda a dominar su espacio con etiquetas QR. Guías de expertos sobre mudanzas, orden y gestión de inventario digital.',
+      ctaText: '¿Listo para transformar la organización de tu hogar? Echa un vistazo a nuestras',
+      ctaLink: 'etiquetas de almacenamiento QR premium',
+      ctaSuffix: 'y comienza a organizar hoy mismo.',
+      faq: {
+        title: 'Preguntas Frecuentes',
+        q1: '¿Cómo ayudan las etiquetas de almacenamiento QR con las mudanzas?',
+        a1: 'Las etiquetas QR le permiten digitalizar su inventario de mudanza. Al escanear una etiqueta, puede ver fotos y listas de lo que hay dentro de una caja sin abrirla.',
+        q2: '¿Estas etiquetas son compatibles con cualquier smartphone?',
+        a2: 'Sí, nuestras etiquetas QR tienen un formato estándar y se pueden escanear con cualquier cámara de smartphone.'
+      }
+    },
+    seo: {
+      homeTitle: 'QrSortable | Etiquetas QR de almacenamiento premium para el hogar y mudanzas',
+      homeDesc: 'Organice su hogar y simplifique su mudanza con las etiquetas QR de QrSortable. Etiquetas inteligentes codificadas por colores.',
+      keywords: 'etiquetas QR, organización del hogar, suministros de mudanza, almacenamiento inteligente'
     },
     features: {
       title: '¿Por qué QrSortable?',
@@ -852,6 +990,7 @@ export const TRANSLATIONS: any = {
       slogan: 'Simplificando mudanzas y organización del hogar, un escaneo a la vez.',
       company: 'Empresa',
       about: 'Sobre Nosotros',
+      articles: 'Artículos',
       privacy: 'Privacidad',
       terms: 'Términos',
       cookies: 'Cookies',
@@ -924,6 +1063,11 @@ export const TRANSLATIONS: any = {
       sendAnother: 'Enviar otro',
       placeholderLong: 'Texto de respuesta larga',
       placeholderShort: 'Texto de respuesta corta'
+    },
+    categories: {
+      Organization: 'Organización',
+      Moving: 'Mudanza',
+      Business: 'Negocios'
     }
   }
 };

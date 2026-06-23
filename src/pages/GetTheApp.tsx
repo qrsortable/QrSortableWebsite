@@ -5,6 +5,16 @@ import { Footer } from '../components/Footer';
 
 export const GetTheApp: React.FC = () => {
   const { t } = useTranslation();
+  const [googlePlayUrl, setGooglePlayUrl] = React.useState('https://play.google.com/store/apps/details?id=com.danfe.qrsortable&pcampaignid=web_share');
+  const [appStoreUrl, setAppStoreUrl] = React.useState('https://apps.apple.com/de/app/qrsortable/id6775796519');
+
+  React.useEffect(() => {
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    if (isMobile) {
+      setGooglePlayUrl('https://play.google.com/store/apps/details?id=com.danfe.qrsortable');
+      setAppStoreUrl('https://apps.apple.com/de/app/qrsortable/id6775796519');
+    }
+  }, []);
   
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
@@ -21,7 +31,7 @@ export const GetTheApp: React.FC = () => {
             <div className="bg-white p-10 rounded-[3rem] shadow-2xl border border-gray-100 flex flex-col items-center text-center hover:scale-[1.02] transition-transform duration-300">
               <div className="mb-8">
                 <a 
-                  href="https://apps.apple.com" 
+                  href={appStoreUrl} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="block"
@@ -41,7 +51,7 @@ export const GetTheApp: React.FC = () => {
             <div className="bg-white p-10 rounded-[3rem] shadow-2xl border border-gray-100 flex flex-col items-center text-center hover:scale-[1.02] transition-transform duration-300">
               <div className="mb-8">
                 <a 
-                  href="https://play.google.com/store" 
+                  href={googlePlayUrl} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="block"

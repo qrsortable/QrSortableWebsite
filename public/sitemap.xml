@@ -1,51 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ais-pre-dsit6zrobukjtjwvdoys5g-585433535986.europe-west2.run.app/</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://qrsortable.app/</loc>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ais-pre-dsit6zrobukjtjwvdoys5g-585433535986.europe-west2.run.app/#/about</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://qrsortable.app/about</loc>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ais-pre-dsit6zrobukjtjwvdoys5g-585433535986.europe-west2.run.app/#/get-the-app</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://qrsortable.app/get-the-app</loc>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ais-pre-dsit6zrobukjtjwvdoys5g-585433535986.europe-west2.run.app/#/product/starter-pack</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://qrsortable.app/product/starter-pack</loc>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ais-pre-dsit6zrobukjtjwvdoys5g-585433535986.europe-west2.run.app/#/product/pro-pack</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://qrsortable.app/product/pro-pack</loc>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ais-pre-dsit6zrobukjtjwvdoys5g-585433535986.europe-west2.run.app/#/product/business-pack</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://qrsortable.app/product/business-pack</loc>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ais-pre-dsit6zrobukjtjwvdoys5g-585433535986.europe-west2.run.app/#/privacy</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://qrsortable.app/privacy</loc>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://ais-pre-dsit6zrobukjtjwvdoys5g-585433535986.europe-west2.run.app/#/terms</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://qrsortable.app/terms</loc>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://qrsortable.app/articles</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://qrsortable.app/articles/benefits-of-qr-labels-for-home-organization</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qrsortable.app/articles/the-ultimate-guide-to-stress-free-moving</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qrsortable.app/product/standard-stickers</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://qrsortable.app/product/large-tags</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://qrsortable.app/product/waterproof-labels</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://qrsortable.app/app-feedback</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://qrsortable.app/articles/small-business-inventory-management-qr-codes</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qrsortable.app/articles/qr-code-storage-labels-the-smarter-way-to-find-what-you-own</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

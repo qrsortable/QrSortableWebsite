@@ -50,7 +50,7 @@ export const HowItWorks: React.FC = () => {
             </div>
             <div className="lg:w-[500px] w-full flex-shrink-0">
                <div className="relative h-[700px] rounded-[3rem] overflow-hidden border-8 border-white/10 shadow-2xl transform lg:rotate-2 hover:rotate-0 transition-all duration-500 group">
-                   <img src={lifestyleImageUrl} alt="Scanning storage bins" className="w-full h-full object-cover transition-all duration-500" onError={(e) => {(e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop";}} />
+                   <img src={lifestyleImageUrl} alt="Scanning storage bins for smart organization" loading="lazy" className="w-full h-full object-cover transition-all duration-500" onError={(e) => {(e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop";}} />
                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                    <div className="absolute bottom-8 left-8 right-8 p-6 bg-white/10 backdrop-blur-xl rounded-2xl border-2 border-white/20">
                       <div className="flex items-center space-x-5">

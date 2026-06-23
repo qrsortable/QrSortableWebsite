@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Eye, Settings, ShieldCheck, Check } from 'lucide-react';
 import { useTranslation } from '../contexts/LanguageContext';
 import { useCookies } from '../contexts/CookieContext';
@@ -10,6 +11,12 @@ export const Privacy: React.FC = () => {
   const { t } = useTranslation();
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>{`${t('footer', 'privacy')} | QrSortable`}</title>
+        <meta name="description" content={t('privacy', 'section1.desc')} />
+        <link rel="canonical" href="https://qrsortable.app/privacy" />
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
       <Header />
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="bg-white rounded-[3rem] shadow-2xl p-12 md:p-20 border border-gray-100">

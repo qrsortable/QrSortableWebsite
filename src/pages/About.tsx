@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { QrCode, Zap, Sparkles, Heart } from 'lucide-react';
 import { useTranslation } from '../contexts/LanguageContext';
 import { Header } from '../components/Header';
@@ -9,6 +10,12 @@ export const About: React.FC = () => {
   const { t } = useTranslation();
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>{`${t('footer', 'about')} | QrSortable`}</title>
+        <meta name="description" content={t('about', 'heroSubtitle')} />
+        <link rel="canonical" href="https://qrsortable.app/about" />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
       <Header />
       <div className="bg-abstract-dark text-white py-32 relative overflow-hidden">
         <BackgroundDots scale={2} />

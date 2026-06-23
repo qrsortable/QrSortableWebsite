@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { FileText, Scale, Lock, Globe } from 'lucide-react';
 import { useTranslation } from '../contexts/LanguageContext';
 import { Header } from '../components/Header';
@@ -16,6 +17,12 @@ export const Terms: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>{`${t('footer', 'terms')} | QrSortable`}</title>
+        <meta name="description" content={t('terms', 'intro')} />
+        <link rel="canonical" href="https://qrsortable.app/terms" />
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
       <Header />
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="bg-white rounded-[3rem] shadow-2xl p-12 md:p-20 border border-gray-100">

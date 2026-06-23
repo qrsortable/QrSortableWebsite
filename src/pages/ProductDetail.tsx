@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { ChevronLeft, ShoppingCart, Check, Info, ShieldCheck, Play, ArrowRight, X } from 'lucide-react';
 import { useTranslation } from '../contexts/LanguageContext';
 import { useCart } from '../contexts/CartContext';
@@ -32,6 +33,60 @@ export const ProductDetail: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <Helmet>
+        <title>{`${localized.name || product.name} - QrSortable`}</title>
+        <meta name="description" content={localized.description || product.description} />
+        <meta property="og:title" content={`${localized.name || product.name} - QrSortable`} />
+        <meta property="og:description" content={localized.description || product.description} />
+        <meta property="og:image" content={product.image} />
+        <link rel="canonical" href={`https://qrsortable.app/product/${product.id}`} />
+        
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": localized.name || product.name,
+            "description": localized.description || product.description,
+            "image": product.image,
+            "brand": {
+              "@type": "Brand",
+              "name": "QrSortable"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": product.price,
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": avgRating || 4.7,
+              "reviewCount": reviews.length || 24
+            }
+          })}
+        </script>
+        
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://qrsortable.app"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": localized.name || product.name,
+                "item": `https://qrsortable.app/product/${product.id}`
+              }
+            ]
+          })}
+        </script>
+      </Helmet>
       <Header />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
         <button 

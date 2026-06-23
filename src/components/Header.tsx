@@ -19,6 +19,7 @@ export const Header: React.FC = () => {
     { name: t('nav', 'features'), href: '#features' },
     { name: t('nav', 'howItWorks'), href: '#how-it-works' },
     { name: t('nav', 'shop'), href: '#products' },
+    { name: t('nav', 'articles'), href: '/articles', isExternal: true },
   ];
 
   const handleNavClick = (href: string) => {
@@ -48,14 +49,25 @@ export const Header: React.FC = () => {
 
           <nav className="hidden md:flex items-center space-x-10">
             {navLinks.map((link) => (
-              <button
-                key={link.name}
-                onClick={() => handleNavClick(link.href)}
-                className="text-[15px] font-bold text-gray-400 hover:text-white transition-colors relative group"
-              >
-                {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FDB623] transition-all group-hover:w-full" />
-              </button>
+              link.isExternal ? (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="text-[15px] font-bold text-gray-400 hover:text-white transition-colors relative group"
+                >
+                  {link.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FDB623] transition-all group-hover:w-full" />
+                </Link>
+              ) : (
+                <button
+                  key={link.name}
+                  onClick={() => handleNavClick(link.href)}
+                  className="text-[15px] font-bold text-gray-400 hover:text-white transition-colors relative group"
+                >
+                  {link.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FDB623] transition-all group-hover:w-full" />
+                </button>
+              )
             ))}
             <Link 
               to="/get-the-app" 
@@ -116,13 +128,24 @@ export const Header: React.FC = () => {
         <div className="md:hidden bg-brand-dark border-b border-white/5 animate-slideDown shadow-2xl">
           <div className="px-4 pt-4 pb-8 space-y-4">
             {navLinks.map((link) => (
-              <button
-                key={link.name}
-                onClick={() => handleNavClick(link.href)}
-                className="block w-full text-left px-6 py-4 text-lg font-black text-white bg-white/5 rounded-2xl hover:bg-[#FDB623]/10 transition-colors border border-transparent hover:border-[#FDB623]/20"
-              >
-                {link.name}
-              </button>
+              link.isExternal ? (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="block w-full text-left px-6 py-4 text-lg font-black text-white bg-white/5 rounded-2xl hover:bg-[#FDB623]/10 transition-colors border border-transparent hover:border-[#FDB623]/20"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              ) : (
+                <button
+                  key={link.name}
+                  onClick={() => handleNavClick(link.href)}
+                  className="block w-full text-left px-6 py-4 text-lg font-black text-white bg-white/5 rounded-2xl hover:bg-[#FDB623]/10 transition-colors border border-transparent hover:border-[#FDB623]/20"
+                >
+                  {link.name}
+                </button>
+              )
             ))}
             <Link 
               to="/get-the-app" 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Instagram, Twitter, Linkedin, ArrowUpRight } from 'lucide-react';
+import { Mail, Instagram, Facebook, Linkedin, ArrowUpRight } from 'lucide-react';
 import { useTranslation } from '../contexts/LanguageContext';
 import { useCookies } from '../contexts/CookieContext';
 import { BrandLogo } from './BrandLogo';
@@ -15,6 +15,7 @@ export const Footer: React.FC = () => {
       title: t('footer', 'company'),
       links: [
         { name: t('footer', 'about'), href: '/about' },
+        { name: t('footer', 'articles'), href: '/articles' },
         { name: t('footer', 'privacy'), href: '/privacy' },
         { name: t('footer', 'terms'), href: '/terms' },
       ]
@@ -42,10 +43,21 @@ export const Footer: React.FC = () => {
               {t('footer', 'slogan')}
             </p>
             <div className="flex items-center space-x-4">
-              {[Instagram, Twitter, Linkedin].map((Icon, i) => (
-                <button key={i} className="p-3 rounded-2xl bg-white/5 text-white hover:bg-[#FDB623] hover:text-black transition-all transform hover:-translate-y-1 active:translate-y-0 group">
+              {[
+                { Icon: Instagram, href: "https://www.instagram.com/qrsortable/?r=nametag&utm_source=qr_widget", label: "Instagram" },
+                { Icon: Facebook, href: "https://www.facebook.com/share/14iQCiz7hCH/", label: "Facebook" },
+                { Icon: Linkedin, href: "https://www.linkedin.com/in/qrsortable-q-6a0196419", label: "LinkedIn" }
+              ].map(({ Icon, href, label }) => (
+                <a 
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="p-3 rounded-2xl bg-white/5 text-white hover:bg-[#FDB623] hover:text-black transition-all transform hover:-translate-y-1 active:translate-y-0 group inline-flex items-center justify-center"
+                >
                   <Icon size={20} />
-                </button>
+                </a>
               ))}
             </div>
           </div>
@@ -97,6 +109,7 @@ export const Footer: React.FC = () => {
           <p>© 2026 QrSortable. {t('footer', 'rights')}</p>
           <div className="mt-6 md:mt-0 flex items-center space-x-8">
             <Link to="/about" className="hover:text-white transition-colors uppercase tracking-widest text-[11px] font-black">{t('footer', 'about')}</Link>
+            <Link to="/articles" className="hover:text-white transition-colors uppercase tracking-widest text-[11px] font-black">{t('footer', 'articles')}</Link>
             <Link to="/privacy" className="hover:text-white transition-colors uppercase tracking-widest text-[11px] font-black">{t('footer', 'privacy')}</Link>
             <button 
               onClick={() => setShowManager(true)}
