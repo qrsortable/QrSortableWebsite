@@ -9,7 +9,7 @@ import { SHIP_COUNTRIES } from '../constants/shipping';
 import { PRODUCT_TRANSLATIONS } from '../constants/products';
 import { checkRateLimit, recordSubmission, sanitizeInput } from '../services/utils';
 
-const APPS_SCRIPT_CHECKOUT_URL = 'https://script.google.com/macros/s/AKfycbwiznYG1x8kFdI_Y28nAmJmUt2VBNC1xBkOOLuz0wI0nvcb02NLqTrFEA1GJ9yBO0NF5w/exec';
+const APPS_SCRIPT_CHECKOUT_URL = 'https://script.google.com/macros/s/AKfycbxhKlj4fbiGR5wMA0zoSDtuYow7vTfN0i6qQl1FmyDBLWFeNfnyanqBayvCQv4aXKVrUg/exec';
 
 export const Checkout: React.FC = () => {
   const { cart, cartTotal, clearCart } = useCart();
