@@ -23,6 +23,7 @@ const ProductCard: React.FC<{ product: any }> = ({ product }) => {
             src={product.image} 
             alt={localized.name || product.name} 
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            loading="lazy"
           />
           {product.isPopular && (
              <div className="absolute top-4 left-4 bg-black text-[#FDB623] px-4 py-2 rounded-full text-xs font-black uppercase tracking-widest animate-pulse">

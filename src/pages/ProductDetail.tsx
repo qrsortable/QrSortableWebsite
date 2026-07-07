@@ -103,6 +103,8 @@ export const ProductDetail: React.FC = () => {
                  src={productImages[selectedImage]} 
                  alt={localized.name || product.name} 
                  className="w-full h-full object-cover"
+                 loading="eager"
+                 fetchPriority="high"
                />
             </div>
             <div className="grid grid-cols-4 gap-4">

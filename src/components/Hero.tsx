@@ -136,6 +136,8 @@ export const Hero: React.FC = () => {
                             alt="LLV626 QR" 
                             className="w-full h-full"
                             style={{ imageRendering: 'pixelated' }}
+                            loading="eager"
+                            fetchPriority="high"
                          />
                     </div>
                 </div>
