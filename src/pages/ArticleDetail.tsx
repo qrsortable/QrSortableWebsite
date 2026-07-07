@@ -82,13 +82,13 @@ export const ArticleDetail: React.FC = () => {
         <meta name="twitter:description" content={article.excerpt[language as keyof typeof article.excerpt]} />
         <meta name="twitter:image" content={article.image} />
         
-        <link rel="alternate" hrefLang="en" href={`https://qrsortable.app/articles/${article.slug}`} />
-        <link rel="alternate" hrefLang="de" href={`https://qrsortable.app/articles/${article.slug}`} />
-        <link rel="alternate" hrefLang="fr" href={`https://qrsortable.app/articles/${article.slug}`} />
-        <link rel="alternate" hrefLang="es" href={`https://qrsortable.app/articles/${article.slug}`} />
-        <link rel="alternate" hrefLang="x-default" href={`https://qrsortable.app/articles/${article.slug}`} />
+        <link rel="alternate" hrefLang="en" href={`https://www.qrsortable.com/articles/${article.slug}`} />
+        <link rel="alternate" hrefLang="de" href={`https://www.qrsortable.com/articles/${article.slug}`} />
+        <link rel="alternate" hrefLang="fr" href={`https://www.qrsortable.com/articles/${article.slug}`} />
+        <link rel="alternate" hrefLang="es" href={`https://www.qrsortable.com/articles/${article.slug}`} />
+        <link rel="alternate" hrefLang="x-default" href={`https://www.qrsortable.com/articles/${article.slug}`} />
         
-        <link rel="canonical" href={`https://qrsortable.app/articles/${article.slug}`} />
+        <link rel="canonical" href={`https://www.qrsortable.com/articles/${article.slug}`} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -98,19 +98,19 @@ export const ArticleDetail: React.FC = () => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://qrsortable.app"
+                "item": "https://www.qrsortable.com"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Articles",
-                "item": "https://qrsortable.app/articles"
+                "item": "https://www.qrsortable.com/articles"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": title,
-                "item": `https://qrsortable.app/articles/${article.slug}`
+                "item": `https://www.qrsortable.com/articles/${article.slug}`
               }
             ]
           })}
@@ -131,7 +131,7 @@ export const ArticleDetail: React.FC = () => {
               "name": "QrSortable",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://qrsortable.app/logo.png"
+                "url": "https://www.qrsortable.com/logo.png"
               }
             },
             "description": article.excerpt[language as keyof typeof article.excerpt]

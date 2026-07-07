@@ -18,33 +18,33 @@ export const Articles: React.FC = () => {
         <meta name="description" content={t('articles', 'seoDesc')} />
         <meta property="og:title" content={t('articles', 'seoTitle')} />
         <meta property="og:description" content={t('articles', 'seoDesc')} />
-        <meta property="og:image" content="https://qrsortable.app/articles-og.jpg" />
+        <meta property="og:image" content="https://www.qrsortable.com/articles-og.jpg" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('articles', 'seoTitle')} />
         <meta name="twitter:description" content={t('articles', 'seoDesc')} />
-        <meta name="twitter:image" content="https://qrsortable.app/articles-og.jpg" />
+        <meta name="twitter:image" content="https://www.qrsortable.com/articles-og.jpg" />
         
-        <link rel="alternate" hrefLang="en" href="https://qrsortable.app/articles" />
-        <link rel="alternate" hrefLang="de" href="https://qrsortable.app/articles" />
-        <link rel="alternate" hrefLang="fr" href="https://qrsortable.app/articles" />
-        <link rel="alternate" hrefLang="es" href="https://qrsortable.app/articles" />
-        <link rel="alternate" hrefLang="x-default" href="https://qrsortable.app/articles" />
+        <link rel="alternate" hrefLang="en" href="https://www.qrsortable.com/articles" />
+        <link rel="alternate" hrefLang="de" href="https://www.qrsortable.com/articles" />
+        <link rel="alternate" hrefLang="fr" href="https://www.qrsortable.com/articles" />
+        <link rel="alternate" hrefLang="es" href="https://www.qrsortable.com/articles" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.qrsortable.com/articles" />
         
-        <link rel="canonical" href="https://qrsortable.app/articles" />
+        <link rel="canonical" href="https://www.qrsortable.com/articles" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Blog",
             "name": t('articles', 'title'),
             "description": t('articles', 'seoDesc'),
-            "url": "https://qrsortable.app/articles",
+            "url": "https://www.qrsortable.com/articles",
             "publisher": {
               "@type": "Organization",
               "name": "QrSortable",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://qrsortable.app/logo.png"
+                "url": "https://www.qrsortable.com/logo.png"
               }
             }
           })}

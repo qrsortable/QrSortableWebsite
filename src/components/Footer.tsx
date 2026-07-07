@@ -46,7 +46,7 @@ export const Footer: React.FC = () => {
               {[
                 { Icon: Instagram, href: "https://www.instagram.com/qrsortable/?r=nametag&utm_source=qr_widget", label: "Instagram" },
                 { Icon: Facebook, href: "https://www.facebook.com/share/14iQCiz7hCH/", label: "Facebook" },
-                { Icon: Linkedin, href: "https://www.linkedin.com/in/qrsortable-q-6a0196419", label: "LinkedIn" }
+                { Icon: Linkedin, href: "https://www.linkedin.com/company/135935143/admin/dashboard/", label: "LinkedIn" }
               ].map(({ Icon, href, label }) => (
                 <a 
                   key={label}

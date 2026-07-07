@@ -14,7 +14,7 @@ export const Privacy: React.FC = () => {
       <Helmet>
         <title>{`${t('footer', 'privacy')} | QrSortable`}</title>
         <meta name="description" content={t('privacy', 'section1.desc')} />
-        <link rel="canonical" href="https://qrsortable.app/privacy" />
+        <link rel="canonical" href="https://www.qrsortable.com/privacy" />
         <meta name="robots" content="noindex, follow" />
       </Helmet>
       <Header />

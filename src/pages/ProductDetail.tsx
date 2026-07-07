@@ -39,7 +39,7 @@ export const ProductDetail: React.FC = () => {
         <meta property="og:title" content={`${localized.name || product.name} - QrSortable`} />
         <meta property="og:description" content={localized.description || product.description} />
         <meta property="og:image" content={product.image} />
-        <link rel="canonical" href={`https://qrsortable.app/product/${product.id}`} />
+        <link rel="canonical" href={`https://www.qrsortable.com/product/${product.id}`} />
         
         <script type="application/ld+json">
           {JSON.stringify({
@@ -75,13 +75,13 @@ export const ProductDetail: React.FC = () => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://qrsortable.app"
+                "item": "https://www.qrsortable.com"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": localized.name || product.name,
-                "item": `https://qrsortable.app/product/${product.id}`
+                "item": `https://www.qrsortable.com/product/${product.id}`
               }
             ]
           })}

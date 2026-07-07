@@ -20,25 +20,25 @@ export const Home: React.FC = () => {
         <meta name="robots" content="index, follow, max-image-preview:large" />
         <meta property="og:title" content={t('seo', 'homeTitle')} />
         <meta property="og:description" content={t('seo', 'homeDesc')} />
-        <meta property="og:image" content="https://qrsortable.app/og-image.jpg" />
+        <meta property="og:image" content="https://www.qrsortable.com/og-image.jpg" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('seo', 'homeTitle')} />
         <meta name="twitter:description" content={t('seo', 'homeDesc')} />
-        <meta name="twitter:image" content="https://qrsortable.app/og-image.jpg" />
-        <link rel="canonical" href="https://qrsortable.app/" />
+        <meta name="twitter:image" content="https://www.qrsortable.com/og-image.jpg" />
+        <link rel="canonical" href="https://www.qrsortable.com/" />
         
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "QrSortable",
-            "url": "https://qrsortable.app",
-            "logo": "https://qrsortable.app/logo.png",
+            "url": "https://www.qrsortable.com",
+            "logo": "https://www.qrsortable.com/logo.png",
             "sameAs": [
               "https://www.facebook.com/share/14iQCiz7hCH/",
               "https://www.instagram.com/qrsortable/?r=nametag&utm_source=qr_widget",
-              "https://www.linkedin.com/in/qrsortable-q-6a0196419"
+              "https://www.linkedin.com/company/135935143/admin/dashboard/"
             ]
           })}
         </script>
@@ -60,6 +60,31 @@ export const Home: React.FC = () => {
               "price": "0.00",
               "priceCurrency": "EUR"
             }
+          })}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": t('home', 'faq.q1') || "How do QR code storage labels help with moving?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": t('home', 'faq.a1') || "QR code storage labels allow you to digitize your moving inventory. By scanning a label, you can see high-res photos and lists of what is inside a box without opening it, making the unpacking process much faster."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": t('home', 'faq.q2') || "Are these labels compatible with any smartphone?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": t('home', 'faq.a2') || "Yes, our QR labels are standard format and can be scanned by any smartphone camera. For the best experience and full inventory features, we recommend using the free QrSortable app."
+                }
+              }
+            ]
           })}
         </script>
       </Helmet>

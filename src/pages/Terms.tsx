@@ -20,7 +20,7 @@ export const Terms: React.FC = () => {
       <Helmet>
         <title>{`${t('footer', 'terms')} | QrSortable`}</title>
         <meta name="description" content={t('terms', 'intro')} />
-        <link rel="canonical" href="https://qrsortable.app/terms" />
+        <link rel="canonical" href="https://www.qrsortable.com/terms" />
         <meta name="robots" content="noindex, follow" />
       </Helmet>
       <Header />

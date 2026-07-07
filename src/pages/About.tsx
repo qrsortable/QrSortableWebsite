@@ -13,7 +13,7 @@ export const About: React.FC = () => {
       <Helmet>
         <title>{`${t('footer', 'about')} | QrSortable`}</title>
         <meta name="description" content={t('about', 'heroSubtitle')} />
-        <link rel="canonical" href="https://qrsortable.app/about" />
+        <link rel="canonical" href="https://www.qrsortable.com/about" />
         <meta name="robots" content="index, follow" />
       </Helmet>
       <Header />
