@@ -226,6 +226,8 @@ export const ArticleDetail: React.FC = () => {
               alt={title} 
               className="w-full aspect-video object-cover" 
               referrerPolicy="no-referrer"
+              loading="eager"
+              fetchPriority="high"
             />
           </figure>
 

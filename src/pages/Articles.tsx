@@ -112,6 +112,7 @@ export const Articles: React.FC = () => {
                     alt={article.title[language as keyof typeof article.title]} 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     referrerPolicy="no-referrer"
+                    loading="lazy"
                   />
                   <div className="absolute top-4 left-4">
                     <span className="bg-[#FDB623] text-gray-900 text-xs font-black px-3 py-1.5 rounded-full uppercase tracking-wider">
