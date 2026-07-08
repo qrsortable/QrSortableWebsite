@@ -15,7 +15,10 @@ export const ArticleDetail: React.FC = () => {
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [showToast, setShowToast] = useState<'shared' | 'saved' | 'removed' | null>(null);
   
-  const article = articles.find(a => a.slug === slug);
+  const article = articles.find(a => 
+    a.slug === slug || 
+    (a.id === '4' && slug === 'qr-code-storage-labels-the-smarter-way-to-find-what-you-own')
+  );
 
   useEffect(() => {
     if (article) {
@@ -26,6 +29,11 @@ export const ArticleDetail: React.FC = () => {
 
   if (!article) {
     return <Navigate to="/articles" replace />;
+  }
+
+  // Handle SEO redirection from old slug to canonical slug
+  if (slug === 'qr-code-storage-labels-the-smarter-way-to-find-what-you-own') {
+    return <Navigate to={`/articles/${article.slug}`} replace />;
   }
 
   const handleShare = async () => {
@@ -82,13 +90,13 @@ export const ArticleDetail: React.FC = () => {
         <meta name="twitter:description" content={article.excerpt[language as keyof typeof article.excerpt]} />
         <meta name="twitter:image" content={article.image} />
         
-        <link rel="alternate" hrefLang="en" href={`https://www.qrsortable.com/articles/${article.slug}`} />
-        <link rel="alternate" hrefLang="de" href={`https://www.qrsortable.com/articles/${article.slug}`} />
-        <link rel="alternate" hrefLang="fr" href={`https://www.qrsortable.com/articles/${article.slug}`} />
-        <link rel="alternate" hrefLang="es" href={`https://www.qrsortable.com/articles/${article.slug}`} />
+        <link rel="alternate" hrefLang="en" href={`https://www.qrsortable.com/articles/${article.slug}?lang=en`} />
+        <link rel="alternate" hrefLang="de" href={`https://www.qrsortable.com/articles/${article.slug}?lang=de`} />
+        <link rel="alternate" hrefLang="fr" href={`https://www.qrsortable.com/articles/${article.slug}?lang=fr`} />
+        <link rel="alternate" hrefLang="es" href={`https://www.qrsortable.com/articles/${article.slug}?lang=es`} />
         <link rel="alternate" hrefLang="x-default" href={`https://www.qrsortable.com/articles/${article.slug}`} />
         
-        <link rel="canonical" href={`https://www.qrsortable.com/articles/${article.slug}`} />
+        <link rel="canonical" href={`https://www.qrsortable.com/articles/${article.slug}${language !== 'EN' ? `?lang=${language.toLowerCase()}` : ''}`} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -220,15 +228,20 @@ export const ArticleDetail: React.FC = () => {
             </div>
           </header>
 
-          <figure className="mb-12 rounded-[2.5rem] overflow-hidden shadow-2xl">
+          <figure className="mb-12 rounded-[2.5rem] overflow-hidden shadow-2xl bg-white border border-gray-100">
             <img 
               src={article.image} 
               alt={title} 
-              className="w-full aspect-video object-cover" 
+              className="w-full h-auto block object-contain" 
               referrerPolicy="no-referrer"
               loading="eager"
               fetchPriority="high"
             />
+            {article.imageCaption && (
+              <figcaption className="py-4 bg-gray-50 border-t border-gray-100 text-sm text-gray-500 font-bold italic text-center px-4 block">
+                {article.imageCaption[language as keyof typeof article.imageCaption] || article.imageCaption.EN}
+              </figcaption>
+            )}
           </figure>
 
           <div className="prose prose-xl prose-slate max-w-none prose-img:rounded-3xl prose-img:shadow-xl prose-headings:font-itim prose-headings:font-black">

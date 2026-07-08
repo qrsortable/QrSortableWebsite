@@ -39,7 +39,12 @@ export const ProductDetail: React.FC = () => {
         <meta property="og:title" content={`${localized.name || product.name} - QrSortable`} />
         <meta property="og:description" content={localized.description || product.description} />
         <meta property="og:image" content={product.image} />
-        <link rel="canonical" href={`https://www.qrsortable.com/product/${product.id}`} />
+        <link rel="alternate" hrefLang="en" href={`https://www.qrsortable.com/product/${product.id}?lang=en`} />
+        <link rel="alternate" hrefLang="de" href={`https://www.qrsortable.com/product/${product.id}?lang=de`} />
+        <link rel="alternate" hrefLang="fr" href={`https://www.qrsortable.com/product/${product.id}?lang=fr`} />
+        <link rel="alternate" hrefLang="es" href={`https://www.qrsortable.com/product/${product.id}?lang=es`} />
+        <link rel="alternate" hrefLang="x-default" href={`https://www.qrsortable.com/product/${product.id}`} />
+        <link rel="canonical" href={`https://www.qrsortable.com/product/${product.id}${language !== 'EN' ? `?lang=${language.toLowerCase()}` : ''}`} />
         
         <script type="application/ld+json">
           {JSON.stringify({

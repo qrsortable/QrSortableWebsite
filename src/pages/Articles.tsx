@@ -11,6 +11,22 @@ import { Footer } from '../components/Footer';
 export const Articles: React.FC = () => {
   const { language, t } = useTranslation();
 
+  const faqData = t('articles', 'faq') || {};
+  const faqKeys = Object.keys(faqData).filter(key => key.startsWith('q') && !isNaN(Number(key.slice(1))));
+  faqKeys.sort((a, b) => Number(a.slice(1)) - Number(b.slice(1)));
+
+  const faqMainEntity = faqKeys.map(qKey => {
+    const aKey = 'a' + qKey.slice(1);
+    return {
+      "@type": "Question",
+      "name": faqData[qKey],
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faqData[aKey]
+      }
+    };
+  }).filter(item => item.name && item.acceptedAnswer.text);
+
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <Helmet>
@@ -25,13 +41,13 @@ export const Articles: React.FC = () => {
         <meta name="twitter:description" content={t('articles', 'seoDesc')} />
         <meta name="twitter:image" content="https://www.qrsortable.com/articles-og.jpg" />
         
-        <link rel="alternate" hrefLang="en" href="https://www.qrsortable.com/articles" />
-        <link rel="alternate" hrefLang="de" href="https://www.qrsortable.com/articles" />
-        <link rel="alternate" hrefLang="fr" href="https://www.qrsortable.com/articles" />
-        <link rel="alternate" hrefLang="es" href="https://www.qrsortable.com/articles" />
+        <link rel="alternate" hrefLang="en" href="https://www.qrsortable.com/articles?lang=en" />
+        <link rel="alternate" hrefLang="de" href="https://www.qrsortable.com/articles?lang=de" />
+        <link rel="alternate" hrefLang="fr" href="https://www.qrsortable.com/articles?lang=fr" />
+        <link rel="alternate" hrefLang="es" href="https://www.qrsortable.com/articles?lang=es" />
         <link rel="alternate" hrefLang="x-default" href="https://www.qrsortable.com/articles" />
         
-        <link rel="canonical" href="https://www.qrsortable.com/articles" />
+        <link rel="canonical" href={`https://www.qrsortable.com/articles${language !== 'EN' ? `?lang=${language.toLowerCase()}` : ''}`} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -53,24 +69,7 @@ export const Articles: React.FC = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": t('articles', 'faq.q1'),
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": t('articles', 'faq.a1')
-                }
-              },
-              {
-                "@type": "Question",
-                "name": t('articles', 'faq.q2'),
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": t('articles', 'faq.a2')
-                }
-              }
-            ]
+            "mainEntity": faqMainEntity
           })}
         </script>
       </Helmet>
@@ -171,14 +170,18 @@ export const Articles: React.FC = () => {
             {t('articles', 'faq.title')}
           </h2>
           <div className="space-y-8">
-            <div className="bg-gray-50 rounded-2xl p-8">
-              <h3 className="text-xl font-black text-gray-900 mb-4">{t('articles', 'faq.q1')}</h3>
-              <p className="text-gray-600 font-medium leading-relaxed">{t('articles', 'faq.a1')}</p>
-            </div>
-            <div className="bg-gray-50 rounded-2xl p-8">
-              <h3 className="text-xl font-black text-gray-900 mb-4">{t('articles', 'faq.q2')}</h3>
-              <p className="text-gray-600 font-medium leading-relaxed">{t('articles', 'faq.a2')}</p>
-            </div>
+            {faqKeys.map((qKey) => {
+              const aKey = 'a' + qKey.slice(1);
+              const question = faqData[qKey];
+              const answer = faqData[aKey];
+              if (!question || !answer) return null;
+              return (
+                <div key={qKey} className="bg-gray-50 rounded-2xl p-8 hover:shadow-md transition-shadow">
+                  <h3 className="text-xl font-black text-gray-900 mb-4">{question}</h3>
+                  <p className="text-gray-600 font-medium leading-relaxed">{answer}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

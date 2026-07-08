@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 export const MollieReturn: React.FC = () => {
   const [searchParams] = useSearchParams();
@@ -29,6 +30,10 @@ export const MollieReturn: React.FC = () => {
   if (!paymentId) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4 font-sans">
+        <Helmet>
+          <title>Payment Error - QrSortable</title>
+          <meta name="robots" content="noindex, nofollow" />
+        </Helmet>
         <div className="max-w-md w-full bg-white rounded-[2rem] p-8 shadow-xl text-center border-4 border-gray-100">
           <div className="text-red-500 mb-4 flex justify-center">
             <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -50,6 +55,10 @@ export const MollieReturn: React.FC = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#FDB623] p-4 font-sans">
+      <Helmet>
+        <title>Returning to App - QrSortable</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
       <div className="max-w-md w-full bg-white rounded-[2rem] p-8 shadow-2xl text-center border-8 border-white animate-pulse">
         <h1 className="text-3xl font-black text-gray-900 mb-4 italic tracking-tight">QrSortable</h1>
         <div className="flex justify-center mb-6">

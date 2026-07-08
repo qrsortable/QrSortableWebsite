@@ -1,10 +1,11 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useTranslation } from '../contexts/LanguageContext';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
 export const GetTheApp: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
   const [googlePlayUrl, setGooglePlayUrl] = React.useState('https://play.google.com/store/apps/details?id=com.danfe.qrsortable&pcampaignid=web_share');
   const [appStoreUrl, setAppStoreUrl] = React.useState('https://apps.apple.com/de/app/qrsortable/id6775796519');
 
@@ -18,6 +19,17 @@ export const GetTheApp: React.FC = () => {
   
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
+      <Helmet>
+        <title>{`${t('nav', 'getApp')} | QrSortable`}</title>
+        <meta name="description" content={t('nav', 'getAppSubtitle')} />
+        <link rel="alternate" hrefLang="en" href="https://www.qrsortable.com/get-the-app?lang=en" />
+        <link rel="alternate" hrefLang="de" href="https://www.qrsortable.com/get-the-app?lang=de" />
+        <link rel="alternate" hrefLang="fr" href="https://www.qrsortable.com/get-the-app?lang=fr" />
+        <link rel="alternate" hrefLang="es" href="https://www.qrsortable.com/get-the-app?lang=es" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.qrsortable.com/get-the-app" />
+        <link rel="canonical" href={`https://www.qrsortable.com/get-the-app${language !== 'EN' ? `?lang=${language.toLowerCase()}` : ''}`} />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
       <Header />
       <main className="flex-grow flex items-center justify-center p-4 py-20">
         <div className="max-w-4xl w-full">

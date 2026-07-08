@@ -14,7 +14,54 @@ const LanguageContext = createContext<LanguageContextType>({
 });
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState('EN');
+  const [language, setLanguage] = useState(() => {
+    // 1. Check query parameter `lang` or `hl`
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const langParam = params.get('lang') || params.get('hl');
+      if (langParam) {
+        const upper = langParam.toUpperCase();
+        if (['EN', 'DE', 'FR', 'ES'].includes(upper)) {
+          return upper;
+        }
+      }
+    } catch (e) {}
+
+    // 2. Check localStorage
+    try {
+      const saved = localStorage.getItem('language');
+      if (saved && ['EN', 'DE', 'FR', 'ES'].includes(saved.toUpperCase())) {
+        return saved.toUpperCase();
+      }
+    } catch (e) {}
+
+    // 3. Check browser language
+    try {
+      const browserLang = navigator.language.split('-')[0].toUpperCase();
+      if (['EN', 'DE', 'FR', 'ES'].includes(browserLang)) {
+        return browserLang;
+      }
+    } catch (e) {}
+    
+    return 'EN';
+  });
+
+  const handleSetLanguage = (lang: string) => {
+    const upperLang = lang.toUpperCase();
+    if (!['EN', 'DE', 'FR', 'ES'].includes(upperLang)) return;
+    
+    setLanguage(upperLang);
+    
+    try {
+      localStorage.setItem('language', upperLang);
+    } catch (e) {}
+
+    try {
+      const url = new URL(window.location.href);
+      url.searchParams.set('lang', upperLang.toLowerCase());
+      window.history.replaceState(null, '', url.pathname + url.search + url.hash);
+    } catch (e) {}
+  };
 
   const t = (section: string, key?: string) => {
     if (!TRANSLATIONS[language] || !TRANSLATIONS[language][section]) {
@@ -44,7 +91,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage: handleSetLanguage, t }}>
       {children}
     </LanguageContext.Provider>
   );

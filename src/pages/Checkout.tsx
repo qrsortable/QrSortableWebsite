@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ChevronLeft, ShoppingCart, Globe, MapPin, Package, Lock, Loader2, Check, AlertCircle, RefreshCw } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import { useTranslation } from '../contexts/LanguageContext';
 import { useCart } from '../contexts/CartContext';
 import { Header } from '../components/Header';
@@ -181,6 +182,10 @@ export const Checkout: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <Helmet>
+        <title>Checkout - QrSortable</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
       <Header />
       <div className="max-w-6xl mx-auto px-4 py-32">
         <button onClick={() => navigate('/')} className="flex items-center text-gray-500 hover:text-gray-900 mb-12 text-xl font-bold transition-colors">

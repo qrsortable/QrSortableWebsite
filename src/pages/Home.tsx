@@ -9,7 +9,7 @@ import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
 export const Home: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
 
   return (
     <div className="min-h-screen">
@@ -26,7 +26,13 @@ export const Home: React.FC = () => {
         <meta name="twitter:title" content={t('seo', 'homeTitle')} />
         <meta name="twitter:description" content={t('seo', 'homeDesc')} />
         <meta name="twitter:image" content="https://www.qrsortable.com/og-image.jpg" />
-        <link rel="canonical" href="https://www.qrsortable.com/" />
+        
+        <link rel="alternate" hrefLang="en" href="https://www.qrsortable.com/?lang=en" />
+        <link rel="alternate" hrefLang="de" href="https://www.qrsortable.com/?lang=de" />
+        <link rel="alternate" hrefLang="fr" href="https://www.qrsortable.com/?lang=fr" />
+        <link rel="alternate" hrefLang="es" href="https://www.qrsortable.com/?lang=es" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.qrsortable.com/" />
+        <link rel="canonical" href={`https://www.qrsortable.com/${language !== 'EN' ? `?lang=${language.toLowerCase()}` : ''}`} />
         
         <script type="application/ld+json">
           {JSON.stringify({

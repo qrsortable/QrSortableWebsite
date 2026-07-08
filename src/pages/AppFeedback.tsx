@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Star, Loader2, Check, X } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { checkRateLimit, recordSubmission, sanitizeInput } from '../services/utils';
 import { useTranslation } from '../contexts/LanguageContext';
 
@@ -116,6 +117,10 @@ export const AppFeedback: React.FC = () => {
   if (submitted) {
     return (
       <div className="min-h-screen bg-[#fff8e1] flex items-center justify-center p-4 font-sans">
+        <Helmet>
+          <title>Feedback Submitted - QrSortable</title>
+          <meta name="robots" content="noindex, nofollow" />
+        </Helmet>
         <div className="max-w-2xl w-full bg-white rounded-2xl shadow-xl p-8 sm:p-12 text-center border-t-8 border-[#FDB623] relative">
           <button 
             onClick={resetForm}
@@ -142,6 +147,10 @@ export const AppFeedback: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#fff8e1] py-6 sm:py-12 px-4 sm:px-6 lg:px-8 font-sans">
+      <Helmet>
+        <title>App Feedback - QrSortable</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
       <div className="max-w-3xl mx-auto space-y-4 sm:space-y-6">
         {/* Header Section */}
         <div className="bg-white rounded-xl shadow-md border-t-8 border-[#FDB623] p-5 sm:p-8">
