@@ -6,7 +6,7 @@ import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
 export const Terms: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
   
   const sections = [
     { icon: <FileText className="h-8 w-8" />, ...t('terms', 'section1') },
@@ -17,10 +17,15 @@ export const Terms: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Helmet>
+      <Helmet htmlAttributes={{ lang: language.toLowerCase() }}>
         <title>{`${t('footer', 'terms')} | QrSortable`}</title>
         <meta name="description" content={t('terms', 'intro')} />
-        <link rel="canonical" href="https://www.qrsortable.com/terms" />
+        <link rel="alternate" hrefLang="en" href="https://www.qrsortable.com/terms" />
+        <link rel="alternate" hrefLang="de" href="https://www.qrsortable.com/terms?lang=de" />
+        <link rel="alternate" hrefLang="fr" href="https://www.qrsortable.com/terms?lang=fr" />
+        <link rel="alternate" hrefLang="es" href="https://www.qrsortable.com/terms?lang=es" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.qrsortable.com/terms" />
+        <link rel="canonical" href={`https://www.qrsortable.com/terms${language !== 'EN' ? `?lang=${language.toLowerCase()}` : ''}`} />
         <meta name="robots" content="noindex, follow" />
       </Helmet>
       <Header />

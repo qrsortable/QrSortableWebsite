@@ -8,7 +8,7 @@ import { StarRating } from './StarRating';
 import { useProductFeedback } from '../contexts/FeedbackContext';
 
 const ProductCard: React.FC<{ product: any }> = ({ product }) => {
-  const { t, language } = useTranslation();
+  const { t, language, localizePath } = useTranslation();
   const { addToCart } = useCart();
   const { reviews, isLoading } = useProductFeedback(product.name);
   
@@ -17,7 +17,7 @@ const ProductCard: React.FC<{ product: any }> = ({ product }) => {
 
   return (
     <div className="bg-white rounded-[3rem] p-8 shadow-xl hover:shadow-2xl transition-all border border-gray-100 flex flex-col group h-full">
-      <Link to={`/product/${product.id}`} className="block">
+      <Link to={localizePath(`/product/${product.id}`)} className="block">
         <div className="relative mb-8 overflow-hidden rounded-[2rem] bg-gray-50 aspect-square">
           <img 
             src={product.image} 
@@ -38,7 +38,7 @@ const ProductCard: React.FC<{ product: any }> = ({ product }) => {
           <StarRating rating={avgRating} size={16} count={reviews.length} showLabel />
         </div>
         
-        <Link to={`/product/${product.id}`} className="block">
+        <Link to={localizePath(`/product/${product.id}`)} className="block">
           <h3 className="text-2xl font-black text-gray-900 group-hover:text-[#FDB623] transition-colors leading-tight min-h-[4.5rem] flex items-start pt-4">
             {localized.name || product.name}
           </h3>
@@ -67,7 +67,7 @@ const ProductCard: React.FC<{ product: any }> = ({ product }) => {
         </div>
       </div>
       <Link 
-        to={`/product/${product.id}`}
+        to={localizePath(`/product/${product.id}`)}
         className="mt-8 py-4 px-6 bg-gray-50 rounded-2xl text-center text-sm font-black text-gray-900 hover:bg-gray-100 transition-all border border-gray-100 flex items-center justify-center space-x-2 group/link"
       >
         <span>{t('shop', 'viewDetails')}</span>

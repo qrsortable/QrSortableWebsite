@@ -9,7 +9,7 @@ import { LANGUAGES } from '../constants/translations';
 export const Header: React.FC = () => {
   const { toggleCart, cart } = useCart();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { language, setLanguage, t } = useTranslation();
+  const { language, setLanguage, t, localizePath } = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -24,7 +24,7 @@ export const Header: React.FC = () => {
 
   const handleNavClick = (href: string) => {
     if (location.pathname !== '/') {
-      navigate('/');
+      navigate(localizePath('/'));
       setTimeout(() => {
         const el = document.querySelector(href);
         el?.scrollIntoView({ behavior: 'smooth' });
@@ -40,7 +40,7 @@ export const Header: React.FC = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-brand-dark/95 backdrop-blur-xl border-b border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <Link to="/" className="flex items-center space-x-3 group animate-fadeIn">
+          <Link to={localizePath('/')} className="flex items-center space-x-3 group animate-fadeIn">
             <BrandLogo size={40} />
             <span className="text-2xl font-black tracking-tighter text-white group-hover:text-[#FDB623] transition-colors">
               QrSortable
@@ -52,7 +52,7 @@ export const Header: React.FC = () => {
               link.isExternal ? (
                 <Link
                   key={link.name}
-                  to={link.href}
+                  to={localizePath(link.href)}
                   className="text-[15px] font-bold text-gray-400 hover:text-white transition-colors relative group"
                 >
                   {link.name}
@@ -70,7 +70,7 @@ export const Header: React.FC = () => {
               )
             ))}
             <Link 
-              to="/get-the-app" 
+              to={localizePath('/get-the-app')} 
               className="text-[15px] font-bold text-gray-400 hover:text-white transition-colors relative group"
             >
               {t('nav', 'getApp')}
@@ -131,7 +131,7 @@ export const Header: React.FC = () => {
               link.isExternal ? (
                 <Link
                   key={link.name}
-                  to={link.href}
+                  to={localizePath(link.href)}
                   className="block w-full text-left px-6 py-4 text-lg font-black text-white bg-white/5 rounded-2xl hover:bg-[#FDB623]/10 transition-colors border border-transparent hover:border-[#FDB623]/20"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
@@ -148,7 +148,7 @@ export const Header: React.FC = () => {
               )
             ))}
             <Link 
-              to="/get-the-app" 
+              to={localizePath('/get-the-app')} 
               className="block w-full text-left px-6 py-4 text-lg font-black text-white bg-white/5 rounded-2xl hover:bg-[#FDB623]/10 transition-colors border border-transparent hover:border-[#FDB623]/20"
               onClick={() => setIsMobileMenuOpen(false)}
             >

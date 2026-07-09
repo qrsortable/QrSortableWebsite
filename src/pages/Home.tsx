@@ -13,7 +13,7 @@ export const Home: React.FC = () => {
 
   return (
     <div className="min-h-screen">
-      <Helmet>
+      <Helmet htmlAttributes={{ lang: language.toLowerCase() }}>
         <title>{t('seo', 'homeTitle')}</title>
         <meta name="description" content={t('seo', 'homeDesc')} />
         <meta name="keywords" content={t('seo', 'keywords')} />
@@ -27,7 +27,7 @@ export const Home: React.FC = () => {
         <meta name="twitter:description" content={t('seo', 'homeDesc')} />
         <meta name="twitter:image" content="https://www.qrsortable.com/og-image.jpg" />
         
-        <link rel="alternate" hrefLang="en" href="https://www.qrsortable.com/?lang=en" />
+        <link rel="alternate" hrefLang="en" href="https://www.qrsortable.com/" />
         <link rel="alternate" hrefLang="de" href="https://www.qrsortable.com/?lang=de" />
         <link rel="alternate" hrefLang="fr" href="https://www.qrsortable.com/?lang=fr" />
         <link rel="alternate" hrefLang="es" href="https://www.qrsortable.com/?lang=es" />
@@ -42,8 +42,9 @@ export const Home: React.FC = () => {
             "url": "https://www.qrsortable.com",
             "logo": "https://www.qrsortable.com/logo.png",
             "sameAs": [
+              "https://x.com/QrSortable",
               "https://www.facebook.com/share/14iQCiz7hCH/",
-              "https://www.instagram.com/qrsortable/?r=nametag&utm_source=qr_widget",
+              "https://www.instagram.com/qrsortable2026/",
               "https://www.linkedin.com/company/135935143/admin/dashboard/"
             ]
           })}

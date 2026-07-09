@@ -10,10 +10,10 @@ export const About: React.FC = () => {
   const { t, language } = useTranslation();
   return (
     <div className="min-h-screen bg-gray-50">
-      <Helmet>
+      <Helmet htmlAttributes={{ lang: language.toLowerCase() }}>
         <title>{`${t('footer', 'about')} | QrSortable`}</title>
         <meta name="description" content={t('about', 'heroSubtitle')} />
-        <link rel="alternate" hrefLang="en" href="https://www.qrsortable.com/about?lang=en" />
+        <link rel="alternate" hrefLang="en" href="https://www.qrsortable.com/about" />
         <link rel="alternate" hrefLang="de" href="https://www.qrsortable.com/about?lang=de" />
         <link rel="alternate" hrefLang="fr" href="https://www.qrsortable.com/about?lang=fr" />
         <link rel="alternate" hrefLang="es" href="https://www.qrsortable.com/about?lang=es" />

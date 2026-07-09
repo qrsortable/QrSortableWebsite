@@ -5,12 +5,14 @@ interface LanguageContextType {
   language: string;
   setLanguage: (lang: string) => void;
   t: (section: string, key?: string) => any;
+  localizePath: (path: string) => string;
 }
 
 const LanguageContext = createContext<LanguageContextType>({
   language: 'EN',
   setLanguage: () => {},
-  t: () => ''
+  t: () => '',
+  localizePath: (path: string) => path
 });
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -90,8 +92,18 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     return value !== undefined ? value : key;
   };
 
+  const localizePath = (path: string) => {
+    if (!path) return path;
+    if (path.startsWith('#')) return path;
+    if (language === 'EN') return path;
+    const cleanPath = path.split('#')[0];
+    const hash = path.includes('#') ? '#' + path.split('#')[1] : '';
+    const separator = cleanPath.includes('?') ? '&' : '?';
+    return `${cleanPath}${separator}lang=${language.toLowerCase()}${hash}`;
+  };
+
   return (
-    <LanguageContext.Provider value={{ language, setLanguage: handleSetLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage: handleSetLanguage, t, localizePath }}>
       {children}
     </LanguageContext.Provider>
   );

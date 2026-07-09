@@ -11,7 +11,7 @@ import ReactMarkdown from 'react-markdown';
 
 export const ArticleDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
-  const { language, t } = useTranslation();
+  const { language, t, localizePath } = useTranslation();
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [showToast, setShowToast] = useState<'shared' | 'saved' | 'removed' | null>(null);
   
@@ -77,7 +77,7 @@ export const ArticleDetail: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white flex flex-col">
-      <Helmet>
+      <Helmet htmlAttributes={{ lang: language.toLowerCase() }}>
         <title>{title} | QrSortable</title>
         <meta name="description" content={article.excerpt[language as keyof typeof article.excerpt]} />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -90,7 +90,7 @@ export const ArticleDetail: React.FC = () => {
         <meta name="twitter:description" content={article.excerpt[language as keyof typeof article.excerpt]} />
         <meta name="twitter:image" content={article.image} />
         
-        <link rel="alternate" hrefLang="en" href={`https://www.qrsortable.com/articles/${article.slug}?lang=en`} />
+        <link rel="alternate" hrefLang="en" href={`https://www.qrsortable.com/articles/${article.slug}`} />
         <link rel="alternate" hrefLang="de" href={`https://www.qrsortable.com/articles/${article.slug}?lang=de`} />
         <link rel="alternate" hrefLang="fr" href={`https://www.qrsortable.com/articles/${article.slug}?lang=fr`} />
         <link rel="alternate" hrefLang="es" href={`https://www.qrsortable.com/articles/${article.slug}?lang=es`} />
@@ -152,7 +152,7 @@ export const ArticleDetail: React.FC = () => {
       <main className="flex-grow pt-32 pb-20">
         {/* Back Button */}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
-          <Link to="/articles" className="inline-flex items-center gap-2 text-gray-500 hover:text-[#FDB623] font-black transition-colors group">
+          <Link to={localizePath('/articles')} className="inline-flex items-center gap-2 text-gray-500 hover:text-[#FDB623] font-black transition-colors group">
             <ChevronLeft className="h-5 w-5 transform group-hover:-translate-x-1 transition-transform" />
             {t('articles', 'back')}
           </Link>
@@ -273,7 +273,7 @@ export const ArticleDetail: React.FC = () => {
             
             <div className="mt-12 p-8 bg-gray-50 rounded-3xl border border-gray-100 italic">
               <p className="text-gray-600 text-lg">
-                {t('articles', 'ctaText')} <Link to="/#products" className="text-[#FDB623] font-black underline decoration-2 underline-offset-4">{t('articles', 'ctaLink')}</Link> {t('articles', 'ctaSuffix')}
+                {t('articles', 'ctaText')} <Link to={localizePath('/#products')} className="text-[#FDB623] font-black underline decoration-2 underline-offset-4">{t('articles', 'ctaLink')}</Link> {t('articles', 'ctaSuffix')}
               </p>
             </div>
           </div>
@@ -283,10 +283,10 @@ export const ArticleDetail: React.FC = () => {
               <h3 className="text-3xl font-black text-gray-900 mb-4 font-itim">{t('articles', 'ctaTitle')}</h3>
               <p className="text-gray-900/80 font-bold mb-8 text-lg">{t('articles', 'ctaDesc')}</p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Link to="/get-the-app" className="bg-gray-900 text-white px-8 py-4 rounded-xl font-black hover:scale-105 transition-transform">
+                <Link to={localizePath('/get-the-app')} className="bg-gray-900 text-white px-8 py-4 rounded-xl font-black hover:scale-105 transition-transform">
                   {t('articles', 'getApp')}
                 </Link>
-                <Link to="/" className="bg-white text-gray-900 px-8 py-4 rounded-xl font-black hover:scale-105 transition-transform border-b-4 border-gray-200">
+                <Link to={localizePath('/')} className="bg-white text-gray-900 px-8 py-4 rounded-xl font-black hover:scale-105 transition-transform border-b-4 border-gray-200">
                   {t('articles', 'browseLabels')}
                 </Link>
               </div>

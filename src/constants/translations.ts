@@ -363,9 +363,9 @@ export const TRANSLATIONS: any = {
       }
     },
     seo: {
-      homeTitle: 'QrSortable | Premium QR-Code Etiketten für Haushalt & Umzug',
-      homeDesc: 'Modernisieren Sie Ihre Lagerung mit intelligenten QR-Etiketten. Perfekt für Umzüge, saisonale Lagerung und das Inventar kleiner Unternehmen. Sehen Sie, was drin ist, ohne den Karton zu öffnen.',
-      keywords: 'QR-Code Etiketten, Heimorganisation, Umzugszubehör, intelligente Lagerung, Bestandsverwaltung'
+      homeTitle: 'QrSortable | QR-Code Lageretiketten & Aufkleber für Lagerboxen',
+      homeDesc: 'Entdecken Sie Smart QR-Code Etiketten & QR-Code Aufkleber für Lagerboxen. Die perfekte QR-Code Beschriftung für Ihr Lager, Ihre Umzugsetiketten und Heimorganisation.',
+      keywords: 'QR-Code Lageretiketten, QR-Code Aufkleber für Lagerboxen, Smart QR-Code Etiketten, QR-Code Umzugsetiketten, QR-Code Beschriftung Lager, Lageretiketten, QR-Code Etiketten, Umzugsetiketten'
     },
     features: {
       title: 'Warum QrSortable?',
@@ -649,9 +649,9 @@ export const TRANSLATIONS: any = {
       }
     },
     seo: {
-      homeTitle: 'QrSortable | Étiquettes QR code premium pour la maison et le déménagement',
-      homeDesc: 'Modernisez votre stockage grâce aux étiquettes QR intelligentes. Parfait pour les déménagements, le stockage saisonnier et l\'inventaire des petites entreprises. Visualisez le contenu sans ouvrir les cartons.',
-      keywords: 'étiquettes QR code, organisation de la maison, fournitures de déménagement, stockage intelligent, gestion des stocks'
+      homeTitle: 'QrSortable | Étiquettes QR Code Stockage pour Bacs de Rangement',
+      homeDesc: 'Trouvez les meilleures étiquettes QR code stockage et étiquettes intelligentes QR code. Idéal pour vos étiquettes déménagement QR code et l\'organisation de stockage intelligente de vos bacs.',
+      keywords: 'Étiquettes QR code stockage, Étiquettes QR code pour bacs de rangement, Étiquettes intelligentes QR code, Étiquettes déménagement QR code, QR code étiquettes organisation, étiquettes de stockage, étiquettes QR code, étiquettes déménagement'
     },
     features: {
       title: 'Pourquoi QrSortable ?',
@@ -935,9 +935,9 @@ export const TRANSLATIONS: any = {
       }
     },
     seo: {
-      homeTitle: 'QrSortable | Etiquetas QR de almacenamiento premium para el hogar y mudanzas',
-      homeDesc: 'Moderniza tu almacenamiento con etiquetas QR inteligentes. Perfecto para mudanzas, almacenamiento estacional e inventario de pequeñas empresas. Visualiza el contenido sin abrir las cajas.',
-      keywords: 'etiquetas QR, organización del hogar, suministros de mudanza, almacenamiento inteligente, gestión de inventario'
+      homeTitle: 'QrSortable | Etiquetas QR Almacenamiento & Etiquetas QR Mudanza',
+      homeDesc: 'Descubre las mejores etiquetas QR almacenamiento y etiquetas QR para contenedores. Optimiza tu inventario con etiquetas inteligentes QR y pegatinas QR de organización para mudanzas.',
+      keywords: 'Etiquetas QR almacenamiento, Etiquetas QR para contenedores, Etiquetas inteligentes QR, Etiquetas QR mudanza, QR etiquetas organización, etiquetas almacenamiento, etiquetas QR, etiquetas mudanza'
     },
     features: {
       title: '¿Por qué QrSortable?',

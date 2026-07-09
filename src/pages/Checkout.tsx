@@ -182,7 +182,7 @@ export const Checkout: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
-      <Helmet>
+      <Helmet htmlAttributes={{ lang: language.toLowerCase() }}>
         <title>Checkout - QrSortable</title>
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>

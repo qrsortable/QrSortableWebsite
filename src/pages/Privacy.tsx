@@ -8,13 +8,18 @@ import { Footer } from '../components/Footer';
 
 export const Privacy: React.FC = () => {
   const { setShowManager } = useCookies();
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
   return (
     <div className="min-h-screen bg-gray-50">
-      <Helmet>
+      <Helmet htmlAttributes={{ lang: language.toLowerCase() }}>
         <title>{`${t('footer', 'privacy')} | QrSortable`}</title>
         <meta name="description" content={t('privacy', 'section1.desc')} />
-        <link rel="canonical" href="https://www.qrsortable.com/privacy" />
+        <link rel="alternate" hrefLang="en" href="https://www.qrsortable.com/privacy" />
+        <link rel="alternate" hrefLang="de" href="https://www.qrsortable.com/privacy?lang=de" />
+        <link rel="alternate" hrefLang="fr" href="https://www.qrsortable.com/privacy?lang=fr" />
+        <link rel="alternate" hrefLang="es" href="https://www.qrsortable.com/privacy?lang=es" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.qrsortable.com/privacy" />
+        <link rel="canonical" href={`https://www.qrsortable.com/privacy${language !== 'EN' ? `?lang=${language.toLowerCase()}` : ''}`} />
         <meta name="robots" content="noindex, follow" />
       </Helmet>
       <Header />

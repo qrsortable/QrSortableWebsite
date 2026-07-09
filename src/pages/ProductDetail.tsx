@@ -33,13 +33,13 @@ export const ProductDetail: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
-      <Helmet>
+      <Helmet htmlAttributes={{ lang: language.toLowerCase() }}>
         <title>{`${localized.name || product.name} - QrSortable`}</title>
         <meta name="description" content={localized.description || product.description} />
         <meta property="og:title" content={`${localized.name || product.name} - QrSortable`} />
         <meta property="og:description" content={localized.description || product.description} />
         <meta property="og:image" content={product.image} />
-        <link rel="alternate" hrefLang="en" href={`https://www.qrsortable.com/product/${product.id}?lang=en`} />
+        <link rel="alternate" hrefLang="en" href={`https://www.qrsortable.com/product/${product.id}`} />
         <link rel="alternate" hrefLang="de" href={`https://www.qrsortable.com/product/${product.id}?lang=de`} />
         <link rel="alternate" hrefLang="fr" href={`https://www.qrsortable.com/product/${product.id}?lang=fr`} />
         <link rel="alternate" hrefLang="es" href={`https://www.qrsortable.com/product/${product.id}?lang=es`} />

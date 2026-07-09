@@ -19,10 +19,10 @@ export const GetTheApp: React.FC = () => {
   
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
-      <Helmet>
+      <Helmet htmlAttributes={{ lang: language.toLowerCase() }}>
         <title>{`${t('nav', 'getApp')} | QrSortable`}</title>
         <meta name="description" content={t('nav', 'getAppSubtitle')} />
-        <link rel="alternate" hrefLang="en" href="https://www.qrsortable.com/get-the-app?lang=en" />
+        <link rel="alternate" hrefLang="en" href="https://www.qrsortable.com/get-the-app" />
         <link rel="alternate" hrefLang="de" href="https://www.qrsortable.com/get-the-app?lang=de" />
         <link rel="alternate" hrefLang="fr" href="https://www.qrsortable.com/get-the-app?lang=fr" />
         <link rel="alternate" hrefLang="es" href="https://www.qrsortable.com/get-the-app?lang=es" />

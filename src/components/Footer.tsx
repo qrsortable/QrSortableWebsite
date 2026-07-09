@@ -6,8 +6,20 @@ import { useCookies } from '../contexts/CookieContext';
 import { BrandLogo } from './BrandLogo';
 import { BackgroundDots } from './BackgroundDots';
 
+const XIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
+  <svg 
+    viewBox="0 0 24 24" 
+    width={size} 
+    height={size} 
+    fill="currentColor" 
+    aria-hidden="true"
+  >
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
+
 export const Footer: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, localizePath } = useTranslation();
   const { setShowManager } = useCookies();
   
   const sections = [
@@ -30,7 +42,7 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-24 mb-24 text-center md:text-left">
           <div className="lg:col-span-1 flex flex-col items-center md:items-start">
-            <Link to="/" className="flex items-center space-x-3 mb-8 group">
+            <Link to={localizePath('/')} className="flex items-center space-x-3 mb-8 group">
               <BrandLogo size={48} />
               <div className="flex flex-col items-start leading-none">
                 <span className="text-3xl font-black tracking-tighter text-white group-hover:text-[#FDB623] transition-colors">
@@ -44,7 +56,8 @@ export const Footer: React.FC = () => {
             </p>
             <div className="flex items-center space-x-4">
               {[
-                { Icon: Instagram, href: "https://www.instagram.com/qrsortable/?r=nametag&utm_source=qr_widget", label: "Instagram" },
+                { Icon: XIcon, href: "https://x.com/QrSortable", label: "X" },
+                { Icon: Instagram, href: "https://www.instagram.com/qrsortable2026/", label: "Instagram" },
                 { Icon: Facebook, href: "https://www.facebook.com/share/14iQCiz7hCH/", label: "Facebook" },
                 { Icon: Linkedin, href: "https://www.linkedin.com/company/135935143/admin/dashboard/", label: "LinkedIn" }
               ].map(({ Icon, href, label }) => (
@@ -72,7 +85,7 @@ export const Footer: React.FC = () => {
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <Link 
-                      to={link.href} 
+                      to={localizePath(link.href)} 
                       className="text-gray-400 font-bold hover:text-[#FDB623] transition-all flex items-center group whitespace-nowrap"
                     >
                       <ArrowUpRight size={14} className="mr-2 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-[#FDB623]" />
@@ -108,9 +121,9 @@ export const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-white/5 font-bold text-sm text-gray-500">
           <p>© 2026 QrSortable. {t('footer', 'rights')}</p>
           <div className="mt-6 md:mt-0 flex items-center space-x-8">
-            <Link to="/about" className="hover:text-white transition-colors uppercase tracking-widest text-[11px] font-black">{t('footer', 'about')}</Link>
-            <Link to="/articles" className="hover:text-white transition-colors uppercase tracking-widest text-[11px] font-black">{t('footer', 'articles')}</Link>
-            <Link to="/privacy" className="hover:text-white transition-colors uppercase tracking-widest text-[11px] font-black">{t('footer', 'privacy')}</Link>
+            <Link to={localizePath('/about')} className="hover:text-white transition-colors uppercase tracking-widest text-[11px] font-black">{t('footer', 'about')}</Link>
+            <Link to={localizePath('/articles')} className="hover:text-white transition-colors uppercase tracking-widest text-[11px] font-black">{t('footer', 'articles')}</Link>
+            <Link to={localizePath('/privacy')} className="hover:text-white transition-colors uppercase tracking-widest text-[11px] font-black">{t('footer', 'privacy')}</Link>
             <button 
               onClick={() => setShowManager(true)}
               className="hover:text-white transition-colors uppercase tracking-widest text-[11px] font-black"

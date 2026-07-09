@@ -6,10 +6,10 @@ import { useTranslation } from '../contexts/LanguageContext';
 
 export const Success: React.FC = () => {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-8 text-center">
-      <Helmet>
+      <Helmet htmlAttributes={{ lang: language.toLowerCase() }}>
         <title>Order Completed - QrSortable</title>
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>

@@ -9,7 +9,7 @@ import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
 export const Articles: React.FC = () => {
-  const { language, t } = useTranslation();
+  const { language, t, localizePath } = useTranslation();
 
   const faqData = t('articles', 'faq') || {};
   const faqKeys = Object.keys(faqData).filter(key => key.startsWith('q') && !isNaN(Number(key.slice(1))));
@@ -29,7 +29,7 @@ export const Articles: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
-      <Helmet>
+      <Helmet htmlAttributes={{ lang: language.toLowerCase() }}>
         <title>{t('articles', 'seoTitle')}</title>
         <meta name="description" content={t('articles', 'seoDesc')} />
         <meta property="og:title" content={t('articles', 'seoTitle')} />
@@ -41,7 +41,7 @@ export const Articles: React.FC = () => {
         <meta name="twitter:description" content={t('articles', 'seoDesc')} />
         <meta name="twitter:image" content="https://www.qrsortable.com/articles-og.jpg" />
         
-        <link rel="alternate" hrefLang="en" href="https://www.qrsortable.com/articles?lang=en" />
+        <link rel="alternate" hrefLang="en" href="https://www.qrsortable.com/articles" />
         <link rel="alternate" hrefLang="de" href="https://www.qrsortable.com/articles?lang=de" />
         <link rel="alternate" hrefLang="fr" href="https://www.qrsortable.com/articles?lang=fr" />
         <link rel="alternate" hrefLang="es" href="https://www.qrsortable.com/articles?lang=es" />
@@ -105,7 +105,7 @@ export const Articles: React.FC = () => {
                 transition={{ delay: index * 0.1 }}
                 className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 flex flex-col group"
               >
-                <Link to={`/articles/${article.slug}`} className="block relative overflow-hidden h-56">
+                 <Link to={localizePath(`/articles/${article.slug}`)} className="block relative overflow-hidden h-56">
                   <img 
                     src={article.image} 
                     alt={article.title[language as keyof typeof article.title]} 
@@ -132,7 +132,7 @@ export const Articles: React.FC = () => {
                     </div>
                   </div>
 
-                  <Link to={`/articles/${article.slug}`}>
+                  <Link to={localizePath(`/articles/${article.slug}`)}>
                     <h2 className="text-2xl font-black text-gray-900 mb-4 font-itim leading-tight group-hover:text-[#FDB623] transition-colors">
                       {article.title[language as keyof typeof article.title]}
                     </h2>
@@ -150,7 +150,7 @@ export const Articles: React.FC = () => {
                       {article.author}
                     </div>
                     <Link 
-                      to={`/articles/${article.slug}`}
+                      to={localizePath(`/articles/${article.slug}`)}
                       className="text-[#FDB623] font-black inline-flex items-center gap-1 group/btn"
                     >
                       {t('articles', 'readMore')}
