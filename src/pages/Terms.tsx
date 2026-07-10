@@ -29,6 +29,7 @@ export const Terms: React.FC = () => {
         <meta name="robots" content="noindex, follow" />
       </Helmet>
       <Header />
+      <main className="flex-grow">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="bg-white rounded-[3rem] shadow-2xl p-12 md:p-20 border border-gray-100">
           <div className="text-center mb-16">
@@ -57,6 +58,7 @@ export const Terms: React.FC = () => {
           </div>
         </div>
       </div>
+      </main>
       <Footer />
     </div>
   );

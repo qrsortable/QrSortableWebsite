@@ -93,6 +93,7 @@ export const ProductDetail: React.FC = () => {
         </script>
       </Helmet>
       <Header />
+      <main className="flex-grow">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
         <button 
           onClick={() => navigate('/')}
@@ -208,6 +209,7 @@ export const ProductDetail: React.FC = () => {
         {/* Feedback Section */}
         <FeedbackSection product={product} />
       </div>
+      </main>
       <Footer />
 
       {/* Video Modal */}

@@ -171,11 +171,11 @@ export const Checkout: React.FC = () => {
     return (
       <div className="min-h-screen bg-gray-50 flex flex-col">
         <Header />
-        <div className="flex-1 flex flex-col items-center justify-center p-8">
+        <main className="flex-1 flex flex-col items-center justify-center p-8">
           <ShoppingCart className="h-24 w-24 text-gray-300 mb-8" />
           <p className="text-3xl font-black text-gray-600 mb-8">{t('cart', 'empty')}</p>
           <button onClick={() => navigate('/')} className="text-[#FDB623] font-black text-2xl hover:underline">{t('cart', 'startShopping')}</button>
-        </div>
+        </main>
       </div>
     );
   }
@@ -187,7 +187,7 @@ export const Checkout: React.FC = () => {
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
       <Header />
-      <div className="max-w-6xl mx-auto px-4 py-32">
+      <main className="max-w-6xl mx-auto px-4 py-32">
         <button onClick={() => navigate('/')} className="flex items-center text-gray-500 hover:text-gray-900 mb-12 text-xl font-bold transition-colors">
           <ChevronLeft className="h-7 w-7 mr-2" /> {t('product', 'back')}
         </button>
@@ -383,7 +383,7 @@ export const Checkout: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 };

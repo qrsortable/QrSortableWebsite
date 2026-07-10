@@ -67,10 +67,10 @@ export const CookieBanner: React.FC = () => {
                       <div className="flex items-center space-x-3 mb-2">
                         <h4 className="font-black text-xl capitalize">{t('cookies', `manager.${cat.key}.title`)}</h4>
                         {cat.disabled && (
-                          <span className="px-3 py-1 bg-white/10 text-[10px] font-black uppercase rounded-lg text-gray-400 tracking-widest">Required</span>
+                          <span className="px-3 py-1 bg-white/10 text-[10px] font-black uppercase rounded-lg text-gray-300 tracking-widest">Required</span>
                         )}
                       </div>
-                      <p className="text-gray-400 font-bold leading-relaxed">{t('cookies', `manager.${cat.key}.desc`)}</p>
+                      <p className="text-gray-300 font-bold leading-relaxed">{t('cookies', `manager.${cat.key}.desc`)}</p>
                     </div>
                     <button 
                       onClick={() => !cat.disabled && setLocalSettings(prev => ({ ...prev, [cat.key]: !prev[cat.key as keyof CookieSettings] }))}
@@ -140,7 +140,7 @@ export const CookieBanner: React.FC = () => {
               <h2 className="text-3xl font-black mb-4 tracking-tight">
                 {t('cookies', 'banner.title')}
               </h2>
-              <p className="text-gray-400 font-bold text-xl leading-relaxed max-w-3xl">
+              <p className="text-gray-300 font-bold text-xl leading-relaxed max-w-3xl">
                 {t('cookies', 'banner.desc')}
               </p>
             </div>

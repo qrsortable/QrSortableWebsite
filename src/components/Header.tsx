@@ -104,6 +104,7 @@ export const Header: React.FC = () => {
 
             <button
               onClick={toggleCart}
+              aria-label="Open shopping cart"
               className="p-3 rounded-2xl bg-[#FDB623] text-black hover:bg-yellow-400 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 relative group"
             >
               <ShoppingCart size={22} className="group-hover:scale-110 transition-transform" />
@@ -117,6 +118,7 @@ export const Header: React.FC = () => {
             <button
               className="md:hidden p-3 rounded-2xl bg-white/5 text-white hover:bg-white/10 transition-all border border-white/10"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>

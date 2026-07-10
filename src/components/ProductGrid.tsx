@@ -56,10 +56,11 @@ const ProductCard: React.FC<{ product: any }> = ({ product }) => {
         <div className="pt-6 flex items-center justify-between">
           <div className="flex flex-col">
             <span className="text-4xl font-black text-gray-900">€{product.price}</span>
-            <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">{t('shop', 'incVat')}</span>
+            <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">{t('shop', 'incVat')}</span>
           </div>
           <button 
             onClick={() => addToCart(product)}
+            aria-label={`Add ${localized.name || product.name} to cart`}
             className="p-5 bg-black text-white hover:bg-[#FDB623] hover:text-black rounded-2xl transition-all shadow-lg active:scale-95 group/btn"
           >
             <ShoppingCart size={24} className="group-hover/btn:scale-110 transition-transform" />
@@ -101,7 +102,7 @@ export const ProductGrid: React.FC = () => {
                  <Star size={40} className="fill-current" />
                </div>
                <h3 className="text-3xl font-black text-white mb-6">{t('shop', 'needCustom')}</h3>
-               <p className="text-lg text-gray-400 font-bold mb-10 leading-relaxed">{t('shop', 'customDesc')}</p>
+               <p className="text-lg text-gray-300 font-bold mb-10 leading-relaxed">{t('shop', 'customDesc')}</p>
                <a href="mailto:qrsortable@gmail.com" className="inline-block px-8 py-4 bg-[#FDB623] text-black font-black text-lg rounded-2xl hover:bg-yellow-400 transition-all shadow-lg active:scale-95">
                  {t('shop', 'getAQuote')}
                </a>

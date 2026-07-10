@@ -86,26 +86,29 @@ export const Hero: React.FC = () => {
                         </div>
                      </div>
                      <div className="px-6 mb-3">
-                        <h2 className="text-[#FDB623] font-black text-2xl text-center">{t('hero', 'storageRoom')}</h2>
+                        <div className="text-[#FDB623] font-black text-2xl text-center">{t('hero', 'storageRoom')}</div>
                      </div>
                      <div className="flex-1 overflow-y-auto px-6 pb-28 space-y-4 custom-scrollbar">
-                         {phoneBoxData.map((box, idx) => (
-                             <div key={idx} className={`${box.color} p-4 rounded-3xl shadow-lg relative overflow-hidden group`}>
-                                 <div className="flex items-center">
-                                     <div className="bg-white/20 p-2 rounded-xl mr-4 shadow-md">
-                                        <Package className="h-10 w-10 text-white" />
-                                     </div>
-                                     <div className="flex-1">
-                                         <h4 className="text-white font-black text-lg tracking-wide">{box.id}</h4>
-                                         <div className="flex items-center text-white/90 text-sm mt-1">
-                                            <MapPin className="h-4 w-4 mr-1.5" />
-                                            {box.room}
-                                         </div>
-                                         <p className="text-white/60 text-xs mt-1.5">{box.date}</p>
-                                     </div>
-                                 </div>
-                             </div>
-                         ))}
+                         {phoneBoxData.map((box, idx) => {
+                              const isLightBg = box.color === 'bg-[#FDB623]';
+                              return (
+                                  <div key={idx} className={`${box.color} p-4 rounded-3xl shadow-lg relative overflow-hidden group`}>
+                                      <div className="flex items-center">
+                                          <div className="bg-white/20 p-2 rounded-xl mr-4 shadow-md">
+                                             <Package className={`h-10 w-10 ${isLightBg ? 'text-gray-950' : 'text-white'}`} />
+                                          </div>
+                                          <div className="flex-1">
+                                              <div className={`font-black text-lg tracking-wide ${isLightBg ? 'text-gray-950' : 'text-white'}`}>{box.id}</div>
+                                              <div className={`flex items-center text-sm mt-1 ${isLightBg ? 'text-gray-900 font-bold' : 'text-gray-100 font-medium'}`}>
+                                                 <MapPin className="h-4 w-4 mr-1.5" />
+                                                 {box.room}
+                                              </div>
+                                              <p className={`text-xs mt-1.5 ${isLightBg ? 'text-gray-800 font-bold' : 'text-gray-200 font-medium'}`}>{box.date}</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              );
+                          })}
                      </div>
                      <div className="absolute bottom-0 w-full bg-[#1a1a1a]/95 backdrop-blur-md border-t border-white/5 px-6 py-5">
                          <div className="flex items-center justify-between relative">
@@ -129,7 +132,7 @@ export const Hero: React.FC = () => {
             
             <div className="relative flex-shrink-0 z-10 mt-[-60px] md:mt-0 md:ml-[-80px] lg:ml-[-60px]">
                 <div className="w-56 bg-white rounded-[2rem] p-6 pb-8 shadow-[0_40px_80px_-20px_rgba(0,0,0,0.5)] transform md:rotate-12 transition-transform hover:rotate-0 duration-500 cursor-pointer flex flex-col items-center">
-                    <h3 className="text-4xl font-black text-black mb-4 tracking-widest">LLV626</h3>
+                    <div className="text-4xl font-black text-black mb-4 tracking-widest">LLV626</div>
                     <div className="w-full aspect-square bg-white p-2">
                          <img 
                             src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=LLV626&margin=0" 

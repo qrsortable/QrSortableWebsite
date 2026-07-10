@@ -51,7 +51,7 @@ export const Footer: React.FC = () => {
                 <span className="text-[10px] font-black text-[#FDB623] mt-1 tracking-widest uppercase">Smart labels</span>
               </div>
             </Link>
-            <p className="text-gray-400 font-bold leading-relaxed mb-10 max-w-xs mx-auto md:mx-0">
+            <p className="text-gray-300 font-bold leading-relaxed mb-10 max-w-xs mx-auto md:mx-0">
               {t('footer', 'slogan')}
             </p>
             <div className="flex items-center space-x-4">
@@ -86,7 +86,7 @@ export const Footer: React.FC = () => {
                   <li key={link.name}>
                     <Link 
                       to={localizePath(link.href)} 
-                      className="text-gray-400 font-bold hover:text-[#FDB623] transition-all flex items-center group whitespace-nowrap"
+                      className="text-gray-300 font-bold hover:text-[#FDB623] transition-all flex items-center group whitespace-nowrap"
                     >
                       <ArrowUpRight size={14} className="mr-2 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-[#FDB623]" />
                       {link.name}
@@ -102,7 +102,7 @@ export const Footer: React.FC = () => {
               {t('footer', 'payments')}
               <span className="absolute -bottom-3 left-1/2 md:left-0 -translate-x-1/2 md:translate-x-0 w-8 h-1 bg-[#FDB623] rounded-full" />
             </h3>
-            <p className="text-gray-400 font-bold mb-8 text-center md:text-left">
+            <p className="text-gray-300 font-bold mb-8 text-center md:text-left">
               Contact us anytime at: 
               <a href="mailto:qrsortable@gmail.com" className="block text-white font-black hover:text-[#FDB623] transition-colors mt-2 text-lg">
                 qrsortable@gmail.com
@@ -110,7 +110,7 @@ export const Footer: React.FC = () => {
             </p>
             <div className="flex items-center flex-wrap justify-center md:justify-start gap-4">
               {['Visa', 'Mastercard', 'Google Pay', 'Apple Pay'].map((method) => (
-                <div key={method} className="px-4 py-2 bg-white/5 rounded-xl border border-white/10 font-black text-[10px] text-gray-500 uppercase tracking-widest">
+                <div key={method} className="px-4 py-2 bg-white/5 rounded-xl border border-white/10 font-black text-[10px] text-gray-300 uppercase tracking-widest">
                   {method}
                 </div>
               ))}
@@ -118,7 +118,7 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-white/5 font-bold text-sm text-gray-500">
+        <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-white/5 font-bold text-sm text-gray-400">
           <p>© 2026 QrSortable. {t('footer', 'rights')}</p>
           <div className="mt-6 md:mt-0 flex items-center space-x-8">
             <Link to={localizePath('/about')} className="hover:text-white transition-colors uppercase tracking-widest text-[11px] font-black">{t('footer', 'about')}</Link>

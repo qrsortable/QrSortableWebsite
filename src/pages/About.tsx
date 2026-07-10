@@ -22,6 +22,7 @@ export const About: React.FC = () => {
         <meta name="robots" content="index, follow" />
       </Helmet>
       <Header />
+      <main className="flex-grow">
       <div className="bg-abstract-dark text-white py-32 relative overflow-hidden">
         <BackgroundDots scale={2} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
@@ -82,6 +83,7 @@ export const About: React.FC = () => {
           </div>
         </div>
       </div>
+      </main>
       <Footer />
     </div>
   );

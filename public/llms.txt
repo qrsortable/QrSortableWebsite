@@ -1,0 +1,13 @@
+# QrSortable - Smart QR Code Storage & Organizing Labels
+
+Smart physical organizer QR code labels designed to digitize and manage your moving boxes, attic storage, or office files. Scan with any standard smartphone or use the companion QrSortable app to instantly view, search, and manage contents with high-resolution photos and detailed lists.
+
+## Navigation & Key Pages
+
+- [Home](https://www.qrsortable.com/) - Overview of product capabilities, features, and dynamic QR visualizers.
+- [Shop Section](https://www.qrsortable.com/#products) - Purchase physical premium organizer packs.
+- [Get The App](https://www.qrsortable.com/get-the-app) - Download the free mobile companion app for iOS and Android.
+- [Articles](https://www.qrsortable.com/articles) - Practical organization tips, packing guides, and moving resources.
+- [About Us](https://www.qrsortable.com/about) - Discover our story and values.
+- [Privacy Policy](https://www.qrsortable.com/privacy) - Information on user data protection.
+- [Terms & Conditions](https://www.qrsortable.com/terms) - Standard terms of service.

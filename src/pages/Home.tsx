@@ -96,10 +96,12 @@ export const Home: React.FC = () => {
         </script>
       </Helmet>
       <Header />
+      <main id="main-content">
       <Hero />
       <Features />
       <HowItWorks />
       <ProductGrid />
+      </main>
       <Footer />
     </div>
   );
