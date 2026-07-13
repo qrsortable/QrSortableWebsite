@@ -8,11 +8,11 @@ export const Hero: React.FC = () => {
   const { t } = useTranslation();
 
   const phoneBoxData = [
-    { id: '2DGPL', room: 'Blue color closet', date: '16 Feb 2026, 9:30 pm', color: 'bg-red-600' },
-    { id: '2DMPX', room: 'Kitchen closet', date: '18 Dec 2025, 10:30 pm', color: 'bg-blue-600' },
+    { id: '2DGPL', room: 'Blue color closet', date: '16 Feb 2026, 9:30 pm', color: 'bg-red-700' },
+    { id: '2DMPX', room: 'Kitchen closet', date: '18 Dec 2025, 10:30 pm', color: 'bg-blue-700' },
     { id: 'LLV626', room: 'Book closet', date: '23 Jan 2024, 10:30 pm', color: 'bg-[#FDB623]' },
-    { id: 'LLP628', room: 'Spare parts closet', date: '28 Dec 2025, 11:35 am', color: 'bg-green-500' },
-    { id: 'LEV636', room: 'Sport closet', date: '23 Nov 2025, 10:30 pm', color: 'bg-pink-500' },
+    { id: 'LLP628', room: 'Spare parts closet', date: '28 Dec 2025, 11:35 am', color: 'bg-emerald-700' },
+    { id: 'LEV636', room: 'Sport closet', date: '23 Nov 2025, 10:30 pm', color: 'bg-pink-700' },
   ];
 
   return (
@@ -99,11 +99,11 @@ export const Hero: React.FC = () => {
                                           </div>
                                           <div className="flex-1">
                                               <div className={`font-black text-lg tracking-wide ${isLightBg ? 'text-gray-950' : 'text-white'}`}>{box.id}</div>
-                                              <div className={`flex items-center text-sm mt-1 ${isLightBg ? 'text-gray-900 font-bold' : 'text-gray-100 font-medium'}`}>
+                                              <div className={`flex items-center text-sm mt-1 ${isLightBg ? 'text-gray-900 font-bold' : 'text-white/95 font-semibold'}`}>
                                                  <MapPin className="h-4 w-4 mr-1.5" />
                                                  {box.room}
                                               </div>
-                                              <p className={`text-xs mt-1.5 ${isLightBg ? 'text-gray-800 font-bold' : 'text-gray-200 font-medium'}`}>{box.date}</p>
+                                              <p className={`text-xs mt-1.5 ${isLightBg ? 'text-gray-800 font-bold' : 'text-white/85 font-medium'}`}>{box.date}</p>
                                           </div>
                                       </div>
                                   </div>

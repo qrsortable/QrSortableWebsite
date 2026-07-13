@@ -39,7 +39,7 @@ export const CookieBanner: React.FC = () => {
   // Manager View (Modal)
   if (showManager) {
     return (
-      <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-xl animate-fadeIn">
+      <div role="dialog" aria-modal="true" aria-labelledby="cookie-settings-title" className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-xl animate-fadeIn">
         <div className="w-full max-w-2xl animate-in zoom-in-95 duration-300">
           <div className="bg-[#111] text-white p-8 sm:p-12 rounded-[3rem] shadow-[0_0_100px_rgba(0,0,0,0.5)] border border-white/10 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#FDB623]/10 blur-[80px] -mr-32 -mt-32 rounded-full" />
@@ -50,7 +50,7 @@ export const CookieBanner: React.FC = () => {
                   <div className="p-3 bg-[#FDB623] rounded-2xl shadow-lg">
                     <Settings className="text-black" size={24} />
                   </div>
-                  <h2 className="text-3xl font-black">{t('cookies', 'banner.customize')}</h2>
+                  <h2 id="cookie-settings-title" className="text-3xl font-black">{t('cookies', 'banner.customize')}</h2>
                 </div>
                 <button 
                   onClick={() => setShowManager(false)}
@@ -110,7 +110,7 @@ export const CookieBanner: React.FC = () => {
 
   // Initial Banner View (Bottom Floating)
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-[100] p-4 sm:p-12 flex justify-center pointer-events-none">
+    <section aria-label="Cookie consent banner" className="fixed bottom-0 left-0 right-0 z-[100] p-4 sm:p-12 flex justify-center pointer-events-none">
       <div className="w-full max-w-4xl bg-[#0a0a0c] text-white p-8 sm:p-12 rounded-[3.5rem] shadow-[0_40px_100px_rgba(0,0,0,0.8)] border border-white/5 relative overflow-hidden pointer-events-auto animate-slideUp">
         {/* Subtle Background dots/stars effect */}
         <div className="absolute inset-0 opacity-20 pointer-events-none">
@@ -164,13 +164,13 @@ export const CookieBanner: React.FC = () => {
             
             <button 
               onClick={handleAcceptEssential}
-              className="text-gray-500 hover:text-white font-black text-lg transition-colors px-4 py-2"
+              className="text-gray-300 hover:text-white font-black text-lg transition-colors px-4 py-2"
             >
               {t('cookies', 'banner.essentialOnly')}
             </button>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

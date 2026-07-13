@@ -44,7 +44,7 @@ const ProductCard: React.FC<{ product: any }> = ({ product }) => {
           </h3>
         </Link>
         
-        <p className="text-gray-500 font-bold leading-relaxed line-clamp-3">
+        <p className="text-gray-700 font-medium leading-relaxed line-clamp-3">
           {localized.description || product.description}
         </p>
         
@@ -56,7 +56,7 @@ const ProductCard: React.FC<{ product: any }> = ({ product }) => {
         <div className="pt-6 flex items-center justify-between">
           <div className="flex flex-col">
             <span className="text-4xl font-black text-gray-900">€{product.price}</span>
-            <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">{t('shop', 'incVat')}</span>
+            <span className="text-xs font-black text-gray-700 uppercase tracking-widest">{t('shop', 'incVat')}</span>
           </div>
           <button 
             onClick={() => addToCart(product)}

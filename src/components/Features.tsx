@@ -53,7 +53,7 @@ export const Features: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="text-5xl font-black text-gray-900 mb-6">{t('features', 'title')}</h2>
-          <p className="text-2xl text-gray-600 max-w-3xl mx-auto">{t('features', 'subtitle')}</p>
+          <p className="text-2xl text-gray-700 max-w-3xl mx-auto">{t('features', 'subtitle')}</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {features.map((f, i) => (
@@ -62,7 +62,7 @@ export const Features: React.FC = () => {
                 {f.icon}
               </div>
               <h3 className="text-3xl font-black text-gray-900 mb-5">{f.title}</h3>
-              <p className="text-xl text-gray-600 leading-relaxed font-medium">
+              <p className="text-xl text-gray-700 leading-relaxed font-bold">
                 {f.desc}
               </p>
             </div>

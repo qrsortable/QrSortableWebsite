@@ -8,7 +8,7 @@ export const Success: React.FC = () => {
   const navigate = useNavigate();
   const { t, language } = useTranslation();
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-8 text-center">
+    <main className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-8 text-center">
       <Helmet htmlAttributes={{ lang: language.toLowerCase() }}>
         <title>Order Completed - QrSortable</title>
         <meta name="robots" content="noindex, nofollow" />
@@ -17,6 +17,6 @@ export const Success: React.FC = () => {
       <h1 className="text-6xl font-black text-gray-900 mb-6">{t('success', 'title')}</h1>
       <p className="text-2xl text-gray-600 mb-12 font-bold">{t('success', 'message')}</p>
       <button onClick={() => navigate('/')} className="text-[#FDB623] font-black text-2xl hover:underline transition-all">{t('success', 'backHome')}</button>
-    </div>
+    </main>
   );
 };

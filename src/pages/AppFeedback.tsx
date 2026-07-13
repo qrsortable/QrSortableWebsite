@@ -146,7 +146,7 @@ export const AppFeedback: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-[#fff8e1] py-6 sm:py-12 px-4 sm:px-6 lg:px-8 font-sans">
+    <main className="min-h-screen bg-[#fff8e1] py-6 sm:py-12 px-4 sm:px-6 lg:px-8 font-sans">
       <Helmet>
         <title>App Feedback - QrSortable</title>
         <meta name="robots" content="noindex, nofollow" />
@@ -359,7 +359,7 @@ export const AppFeedback: React.FC = () => {
           </div>
         </form>
       </div>
-    </div>
+    </main>
   );
 };
 

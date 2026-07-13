@@ -29,7 +29,7 @@ export const MollieReturn: React.FC = () => {
 
   if (!paymentId) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4 font-sans">
+      <main className="min-h-screen flex items-center justify-center bg-gray-50 p-4 font-sans">
         <Helmet>
           <title>Payment Error - QrSortable</title>
           <meta name="robots" content="noindex, nofollow" />
@@ -49,12 +49,12 @@ export const MollieReturn: React.FC = () => {
             Go to Homepage
           </a>
         </div>
-      </div>
+      </main>
     );
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#FDB623] p-4 font-sans">
+    <main className="min-h-screen flex items-center justify-center bg-[#FDB623] p-4 font-sans">
       <Helmet>
         <title>Returning to App - QrSortable</title>
         <meta name="robots" content="noindex, nofollow" />
@@ -75,6 +75,6 @@ export const MollieReturn: React.FC = () => {
           </a>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
