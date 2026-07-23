@@ -23,6 +23,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.qrsortable.com/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.qrsortable.com/contact" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.qrsortable.com/contact?lang=de" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.qrsortable.com/contact?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.qrsortable.com/contact?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.qrsortable.com/contact" />
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.qrsortable.com/get-the-app</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.qrsortable.com/get-the-app" />
     <xhtml:link rel="alternate" hreflang="de" href="https://www.qrsortable.com/get-the-app?lang=de" />
@@ -140,6 +151,94 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.qrsortable.com/articles/the-ultimate-guide-to-qr-code-storage-labels?lang=es" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.qrsortable.com/articles/the-ultimate-guide-to-qr-code-storage-labels" />
     <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.qrsortable.com/features/qr-code-inventory-preview</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.qrsortable.com/features/qr-code-inventory-preview" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.qrsortable.com/features/qr-code-inventory-preview?lang=de" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.qrsortable.com/features/qr-code-inventory-preview?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.qrsortable.com/features/qr-code-inventory-preview?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.qrsortable.com/features/qr-code-inventory-preview" />
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.qrsortable.com/features/moving-box-organizer</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.qrsortable.com/features/moving-box-organizer" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.qrsortable.com/features/moving-box-organizer?lang=de" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.qrsortable.com/features/moving-box-organizer?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.qrsortable.com/features/moving-box-organizer?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.qrsortable.com/features/moving-box-organizer" />
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.qrsortable.com/features/shared-inventory-management</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.qrsortable.com/features/shared-inventory-management" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.qrsortable.com/features/shared-inventory-management?lang=de" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.qrsortable.com/features/shared-inventory-management?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.qrsortable.com/features/shared-inventory-management?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.qrsortable.com/features/shared-inventory-management" />
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.qrsortable.com/features/qr-code-generator-storage</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.qrsortable.com/features/qr-code-generator-storage" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.qrsortable.com/features/qr-code-generator-storage?lang=de" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.qrsortable.com/features/qr-code-generator-storage?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.qrsortable.com/features/qr-code-generator-storage?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.qrsortable.com/features/qr-code-generator-storage" />
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.qrsortable.com/features/multilingual-inventory-app</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.qrsortable.com/features/multilingual-inventory-app" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.qrsortable.com/features/multilingual-inventory-app?lang=de" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.qrsortable.com/features/multilingual-inventory-app?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.qrsortable.com/features/multilingual-inventory-app?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.qrsortable.com/features/multilingual-inventory-app" />
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.qrsortable.com/features/secure-inventory-tracking</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.qrsortable.com/features/secure-inventory-tracking" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.qrsortable.com/features/secure-inventory-tracking?lang=de" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.qrsortable.com/features/secure-inventory-tracking?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.qrsortable.com/features/secure-inventory-tracking?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.qrsortable.com/features/secure-inventory-tracking" />
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.qrsortable.com/features/no-account-needed</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.qrsortable.com/features/no-account-needed" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.qrsortable.com/features/no-account-needed?lang=de" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.qrsortable.com/features/no-account-needed?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.qrsortable.com/features/no-account-needed?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.qrsortable.com/features/no-account-needed" />
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.qrsortable.com/features/support-team</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.qrsortable.com/features/support-team" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.qrsortable.com/features/support-team?lang=de" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.qrsortable.com/features/support-team?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.qrsortable.com/features/support-team?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.qrsortable.com/features/support-team" />
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

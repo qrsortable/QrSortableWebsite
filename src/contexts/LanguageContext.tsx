@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 import { TRANSLATIONS } from '../constants/translations';
 
 interface LanguageContextType {
@@ -17,6 +17,15 @@ const LanguageContext = createContext<LanguageContextType>({
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [language, setLanguage] = useState(() => {
+    // 0. Check pathname prefix like /de/, /fr/, /es/
+    try {
+      const pathname = window.location.pathname;
+      const match = pathname.match(/^\/(de|fr|es)\b/i);
+      if (match) {
+        return match[1].toUpperCase();
+      }
+    } catch (e) {}
+
     // 1. Check query parameter `lang` or `hl`
     try {
       const params = new URLSearchParams(window.location.search);
@@ -64,6 +73,28 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       window.history.replaceState(null, '', url.pathname + url.search + url.hash);
     } catch (e) {}
   };
+
+  useEffect(() => {
+    try {
+      const pathname = window.location.pathname;
+      const match = pathname.match(/^\/(de|fr|es)(\/.*)?$/i);
+      if (match) {
+        const detectedLang = match[1].toLowerCase();
+        const remainingPath = match[2] || '/';
+        
+        // Construct new URL with ?lang=detectedLang
+        const url = new URL(window.location.href);
+        url.pathname = remainingPath;
+        url.searchParams.set('lang', detectedLang);
+        
+        // Update language state
+        handleSetLanguage(detectedLang.toUpperCase());
+        
+        // Redirect seamlessly
+        window.location.replace(url.pathname + url.search + url.hash);
+      }
+    } catch (e) {}
+  }, []);
 
   const t = (section: string, key?: string) => {
     if (!TRANSLATIONS[language] || !TRANSLATIONS[language][section]) {

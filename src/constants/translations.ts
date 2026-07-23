@@ -85,14 +85,14 @@ export const TRANSLATIONS: any = {
       title: 'Why QrSortable?',
       subtitle: 'Stop digging through cardboard mountains. Get organized in seconds.',
       items: {
-        preview: { title: "One-Tap Preview", desc: "Scan the label and see the contents list and photos immediately." },
-        moving: { title: "Moving Mode", desc: "Group boxes by room. Print a master packing list." },
-        sharing: { title: "Multi-User Sharing", desc: "Share access with family or movers." },
-        generate: { title: "Digitally Generate Code", desc: "Generate and print custom QR codes instantly." },
-        lang: { title: "Multi-Language Support", desc: "Accessible and easy for users worldwide." },
-        security: { title: "High Data Security", desc: "Your inventory details remain safe and private." },
-        noAccount: { title: "No Account Needed", desc: "Download and start organizing immediately." },
-        support: { title: "Best Customer Support", desc: "We reply within hours to solve your challenges." }
+        preview: { title: "One-Tap Preview", desc: "Scan the label and see the contents list and photos immediately.", linkText: "QR Code Inventory Preview" },
+        moving: { title: "Moving Mode", desc: "Group boxes by room. Print a master packing list.", linkText: "Moving Box Organizer" },
+        sharing: { title: "Multi-User Sharing", desc: "Share access with family or movers.", linkText: "Shared Inventory Management" },
+        generate: { title: "Digitally Generate Code", desc: "Generate and print custom QR codes instantly.", linkText: "QR Code Generator for Storage" },
+        lang: { title: "Multi-Language Support", desc: "Accessible and easy for users worldwide.", linkText: "Multilingual Inventory App" },
+        security: { title: "High Data Security", desc: "Your inventory details remain safe and private.", linkText: "Secure Inventory Tracking" },
+        noAccount: { title: "No Account Needed", desc: "Download and start organizing immediately.", linkText: "No Account Needed" },
+        support: { title: "Best Customer Support", desc: "We reply within hours to solve your challenges.", linkText: "Support Team" }
       }
     },
     howItWorks: {
@@ -212,11 +212,13 @@ export const TRANSLATIONS: any = {
       slogan: 'Simplifying moves and home organization one scan at a time.',
       company: 'Company',
       about: 'About Us',
+      contact: 'Contact Us',
       articles: 'Articles',
       privacy: 'Privacy Policy',
       terms: 'Terms of Service',
       cookies: 'Cookie Settings',
       payments: 'Payments',
+      contactUs: 'Contact us anytime at:',
       rights: 'All rights reserved.'
     },
     about: {
@@ -371,14 +373,14 @@ export const TRANSLATIONS: any = {
       title: 'Warum QrSortable?',
       subtitle: 'Hören Sie auf, in Kartonbergen zu wühlen. In Sekunden organisiert.',
       items: {
-        preview: { title: "Ein-Klick-Vorschau", desc: "Scannen Sie das Etikett und sehen Sie sofort die Inhaltsliste und Fotos." },
-        moving: { title: "Umzugsmodus", desc: "Gruppieren Sie Kisten nach Raum. Drucken Sie eine Master-Packliste." },
-        sharing: { title: "Multi-User-Freigabe", desc: "Teilen Sie den Zugriff mit Familie oder Umzugshelfern." },
-        generate: { title: "Codes digital generieren", desc: "Erstellen und drucken Sie eigene QR-Codes sofort." },
-        lang: { title: "Mehrsprachiger Support", desc: "Zugänglich und einfach für Benutzer weltweit." },
-        security: { title: "Hohe Datensicherheit", desc: "Ihre Bestandsdaten bleiben absolut sicher und privat." },
-        noAccount: { title: "Kein Konto erforderlich", desc: "Herunterladen und sofort mit dem Organisieren beginnen." },
-        support: { title: "Bester Kundensupport", desc: "Wir antworten innerhalb von Stunden, um Ihre Fragen zu lösen." }
+        preview: { title: "Ein-Klick-Vorschau", desc: "Scannen Sie das Etikett und sehen Sie sofort die Inhaltsliste und Fotos.", linkText: "QR-Code Inventar-Vorschau" },
+        moving: { title: "Umzugsmodus", desc: "Gruppieren Sie Kisten nach Raum. Drucken Sie eine Master-Packliste.", linkText: "Umzugskisten-Organizer" },
+        sharing: { title: "Multi-User-Freigabe", desc: "Teilen Sie den Zugriff mit Familie oder Umzugshelfern.", linkText: "Gemeinsame Bestandsverwaltung" },
+        generate: { title: "Codes digital generieren", desc: "Erstellen und drucken Sie eigene QR-Codes sofort.", linkText: "QR-Code-Generator für Lagerung" },
+        lang: { title: "Mehrsprachiger Support", desc: "Zugänglich und einfach für Benutzer weltweit.", linkText: "Mehrsprachige Inventar-App" },
+        security: { title: "Hohe Datensicherheit", desc: "Ihre Bestandsdaten bleiben absolut sicher und privat.", linkText: "Sichere Bestandsverfolgung" },
+        noAccount: { title: "Kein Konto erforderlich", desc: "Herunterladen und sofort mit dem Organisieren beginnen.", linkText: "Kein Konto erforderlich" },
+        support: { title: "Bester Kundensupport", desc: "Wir antworten innerhalb von Stunden, um Ihre Fragen zu lösen.", linkText: "Support-Team" }
       }
     },
     howItWorks: {
@@ -498,11 +500,13 @@ export const TRANSLATIONS: any = {
       slogan: 'Umzüge und Heimorganisation vereinfachen – ein Scan nach dem anderen.',
       company: 'Firma',
       about: 'Über Uns',
+      contact: 'Kontakt',
       articles: 'Artikel',
       privacy: 'Datenschutz',
       terms: 'AGB',
       cookies: 'Cookie-Einstellungen',
       payments: 'Zahlungen',
+      contactUs: 'Kontaktieren Sie uns jederzeit unter:',
       rights: 'Alle Rechte vorbehalten.'
     },
     about: {
@@ -657,14 +661,14 @@ export const TRANSLATIONS: any = {
       title: 'Pourquoi QrSortable ?',
       subtitle: 'Arrêtez de fouiller dans les cartons. Organisez-vous en quelques secondes.',
       items: {
-        preview: { title: "Aperçu en un clic", desc: "Scannez l'étiquette et affichez instantanément la liste du contenu et les photos." },
-        moving: { title: "Mode Déménagement", desc: "Regroupez les cartons par pièce. Générez une liste de colisage complète." },
-        sharing: { title: "Partage multi-utilisateurs", desc: "Partagez l'accès en lecture ou écriture avec votre famille ou vos déménageurs." },
-        generate: { title: "Générer des codes numériques", desc: "Créez et imprimez vos propres codes QR instantanément." },
-        lang: { title: "Support multilingue", desc: "Une application accessible et intuitive pour les utilisateurs du monde entier." },
-        security: { title: "Haute sécurité des données", desc: "Vos données d'inventaire restent totalement sécurisées et privées." },
-        noAccount: { title: "Aucun compte requis", desc: "Téléchargez l'application et commencez à organiser sans perdre de temps." },
-        support: { title: "Excellent support client", desc: "Nous répondons en quelques heures pour vous aider à résoudre vos questions." }
+        preview: { title: "Aperçu en un clic", desc: "Scannez l'étiquette et affichez instantanément la liste du contenu et les photos.", linkText: "Aperçu d'inventaire par code QR" },
+        moving: { title: "Mode Déménagement", desc: "Regroupez les cartons par pièce. Générez une liste de colisage complète.", linkText: "Organisateur de cartons de déménagement" },
+        sharing: { title: "Partage multi-utilisateurs", desc: "Partagez l'accès en lecture ou écriture avec votre famille ou vos déménageurs.", linkText: "Gestion d'inventaire partagé" },
+        generate: { title: "Générer des codes numériques", desc: "Créez et imprimez vos propres codes QR instantanément.", linkText: "Générateur de code QR pour stockage" },
+        lang: { title: "Support multilingue", desc: "Une application accessible et intuitive pour les utilisateurs du monde entier.", linkText: "Application d'inventaire multilingue" },
+        security: { title: "Haute sécurité des données", desc: "Vos données d'inventaire restent totalement sécurisées et privées.", linkText: "Suivi d'inventaire sécurisé" },
+        noAccount: { title: "Aucun compte requis", desc: "Téléchargez l'application et commencez à organiser sans perdre de temps.", linkText: "Sans création de compte" },
+        support: { title: "Excellent support client", desc: "Nous répondons en quelques heures pour vous aider à résoudre vos questions.", linkText: "Équipe d'assistance" }
       }
     },
     howItWorks: {
@@ -784,11 +788,13 @@ export const TRANSLATIONS: any = {
       slogan: 'Simplifier les déménagements et l\'organisation de la maison – un scan à la fois.',
       company: 'Société',
       about: 'À propos',
+      contact: 'Contact',
       articles: 'Articles',
       privacy: 'Confidentialité',
       terms: 'Conditions d\'utilisation',
       cookies: 'Préférences cookies',
       payments: 'Paiements',
+      contactUs: 'Contactez-nous à tout moment :',
       rights: 'Tous droits réservés.'
     },
     about: {
@@ -943,14 +949,14 @@ export const TRANSLATIONS: any = {
       title: '¿Por qué QrSortable?',
       subtitle: 'Deja de buscar entre montañas de cartón. Organízate en segundos.',
       items: {
-        preview: { title: "Vista previa con un clic", desc: "Escanea la etiqueta y ve el contenido y las fotos al instante." },
-        moving: { title: "Modo Mudanza", desc: "Agrupa cajas por habitación. Genera una lista maestra de embalaje." },
-        sharing: { title: "Acceso multiusuario", desc: "Comparte el acceso de lectura o edición con familia o empresas de mudanzas." },
-        generate: { title: "Generar códigos digitales", desc: "Crea e imprime códigos QR personalizados al instante." },
-        lang: { title: "Soporte multilingüe", desc: "Una aplicación accesible y fácil para usuarios de todo el mundo." },
-        security: { title: "Alta seguridad de datos", desc: "Tus datos de inventario permanecen totalmente seguros y privados." },
-        noAccount: { title: "Sin necesidad de cuenta", desc: "Descarga la aplicación y comienza a organizar inmediatamente sin perder tiempo." },
-        support: { title: "Excelente soporte al cliente", desc: "Respondemos en pocas horas para resolver cualquier duda." }
+        preview: { title: "Vista previa con un clic", desc: "Escanea la etiqueta y ve el contenido y las fotos al instante.", linkText: "Vista previa de inventario con código QR" },
+        moving: { title: "Modo Mudanza", desc: "Agrupa cajas por habitación. Genera una lista maestra de embalaje.", linkText: "Organizador de cajas de mudanza" },
+        sharing: { title: "Acceso multiusuario", desc: "Comparte el acceso de lectura o edición con familia o empresas de mudanzas.", linkText: "Gestión de inventario compartido" },
+        generate: { title: "Generar códigos digitales", desc: "Crea e imprime códigos QR personalizados al instante.", linkText: "Generador de códigos QR para almacenamiento" },
+        lang: { title: "Soporte multilingüe", desc: "Una aplicación accesible y fácil para usuarios de todo el mundo.", linkText: "Aplicación de inventario multilingüe" },
+        security: { title: "Alta seguridad de datos", desc: "Tus datos de inventario permanecen totalmente seguros y privados.", linkText: "Seguimiento de inventario seguro" },
+        noAccount: { title: "Sin necesidad de cuenta", desc: "Descarga la aplicación y comienza a organizar inmediatamente sin perder tiempo.", linkText: "Sin necesidad de cuenta" },
+        support: { title: "Excelente soporte al cliente", desc: "Respondemos en pocas horas para resolver cualquier duda.", linkText: "Equipo de soporte" }
       }
     },
     howItWorks: {
@@ -1070,11 +1076,13 @@ export const TRANSLATIONS: any = {
       slogan: 'Simplificando las mudanzas y la organización del hogar, un escaneo a la vez.',
       company: 'Empresa',
       about: 'Sobre nosotros',
+      contact: 'Contacto',
       articles: 'Artículos',
       privacy: 'Privacidad',
       terms: 'Condiciones de uso',
       cookies: 'Preferencias de cookies',
       payments: 'Pagos',
+      contactUs: 'Contáctenos en cualquier momento:',
       rights: 'Todos los derechos reservados.'
     },
     about: {

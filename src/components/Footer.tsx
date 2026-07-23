@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Instagram, Facebook, Linkedin, ArrowUpRight } from 'lucide-react';
+import { Mail, Instagram, Facebook, Linkedin, ArrowUpRight, MapPin } from 'lucide-react';
 import { useTranslation } from '../contexts/LanguageContext';
 import { useCookies } from '../contexts/CookieContext';
 import { BrandLogo } from './BrandLogo';
@@ -19,7 +19,7 @@ const XIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
 );
 
 export const Footer: React.FC = () => {
-  const { t, localizePath } = useTranslation();
+  const { language, t, localizePath } = useTranslation();
   const { setShowManager } = useCookies();
   
   const sections = [
@@ -28,6 +28,7 @@ export const Footer: React.FC = () => {
       links: [
         { name: t('footer', 'about'), href: '/about' },
         { name: t('footer', 'articles'), href: '/articles' },
+        { name: t('footer', 'contact'), href: '/contact' },
         { name: t('footer', 'privacy'), href: '/privacy' },
         { name: t('footer', 'terms'), href: '/terms' },
       ]
@@ -102,15 +103,53 @@ export const Footer: React.FC = () => {
               {t('footer', 'payments')}
               <span className="absolute -bottom-3 left-1/2 md:left-0 -translate-x-1/2 md:translate-x-0 w-8 h-1 bg-[#FDB623] rounded-full" />
             </h3>
-            <p className="text-gray-300 font-bold mb-8 text-center md:text-left">
-              Contact us anytime at: 
-              <a href="mailto:qrsortable@gmail.com" className="block text-white font-black hover:text-[#FDB623] transition-colors mt-2 text-lg">
+            
+            <div className="text-gray-300 font-bold mb-6 text-center md:text-left">
+              <span className="block text-[11px] uppercase text-gray-400 tracking-wider font-black mb-1">
+                {t('footer', 'contactUs') || 'Contact us anytime at:'}
+              </span>
+              <a href="mailto:qrsortable@gmail.com" className="block text-white font-black hover:text-[#FDB623] transition-colors mt-1 text-lg">
                 qrsortable@gmail.com
               </a>
-            </p>
-            <div className="flex items-center flex-wrap justify-center md:justify-start gap-4">
+              
+              <span className="block text-[11px] uppercase text-gray-400 tracking-wider font-black mt-4 mb-1">
+                {language === 'DE' ? 'Firmensitz' : 'Office Location'}
+              </span>
+              <a 
+                href="https://maps.google.com/?q=Fahlenbacher+Str.,+85296+Rohrbach" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white hover:text-[#FDB623] transition-colors flex items-center justify-center md:justify-start gap-1.5 font-bold mt-1 text-sm group"
+              >
+                <MapPin size={15} className="text-[#FDB623] shrink-0" />
+                <span className="underline decoration-white/20 group-hover:decoration-current">Fahlenbacher Str., 85296 Rohrbach</span>
+              </a>
+            </div>
+
+            {/* Compact Map Embed */}
+            <div className="w-full max-w-[280px] h-[140px] rounded-xl overflow-hidden border border-white/10 mb-6 shadow-md shadow-black/30 relative group">
+              <iframe 
+                src="https://maps.google.com/maps?q=Fahlenbacher%20Str.,%2085296%20Rohrbach&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=&amp;output=embed" 
+                width="100%" 
+                height="100%" 
+                className="border-0 opacity-80 group-hover:opacity-100 transition-opacity" 
+                allowFullScreen={false} 
+                loading="lazy" 
+                referrerPolicy="no-referrer"
+                title="QrSortable Location Map"
+              />
+              <a 
+                href="https://maps.google.com/?q=Fahlenbacher+Str.,+85296+Rohrbach" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="absolute inset-0 bg-transparent cursor-pointer"
+                aria-label="Open in Google Maps"
+              />
+            </div>
+
+            <div className="flex items-center flex-wrap justify-center md:justify-start gap-2.5">
               {['Visa', 'Mastercard', 'Google Pay', 'Apple Pay'].map((method) => (
-                <div key={method} className="px-4 py-2 bg-white/5 rounded-xl border border-white/10 font-black text-[10px] text-gray-300 uppercase tracking-widest">
+                <div key={method} className="px-3 py-1.5 bg-white/5 rounded-xl border border-white/10 font-black text-[9px] text-gray-300 uppercase tracking-widest">
                   {method}
                 </div>
               ))}

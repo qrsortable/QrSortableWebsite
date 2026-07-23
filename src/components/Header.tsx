@@ -24,14 +24,11 @@ export const Header: React.FC = () => {
 
   const handleNavClick = (href: string) => {
     if (location.pathname !== '/') {
-      navigate(localizePath('/'));
-      setTimeout(() => {
-        const el = document.querySelector(href);
-        el?.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
+      navigate(localizePath('/' + href));
     } else {
       const el = document.querySelector(href);
       el?.scrollIntoView({ behavior: 'smooth' });
+      navigate(href, { replace: true });
     }
     setIsMobileMenuOpen(false);
   };
