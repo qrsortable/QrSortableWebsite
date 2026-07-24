@@ -34,6 +34,33 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    id: '5',
+    slug: 'smart-qr-code-labels-for-storage-bins',
+    title: {
+      EN: 'Smart QR Code Labels for Storage Bins: Scan, Search, and Organize Every Box',
+      DE: 'Intelligente QR-Code-Etiketten für Lagerboxen: Scannen, Suchen und jede Kiste organisieren',
+      FR: 'Étiquettes QR code intelligentes pour bacs de rangement : Scannez, cherchez et organisez chaque boîte',
+      ES: 'Etiquetas inteligentes QR para cajas de almacenamiento: Escanea, busca y organiza cada caja'
+    },
+    excerpt: {
+      EN: 'Smart QR code labels for storage bins help you scan boxes, view contents, add photos, and find stored items instantly. Learn how QR code storage labels work and how to choose the best system.',
+      DE: 'Intelligente QR-Code-Etiketten für Lagerboxen helfen Ihnen, Kisten zu scannen, Inhalte anzuzeigen, Fotos hinzuzufügen und gelagerte Gegenstände sofort zu finden.',
+      FR: 'Les étiquettes QR intelligentes pour bacs de rangement vous aident à scanner vos boîtes, consulter leur contenu, ajouter des photos et retrouver vos affaires instantanément.',
+      ES: 'Las etiquetas inteligentes QR para cajas de almacenamiento te ayudan a escanear cajas, ver contenido, añadir fotos y encontrar objetos guardados al instante.'
+    },
+    content: {
+      EN: 'Smart QR code labels for storage bins help you scan boxes, view contents, add photos, and find stored items instantly. Learn how QR code storage labels work and how to choose the best system.',
+      DE: 'Intelligente QR-Code-Etiketten für Lagerboxen helfen Ihnen, Kisten zu scannen, Inhalte anzuzeigen, Fotos hinzuzufügen und gelagerte Gegenstände sofort zu finden.',
+      FR: 'Les étiquettes QR intelligentes pour bacs de rangement vous aident à scanner vos boîtes, consulter leur contenu, ajouter des photos et retrouver vos affaires instantanément.',
+      ES: 'Las etiquetas inteligentes QR para cajas de almacenamiento te ayudan a escanear cajas, ver contenido, añadir fotos y encontrar objetos guardados al instante.'
+    },
+    date: '2026-07-23',
+    author: 'QrSortable Storage Team',
+    readTime: '8 min',
+    category: 'Organization',
+    image: '/images/qr_storage_header.png'
+  },
+  {
     id: '1',
     slug: 'benefits-of-qr-labels-for-home-organization',
     title: {
