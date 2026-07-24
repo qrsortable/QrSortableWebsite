@@ -13,6 +13,14 @@ export const About: React.FC = () => {
       <Helmet htmlAttributes={{ lang: language.toLowerCase() }}>
         <title>{`${t('footer', 'about')} | QrSortable`}</title>
         <meta name="description" content={t('about', 'heroSubtitle')} />
+        <meta property="og:title" content={`${t('footer', 'about')} | QrSortable`} />
+        <meta property="og:description" content={t('about', 'heroSubtitle')} />
+        <meta property="og:image" content="https://www.qrsortable.com/og-image.jpg" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${t('footer', 'about')} | QrSortable`} />
+        <meta name="twitter:description" content={t('about', 'heroSubtitle')} />
+        <meta name="twitter:image" content="https://www.qrsortable.com/og-image.jpg" />
         <link rel="alternate" hrefLang="en" href="https://www.qrsortable.com/about" />
         <link rel="alternate" hrefLang="de" href="https://www.qrsortable.com/about?lang=de" />
         <link rel="alternate" hrefLang="fr" href="https://www.qrsortable.com/about?lang=fr" />
@@ -20,6 +28,15 @@ export const About: React.FC = () => {
         <link rel="alternate" hrefLang="x-default" href="https://www.qrsortable.com/about" />
         <link rel="canonical" href={`https://www.qrsortable.com/about${language !== 'EN' ? `?lang=${language.toLowerCase()}` : ''}`} />
         <meta name="robots" content="index, follow" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "name": `${t('footer', 'about')} - QrSortable`,
+            "description": t('about', 'heroSubtitle'),
+            "url": "https://www.qrsortable.com/about"
+          })}
+        </script>
       </Helmet>
       <Header />
       <main className="flex-grow">

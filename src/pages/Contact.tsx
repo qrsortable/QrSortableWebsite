@@ -90,6 +90,14 @@ export const Contact: React.FC = () => {
       <Helmet htmlAttributes={{ lang: language.toLowerCase() }}>
         <title>{`${tData.title} | QrSortable`}</title>
         <meta name="description" content={tData.subtitle} />
+        <meta property="og:title" content={`${tData.title} | QrSortable`} />
+        <meta property="og:description" content={tData.subtitle} />
+        <meta property="og:image" content="https://www.qrsortable.com/og-image.jpg" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${tData.title} | QrSortable`} />
+        <meta name="twitter:description" content={tData.subtitle} />
+        <meta name="twitter:image" content="https://www.qrsortable.com/og-image.jpg" />
         <link rel="alternate" hrefLang="en" href="https://www.qrsortable.com/contact" />
         <link rel="alternate" hrefLang="de" href="https://www.qrsortable.com/contact?lang=de" />
         <link rel="alternate" hrefLang="fr" href="https://www.qrsortable.com/contact?lang=fr" />

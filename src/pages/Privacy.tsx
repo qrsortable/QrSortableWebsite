@@ -14,13 +14,30 @@ export const Privacy: React.FC = () => {
       <Helmet htmlAttributes={{ lang: language.toLowerCase() }}>
         <title>{`${t('footer', 'privacy')} | QrSortable`}</title>
         <meta name="description" content={t('privacy', 'section1.desc')} />
+        <meta property="og:title" content={`${t('footer', 'privacy')} | QrSortable`} />
+        <meta property="og:description" content={t('privacy', 'section1.desc')} />
+        <meta property="og:image" content="https://www.qrsortable.com/og-image.jpg" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${t('footer', 'privacy')} | QrSortable`} />
+        <meta name="twitter:description" content={t('privacy', 'section1.desc')} />
+        <meta name="twitter:image" content="https://www.qrsortable.com/og-image.jpg" />
         <link rel="alternate" hrefLang="en" href="https://www.qrsortable.com/privacy" />
         <link rel="alternate" hrefLang="de" href="https://www.qrsortable.com/privacy?lang=de" />
         <link rel="alternate" hrefLang="fr" href="https://www.qrsortable.com/privacy?lang=fr" />
         <link rel="alternate" hrefLang="es" href="https://www.qrsortable.com/privacy?lang=es" />
         <link rel="alternate" hrefLang="x-default" href="https://www.qrsortable.com/privacy" />
         <link rel="canonical" href={`https://www.qrsortable.com/privacy${language !== 'EN' ? `?lang=${language.toLowerCase()}` : ''}`} />
-        <meta name="robots" content="noindex, follow" />
+        <meta name="robots" content="index, follow" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": `${t('footer', 'privacy')} - QrSortable`,
+            "description": t('privacy', 'section1.desc'),
+            "url": "https://www.qrsortable.com/privacy"
+          })}
+        </script>
       </Helmet>
       <Header />
       <main className="flex-grow">

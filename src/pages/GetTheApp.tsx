@@ -22,6 +22,14 @@ export const GetTheApp: React.FC = () => {
       <Helmet htmlAttributes={{ lang: language.toLowerCase() }}>
         <title>{`${t('nav', 'getApp')} | QrSortable`}</title>
         <meta name="description" content={t('nav', 'getAppSubtitle')} />
+        <meta property="og:title" content={`${t('nav', 'getApp')} | QrSortable`} />
+        <meta property="og:description" content={t('nav', 'getAppSubtitle')} />
+        <meta property="og:image" content="https://www.qrsortable.com/og-image.jpg" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${t('nav', 'getApp')} | QrSortable`} />
+        <meta name="twitter:description" content={t('nav', 'getAppSubtitle')} />
+        <meta name="twitter:image" content="https://www.qrsortable.com/og-image.jpg" />
         <link rel="alternate" hrefLang="en" href="https://www.qrsortable.com/get-the-app" />
         <link rel="alternate" hrefLang="de" href="https://www.qrsortable.com/get-the-app?lang=de" />
         <link rel="alternate" hrefLang="fr" href="https://www.qrsortable.com/get-the-app?lang=fr" />
@@ -29,6 +37,20 @@ export const GetTheApp: React.FC = () => {
         <link rel="alternate" hrefLang="x-default" href="https://www.qrsortable.com/get-the-app" />
         <link rel="canonical" href={`https://www.qrsortable.com/get-the-app${language !== 'EN' ? `?lang=${language.toLowerCase()}` : ''}`} />
         <meta name="robots" content="index, follow" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "QrSortable",
+            "operatingSystem": "iOS, Android",
+            "applicationCategory": "UtilitiesApplication",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "EUR"
+            }
+          })}
+        </script>
       </Helmet>
       <Header />
       <main className="flex-grow flex items-center justify-center p-4 py-20">

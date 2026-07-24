@@ -20,13 +20,30 @@ export const Terms: React.FC = () => {
       <Helmet htmlAttributes={{ lang: language.toLowerCase() }}>
         <title>{`${t('footer', 'terms')} | QrSortable`}</title>
         <meta name="description" content={t('terms', 'intro')} />
+        <meta property="og:title" content={`${t('footer', 'terms')} | QrSortable`} />
+        <meta property="og:description" content={t('terms', 'intro')} />
+        <meta property="og:image" content="https://www.qrsortable.com/og-image.jpg" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${t('footer', 'terms')} | QrSortable`} />
+        <meta name="twitter:description" content={t('terms', 'intro')} />
+        <meta name="twitter:image" content="https://www.qrsortable.com/og-image.jpg" />
         <link rel="alternate" hrefLang="en" href="https://www.qrsortable.com/terms" />
         <link rel="alternate" hrefLang="de" href="https://www.qrsortable.com/terms?lang=de" />
         <link rel="alternate" hrefLang="fr" href="https://www.qrsortable.com/terms?lang=fr" />
         <link rel="alternate" hrefLang="es" href="https://www.qrsortable.com/terms?lang=es" />
         <link rel="alternate" hrefLang="x-default" href="https://www.qrsortable.com/terms" />
         <link rel="canonical" href={`https://www.qrsortable.com/terms${language !== 'EN' ? `?lang=${language.toLowerCase()}` : ''}`} />
-        <meta name="robots" content="noindex, follow" />
+        <meta name="robots" content="index, follow" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": `${t('footer', 'terms')} - QrSortable`,
+            "description": t('terms', 'intro'),
+            "url": "https://www.qrsortable.com/terms"
+          })}
+        </script>
       </Helmet>
       <Header />
       <main className="flex-grow">
