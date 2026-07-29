@@ -100,6 +100,17 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://www.qrsortable.com/return-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.qrsortable.com/return-policy" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.qrsortable.com/return-policy?lang=de" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.qrsortable.com/return-policy?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.qrsortable.com/return-policy?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.qrsortable.com/return-policy" />
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://www.qrsortable.com/articles</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.qrsortable.com/articles" />
     <xhtml:link rel="alternate" hreflang="de" href="https://www.qrsortable.com/articles?lang=de" />

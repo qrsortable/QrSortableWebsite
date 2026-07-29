@@ -7,6 +7,7 @@ import { About } from './pages/About';
 import { Contact } from './pages/Contact';
 import { Privacy } from './pages/Privacy';
 import { Terms } from './pages/Terms';
+import { ReturnPolicy } from './pages/ReturnPolicy';
 import { Success } from './pages/Success';
 import { GetTheApp } from './pages/GetTheApp';
 import { MollieReturn } from './pages/MollieReturn';
@@ -92,6 +93,9 @@ const App: React.FC = () => {
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/privacy" element={<Privacy />} />
                   <Route path="/terms" element={<Terms />} />
+                  <Route path="/return-policy" element={<ReturnPolicy />} />
+                  <Route path="/refund-policy" element={<ReturnPolicy />} />
+                  <Route path="/returns" element={<ReturnPolicy />} />
                   <Route path="/success" element={<Success />} />
                   <Route path="/get-the-app" element={<GetTheApp />} />
                   <Route path="/mollie-return" element={<MollieReturn />} />

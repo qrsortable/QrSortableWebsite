@@ -216,6 +216,7 @@ export const TRANSLATIONS: any = {
       articles: 'Articles',
       privacy: 'Privacy Policy',
       terms: 'Terms of Service',
+      returnPolicy: 'Return & Refund Policy',
       cookies: 'Cookie Settings',
       payments: 'Payments',
       contactUs: 'Contact us anytime at:',
@@ -250,6 +251,69 @@ export const TRANSLATIONS: any = {
       section2: { title: 'Payments & Refunds', desc: 'To request a refund, email us at qrsortable@gmail.com, and we’ll respond within a few hours. All prices include VAT where applicable. You may request a refund within 30 days of purchase for unused label packs. Labels that have been scanned and linked to a user account are considered used and are not eligible for refunds.' },
       section3: { title: 'Intellectual Property', desc: 'The "QrSortable" name, brand logo, and unique QR generation algorithms are the exclusive property of QrSortable. Any unauthorized reproduction is strictly prohibited.' },
       section4: { title: 'Governing Law', desc: 'These terms are governed by the laws of the European Union and the United States. Any disputes will be resolved through arbitration in a neutral jurisdiction.' }
+    },
+    returnPolicy: {
+      title: 'Return & Refund Policy',
+      lastUpdated: 'Last Updated: July 29, 2026',
+      seoTitle: 'Return & Refund Policy | QrSortable',
+      seoDesc: 'Return & Refund Policy for QrSortable. Learn about return eligibility, 30-day return window, shipping costs, refund processing, and exchanges.',
+      returns: {
+        title: 'Returns',
+        text: 'We want you to be completely satisfied with your purchase. We accept returns for both defective and non-defective products within 30 days from the date of delivery. If 30 days have passed since your delivery date, unfortunately, we cannot offer you a return or refund.'
+      },
+      eligibility: {
+        title: 'Return Eligibility',
+        text: 'To be eligible for a return, your item must meet the following criteria:',
+        item1: 'The item must be unused, unaltered, and in the original condition that you received it.',
+        item2: 'The item must be in its original packaging.',
+        item3: 'Proof of purchase or your original order number must be provided.'
+      },
+      howToRequest: {
+        title: 'How to Request a Return',
+        text: 'To initiate a return, please follow these steps:',
+        step1Prefix: 'Send an email to our support team at ',
+        step1Suffix: ' with the subject line "Return Request - [Your Order Number]".',
+        step2: 'Include details about the product you wish to return and the reason for the return (please attach photos if the item is damaged or defective).',
+        step3: 'Our support team will review your request and provide return authorization instructions and the return shipping address.'
+      },
+      shipping: {
+        title: 'Return Shipping',
+        text: 'Return shipping responsibility depends on the nature of the return:',
+        nonDefectiveTitle: 'Non-Defective Items',
+        nonDefective: 'For standard returns (such as change of mind or preference), customers are responsible for paying their own return shipping costs. Shipping costs are non-refundable.',
+        defectiveTitle: 'Defective, Damaged, or Incorrect Items',
+        defective: 'If you received a defective, damaged, or incorrect item, the seller will cover all return shipping costs. We will provide a pre-paid return shipping label.'
+      },
+      refunds: {
+        title: 'Refunds',
+        text1: 'Once your return is received and inspected, we will send you an email notification confirming receipt of your returned item. We will also notify you of the approval or rejection of your refund based on item condition.',
+        text2: 'If approved, your refund will be issued directly to your original method of payment.'
+      },
+      processingTime: {
+        title: 'Refund Processing Time',
+        text: 'Approved refunds are processed within 5 business days after the returned item is received and inspected. Depending on your financial institution or card issuer, it may take additional business days for the credit to officially post to your account statement.'
+      },
+      exchanges: {
+        title: 'Exchanges',
+        textPrefix: 'We accept exchanges specifically for defective, damaged, or incorrectly shipped items. If you need to exchange an item for the same product, contact us at ',
+        textSuffix: ' within 7 days of delivery, and we will arrange a prompt replacement at no additional cost to you.'
+      },
+      nonReturnable: {
+        title: 'Non-Returnable Items',
+        text: 'Certain types of items cannot be returned for a refund or exchange:',
+        item1: 'Customized or personalized products.',
+        item2: 'Digital products and downloadable content.',
+        item3: 'Gift cards and promotional vouchers.'
+      },
+      damagedOrders: {
+        title: 'Damaged or Incorrect Orders',
+        textPrefix: 'Please inspect your order upon delivery. If your order arrives damaged, defective, or incorrect, you must report it to us within 7 days of delivery. Please email ',
+        textSuffix: ' with your order number and photos of the item and packaging so we can resolve the issue immediately.'
+      },
+      contactUs: {
+        title: 'Contact Us',
+        text: 'If you have any questions or concerns regarding our Return & Refund Policy, please reach out to us:'
+      }
     },
     cookies: {
       banner: { title: 'We respect your privacy', desc: 'We use cookies to enhance your experience, serve personalized content, and analyze our traffic. Your choices help us provide a safer, faster organization experience.', acceptAll: 'Accept All', customize: 'Customize Settings', essentialOnly: 'Essential Only', save: 'Save My Preferences' },
@@ -504,6 +568,7 @@ export const TRANSLATIONS: any = {
       articles: 'Artikel',
       privacy: 'Datenschutz',
       terms: 'AGB',
+      returnPolicy: 'Rückgabe- & Erstattung',
       cookies: 'Cookie-Einstellungen',
       payments: 'Zahlungen',
       contactUs: 'Kontaktieren Sie uns jederzeit unter:',
@@ -538,6 +603,69 @@ export const TRANSLATIONS: any = {
       section2: { title: 'Zahlungen & Erstattungen', desc: 'Um eine Erstattung zu beantragen, schreiben uns an qrsortable@gmail.com, und wir antworten innerhalb weniger Stunden. Alle Preise enthalten die gesetzliche MwSt., falls zutreffend. Sie können innerhalb von 30 Tagen nach dem Kauf eine Erstattung für unbenutzte Etiketten-Packs beantragen. Etiketten, die bereits gescannt und mit einem Benutzerkonto verknüpft wurden, gelten als benutzt und sind von der Erstattung ausgeschlossen.' },
       section3: { title: 'Geistiges Eigentum', desc: 'Der Name "QrSortable", das Markenlogo und die einzigartigen QR-Generierungsalgorithmen sind das ausschließliche Eigentum von QrSortable. Jede unbefugte Vervielfältigung ist strengstens untersagt.' },
       section4: { title: 'Anwendbares Recht', desc: 'Diese Bedingungen unterliegen den Gesetzen der Europäischen Union und der Vereinigten Staaten. Streitigkeiten werden durch ein Schiedsverfahren in einer neutralen Gerichtsbarkeit beizulegen.' }
+    },
+    returnPolicy: {
+      title: 'Rückgabe- & Rückerstattungsrichtlinie',
+      lastUpdated: 'Zuletzt aktualisiert: 29. Juli 2026',
+      seoTitle: 'Rückgabe- & Rückerstattungsrichtlinie | QrSortable',
+      seoDesc: 'Rückgabe- und Rückerstattungsrichtlinie für QrSortable. Erfahren Sie mehr über Rückgabebedingungen, 30-Tage-Frist, Versandkosten und Rückerstattungen.',
+      returns: {
+        title: 'Rücksendungen',
+        text: 'Wir möchten, dass Sie mit Ihrem Kauf rundum zufrieden sind. Wir akzeptieren Rücksendungen sowohl für fehlerfreie als auch für mangelhafte Produkte innerhalb von 30 Tagen ab Lieferdatum. Wenn seit Ihrem Lieferdatum mehr als 30 Tage vergangen sind, können wir Ihnen leider keine Rückgabe oder Rückerstattung anbieten.'
+      },
+      eligibility: {
+        title: 'Voraussetzungen für eine Rückgabe',
+        text: 'Damit ein Artikel für eine Rückgabe in Frage kommt, muss er die folgenden Kriterien erfüllen:',
+        item1: 'Der Artikel muss unbenutzt, unverändert und im ursprünglichen Zustand sein, in dem Sie ihn erhalten haben.',
+        item2: 'Der Artikel muss sich in der Originalverpackung befinden.',
+        item3: 'Ein Kaufnachweis oder Ihre ursprüngliche Bestellnummer muss vorgelegt werden.'
+      },
+      howToRequest: {
+        title: 'So beantragen Sie eine Rückgabe',
+        text: 'Um eine Rückgabe einzuleiten, folgen Sie bitte diesen Schritten:',
+        step1Prefix: 'Senden Sie eine E-Mail an unser Support-Team unter ',
+        step1Suffix: ' mit dem Betreff "Rückgabeanfrage - [Ihre Bestellnummer]".',
+        step2: 'Geben Sie Details zum Produkt und den Grund für die Rückgabe an (fügen Sie Fotos bei, falls der Artikel beschädigt oder defekt ist).',
+        step3: 'Unser Support-Team prüft Ihre Anfrage und sendet Ihnen Anweisungen zur Rückgabe sowie die Rücksendeadresse.'
+      },
+      shipping: {
+        title: 'Rücksendekosten',
+        text: 'Die Verantwortung für die Rücksendekosten hängt von der Art der Rückgabe ab:',
+        nonDefectiveTitle: 'Fehlerfreie Artikel',
+        nonDefective: 'Bei Standardrücksendungen (z. B. Meinungsänderung) tragen Kunden die Rücksendekosten selbst. Versandkosten werden nicht erstattet.',
+        defectiveTitle: 'Defekte, beschädigte oder falsche Artikel',
+        defective: 'Wenn Sie einen defekten, beschädigten oder falschen Artikel erhalten haben, übernimmt der Verkäufer alle Rücksendekosten. Wir stellen ein vorfrankiertes Rücksendeetikett bereit.'
+      },
+      refunds: {
+        title: 'Rückerstattungen',
+        text1: 'Sobald Ihre Rücksendung eingetroffen ist und geprüft wurde, senden wir Ihnen eine E-Mail-Benachrichtigung über den Eingang sowie über die Genehmigung oder Ablehnung Ihrer Rückerstattung.',
+        text2: 'Nach der Genehmigung wird Ihre Rückerstattung direkt auf Ihre ursprüngliche Zahlungsmethode überwiesen.'
+      },
+      processingTime: {
+        title: 'Bearbeitungszeit für Rückerstattungen',
+        text: 'Genehmigte Rückerstattungen werden innerhalb von 5 Werktagen nach Erhalt und Prüfung des Artikels bearbeitet. Je nach Kreditinstitut kann es einige zusätzliche Werktage dauern, bis die Gutschrift auf Ihrem Konto erscheint.'
+      },
+      exchanges: {
+        title: 'Umtausch',
+        textPrefix: 'Wir tauschen Artikel ausschließlich bei Defekten, Beschädigungen oder Falschlieferungen um. Wenn Sie einen Artikel umtauschen möchten, kontaktieren Sie uns innerhalb von 7 Tagen nach Lieferung unter ',
+        textSuffix: ' für einen kostenlosen Ersatz.'
+      },
+      nonReturnable: {
+        title: 'Vom Umtausch ausgeschlossene Artikel',
+        text: 'Bestimmte Artikelarten sind von der Rückgabe oder Rückerstattung ausgeschlossen:',
+        item1: 'Personalisierte oder individuell angefertigte Produkte.',
+        item2: 'Digitale Produkte und herunterladbare Inhalte.',
+        item3: 'Geschenkkarten und Gutscheine.'
+      },
+      damagedOrders: {
+        title: 'Beschädigte oder falsche Bestellungen',
+        textPrefix: 'Bitte überprüfen Sie Ihre Bestellung bei der Lieferung. Wenn Ihre Bestellung beschädigt oder falsch ankommt, müssen Sie dies innerhalb von 7 Tagen nach Lieferung an ',
+        textSuffix: ' mit Fotos melden.'
+      },
+      contactUs: {
+        title: 'Kontaktieren Sie uns',
+        text: 'Wenn Sie Fragen oder Bedenken zu unserer Rückgabe- und Rückerstattungsrichtlinie haben, wenden Sie sich bitte an uns:'
+      }
     },
     cookies: {
       banner: { title: 'Wir respektieren Ihre Privatsphäre', desc: 'Wir verwenden Cookies, um Ihre Erfahrung zu verbessern, personalisierte Inhalte bereitzustellen und unseren Datenverkehr zu analysieren. Ihre Entscheidungen helfen uns, ein schnelleres und sichereres Organisationserlebnis anzubieten.', acceptAll: 'Alle akzeptieren', customize: 'Einstellungen anpassen', essentialOnly: 'Nur Essenzielle', save: 'Meine Einstellungen speichern' },
@@ -792,6 +920,7 @@ export const TRANSLATIONS: any = {
       articles: 'Articles',
       privacy: 'Confidentialité',
       terms: 'Conditions d\'utilisation',
+      returnPolicy: 'Politique de retour',
       cookies: 'Préférences cookies',
       payments: 'Paiements',
       contactUs: 'Contactez-nous à tout moment :',
@@ -826,6 +955,69 @@ export const TRANSLATIONS: any = {
       section2: { title: 'Paiements et remboursements', desc: 'Pour demander un remboursement, écrivez-nous à qrsortable@gmail.com et nous vous répondrons en quelques heures. Tous les tarifs incluent la TVA applicable. Vous pouvez demander un remboursement dans les 30 jours suivant l\'achat pour les packs d\'étiquettes complets et non utilisés. Les étiquettes ayant déjà été scannées et associées à un compte utilisateur sont considérées comme utilisées et ne peuvent faire l\'objet d\'un remboursement.' },
       section3: { title: 'Propriété intellectuelle', desc: 'Le nom "QrSortable", le logo de la marque ainsi que les algorithmes de génération de codes QR uniques sont la propriété exclusive de QrSortable. Toute reproduction ou utilisation non autorisée est strictement interdite.' },
       section4: { title: 'Droit applicable', desc: 'Les présentes conditions d\'utilisation sont régies par les lois en vigueur dans l\'Union Européenne et aux États-Unis. Tout litige éventuel sera soumis à une procédure d\'arbitrage dans une jurisdiction neutre.' }
+    },
+    returnPolicy: {
+      title: 'Politique de Retour & Remboursement',
+      lastUpdated: 'Dernière mise à jour : 29 juillet 2026',
+      seoTitle: 'Politique de Retour & Remboursement | QrSortable',
+      seoDesc: 'Politique de retour et de remboursement pour QrSortable. Découvrez les conditions de retour sous 30 jours, les frais de port et le traitement des remboursements.',
+      returns: {
+        title: 'Retours',
+        text: 'Nous voulons que vous soyez entièrement satisfait de votre achat. Nous acceptons les retours pour les produits défectueux et non défectueux dans un délai de 30 jours à compter de la date de livraison. Si 30 jours se sont écoulés depuis votre livraison, nous ne pouvons malheureusement pas vous proposer de retour ou de remboursement.'
+      },
+      eligibility: {
+        title: 'Conditions de retour',
+        text: 'Pour être éligible à un retour, votre article doit répondre aux critères suivants :',
+        item1: 'L\'article doit être inutilisé, non modifié et dans l\'état d\'origine dans lequel vous l\'avez reçu.',
+        item2: 'L\'article doit être dans son emballage d\'origine.',
+        item3: 'Une preuve d\'achat ou votre numéro de commande d\'origine doit être fourni.'
+      },
+      howToRequest: {
+        title: 'Comment demander un retour',
+        text: 'Pour initier un retour, veuillez suivre ces étapes :',
+        step1Prefix: 'Envoyez un e-mail à notre équipe d\'assistance à ',
+        step1Suffix: ' avec pour objet "Demande de retour - [Votre numéro de commande]".',
+        step2: 'Indiquez les détails du produit que vous souhaitez retourner et la raison du retour (joignez des photos si l\'article est endommagé ou défectueux).',
+        step3: 'Notre équipe examinera votre demande et vous fournira les instructions d\'autorisation de retour et l\'adresse de retour.'
+      },
+      shipping: {
+        title: 'Frais de retour',
+        text: 'La responsabilité des frais de retour dépend de la nature du retour :',
+        nonDefectiveTitle: 'Articles non défectueux',
+        nonDefective: 'Pour les retours standards (changement d\'avis), les clients sont responsables du paiement de leurs propres frais de retour. Les frais de livraison ne sont pas remboursables.',
+        defectiveTitle: 'Articles défectueux, endommagés ou incorrects',
+        defective: 'Si vous avez reçu un article défectueux, endommagé ou incorrect, le vendeur couvrira tous les frais de retour. Nous fournirons une étiquette de retour prépayée.'
+      },
+      refunds: {
+        title: 'Remboursements',
+        text1: 'Une fois votre retour reçu et inspecté, nous vous enverrons un e-mail de confirmation de réception ainsi que l\'approbation ou le refus de votre remboursement en fonction de l\'état de l\'article.',
+        text2: 'S\'il est approuvé, votre remboursement sera effectué directement sur votre mode de paiement d\'origine.'
+      },
+      processingTime: {
+        title: 'Délai de traitement du remboursement',
+        text: 'Les remboursements approuvés sont traités dans un délai de 5 jours ouvrés après réception et inspection de l\'article retourné. Selon votre banque, quelques jours supplémentaires peuvent être nécessaires.'
+      },
+      exchanges: {
+        title: 'Échanges',
+        textPrefix: 'Nous acceptons les échanges uniquement pour les articles défectueux, endommagés ou mal expédiés. Si vous devez échanger un article, contactez-nous sous 7 jours à ',
+        textSuffix: ' pour organiser un remplacement gratuit.'
+      },
+      nonReturnable: {
+        title: 'Articles non retournables',
+        text: 'Certains types d\'articles ne peuvent pas être retournés :',
+        item1: 'Produits personnalisés ou sur mesure.',
+        item2: 'Produits numériques et contenus téléchargeables.',
+        item3: 'Cartes-cadeaux et bons de réduction.'
+      },
+      damagedOrders: {
+        title: 'Commandes endommagées ou incorrectes',
+        textPrefix: 'Veuillez inspecter votre commande dès sa livraison. Si votre commande arrive endommagée, défectueuse ou incorrecte, vous devez nous la signaler dans les 7 jours suivant la livraison à ',
+        textSuffix: ' avec des photos.'
+      },
+      contactUs: {
+        title: 'Contactez-nous',
+        text: 'Si vous avez des questions ou des préoccupations concernant notre politique de retour et de remboursement, veuillez nous contacter :'
+      }
     },
     cookies: {
       banner: { title: 'Nous respectons votre vie privée', desc: 'Nous utilisons des cookies pour optimiser votre navigation, vous proposer des contenus personnalisés et analyser notre trafic. Vos choix nous aident à vous offrir une expérience d\'organisation plus rapide et plus sécurisée.', acceptAll: 'Tout accepter', customize: 'Personnaliser mes choix', essentialOnly: 'Uniquement les cookies essentiels', save: 'Sauvegarder mes choix' },
@@ -1080,6 +1272,7 @@ export const TRANSLATIONS: any = {
       articles: 'Artículos',
       privacy: 'Privacidad',
       terms: 'Condiciones de uso',
+      returnPolicy: 'Política de devolución',
       cookies: 'Preferencias de cookies',
       payments: 'Pagos',
       contactUs: 'Contáctenos en cualquier momento:',
@@ -1114,6 +1307,69 @@ export const TRANSLATIONS: any = {
       section2: { title: 'Pagos y reembolsos', desc: 'Para solicitar un reembolso, envíanos un correo electrónico a qrsortable@gmail.com y te responderemos en unas pocas horas. Todos los precios incluyen el IVA aplicable. Puedes solicitar un reembolso dentro de los 30 días posteriores a la compra para paquetes de etiquetas completos y no utilizados. Las etiquetas que ya han sido escaneadas y vinculadas a una cuenta de usuario se consideran usadas y no son elegibles para reembolsos.' },
       section3: { title: 'Propiedad intelectual', desc: 'El nombre "QrSortable", el logotipo de la marca y los algoritmos exclusivos de generación de códigos QR son propiedad exclusiva de QrSortable. Cualquier reproducción no autorizada está estrictamente prohibida.' },
       section4: { title: 'Ley aplicable', desc: 'Estas condiciones se rigen por las leyes de la Unión Europea y los Estados Unidos. Cualquier disputa se resolverá mediante arbitraje en una jurisdicción neutral.' }
+    },
+    returnPolicy: {
+      title: 'Política de Devolución y Reembolso',
+      lastUpdated: 'Última actualización: 29 de julio de 2026',
+      seoTitle: 'Política de Devolución y Reembolso | QrSortable',
+      seoDesc: 'Política de devolución y reembolso de QrSortable. Conozca la elegibilidad, plazo de 30 días, gastos de envío y procesamiento de reembolsos.',
+      returns: {
+        title: 'Devoluciones',
+        text: 'Queremos que esté completamente satisfecho con su compra. Aceptamos devoluciones tanto de productos defectuosos como no defectuosos dentro de los 30 días posteriores a la fecha de entrega. Si han pasado más de 30 días desde la entrega, lamentablemente no podemos ofrecerle una devolución o reembolso.'
+      },
+      eligibility: {
+        title: 'Elegibilidad para devoluciones',
+        text: 'Para ser elegible para una devolución, su artículo debe cumplir con los siguientes criterios:',
+        item1: 'El artículo debe estar sin usar, sin alterar y en las mismas condiciones en que lo recibió.',
+        item2: 'El artículo debe estar en su embalaje original.',
+        item3: 'Se debe proporcionar un comprobante de compra o su número de pedido original.'
+      },
+      howToRequest: {
+        title: 'Cómo solicitar una devolución',
+        text: 'Para iniciar una devolución, siga estos pasos:',
+        step1Prefix: 'Envíe un correo electrónico a nuestro equipo de soporte a ',
+        step1Suffix: ' con el asunto "Solicitud de devolución - [Su número de pedido]".',
+        step2: 'Incluya detalles sobre el producto que desea devolver y el motivo de la devolución (adjunte fotos si el artículo está dañado o defectuoso).',
+        step3: 'Nuestro equipo de soporte revisará su solicitud y le proporcionará instrucciones de autorización y la dirección de envío de devolución.'
+      },
+      shipping: {
+        title: 'Envío de devolución',
+        text: 'La responsabilidad del envío de devolución depende de la naturaleza de la devolución:',
+        nonDefectiveTitle: 'Artículos no defectuosos',
+        nonDefective: 'Para devoluciones estándar (cambio de opinión), los clientes son responsables de pagar sus propios gastos de envío. Los gastos de envío no son reembolsables.',
+        defectiveTitle: 'Artículos defectuosos, dañados o incorrectos',
+        defective: 'Si recibió un artículo defectuoso, dañado o incorrecto, el vendedor cubrirá todos los gastos de envío de devolución mediante una etiqueta prepagada.'
+      },
+      refunds: {
+        title: 'Reembolsos',
+        text1: 'Una vez recibida e inspeccionada su devolución, le enviaremos una notificación por correo electrónico confirmando la recepción y la aprobación o rechazo de su reembolso según el estado del artículo.',
+        text2: 'Si se aprueba, su reembolso se emitirá directamente a su método de pago original.'
+      },
+      processingTime: {
+        title: 'Tiempo de procesamiento del reembolso',
+        text: 'Los reembolsos aprobados se procesan dentro de los 5 días hábiles posteriores a la recepción e inspección del artículo. Según su entidad bancaria, pueden ser necesarios días adicionales para que el crédito se refleje en su estado de cuenta.'
+      },
+      exchanges: {
+        title: 'Intercambios',
+        textPrefix: 'Aceptamos cambios específicamente por artículos defectuosos, dañados o enviados incorrectamente. Si necesita cambiar un artículo por el mismo producto, contáctenos dentro de los 7 días posteriores a la entrega en ',
+        textSuffix: ' para organizar un reemplazo sin costo.'
+      },
+      nonReturnable: {
+        title: 'Artículos no devolvibles',
+        text: 'Ciertos tipos de artículos no se pueden devolver para un reembolso o cambio:',
+        item1: 'Productos personalizados o a medida.',
+        item2: 'Productos digitales y contenido descargable.',
+        item3: 'Tarjetas de regalo y cupones promocionales.'
+      },
+      damagedOrders: {
+        title: 'Pedidos dañados o incorrectos',
+        textPrefix: 'Inspeccione su pedido al recibirlo. Si su pedido llega dañado, defectuoso o incorrecto, debe informarlo dentro de los 7 días posteriores a la entrega a ',
+        textSuffix: ' con fotos.'
+      },
+      contactUs: {
+        title: 'Contáctenos',
+        text: 'Si tiene alguna pregunta o inquietud con respecto a nuestra Política de devolución y reembolso, comuníquese con nosotros:'
+      }
     },
     cookies: {
       banner: { title: 'Respetamos tu privacidad', desc: 'Usamos cookies para optimizar tu experiencia, ofrecer contenidos personalizados y analizar nuestro tráfico. Tus elecciones nos ayudan a ofrecer un servicio de organización más rápido y seguro.', acceptAll: 'Aceptar todo', customize: 'Personalizar', essentialOnly: 'Solo esenciales', save: 'Guardar mis elecciones' },
