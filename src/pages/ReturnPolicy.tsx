@@ -97,8 +97,8 @@ export const ReturnPolicy: React.FC = () => {
           <ol className="list-decimal pl-6 space-y-1.5">
             <li>
               {t('returnPolicy', 'howToRequest.step1Prefix')}
-              <a href="mailto:support@qrsortable.com" className="text-gray-900 font-semibold underline hover:text-gray-600">
-                support@qrsortable.com
+              <a href="mailto:qrsortable@gmail.com" className="text-gray-900 font-semibold underline hover:text-gray-600">
+                qrsortable@gmail.com
               </a>
               {t('returnPolicy', 'howToRequest.step1Suffix')}
             </li>
@@ -147,8 +147,8 @@ export const ReturnPolicy: React.FC = () => {
           </h2>
           <p>
             {t('returnPolicy', 'exchanges.textPrefix')}
-            <a href="mailto:support@qrsortable.com" className="text-gray-900 font-semibold underline hover:text-gray-600">
-              support@qrsortable.com
+            <a href="mailto:qrsortable@gmail.com" className="text-gray-900 font-semibold underline hover:text-gray-600">
+              qrsortable@gmail.com
             </a>
             {t('returnPolicy', 'exchanges.textSuffix')}
           </p>
@@ -174,8 +174,8 @@ export const ReturnPolicy: React.FC = () => {
           </h2>
           <p>
             {t('returnPolicy', 'damagedOrders.textPrefix')}
-            <a href="mailto:support@qrsortable.com" className="text-gray-900 font-semibold underline hover:text-gray-600">
-              support@qrsortable.com
+            <a href="mailto:qrsortable@gmail.com" className="text-gray-900 font-semibold underline hover:text-gray-600">
+              qrsortable@gmail.com
             </a>
             {t('returnPolicy', 'damagedOrders.textSuffix')}
           </p>
@@ -190,8 +190,8 @@ export const ReturnPolicy: React.FC = () => {
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-5 space-y-2 text-sm sm:text-base font-medium">
             <p>
               <strong className="text-gray-900">Email:</strong>{' '}
-              <a href="mailto:support@qrsortable.com" className="text-gray-900 underline hover:text-gray-600">
-                support@qrsortable.com
+              <a href="mailto:qrsortable@gmail.com" className="text-gray-900 underline hover:text-gray-600">
+                qrsortable@gmail.com
               </a>
             </p>
             <p>
