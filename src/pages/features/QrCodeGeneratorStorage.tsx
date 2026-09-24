@@ -969,7 +969,7 @@ export const QrCodeGeneratorStorage: React.FC = () => {
                 <div className="relative max-w-4xl w-full">
                   <div className="absolute -inset-1 bg-gradient-to-r from-[#FDB623] to-[#FDB623]/30 rounded-[2.5rem] blur opacity-15"></div>
                   <img 
-                    src="/images/qr_storage_header.png" 
+                    src="/images/feature_codegenerated.png" 
                     alt="QR Code Generator for Storage printing and applying labels workflow" 
                     className="relative rounded-[2.5rem] border-4 border-gray-900 shadow-2xl w-full h-auto object-contain"
                     referrerPolicy="no-referrer"
