@@ -110,11 +110,11 @@ export const SUPPORT_TEAM_TRANSLATIONS: Record<string, SupportTeamTranslations> 
     backToHome: "Back to Home",
     
     sec1Heading: "What Is the QrSortable Support Team?",
-    sec1Body: "The QrSortable Support Team helps users with practical questions about QR code labels, box setup, item photos, search, generated PDFs, orders, Multi-User Sharing, Moving Mode, and troubleshooting.\n\nQrSortable is designed to help users scan storage labels, create digital box records, add item names and remarks, attach photos, and search across stored belongings. If you are setting up your first box, preparing for a move, organizing long-term storage, or managing shared inventory, support can help you understand the workflow.\n\nFor support, contact:\nqrsortable@gmail.com",
+    sec1Body: "The QrSortable Support Team helps users with practical questions about QR code labels, box setup, item photos, search, generated PDFs, orders, Multi-User Sharing, Moving Mode, and troubleshooting.\n\nQrSortable is designed to help users scan storage labels, create digital box records, add item names and remarks, attach photos, and search across stored belongings. If you are setting up your first box, preparing for a move, organizing long-term storage, or managing shared inventory, support can help you understand the workflow.\n\nFor support, contact:\ninfo@qrsortable.com",
     
     sec2Heading: "How QrSortable Support Works",
     sec2Step1Title: "Send a Clear Support Email",
-    sec2Step1Body: "Email qrsortable@gmail.com with a short description of the issue or question. Include helpful details such as your device type, app version if known, screenshots if available, and what you were trying to do.",
+    sec2Step1Body: "Email support@qrsortable.com with a short description of the issue or question. Include helpful details such as your device type, app version if known, screenshots if available, and what you were trying to do.",
     sec2Step2Title: "Share the Relevant Details",
     sec2Step2Body: "For scanning issues, mention the label type and lighting conditions. For PDF download issues, mention the order or download step. For Multi-User Sharing, include whether Premium is active and whether the MultiuserID was entered with hyphens.",
     sec2Step3Title: "Get Practical Guidance",
@@ -206,7 +206,7 @@ export const SUPPORT_TEAM_TRANSLATIONS: Record<string, SupportTeamTranslations> 
     faqItems: [
       {
         q: "How can I contact the QrSortable Support Team?",
-        a: "You can contact QrSortable support by emailing qrsortable@gmail.com. Include a short description of your question, screenshots if available, and the step where you need help."
+        a: "You can contact QrSortable support by emailing support@qrsortable.com. Include a short description of your question, screenshots if available, and the step where you need help."
       },
       {
         q: "What should I include in a support email?",
@@ -272,11 +272,11 @@ export const SUPPORT_TEAM_TRANSLATIONS: Record<string, SupportTeamTranslations> 
     backToHome: "Zurück zur Startseite",
     
     sec1Heading: "Was ist das QrSortable Support-Team?",
-    sec1Body: "Das QrSortable Support-Team unterstützt Sie bei praktischen Fragen zu QR-Code-Etiketten, Kartoneinrichtung, Artikelfotos, Suche, generierten PDFs, Bestellungen, Multi-User-Freigabe, Umzugsmodus und Fehlerbehebung.\n\nQrSortable wurde entwickelt, um Ihnen beim Scannen von Lageretiketten, Erstellen digitaler Kartoneinträge, Hinzufügen von Artikelnamen und Bemerkungen sowie beim Anhängen von Fotos und der Suche nach gelagerten Sachen zu helfen. Egal, ob Sie Ihre erste Kiste einrichten, sich auf einen Umzug vorbereiten, ein langfristiges Lager organisieren oder das gemeinsame Inventar verwalten – der Support hilft Ihnen, den Ablauf zu verstehen.\n\nFür Support kontaktieren Sie:\nqrsortable@gmail.com",
+    sec1Body: "Das QrSortable Support-Team unterstützt Sie bei praktischen Fragen zu QR-Code-Etiketten, Kartoneinrichtung, Artikelfotos, Suche, generierten PDFs, Bestellungen, Multi-User-Freigabe, Umzugsmodus und Fehlerbehebung.\n\nQrSortable wurde entwickelt, um Ihnen beim Scannen von Lageretiketten, Erstellen digitaler Kartoneinträge, Hinzufügen von Artikelnamen und Bemerkungen sowie beim Anhängen von Fotos und der Suche nach gelagerten Sachen zu helfen. Egal, ob Sie Ihre erste Kiste einrichten, sich auf einen Umzug vorbereiten, ein langfristiges Lager organisieren oder das gemeinsame Inventar verwalten – der Support hilft Ihnen, den Ablauf zu verstehen.\n\nFür Support kontaktieren Sie:\ninfo@qrsortable.com",
     
     sec2Heading: "So funktioniert der QrSortable-Support",
     sec2Step1Title: "Senden Sie eine klare Support-E-Mail",
-    sec2Step1Body: "Senden Sie eine E-Mail an qrsortable@gmail.com mit einer kurzen Beschreibung des Problems oder Ihrer Frage. Fügen Sie hilfreiche Details hinzu, wie Ihren Gerätetyp, die App-Version (falls bekannt), Screenshots (falls vorhanden) und was Sie gerade tun wollten.",
+    sec2Step1Body: "Senden Sie eine E-Mail an support@qrsortable.com mit einer kurzen Beschreibung des Problems oder Ihrer Frage. Fügen Sie hilfreiche Details hinzu, wie Ihren Gerätetyp, die App-Version (falls bekannt), Screenshots (falls vorhanden) und was Sie gerade tun wollten.",
     sec2Step2Title: "Teilen Sie die relevanten Details",
     sec2Step2Body: "Geben Sie bei Scan-Problemen die Art des Etiketts und die Lichtverhältnisse an. Erwähnen Sie bei PDF-Download-Problemen die Bestellung oder den Download-Schritt. Fügen Sie für die Multi-User-Freigabe hinzu, ob Premium aktiv ist und ob die MultiuserID mit Bindestrichen eingegeben wurde.",
     sec2Step3Title: "Erhalten Sie praktische Unterstützung",
@@ -368,7 +368,7 @@ export const SUPPORT_TEAM_TRANSLATIONS: Record<string, SupportTeamTranslations> 
     faqItems: [
       {
         q: "Wie kann ich das QrSortable Support-Team kontaktieren?",
-        a: "Sie können den QrSortable-Support per E-Mail unter qrsortable@gmail.com erreichen. Beschreiben Sie kurz Ihre Frage und fügen Sie Screenshots sowie den Schritt hinzu, bei dem Sie Hilfe benötigen."
+        a: "Sie können den QrSortable-Support per E-Mail unter support@qrsortable.com erreichen. Beschreiben Sie kurz Ihre Frage und fügen Sie Screenshots sowie den Schritt hinzu, bei dem Sie Hilfe benötigen."
       },
       {
         q: "Was sollte ich in einer Support-E-Mail angeben?",
@@ -434,11 +434,11 @@ export const SUPPORT_TEAM_TRANSLATIONS: Record<string, SupportTeamTranslations> 
     backToHome: "Retour à l'accueil",
     
     sec1Heading: "Qu'est-ce que l'équipe support QrSortable ?",
-    sec1Body: "L'équipe support QrSortable aide les utilisateurs à résoudre leurs questions pratiques concernant les étiquettes QR code, la configuration des cartons, les photos d'articles, la recherche, les PDF générés, les commandes, le partage multi-utilisateur, le mode déménagement et le dépannage.\n\nQrSortable est conçu pour aider les utilisateurs à scanner les étiquettes de stockage, à créer des fiches de carton numériques, à ajouter des noms d'articles et des remarques, à joindre des photos et à effectuer des recherches parmi les objets stockés. Que vous prépariez votre premier carton, organisiez un stockage à long terme ou gériez un inventaire partagé, l'assistance peut vous aider à comprendre le processus.\n\nPour toute assistance, contactez :\nqrsortable@gmail.com",
+    sec1Body: "L'équipe support QrSortable aide les utilisateurs à résoudre leurs questions pratiques concernant les étiquettes QR code, la configuration des cartons, les photos d'articles, la recherche, les PDF générés, les commandes, le partage multi-utilisateur, le mode déménagement et le dépannage.\n\nQrSortable est conçu pour aider les utilisateurs à scanner les étiquettes de stockage, à créer des fiches de carton numériques, à ajouter des noms d'articles et des remarques, à joindre des photos et à effectuer des recherches parmi les objets stockés. Que vous prépariez votre premier carton, organisiez un stockage à long terme ou gériez un inventaire partagé, l'assistance peut vous aider à comprendre le processus.\n\nPour toute assistance, contactez :\ninfo@qrsortable.com",
     
     sec2Heading: "Comment fonctionne l'assistance QrSortable",
     sec2Step1Title: "Envoyer un e-mail clair à l'assistance",
-    sec2Step1Body: "Envoyez un e-mail à qrsortable@gmail.com avec une courte description du problème ou de la question. Indiquez des détails utiles tels que le type d'appareil, la version de l'application si vous la connaissez, des captures d'écran si disponibles et ce que vous essayiez de faire.",
+    sec2Step1Body: "Envoyez un e-mail à support@qrsortable.com avec une courte description du problème ou de la question. Indiquez des détails utiles tels que le type d'appareil, la version de l'application si vous la connaissez, des captures d'écran si disponibles et ce que vous essayiez de faire.",
     sec2Step2Title: "Partager les détails pertinents",
     sec2Step2Body: "Pour les problèmes de scan, mentionnez le type d'étiquette et les conditions de luminosité. Pour les problèmes de téléchargement de PDF, mentionnez l'étape de commande ou de téléchargement. Pour le partage multi-utilisateur, indiquez si l'abonnement Premium est actif et si le MultiuserID a été saisi avec des tirets.",
     sec2Step3Title: "Obtenir des conseils pratiques",
@@ -530,7 +530,7 @@ export const SUPPORT_TEAM_TRANSLATIONS: Record<string, SupportTeamTranslations> 
     faqItems: [
       {
         q: "Comment puis-je contacter l'équipe support de QrSortable ?",
-        a: "Vous pouvez contacter l'assistance QrSortable par e-mail à qrsortable@gmail.com. Décrivez brièvement votre question, joignez des captures d'écran si disponibles et précisez l'étape où vous bloquez."
+        a: "Vous pouvez contacter l'assistance QrSortable par e-mail à support@qrsortable.com. Décrivez brièvement votre question, joignez des captures d'écran si disponibles et précisez l'étape où vous bloquez."
       },
       {
         q: "Que dois-je inclure dans un e-mail à l'assistance ?",
@@ -596,11 +596,11 @@ export const SUPPORT_TEAM_TRANSLATIONS: Record<string, SupportTeamTranslations> 
     backToHome: "Volver al inicio",
     
     sec1Heading: "¿Qué es el equipo de soporte de QrSortable?",
-    sec1Body: "El equipo de soporte de QrSortable ayuda a los usuarios con preguntas prácticas sobre etiquetas de códigos QR, configuración de cajas, fotos de artículos, búsqueda, PDF generados, pedidos, Multi-User Sharing, modo mudanza y resolución de problemas.\n\nQrSortable está diseñado para ayudar a los usuarios a escanear etiquetas de almacenamiento, crear registros de cajas digitales, añadir nombres de artículos y comentarios, adjuntar fotos y buscar entre los objetos guardados. Tanto si está preparando su primera caja, organizando un trastero a largo plazo o gestionando un inventario compartido, el soporte puede ayudarle a entender el proceso.\n\nPara soporte, contacte con:\nqrsortable@gmail.com",
+    sec1Body: "El equipo de soporte de QrSortable ayuda a los usuarios con preguntas prácticas sobre etiquetas de códigos QR, configuración de cajas, fotos de artículos, búsqueda, PDF generados, pedidos, Multi-User Sharing, modo mudanza y resolución de problemas.\n\nQrSortable está diseñado para ayudar a los usuarios a escanear etiquetas de almacenamiento, crear registros de cajas digitales, añadir nombres de artículos y comentarios, adjuntar fotos y buscar entre los objetos guardados. Tanto si está preparando su primera caja, organizando un trastero a largo plazo o gestionando un inventario compartido, el soporte puede ayudarle a entender el proceso.\n\nPara soporte, contacte con:\ninfo@qrsortable.com",
     
     sec2Heading: "Cómo funciona el soporte de QrSortable",
     sec2Step1Title: "Envíe un correo electrónico claro de soporte",
-    sec2Step1Body: "Envíe un correo electrónico a qrsortable@gmail.com con una breve descripción del problema o pregunta. Incluya detalles útiles como el tipo de dispositivo, la versión de la aplicación si la conoce, capturas de pantalla si están disponibles y lo que estaba intentando hacer.",
+    sec2Step1Body: "Envíe un correo electrónico a support@qrsortable.com con una breve descripción del problema o pregunta. Incluya detalles útiles como el tipo de dispositivo, la versión de la aplicación si la conoce, capturas de pantalla si están disponibles y lo que estaba intentando hacer.",
     sec2Step2Title: "Comparta los detalles relevantes",
     sec2Step2Body: "Para problemas de escaneo, mencione el tipo de etiqueta y las condiciones de iluminación. Para problemas de descarga de PDF, mencione el pedido o el paso de descarga. Para Multi-User Sharing, indique si la versión Premium está activa y si el MultiuserID se introdujo con guiones.",
     sec2Step3Title: "Obtenga orientación práctica",
@@ -692,7 +692,7 @@ export const SUPPORT_TEAM_TRANSLATIONS: Record<string, SupportTeamTranslations> 
     faqItems: [
       {
         q: "¿Cómo puedo contactar con el equipo de soporte de QrSortable?",
-        a: "Puede contactar con el soporte de QrSortable enviando un correo electrónico a qrsortable@gmail.com. Incluya una breve descripción de su duda, capturas de pantalla si dispone de ellas y el paso exacto en el que necesita ayuda."
+        a: "Puede contactar con el soporte de QrSortable enviando un correo electrónico a support@qrsortable.com. Incluya una breve descripción de su duda, capturas de pantalla si dispone de ellas y el paso exacto en el que necesita ayuda."
       },
       {
         q: "¿Qué debo incluir en un correo electrónico de soporte?",

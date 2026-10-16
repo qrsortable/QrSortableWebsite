@@ -108,8 +108,8 @@ export const Footer: React.FC = () => {
               <span className="block text-[11px] uppercase text-gray-400 tracking-wider font-black mb-1">
                 {t('footer', 'contactUs') || 'Contact us anytime at:'}
               </span>
-              <a href="mailto:qrsortable@gmail.com" className="block text-white font-black hover:text-[#FDB623] transition-colors mt-1 text-lg">
-                qrsortable@gmail.com
+              <a href="mailto:info@qrsortable.com" className="block text-white font-black hover:text-[#FDB623] transition-colors mt-1 text-lg">
+                info@qrsortable.com
               </a>
               
               <span className="block text-[11px] uppercase text-gray-400 tracking-wider font-black mt-4 mb-1">

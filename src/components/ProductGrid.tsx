@@ -103,7 +103,7 @@ export const ProductGrid: React.FC = () => {
                </div>
                <h3 className="text-3xl font-black text-white mb-6">{t('shop', 'needCustom')}</h3>
                <p className="text-lg text-gray-300 font-bold mb-10 leading-relaxed">{t('shop', 'customDesc')}</p>
-               <a href="mailto:qrsortable@gmail.com" className="inline-block px-8 py-4 bg-[#FDB623] text-black font-black text-lg rounded-2xl hover:bg-yellow-400 transition-all shadow-lg active:scale-95">
+               <a href="mailto:info@qrsortable.com" className="inline-block px-8 py-4 bg-[#FDB623] text-black font-black text-lg rounded-2xl hover:bg-yellow-400 transition-all shadow-lg active:scale-95">
                  {t('shop', 'getAQuote')}
                </a>
              </div>

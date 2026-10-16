@@ -202,7 +202,7 @@ export const AppFeedback: React.FC = () => {
               </ul>
             </div>
             <p className="pt-4 sm:pt-6 font-bold break-words">
-              {t('appFeedback', 'contact')} <a href="mailto:qrsortable@gmail.com" className="text-blue-600 underline">qrsortable@gmail.com</a>
+              {t('appFeedback', 'contact')} <a href="mailto:info@qrsortable.com" className="text-blue-600 underline">info@qrsortable.com</a>
             </p>
           </div>
         </div>

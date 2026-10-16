@@ -129,7 +129,7 @@ export const TRANSLATIONS: any = {
       spec1: 'Our labels are printed using high-quality technology to ensure QR codes and barcodes remain scannable over time.',
       spec2: 'The adhesive used is a special semi-permanent formula: it sticks firmly to cardboard and plastic but can be removed without residue.',
       paymentTitle: 'Payments & Refunds',
-      paymentDesc: 'All prices include VAT. Refund within 30 days for unused packs. Email qrsortable@gmail.com for support.',
+      paymentDesc: 'All prices include VAT. Refund within 30 days for unused packs. Email support@qrsortable.com for support.',
       feedbackTitle: 'Feedback',
       feedbackSubtitle: 'What our customers are saying.',
       writeReview: 'Leave a Review',
@@ -241,14 +241,14 @@ export const TRANSLATIONS: any = {
       updated: 'Last Updated: January 2026',
       section1: { title: 'Information We Collect', desc: 'We collect information you provide directly to us when you make a purchase, leave feedback, or contact us. This includes your name, email address, shipping address, and payment details (processed securely via our partners).' },
       section2: { title: 'How We Use It', desc: 'Your data is used solely to fulfill orders, improve our software experience, and (if you opt-in) notify you about major updates. We do not sell your data to third parties. Ever.' },
-      section3: { title: 'GDPR & CCPA Compliance', desc: 'For our European and US users, we respect your rights to access, rectify, or delete your personal data. You can request data deletion at any time by contacting qrsortable@gmail.com.', list: ['Right to be forgotten', 'Data portability', 'Explicit consent for marketing'] },
+      section3: { title: 'GDPR & CCPA Compliance', desc: 'For our European and US users, we respect your rights to access, rectify, or delete your personal data. You can request data deletion at any time by contacting support@qrsortable.com.', list: ['Right to be forgotten', 'Data portability', 'Explicit consent for marketing'] },
       section4: { title: 'Cookies & Tracking', desc: 'We categorize cookies into Essential, Analytics, and Marketing. Essential cookies are always on to ensure the site works. Analytics and Marketing cookies are strictly opt-in. You can update your choices at any time.' }
     },
     terms: {
       updated: 'Last Updated: January 2026',
       intro: 'By using our website and products, you agree to these terms. Please read them carefully.',
       section1: { title: 'Product Usage', desc: 'QrSortable labels are provided "as-is". While our labels are durable and high-quality, we are not responsible for any damage to belongings stored in containers using our labels. The companion app is free to use but requires an internet connection for cloud syncing.' },
-      section2: { title: 'Payments & Refunds', desc: 'To request a refund, email us at qrsortable@gmail.com, and we’ll respond within a few hours. All prices include VAT where applicable. You may request a refund within 30 days of purchase for unused label packs. Labels that have been scanned and linked to a user account are considered used and are not eligible for refunds.' },
+      section2: { title: 'Payments & Refunds', desc: 'To request a refund, email us at support@qrsortable.com, and we’ll respond within a few hours. All prices include VAT where applicable. You may request a refund within 30 days of purchase for unused label packs. Labels that have been scanned and linked to a user account are considered used and are not eligible for refunds.' },
       section3: { title: 'Intellectual Property', desc: 'The "QrSortable" name, brand logo, and unique QR generation algorithms are the exclusive property of QrSortable. Any unauthorized reproduction is strictly prohibited.' },
       section4: { title: 'Governing Law', desc: 'These terms are governed by the laws of the European Union and the United States. Any disputes will be resolved through arbitration in a neutral jurisdiction.' }
     },
@@ -481,7 +481,7 @@ export const TRANSLATIONS: any = {
       spec1: 'Unsere Etiketten werden mit hochwertiger Technologie gedruckt, damit QR-Codes und Barcodes auch langfristig lesbar bleiben.',
       spec2: 'Der verwendete Klebstoff ist eine spezielle semi-permanente Formel: Er hält fest auf Karton und Kunststoff, lässt sich aber rückstandsfrei entfernen.',
       paymentTitle: 'Zahlung & Erstattung',
-      paymentDesc: 'Preise inkl. MwSt. Erstattung innerhalb von 30 Tagen für unbenutzte Pakete. E-Mail qrsortable@gmail.com für Hilfe.',
+      paymentDesc: 'Preise inkl. MwSt. Erstattung innerhalb von 30 Tagen für unbenutzte Pakete. E-Mail support@qrsortable.com für Hilfe.',
       feedbackTitle: 'Feedback',
       feedbackSubtitle: 'Das sagen unsere Kunden.',
       writeReview: 'Bewertung schreiben',
@@ -593,14 +593,14 @@ export const TRANSLATIONS: any = {
       updated: 'Letztes Update: Januar 2026',
       section1: { title: 'Informationen, die wir sammeln', desc: 'Wir sammeln Informationen, die Sie uns direkt beim Kauf, beim Hinterlassen von Feedback oder bei einer Kontaktaufnahme übermitteln. Dazu gehören Ihr Name, Ihre E-Mail-Adresse, Ihre Lieferadresse und Ihre Zahlungsdaten (die von unseren Partnern sicher verarbeitet werden).' },
       section2: { title: 'Wie wir sie verwenden', desc: 'Ihre Daten werden ausschließlich zur Abwicklung von Bestellungen, zur Verbesserung unserer Software-Erfahrung und (falls Sie zustimmen) zur Benachrichtigung über wichtiges Feedback und Updates verwendet. Wir verkaufen Ihre Daten niemals an Dritte. Niemals.' },
-      section3: { title: 'DSGVO- & CCPA-Konformität', desc: 'Für unsere europäischen und US-amerikanischen Nutzer respektieren wir Ihre Rechte auf Auskunft, Berichtigung oder Löschung Ihrer personenbezogenen Daten. Sie können die Löschung Ihrer Daten jederzeit per E-Mail an qrsortable@gmail.com beantragen.', list: ['Recht auf Vergessenwerden', 'Datenübertragbarkeit', 'Ausdrückliche Zustimmung für Marketing'] },
+      section3: { title: 'DSGVO- & CCPA-Konformität', desc: 'Für unsere europäischen und US-amerikanischen Nutzer respektieren wir Ihre Rechte auf Auskunft, Berichtigung oder Löschung Ihrer personenbezogenen Daten. Sie können die Löschung Ihrer Daten jederzeit per E-Mail an support@qrsortable.com beantragen.', list: ['Recht auf Vergessenwerden', 'Datenübertragbarkeit', 'Ausdrückliche Zustimmung für Marketing'] },
       section4: { title: 'Cookies & Tracking', desc: 'Wir kategorisieren Cookies in Essenziell, Analyse und Marketing. Essenzielle Cookies sind immer aktiviert, um die Funktion der Website zu gewährleisten. Analyse- und Marketing-Cookies erfordern Ihre ausdrückliche Zustimmung. Sie können Ihre Auswahl jederzeit ändern.' }
     },
     terms: {
       updated: 'Letztes Update: Januar 2026',
       intro: 'Durch die Nutzung unserer Website und Produkte stimmen Sie diesen Bedingungen zu. Bitte lesen Sie diese sorgfältig durch.',
       section1: { title: 'Produktnutzung', desc: 'QrSortable-Etiketten werden "wie besehen" bereitgestellt. Obwohl unsere Etiketten langlebig und von hoher Qualität sind, haften wir nicht für Schäden an Besitztümern, die in Behältern mit unseren Etiketten gelagert werden. Die Begleit-App kann kostenlos genutzt werden, erfordert jedoch eine Internetverbindung für die Cloud-Synchronisierung.' },
-      section2: { title: 'Zahlungen & Erstattungen', desc: 'Um eine Erstattung zu beantragen, schreiben uns an qrsortable@gmail.com, und wir antworten innerhalb weniger Stunden. Alle Preise enthalten die gesetzliche MwSt., falls zutreffend. Sie können innerhalb von 30 Tagen nach dem Kauf eine Erstattung für unbenutzte Etiketten-Packs beantragen. Etiketten, die bereits gescannt und mit einem Benutzerkonto verknüpft wurden, gelten als benutzt und sind von der Erstattung ausgeschlossen.' },
+      section2: { title: 'Zahlungen & Erstattungen', desc: 'Um eine Erstattung zu beantragen, schreiben uns an support@qrsortable.com, und wir antworten innerhalb weniger Stunden. Alle Preise enthalten die gesetzliche MwSt., falls zutreffend. Sie können innerhalb von 30 Tagen nach dem Kauf eine Erstattung für unbenutzte Etiketten-Packs beantragen. Etiketten, die bereits gescannt und mit einem Benutzerkonto verknüpft wurden, gelten als benutzt und sind von der Erstattung ausgeschlossen.' },
       section3: { title: 'Geistiges Eigentum', desc: 'Der Name "QrSortable", das Markenlogo und die einzigartigen QR-Generierungsalgorithmen sind das ausschließliche Eigentum von QrSortable. Jede unbefugte Vervielfältigung ist strengstens untersagt.' },
       section4: { title: 'Anwendbares Recht', desc: 'Diese Bedingungen unterliegen den Gesetzen der Europäischen Union und der Vereinigten Staaten. Streitigkeiten werden durch ein Schiedsverfahren in einer neutralen Gerichtsbarkeit beizulegen.' }
     },
@@ -833,7 +833,7 @@ export const TRANSLATIONS: any = {
       spec1: 'Nos étiquettes sont imprimées avec des technologies de pointe pour garantir une lisibilité parfaite des codes QR et barres à long terme.',
       spec2: 'L\'adhésif utilisé bénéficie d\'une formule semi-permanente spéciale : il tient fermement sur le carton et le plastique, mais se retire sans laisser de résidus.',
       paymentTitle: 'Paiements et Remboursements',
-      paymentDesc: 'Prix TTC. Remboursement intégral sous 30 jours pour les packs non ouverts et non utilisés. Écrivez à qrsortable@gmail.com pour toute assistance.',
+      paymentDesc: 'Prix TTC. Remboursement intégral sous 30 jours pour les packs non ouverts et non utilisés. Écrivez à support@qrsortable.com pour toute assistance.',
       feedbackTitle: 'Avis clients',
       feedbackSubtitle: 'Ce que nos clients pensent de nous.',
       writeReview: 'Écrire un avis',
@@ -945,14 +945,14 @@ export const TRANSLATIONS: any = {
       updated: 'Dernière mise à jour : Janvier 2026',
       section1: { title: 'Informations que nous collectons', desc: 'Nous collectons les informations que vous nous transmettez directement lors de vos achats, lorsque vous déposez des commentaires ou lorsque vous nous contactez. Cela inclut votre nom, votre adresse e-mail, votre adresse de livraison et vos coordonnées de paiement (traitées de manière ultra-sécurisée par nos partenaires de paiement).' },
       section2: { title: 'Comment nous les utilisons', desc: 'Vos données personnelles sont utilisées exclusivement pour traiter vos commandes, améliorer l\'expérience utilisateur de nos logiciels et, avec votre consentement, vous informer des retours d\'expérience importants et des mises à jour majeures. Nous ne vendons jamais vos données à des tiers. Jamais.' },
-      section3: { title: 'Conformité RGPD & CCPA', desc: 'Pour nos utilisateurs européens et américains, nous respectons scrupuleusement vos droits d\'accès, de rectification ou de suppression de vos données personnelles. Vous pouvez demander la suppression complète de vos données à tout moment en envoyant un e-mail à qrsortable@gmail.com.', list: ['Droit à l\'oubli', 'Portabilité des données', 'Consentement explicite pour le marketing'] },
+      section3: { title: 'Conformité RGPD & CCPA', desc: 'Pour nos utilisateurs européens et américains, nous respectons scrupuleusement vos droits d\'accès, de rectification ou de suppression de vos données personnelles. Vous pouvez demander la suppression complète de vos données à tout moment en envoyant un e-mail à support@qrsortable.com.', list: ['Droit à l\'oubli', 'Portabilité des données', 'Consentement explicite pour le marketing'] },
       section4: { title: 'Cookies et suivi', desc: 'Nous classons nos cookies en trois catégories : Essentiels, Analytiques et Marketing. Les cookies essentiels sont indispensables et restent toujours activés pour assurer le bon fonctionnement du site. Les cookies analytiques et marketing nécessitent votre consentement explicite. Vous pouvez modifier vos préférences à tout moment.' }
     },
     terms: {
       updated: 'Dernière mise à jour : Janvier 2026',
       intro: 'En utilisant notre site web et nos produits, vous acceptez sans réserve les présentes conditions d\'utilisation. Veuillez les lire attentivement.',
       section1: { title: 'Utilisation du produit', desc: 'Les étiquettes QrSortable sont fournies "en l\'état". Bien que nos étiquettes soient extrêmement durables et de haute qualité, nous déclinons toute responsabilité en cas de dommages causés aux biens stockés dans des conteneurs utilisant nos étiquettes. L\'application mobile complémentaire est gratuite, mais requiert une connexion Internet pour la synchronisation cloud.' },
-      section2: { title: 'Paiements et remboursements', desc: 'Pour demander un remboursement, écrivez-nous à qrsortable@gmail.com et nous vous répondrons en quelques heures. Tous les tarifs incluent la TVA applicable. Vous pouvez demander un remboursement dans les 30 jours suivant l\'achat pour les packs d\'étiquettes complets et non utilisés. Les étiquettes ayant déjà été scannées et associées à un compte utilisateur sont considérées comme utilisées et ne peuvent faire l\'objet d\'un remboursement.' },
+      section2: { title: 'Paiements et remboursements', desc: 'Pour demander un remboursement, écrivez-nous à support@qrsortable.com et nous vous répondrons en quelques heures. Tous les tarifs incluent la TVA applicable. Vous pouvez demander un remboursement dans les 30 jours suivant l\'achat pour les packs d\'étiquettes complets et non utilisés. Les étiquettes ayant déjà été scannées et associées à un compte utilisateur sont considérées comme utilisées et ne peuvent faire l\'objet d\'un remboursement.' },
       section3: { title: 'Propriété intellectuelle', desc: 'Le nom "QrSortable", le logo de la marque ainsi que les algorithmes de génération de codes QR uniques sont la propriété exclusive de QrSortable. Toute reproduction ou utilisation non autorisée est strictement interdite.' },
       section4: { title: 'Droit applicable', desc: 'Les présentes conditions d\'utilisation sont régies par les lois en vigueur dans l\'Union Européenne et aux États-Unis. Tout litige éventuel sera soumis à une procédure d\'arbitrage dans une jurisdiction neutre.' }
     },
@@ -1185,7 +1185,7 @@ export const TRANSLATIONS: any = {
       spec1: 'Nuestras etiquetas se imprimen con tecnología de alta calidad para asegurar una legibilidad perfecta de los códigos QR a largo plazo.',
       spec2: 'El adhesivo utilizado es de una fórmula especial semipermanente: se pega firmemente al cartón y al plástico, pero se puede quitar sin dejar residuos.',
       paymentTitle: 'Pagos y Reembolsos',
-      paymentDesc: 'Precios con IVA incluido. Reembolso completo en 30 días para paquetes de etiquetas no abiertos y no utilizados. Escribe a qrsortable@gmail.com para ayuda.',
+      paymentDesc: 'Precios con IVA incluido. Reembolso completo en 30 días para paquetes de etiquetas no abiertos y no utilizados. Escribe a support@qrsortable.com para ayuda.',
       feedbackTitle: 'Opiniones de clientes',
       feedbackSubtitle: 'Lo que dicen nuestros clientes sobre nosotros.',
       writeReview: 'Escribir una opinión',
@@ -1297,14 +1297,14 @@ export const TRANSLATIONS: any = {
       updated: 'Última actualización: Enero 2026',
       section1: { title: 'Información que recopilamos', desc: 'Recopilamos la información que nos proporcionas directamente al realizar una compra, dejar una opinión o ponerte en contacto con nosotros. Esto incluye tu nombre, correo electrónico, dirección de envío y los detalles de pago (procesados de forma totalmente segura por nuestros proveedores de pago).' },
       section2: { title: 'Cómo la usamos', desc: 'Tus datos personales se utilizan exclusivamente para procesar tus pedidos, mejorar la experiencia de usuario de nuestro software y, si das tu consentimiento, informarte sobre novedades importantes. Nunca vendemos tus datos a terceros. Jamás.' },
-      section3: { title: 'Cumplimiento de RGPD y CCPA', desc: 'Para nuestros usuarios de Europa y EE. UU., respetamos estrictamente tus derechos de acceso, de rectificación o de eliminación de tus datos personales. Puedes solicitar la eliminación completa de tus datos en cualquier momento escribiendo a qrsortable@gmail.com.', list: ['Derecho al olvido', 'Portabilidad de datos', 'Consentimiento explícito para marketing'] },
+      section3: { title: 'Cumplimiento de RGPD y CCPA', desc: 'Para nuestros usuarios de Europa y EE. UU., respetamos estrictamente tus derechos de acceso, de rectificación o de eliminación de tus datos personales. Puedes solicitar la eliminación completa de tus datos en cualquier momento escribiendo a support@qrsortable.com.', list: ['Derecho al olvido', 'Portabilidad de datos', 'Consentimiento explícito para marketing'] },
       section4: { title: 'Cookies y seguimiento', desc: 'Clasificamos nuestras cookies en tres categorías: Esenciales, Analíticas y de Marketing. Las cookies esenciales siempre están activadas para garantizar el correcto funcionamiento del sitio. Las cookies analíticas y de marketing requieren tu consentimiento explícito. Puedes cambiar tus preferencias en cualquier momento.' }
     },
     terms: {
       updated: 'Última actualización: Enero 2026',
       intro: 'Al utilizar nuestro sitio web y nuestros productos, aceptas sin reservas estas condiciones de uso. Por favor, léelas con atención.',
       section1: { title: 'Uso del producto', desc: 'Las etiquetas QrSortable se proporcionan "tal cual". Aunque nuestras etiquetas son extremadamente duraderas y de alta calidad, no nos hacemos responsables de ningún daño a las pertenencias almacenadas en contenedores que utilicen nuestras etiquetas. La aplicación complementaria es gratuita pero requiere una conexión a Internet para la sincronización en la nube.' },
-      section2: { title: 'Pagos y reembolsos', desc: 'Para solicitar un reembolso, envíanos un correo electrónico a qrsortable@gmail.com y te responderemos en unas pocas horas. Todos los precios incluyen el IVA aplicable. Puedes solicitar un reembolso dentro de los 30 días posteriores a la compra para paquetes de etiquetas completos y no utilizados. Las etiquetas que ya han sido escaneadas y vinculadas a una cuenta de usuario se consideran usadas y no son elegibles para reembolsos.' },
+      section2: { title: 'Pagos y reembolsos', desc: 'Para solicitar un reembolso, envíanos un correo electrónico a support@qrsortable.com y te responderemos en unas pocas horas. Todos los precios incluyen el IVA aplicable. Puedes solicitar un reembolso dentro de los 30 días posteriores a la compra para paquetes de etiquetas completos y no utilizados. Las etiquetas que ya han sido escaneadas y vinculadas a una cuenta de usuario se consideran usadas y no son elegibles para reembolsos.' },
       section3: { title: 'Propiedad intelectual', desc: 'El nombre "QrSortable", el logotipo de la marca y los algoritmos exclusivos de generación de códigos QR son propiedad exclusiva de QrSortable. Cualquier reproducción no autorizada está estrictamente prohibida.' },
       section4: { title: 'Ley aplicable', desc: 'Estas condiciones se rigen por las leyes de la Unión Europea y los Estados Unidos. Cualquier disputa se resolverá mediante arbitraje en una jurisdicción neutral.' }
     },

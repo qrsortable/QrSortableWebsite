@@ -457,7 +457,7 @@ export const InventorySupportTeam: React.FC = () => {
                   </Link>
                 </div>
                 <p className="text-xs text-gray-400 mt-6 italic font-bold">
-                  Email qrsortable@gmail.com for support with labels, setup, scanning, PDFs, and inventory workflows.
+                  Email support@qrsortable.com for support with labels, setup, scanning, PDFs, and inventory workflows.
                 </p>
               </div>
             </section>

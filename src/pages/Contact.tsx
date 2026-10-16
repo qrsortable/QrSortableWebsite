@@ -70,7 +70,7 @@ export const Contact: React.FC = () => {
     "image": "https://www.qrsortable.com/brand-logo.png",
     "@id": "https://www.qrsortable.com/#localbusiness",
     "url": "https://www.qrsortable.com/",
-    "email": "qrsortable@gmail.com",
+    "email": "info@qrsortable.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Fahlenbacher Str.",
@@ -152,8 +152,8 @@ export const Contact: React.FC = () => {
                 </div>
               </div>
               <div>
-                <a href="mailto:qrsortable@gmail.com" className="text-xl font-black text-[#FDB623] hover:underline">
-                  qrsortable@gmail.com
+                <a href="mailto:info@qrsortable.com" className="text-xl font-black text-[#FDB623] hover:underline">
+                  info@qrsortable.com
                 </a>
               </div>
             </div>
