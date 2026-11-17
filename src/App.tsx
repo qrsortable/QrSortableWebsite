@@ -15,6 +15,7 @@ import { AppFeedback } from './pages/AppFeedback';
 import { Articles } from './pages/Articles';
 import { ArticleDetail } from './pages/ArticleDetail';
 import { SmartQrStorageBinsArticle } from './pages/SmartQrStorageBinsArticle';
+import { BoxVisibilityExpertsArticle } from './pages/BoxVisibilityExpertsArticle';
 import { QrCodeInventoryPreview } from './pages/features/QrCodeInventoryPreview';
 import { MovingBoxOrganizer } from './pages/features/MovingBoxOrganizer';
 import { SharedInventoryManagement } from './pages/features/SharedInventoryManagement';
@@ -101,6 +102,7 @@ const App: React.FC = () => {
                   <Route path="/mollie-return" element={<MollieReturn />} />
                   <Route path="/app-feedback" element={<AppFeedback />} />
                   <Route path="/articles" element={<Articles />} />
+                  <Route path="/articles/know-whats-inside-every-box-before-opening-it" element={<BoxVisibilityExpertsArticle />} />
                   <Route path="/articles/smart-qr-code-labels-for-storage-bins" element={<SmartQrStorageBinsArticle />} />
                   <Route path="/articles/:slug" element={<ArticleDetail />} />
                 </Routes>

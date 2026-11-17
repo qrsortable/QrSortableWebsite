@@ -34,6 +34,33 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    id: '6',
+    slug: 'know-whats-inside-every-box-before-opening-it',
+    title: {
+      EN: 'Know What’s Inside Every Box Before Opening It: What 8 Experts Say',
+      DE: 'Wissen, was in jeder Kiste ist, bevor man sie öffnet: Was 8 Experten sagen',
+      FR: 'Savoir ce qu\'il y a dans chaque boîte avant de l\'ouvrir : ce que disent 8 experts',
+      ES: 'Saber qué hay dentro de cada caja antes de abrirla: lo que dicen 8 expertos'
+    },
+    excerpt: {
+      EN: 'Eight professionals from events, warehousing, fulfillment and healthcare share how box-level visibility cuts picking time by 25%, receiving time by 77% and removes costly guesswork.',
+      DE: 'Acht Fachleute aus Events, Lagerhaltung, Fulfillment und Gesundheitswesen zeigen, wie Kisten-Transparenz Kommissionierzeit um 25 % und Wareneingangszeit um 77 % senkt.',
+      FR: 'Huit professionnels de l\'événementiel, de la logistique, du e-commerce et de la santé expliquent comment la visibilité par carton réduit de 25 % le picking et de 77 % la réception.',
+      ES: 'Ocho profesionales de eventos, almacenes, fulfillment y salud explican cómo la visibilidad por caja reduce un 25 % el picking y un 77 % la recepción.'
+    },
+    content: {
+      EN: 'Eight professionals from events, warehousing, fulfillment and healthcare share how box-level visibility cuts picking time by 25%, receiving time by 77% and removes costly guesswork.',
+      DE: 'Acht Fachleute aus Events, Lagerhaltung, Fulfillment und Gesundheitswesen zeigen, wie Kisten-Transparenz Kommissionierzeit um 25 % und Wareneingangszeit um 77 % senkt.',
+      FR: 'Huit professionnels de l\'événementiel, de la logistique, du e-commerce et de la santé expliquent comment la visibilité par carton réduit de 25 % le picking et de 77 % la réception.',
+      ES: 'Ocho profesionales de eventos, almacenes, fulfillment y salud explican cómo la visibilidad por caja reduce un 25 % el picking y un 77 % la recepción.'
+    },
+    date: '2026-11-17',
+    author: 'QrSortable Team',
+    readTime: '6 min',
+    category: 'Business',
+    image: '/images/qr_box_scanner_illustration.webp'
+  },
+  {
     id: '5',
     slug: 'smart-qr-code-labels-for-storage-bins',
     title: {

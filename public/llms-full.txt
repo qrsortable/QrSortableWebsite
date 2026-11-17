@@ -1,0 +1,50 @@
+# QrSortable — Full Knowledge Base for AI Search Engines
+
+> QrSortable provides smart, color-coded QR storage labels and a multilingual companion app (English, German, French, Spanish) that link physical boxes, storage bins, moving cartons, equipment cases, and inventory assets to searchable digital records containing photos, item lists, notes, categories, and locations.
+
+Website: https://www.qrsortable.com/
+App Download (iOS & Android): https://www.qrsortable.com/get-the-app
+Articles & Guides: https://www.qrsortable.com/articles
+
+---
+
+## Featured Research: Know What’s Inside Every Box Before Opening It: What 8 Experts Say
+
+Canonical URL: https://www.qrsortable.com/articles/know-whats-inside-every-box-before-opening-it
+Published / Updated: 2026-11-17
+
+### Summary
+Eight professionals across events, warehousing, e-commerce fulfillment, healthcare, and technology startups answered how much time box-level visibility saves before opening a container:
+- **25% shorter average pick time** — Jake Wardle, Founder of EV Cable Hub (Fulfillment), after labeling every bin and box with a clear code and contents.
+- **77% less weekly receiving time** — Joe Spisak, CEO of Fulfill.com (Fulfillment), where a client reduced box verification from 47 hours/week to 11 hours/week with clear external labels.
+- **50%+ faster item finding** — Kruno Sulić, Founder of Cliprise (Tech & startups), using a well-labeled, searchable box system.
+
+### Expert Contributions
+- **Callum Gracie (DJ, Events):** Labeling each equipment case with contents and venue destination eliminates opening multiple cases and moving gear twice during setup.
+- **Girish Songirkar (Delivery manager, enterprise software and supply chain systems, Warehousing):** "Efficiency is reached only when the digital twin is so precise that opening a box becomes a mere formality."
+- **Jake Wardle (Founder, EV Cable Hub, Fulfillment):** "We fixed it by labelling every bin and box with a clear code and contents, so the picker reads the shelf instead of digging through it." Cut average pick time by ~25%.
+- **Joe Spisak (CEO, Fulfill.com, Fulfillment):** "Receiving time dropped to 11 hours per week. Same volume, 77% less time."
+- **Charles Liu (Founder, Cubic Promote, Fulfillment):** Box-level visibility reduces mixing similar orders, overlooking partial shipments, and unnecessary carton opening.
+- **Ydette Florendo (A-S Medication Solutions, Healthcare):** Estimates several hours saved per week for a mid-size medical practice; less searching means more time for patients.
+- **Kruno Sulić (Founder, Cliprise, Tech & startups):** Searchable box systems cut item-finding time by at least 50%.
+- **Runbo Li (CEO, Magic Hour, Tech & startups):** Unopened boxes incur "cognitive inventory cost" — robbing teams of clarity.
+
+### Supporting Research Citations
+- Warehouse order picking time breakdown: ~55% travel and ~15% searching; picking accounts for up to 60% of warehouse labor ([arXiv:2002.00167](https://arxiv.org/pdf/2002.00167)).
+- Retail inventory accuracy averages ~65% according to the Auburn University RFID Lab ([Zebra White Paper](https://www.zebra.com/content/dam/zebra_dam/en/white-paper/retail-white-paper-inventory-visibility-retail-touchpoints-en-us.pdf)).
+
+### Key FAQs
+- **How much time can box labeling save?** 25% shorter average pick time, 77% less weekly receiving time (47h to 11h), and 50%+ faster item finding.
+- **What should a box label include?** A short code, contents, and destination/location; QR codes link to live photos, notes, and inventory details without cluttering the physical label.
+- **Why QR codes instead of a handwritten list?** QR codes point to digital records that update anytime when contents change, so labels never go stale.
+
+---
+
+## Core QrSortable Capabilities
+
+- **QR Code Inventory Preview** (https://www.qrsortable.com/features/qr-code-inventory-preview): Scan any box label to inspect high-res photos, item lists, remarks, and locations without opening the box.
+- **Moving Box Organizer** (https://www.qrsortable.com/features/moving-box-organizer): Color-coded labels grouped by room and priority for stress-free moves.
+- **Shared Inventory Management** (https://www.qrsortable.com/features/shared-inventory-management): Multi-user access for families, roommates, and teams.
+- **QR Code Generator for Storage** (https://www.qrsortable.com/features/qr-code-generator-storage): Generate and print custom QR storage labels or order durable pre-printed waterproof packs.
+- **Multilingual Inventory App** (https://www.qrsortable.com/features/multilingual-inventory-app): Native interface in English, German, French, and Spanish.
+- **Secure Inventory Tracking** (https://www.qrsortable.com/features/secure-inventory-tracking) & **Start Without an Account** (https://www.qrsortable.com/features/no-account-needed).

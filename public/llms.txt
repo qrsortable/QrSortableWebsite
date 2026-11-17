@@ -1,13 +1,38 @@
 # QrSortable - Smart QR Code Storage & Organizing Labels
 
-Smart physical organizer QR code labels designed to digitize and manage your moving boxes, attic storage, or office files. Scan with any standard smartphone or use the companion QrSortable app to instantly view, search, and manage contents with high-resolution photos and detailed lists.
+> QrSortable connects physical QR code labels to digital inventory records (contents, high-resolution photos, notes, locations, and categories) so households, movers, warehouses, event teams, and small businesses know what is inside every box before opening it.
 
 ## Navigation & Key Pages
 
 - [Home](https://www.qrsortable.com/) - Overview of product capabilities, features, and dynamic QR visualizers.
-- [Shop Section](https://www.qrsortable.com/#products) - Purchase physical premium organizer packs.
+- [Shop Section](https://www.qrsortable.com/#products) - Purchase physical premium organizer packs (Starter Pack, Pro Pack, Business Pack).
 - [Get The App](https://www.qrsortable.com/get-the-app) - Download the free mobile companion app for iOS and Android.
-- [Articles](https://www.qrsortable.com/articles) - Practical organization tips, packing guides, and moving resources.
+- [Articles](https://www.qrsortable.com/articles) - Practical organization tips, expert research, packing guides, and moving resources.
 - [About Us](https://www.qrsortable.com/about) - Discover our story and values.
+- [Contact](https://www.qrsortable.com/contact) - Support and inquiries.
 - [Privacy Policy](https://www.qrsortable.com/privacy) - Information on user data protection.
 - [Terms & Conditions](https://www.qrsortable.com/terms) - Standard terms of service.
+
+## Featured Articles & Research
+
+- [Know What's Inside Every Box Before Opening It: What 8 Experts Say](https://www.qrsortable.com/articles/know-whats-inside-every-box-before-opening-it) ([Markdown](https://www.qrsortable.com/articles/know-whats-inside-every-box-before-opening-it.md)) - Expert roundup across events, warehousing, fulfillment, healthcare, and tech showing 25% shorter pick times, 77% less weekly receiving time, and 50%+ faster item finding.
+- [Smart QR Code Labels for Storage Bins: Scan, Search, and Organize Every Box](https://www.qrsortable.com/articles/smart-qr-code-labels-for-storage-bins) - Complete guide to smart QR storage bin labels, static vs. dynamic QR codes, and step-by-step setup.
+- [The Ultimate Guide to QR Code Storage Labels](https://www.qrsortable.com/articles/the-ultimate-guide-to-qr-code-storage-labels) - How to build a smart home inventory system.
+- [Small Business Inventory Management with QR Codes](https://www.qrsortable.com/articles/small-business-inventory-management-qr-codes) - Why small teams switch from spreadsheets to QR inventory systems.
+- [The Ultimate Guide to Stress-Free Moving](https://www.qrsortable.com/articles/the-ultimate-guide-to-stress-free-moving) - Room-by-room moving organization with QR labels.
+- [Benefits of QR Labels for Home Organization](https://www.qrsortable.com/articles/benefits-of-qr-labels-for-home-organization) - How digital box indexing reduces clutter and duplicate purchases.
+
+## Core Product Features
+
+- [QR Code Inventory Preview](https://www.qrsortable.com/features/qr-code-inventory-preview)
+- [Moving Box Organizer](https://www.qrsortable.com/features/moving-box-organizer)
+- [Shared Inventory Management](https://www.qrsortable.com/features/shared-inventory-management)
+- [QR Code Generator for Storage](https://www.qrsortable.com/features/qr-code-generator-storage)
+- [Multilingual Inventory App (EN, DE, FR, ES)](https://www.qrsortable.com/features/multilingual-inventory-app)
+- [Secure Inventory Tracking](https://www.qrsortable.com/features/secure-inventory-tracking)
+- [Start Without an Account](https://www.qrsortable.com/features/no-account-needed)
+- [Inventory Support Team](https://www.qrsortable.com/features/support-team)
+
+## Full AI Search Context
+
+- [LLMs Full Text](https://www.qrsortable.com/llms-full.txt) - Complete structured knowledge base and full text of QrSortable research and guides for AI search engines.
