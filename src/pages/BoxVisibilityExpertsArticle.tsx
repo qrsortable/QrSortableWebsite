@@ -352,7 +352,7 @@ export const BoxVisibilityExpertsArticle: React.FC = () => {
               url: 'https://www.qrsortable.com',
               logo: {
                 '@type': 'ImageObject',
-                url: 'https://www.qrsortable.com/logo.png'
+                url: 'https://www.qrsortable.com/images/qrsortable_product.png'
               }
             },
             about: ['inventory labeling', 'QR code inventory', 'warehouse efficiency', 'box visibility'],

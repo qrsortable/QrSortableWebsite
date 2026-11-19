@@ -24,12 +24,12 @@ export const GetTheApp: React.FC = () => {
         <meta name="description" content={t('nav', 'getAppSubtitle')} />
         <meta property="og:title" content={`${t('nav', 'getApp')} | QrSortable`} />
         <meta property="og:description" content={t('nav', 'getAppSubtitle')} />
-        <meta property="og:image" content="https://www.qrsortable.com/og-image.jpg" />
+        <meta property="og:image" content="https://www.qrsortable.com/images/qrsortable_product.png" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${t('nav', 'getApp')} | QrSortable`} />
         <meta name="twitter:description" content={t('nav', 'getAppSubtitle')} />
-        <meta name="twitter:image" content="https://www.qrsortable.com/og-image.jpg" />
+        <meta name="twitter:image" content="https://www.qrsortable.com/images/qrsortable_product.png" />
         <link rel="alternate" hrefLang="en" href="https://www.qrsortable.com/get-the-app" />
         <link rel="alternate" hrefLang="de" href="https://www.qrsortable.com/get-the-app?lang=de" />
         <link rel="alternate" hrefLang="fr" href="https://www.qrsortable.com/get-the-app?lang=fr" />
@@ -72,7 +72,7 @@ export const GetTheApp: React.FC = () => {
                 >
                   <img 
                     src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" 
-                    alt="Download on the App Store" 
+                    alt={t('nav', 'appStoreAlt')} 
                     className="h-24"
                     referrerPolicy="no-referrer"
                   />
@@ -92,7 +92,7 @@ export const GetTheApp: React.FC = () => {
                 >
                   <img 
                     src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
-                    alt="Get it on Google Play" 
+                    alt={t('nav', 'googlePlayAlt')} 
                     className="h-24"
                     referrerPolicy="no-referrer"
                   />

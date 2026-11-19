@@ -14,7 +14,7 @@ import { FeedbackSection } from '../components/FeedbackSection';
 export const ProductDetail: React.FC = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { t, language } = useTranslation();
+  const { t, language, localizePath } = useTranslation();
   const { addToCart } = useCart();
   const product = PRODUCTS.find(p => p.id === id);
   const { reviews, isLoading } = useProductFeedback(product?.name || '');
@@ -63,11 +63,13 @@ export const ProductDetail: React.FC = () => {
               "priceCurrency": "EUR",
               "availability": "https://schema.org/InStock"
             },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": avgRating || 4.7,
-              "reviewCount": reviews.length || 24
-            }
+            ...(reviews.length > 0 ? {
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": avgRating.toFixed(1),
+                "reviewCount": reviews.length
+              }
+            } : {})
           })}
         </script>
         
@@ -79,7 +81,7 @@ export const ProductDetail: React.FC = () => {
               {
                 "@type": "ListItem",
                 "position": 1,
-                "name": "Home",
+                "name": t('articles', 'homeBreadcrumb'),
                 "item": "https://www.qrsortable.com"
               },
               {
@@ -96,7 +98,7 @@ export const ProductDetail: React.FC = () => {
       <main className="flex-grow">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
         <button 
-          onClick={() => navigate('/')}
+          onClick={() => navigate(localizePath('/'))}
           className="flex items-center text-gray-400 hover:text-black mb-12 text-xl font-bold transition-colors group"
         >
           <ChevronLeft className="h-7 w-7 mr-2 group-hover:-translate-x-1 transition-transform" /> {t('product', 'back')}
@@ -130,7 +132,7 @@ export const ProductDetail: React.FC = () => {
               >
                 <img 
                   src={`https://img.youtube.com/vi/${product.video}/maxresdefault.jpg`} 
-                  alt="Product Video" 
+                  alt={t('product', 'videoLabel')} 
                   className="w-full h-full object-cover opacity-80 group-hover/vid:opacity-100 transition-opacity" 
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -227,7 +229,7 @@ export const ProductDetail: React.FC = () => {
             <div className="w-full h-full relative">
                <iframe
                  src={`https://www.youtube.com/embed/${product.video}?autoplay=1`}
-                 title="Product Video"
+                 title={t('product', 'videoLabel')}
                  frameBorder="0"
                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                  allowFullScreen

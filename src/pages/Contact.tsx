@@ -59,7 +59,7 @@ const content: Record<string, {
 };
 
 export const Contact: React.FC = () => {
-  const { language } = useTranslation();
+  const { language, t } = useTranslation();
   const currentLang = content[language] ? language : 'EN';
   const tData = content[currentLang];
 
@@ -67,7 +67,7 @@ export const Contact: React.FC = () => {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "QrSortable",
-    "image": "https://www.qrsortable.com/brand-logo.png",
+    "image": "https://www.qrsortable.com/images/qrsortable_product.png",
     "@id": "https://www.qrsortable.com/#localbusiness",
     "url": "https://www.qrsortable.com/",
     "email": "info@qrsortable.com",
@@ -92,12 +92,12 @@ export const Contact: React.FC = () => {
         <meta name="description" content={tData.subtitle} />
         <meta property="og:title" content={`${tData.title} | QrSortable`} />
         <meta property="og:description" content={tData.subtitle} />
-        <meta property="og:image" content="https://www.qrsortable.com/og-image.jpg" />
+        <meta property="og:image" content="https://www.qrsortable.com/images/qrsortable_product.png" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${tData.title} | QrSortable`} />
         <meta name="twitter:description" content={tData.subtitle} />
-        <meta name="twitter:image" content="https://www.qrsortable.com/og-image.jpg" />
+        <meta name="twitter:image" content="https://www.qrsortable.com/images/qrsortable_product.png" />
         <link rel="alternate" hrefLang="en" href="https://www.qrsortable.com/contact" />
         <link rel="alternate" hrefLang="de" href="https://www.qrsortable.com/contact?lang=de" />
         <link rel="alternate" hrefLang="fr" href="https://www.qrsortable.com/contact?lang=fr" />
@@ -137,7 +137,7 @@ export const Contact: React.FC = () => {
                   <p className="text-gray-500 font-bold mb-4">{tData.addressDesc}</p>
                 </div>
               </div>
-              <p className="text-lg font-black text-brand-dark">Fahlenbacher Str., 85296 Rohrbach, Germany</p>
+              <p className="text-lg font-black text-brand-dark">Fahlenbacher Str., 85296 Rohrbach, {t('countries', 'Germany')}</p>
             </div>
 
             {/* Email Card */}
@@ -189,7 +189,7 @@ export const Contact: React.FC = () => {
                 allowFullScreen={true} 
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
-                title="QrSortable Location Map"
+                title={t('footer', 'mapTitle')}
               />
             </div>
           </div>

@@ -15,12 +15,12 @@ export const About: React.FC = () => {
         <meta name="description" content={t('about', 'heroSubtitle')} />
         <meta property="og:title" content={`${t('footer', 'about')} | QrSortable`} />
         <meta property="og:description" content={t('about', 'heroSubtitle')} />
-        <meta property="og:image" content="https://www.qrsortable.com/og-image.jpg" />
+        <meta property="og:image" content="https://www.qrsortable.com/images/qrsortable_product.png" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${t('footer', 'about')} | QrSortable`} />
         <meta name="twitter:description" content={t('about', 'heroSubtitle')} />
-        <meta name="twitter:image" content="https://www.qrsortable.com/og-image.jpg" />
+        <meta name="twitter:image" content="https://www.qrsortable.com/images/qrsortable_product.png" />
         <link rel="alternate" hrefLang="en" href="https://www.qrsortable.com/about" />
         <link rel="alternate" hrefLang="de" href="https://www.qrsortable.com/about?lang=de" />
         <link rel="alternate" hrefLang="fr" href="https://www.qrsortable.com/about?lang=fr" />
@@ -73,7 +73,7 @@ export const About: React.FC = () => {
           </div>
           <div className="relative">
              <div className="aspect-square rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white">
-                <img src="https://lh3.googleusercontent.com/d/1aKKd52OG12DdhyBy5z1Fy9fOIAPmun6t" alt="Smart storage organization" className="w-full h-full object-cover" />
+                <img src="https://lh3.googleusercontent.com/d/1aKKd52OG12DdhyBy5z1Fy9fOIAPmun6t" alt={t('about', 'imageAlt')} className="w-full h-full object-cover" />
              </div>
              <div className="absolute -bottom-10 -left-10 bg-[#FDB623] p-10 rounded-[2.5rem] shadow-2xl hidden md:block">
                 <QrCode className="h-16 w-16 text-black" />

@@ -19,7 +19,7 @@ const XIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
 );
 
 export const Footer: React.FC = () => {
-  const { language, t, localizePath } = useTranslation();
+  const { t, localizePath } = useTranslation();
   const { setShowManager } = useCookies();
   
   const sections = [
@@ -49,7 +49,7 @@ export const Footer: React.FC = () => {
                 <span className="text-3xl font-black tracking-tighter text-white group-hover:text-[#FDB623] transition-colors">
                   QrSortable
                 </span>
-                <span className="text-[10px] font-black text-[#FDB623] mt-1 tracking-widest uppercase">Smart labels</span>
+                <span className="text-[10px] font-black text-[#FDB623] mt-1 tracking-widest uppercase">{t('footer', 'smartLabels')}</span>
               </div>
             </Link>
             <p className="text-gray-300 font-bold leading-relaxed mb-10 max-w-xs mx-auto md:mx-0">
@@ -113,7 +113,7 @@ export const Footer: React.FC = () => {
               </a>
               
               <span className="block text-[11px] uppercase text-gray-400 tracking-wider font-black mt-4 mb-1">
-                {language === 'DE' ? 'Firmensitz' : 'Office Location'}
+                {t('footer', 'officeLocation')}
               </span>
               <a 
                 href="https://maps.google.com/?q=Fahlenbacher+Str.,+85296+Rohrbach" 
@@ -136,14 +136,14 @@ export const Footer: React.FC = () => {
                 allowFullScreen={false} 
                 loading="lazy" 
                 referrerPolicy="no-referrer"
-                title="QrSortable Location Map"
+                title={t('footer', 'mapTitle')}
               />
               <a 
                 href="https://maps.google.com/?q=Fahlenbacher+Str.,+85296+Rohrbach" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="absolute inset-0 bg-transparent cursor-pointer"
-                aria-label="Open in Google Maps"
+                aria-label={t('footer', 'openMapsAria')}
               />
             </div>
 

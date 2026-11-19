@@ -23,14 +23,14 @@ export const ReturnPolicy: React.FC = () => {
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDesc} />
-        <meta property="og:image" content="https://www.qrsortable.com/og-image.jpg" />
+        <meta property="og:image" content="https://www.qrsortable.com/images/qrsortable_product.png" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={canonicalUrl} />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDesc} />
-        <meta name="twitter:image" content="https://www.qrsortable.com/og-image.jpg" />
+        <meta name="twitter:image" content="https://www.qrsortable.com/images/qrsortable_product.png" />
 
         {/* Hreflang alternates */}
         <link rel="alternate" hrefLang="en" href="https://www.qrsortable.com/return-policy" />
@@ -189,13 +189,13 @@ export const ReturnPolicy: React.FC = () => {
           <p>{t('returnPolicy', 'contactUs.text')}</p>
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-5 space-y-2 text-sm sm:text-base font-medium">
             <p>
-              <strong className="text-gray-900">Email:</strong>{' '}
+              <strong className="text-gray-900">{t('returnPolicy', 'contactUs.emailLabel')}</strong>{' '}
               <a href="mailto:support@qrsortable.com" className="text-gray-900 underline hover:text-gray-600">
                 support@qrsortable.com
               </a>
             </p>
             <p>
-              <strong className="text-gray-900">Website:</strong>{' '}
+              <strong className="text-gray-900">{t('returnPolicy', 'contactUs.websiteLabel')}</strong>{' '}
               <a href="https://www.qrsortable.com" target="_blank" rel="noopener noreferrer" className="text-gray-900 underline hover:text-gray-600">
                 https://www.qrsortable.com
               </a>

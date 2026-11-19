@@ -105,3 +105,22 @@ export const PRODUCTS: Product[] = [
     reviews: []
   }
 ];
+
+export const DIGITAL_PDF_FEEDBACK_PRODUCT_NAME = 'Instant PDF Label Sheets (QR & Barcodes)';
+
+export const DIGITAL_PDF_FEEDBACK_PRODUCT: Product = {
+  id: 'instant-pdf-label-sheets',
+  name: DIGITAL_PDF_FEEDBACK_PRODUCT_NAME,
+  price: 2,
+  description:
+    'Design and print custom A4 (12 codes) or A5 (6 codes) QR and barcode sheets instantly at home with encrypted app-ready codes.',
+  features: [
+    'Instant PDF Auto-Download',
+    'A4 (12/page) & A5 (6/page)',
+    'Custom QR Hex Colors & Optional Tags',
+    'Encrypted App Compatible',
+    'Zero Shipping Fees (€0.00)',
+  ],
+  image: '/images/feature_codegenerated.png',
+  isDigital: true,
+};

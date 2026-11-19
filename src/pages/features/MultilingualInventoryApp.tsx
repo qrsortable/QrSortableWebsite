@@ -824,7 +824,7 @@ export const MultilingualInventoryApp: React.FC = () => {
     "offers": {
       "@type": "Offer",
       "price": "0.00",
-      "priceCurrency": "USD"
+      "priceCurrency": "EUR"
     }
   };
 
@@ -854,8 +854,13 @@ export const MultilingualInventoryApp: React.FC = () => {
         <link rel="alternate" hrefLang="es" href="https://www.qrsortable.com/features/multilingual-inventory-app?lang=es" />
         <meta property="og:title" content={tPage('seoTitle')} />
         <meta property="og:description" content={tPage('seoDesc')} />
+        <meta property="og:image" content="https://www.qrsortable.com/images/qrsortable_product.png" />
         <meta property="og:url" content={`https://www.qrsortable.com/features/multilingual-inventory-app${language !== 'EN' ? `?lang=${language.toLowerCase()}` : ''}`} />
         <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={tPage('seoTitle')} />
+        <meta name="twitter:description" content={tPage('seoDesc')} />
+        <meta name="twitter:image" content="https://www.qrsortable.com/images/qrsortable_product.png" />
         <meta name="robots" content="index, follow" />
         <script type="application/ld+json">{JSON.stringify(breadcrumbsSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(softwareSchema)}</script>

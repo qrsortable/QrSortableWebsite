@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from '../contexts/LanguageContext';
+import { useProductFeedback } from '../contexts/FeedbackContext';
+import { DIGITAL_PDF_FEEDBACK_PRODUCT_NAME } from '../constants/products';
 import { Hero } from '../components/Hero';
 import { Features } from '../components/Features';
 import { HowItWorks } from '../components/HowItWorks';
@@ -11,6 +13,8 @@ import { Footer } from '../components/Footer';
 
 export const Home: React.FC = () => {
   const { t, language } = useTranslation();
+  const { reviews: digitalReviews } = useProductFeedback(DIGITAL_PDF_FEEDBACK_PRODUCT_NAME);
+  const digitalAvgRating = digitalReviews.length > 0 ? digitalReviews.reduce((a, b) => a + b.rating, 0) / digitalReviews.length : 0;
   const location = useLocation();
 
   useEffect(() => {
@@ -34,12 +38,12 @@ export const Home: React.FC = () => {
         <meta name="robots" content="index, follow, max-image-preview:large" />
         <meta property="og:title" content={t('seo', 'homeTitle')} />
         <meta property="og:description" content={t('seo', 'homeDesc')} />
-        <meta property="og:image" content="https://www.qrsortable.com/og-image.jpg" />
+        <meta property="og:image" content="https://www.qrsortable.com/images/qrsortable_product.png" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('seo', 'homeTitle')} />
         <meta name="twitter:description" content={t('seo', 'homeDesc')} />
-        <meta name="twitter:image" content="https://www.qrsortable.com/og-image.jpg" />
+        <meta name="twitter:image" content="https://www.qrsortable.com/images/qrsortable_product.png" />
         
         <link rel="alternate" hrefLang="en" href="https://www.qrsortable.com/" />
         <link rel="alternate" hrefLang="de" href="https://www.qrsortable.com/?lang=de" />
@@ -54,7 +58,7 @@ export const Home: React.FC = () => {
             "@type": "Organization",
             "name": "QrSortable",
             "url": "https://www.qrsortable.com",
-            "logo": "https://www.qrsortable.com/logo.png",
+            "logo": "https://www.qrsortable.com/images/qrsortable_product.png",
             "sameAs": [
               "https://x.com/QrSortable",
               "https://www.facebook.com/share/14iQCiz7hCH/",
@@ -91,18 +95,144 @@ export const Home: React.FC = () => {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": t('home', 'faq.q1') || "How do QR code storage labels help with moving?",
+                "name": t('articles', 'faq.q1'),
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": t('home', 'faq.a1') || "QR code storage labels allow you to digitize your moving inventory. By scanning a label, you can see high-res photos and lists of what is inside a box without opening it, making the unpacking process much faster."
+                  "text": t('articles', 'faq.a1')
                 }
               },
               {
                 "@type": "Question",
-                "name": t('home', 'faq.q2') || "Are these labels compatible with any smartphone?",
+                "name": t('articles', 'faq.q2'),
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": t('home', 'faq.a2') || "Yes, our QR labels are standard format and can be scanned by any smartphone camera. For the best experience and full inventory features, we recommend using the free QrSortable app."
+                  "text": t('articles', 'faq.a2')
+                }
+              }
+            ]
+          })}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": t('shop', 'title'),
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@type": "Product",
+                  "name": DIGITAL_PDF_FEEDBACK_PRODUCT_NAME,
+                  "sku": "QRS-PDF-LABELS",
+                  "category": "Office Supplies > Labels & Tags > Printable Label Sheets",
+                  "description": "Create Instant PDF Label Sheets (QR & Barcodes) in A4 (€3 · 12 labels) or A5 (€2 · 6 labels). Custom Hex QR colors, Code-128 barcodes, box tags & €0 shipping with auto-download.",
+                  "image": "https://www.qrsortable.com/images/feature_codegenerated.png",
+                  "url": "https://www.qrsortable.com/features/qr-code-generator-storage",
+                  "brand": { "@type": "Brand", "name": "QrSortable" },
+                  ...(digitalReviews.length > 0 ? {
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": digitalAvgRating.toFixed(1),
+                      "reviewCount": digitalReviews.length
+                    }
+                  } : {}),
+                  "offers": {
+                    "@type": "AggregateOffer",
+                    "lowPrice": "2.00",
+                    "highPrice": "15.00",
+                    "priceCurrency": "EUR",
+                    "offerCount": "2",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://www.qrsortable.com/features/qr-code-generator-storage#generator-studio",
+                    "offers": [
+                      {
+                        "@type": "Offer",
+                        "name": "A5 PDF Label Sheet (6 labels/page)",
+                        "sku": "QRS-PDF-A5",
+                        "price": "2.00",
+                        "priceCurrency": "EUR",
+                        "availability": "https://schema.org/InStock",
+                        "url": "https://www.qrsortable.com/features/qr-code-generator-storage?format=A5#generator-studio",
+                        "shippingDetails": {
+                          "@type": "OfferShippingDetails",
+                          "shippingRate": { "@type": "MonetaryAmount", "value": "0.00", "currency": "EUR" },
+                          "deliveryTime": {
+                            "@type": "ShippingDeliveryTime",
+                            "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY" },
+                            "transitTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY" }
+                          }
+                        }
+                      },
+                      {
+                        "@type": "Offer",
+                        "name": "A4 PDF Label Sheet (12 labels/page)",
+                        "sku": "QRS-PDF-A4",
+                        "price": "3.00",
+                        "priceCurrency": "EUR",
+                        "availability": "https://schema.org/InStock",
+                        "url": "https://www.qrsortable.com/features/qr-code-generator-storage?format=A4#generator-studio",
+                        "shippingDetails": {
+                          "@type": "OfferShippingDetails",
+                          "shippingRate": { "@type": "MonetaryAmount", "value": "0.00", "currency": "EUR" },
+                          "deliveryTime": {
+                            "@type": "ShippingDeliveryTime",
+                            "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY" },
+                            "transitTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY" }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@type": "Product",
+                  "name": "Standard Pack (48 Barcode Labels)",
+                  "url": "https://www.qrsortable.com/product/starter-pack",
+                  "brand": { "@type": "Brand", "name": "QrSortable" },
+                  "offers": {
+                    "@type": "Offer",
+                    "price": "14.99",
+                    "priceCurrency": "EUR",
+                    "availability": "https://schema.org/InStock"
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@type": "Product",
+                  "name": "Standard Pack (48 QR Labels)",
+                  "url": "https://www.qrsortable.com/product/pro-pack",
+                  "brand": { "@type": "Brand", "name": "QrSortable" },
+                  "offers": {
+                    "@type": "Offer",
+                    "price": "14.99",
+                    "priceCurrency": "EUR",
+                    "availability": "https://schema.org/InStock"
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                  "@type": "Product",
+                  "name": "Large Pack (100 QR Labels)",
+                  "url": "https://www.qrsortable.com/product/business-pack",
+                  "brand": { "@type": "Brand", "name": "QrSortable" },
+                  "offers": {
+                    "@type": "Offer",
+                    "price": "29.99",
+                    "priceCurrency": "EUR",
+                    "availability": "https://schema.org/InStock"
+                  }
                 }
               }
             ]

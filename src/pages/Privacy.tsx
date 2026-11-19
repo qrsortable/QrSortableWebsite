@@ -16,12 +16,12 @@ export const Privacy: React.FC = () => {
         <meta name="description" content={t('privacy', 'section1.desc')} />
         <meta property="og:title" content={`${t('footer', 'privacy')} | QrSortable`} />
         <meta property="og:description" content={t('privacy', 'section1.desc')} />
-        <meta property="og:image" content="https://www.qrsortable.com/og-image.jpg" />
+        <meta property="og:image" content="https://www.qrsortable.com/images/qrsortable_product.png" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${t('footer', 'privacy')} | QrSortable`} />
         <meta name="twitter:description" content={t('privacy', 'section1.desc')} />
-        <meta name="twitter:image" content="https://www.qrsortable.com/og-image.jpg" />
+        <meta name="twitter:image" content="https://www.qrsortable.com/images/qrsortable_product.png" />
         <link rel="alternate" hrefLang="en" href="https://www.qrsortable.com/privacy" />
         <link rel="alternate" hrefLang="de" href="https://www.qrsortable.com/privacy?lang=de" />
         <link rel="alternate" hrefLang="fr" href="https://www.qrsortable.com/privacy?lang=fr" />

@@ -18,133 +18,38 @@ const assetTags = [
   ...(builtHtml.match(/<link\s+rel="stylesheet"[^>]*>/g) || [])
 ].join('\n    ');
 
-const pageUrl = 'https://www.qrsortable.com/articles/know-whats-inside-every-box-before-opening-it';
-const ogImageUrl = 'https://www.qrsortable.com/images/qr_box_scanner_illustration.png';
-const title = 'Know What’s Inside Every Box Before Opening It: What 8 Experts Say | QrSortable';
-const description =
-  'Eight professionals from events, warehousing, fulfillment and healthcare share how box-level visibility cuts picking time by 25%, receiving time by 77% and removes costly guesswork.';
+const BRAND_LOGO = 'https://www.qrsortable.com/images/qrsortable_product.png';
 
-const articleJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: 'Know What’s Inside Every Box Before Opening It: What 8 Experts Say',
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+function buildPageHtml({
+  routePath,
+  title,
   description,
-  image: [ogImageUrl],
-  datePublished: '2026-11-17',
-  dateModified: '2026-11-17',
-  inLanguage: 'en',
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': pageUrl
-  },
-  author: {
-    '@type': 'Organization',
-    name: 'QrSortable',
-    url: 'https://www.qrsortable.com'
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'QrSortable',
-    url: 'https://www.qrsortable.com',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://www.qrsortable.com/logo.png'
-    }
-  },
-  about: ['inventory labeling', 'QR code inventory', 'warehouse efficiency', 'box visibility'],
-  citation: [
-    'https://arxiv.org/pdf/2002.00167',
-    'https://www.zebra.com/content/dam/zebra_dam/en/white-paper/retail-white-paper-inventory-visibility-retail-touchpoints-en-us.pdf'
-  ],
-  speakable: {
-    '@type': 'SpeakableSpecification',
-    cssSelector: ['#article-headline', '#article-lead', '#numbers', '#theme']
-  }
-};
-
-const breadcrumbJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    {
-      '@type': 'ListItem',
-      position: 1,
-      name: 'QrSortable',
-      item: 'https://www.qrsortable.com/'
-    },
-    {
-      '@type': 'ListItem',
-      position: 2,
-      name: 'Articles',
-      item: 'https://www.qrsortable.com/articles'
-    },
-    {
-      '@type': 'ListItem',
-      position: 3,
-      name: 'Know What’s Inside Every Box Before Opening It: What 8 Experts Say',
-      item: pageUrl
-    }
-  ]
-};
-
-const faqJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How much time can box labeling save?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Experts here reported a 25% cut in average pick time, a 77% drop in weekly receiving time (47 hours to 11), and at least 50% faster item finding with a searchable box system. Results depend on how disorganized things were to begin with.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Why does searching for items cost so much?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'In warehouse order picking, academic breakdowns put travel at roughly 55% and searching at about 15% of picking time. Removing guesswork shortens both.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'What should a box label include?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A short code, the contents, and where the box belongs. Callum Gracie labels cases with contents and venue destination; Jake Wardle uses a clear code plus contents on every bin and box. A QR code can add photos, notes and live inventory details without cluttering the label.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Why use QR codes instead of a handwritten list?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A QR code points to details you can update at any time, including photos, notes and location, so the label never goes stale when the contents change.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'How accurate is the average retailer’s inventory?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The Auburn University RFID Lab has reported around 65%, which is why many teams re-verify instead of trusting the record.'
-      }
-    }
-  ]
-};
-
-const prerenderedArticleHtml = `<!DOCTYPE html>
+  keywords,
+  ogType = 'website',
+  ogImage = BRAND_LOGO,
+  extraHead = '',
+  schemas = [],
+  bodyHtml
+}) {
+  const pageUrl = `https://www.qrsortable.com${routePath}`;
+  return `<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="theme-color" content="#1a1a1a" />
-    <title>${title}</title>
-    <meta name="description" content="${description}" />
-    <meta name="keywords" content="inventory visibility, box labeling, QR code inventory, warehouse picking time, QR storage labels, box content tracker, QrSortable" />
-    <meta name="author" content="QrSortable Team" />
+    <title>${escapeHtml(title)}</title>
+    <meta name="description" content="${escapeHtml(description)}" />
+    ${keywords ? `<meta name="keywords" content="${escapeHtml(keywords)}" />` : ''}
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
     <link rel="canonical" href="${pageUrl}" />
@@ -154,122 +59,543 @@ const prerenderedArticleHtml = `<!DOCTYPE html>
     <link rel="alternate" hreflang="es" href="${pageUrl}?lang=es" />
     <link rel="alternate" hreflang="x-default" href="${pageUrl}" />
     <link rel="alternate" type="text/plain" title="LLMs.txt" href="https://www.qrsortable.com/llms.txt" />
-    <link rel="alternate" type="text/markdown" title="AI & Markdown Version" href="https://www.qrsortable.com/articles/know-whats-inside-every-box-before-opening-it.md" />
+    ${extraHead}
 
-    <meta property="og:type" content="article" />
+    <meta property="og:type" content="${ogType}" />
     <meta property="og:site_name" content="QrSortable" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:title" content="${title}" />
-    <meta property="og:description" content="${description}" />
+    <meta property="og:title" content="${escapeHtml(title)}" />
+    <meta property="og:description" content="${escapeHtml(description)}" />
     <meta property="og:url" content="${pageUrl}" />
-    <meta property="og:image" content="${ogImageUrl}" />
-    <meta property="og:image:alt" content="QrSortable QR code box label scanned by smartphone app" />
-    <meta property="article:published_time" content="2026-11-17T00:00:00Z" />
-    <meta property="article:modified_time" content="2026-11-17T00:00:00Z" />
-    <meta property="article:section" content="Inventory Visibility" />
+    <meta property="og:image" content="${ogImage}" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="${title}" />
-    <meta name="twitter:description" content="${description}" />
-    <meta name="twitter:image" content="${ogImageUrl}" />
+    <meta name="twitter:title" content="${escapeHtml(title)}" />
+    <meta name="twitter:description" content="${escapeHtml(description)}" />
+    <meta name="twitter:image" content="${ogImage}" />
 
-    <script type="application/ld+json">${JSON.stringify(breadcrumbJsonLd)}</script>
-    <script type="application/ld+json">${JSON.stringify(articleJsonLd)}</script>
-    <script type="application/ld+json">${JSON.stringify(faqJsonLd)}</script>
+    ${schemas.map((s) => `<script type="application/ld+json">${JSON.stringify(s)}</script>`).join('\n    ')}
 
     ${assetTags}
   </head>
   <body class="bg-white text-gray-900 antialiased">
     <div id="root">
-      <main style="max-width: 820px; margin: 0 auto; padding: 3rem 1.5rem; font-family: system-ui, -apple-system, sans-serif; line-height: 1.7;">
-        <nav aria-label="Breadcrumb" style="margin-bottom: 1.5rem; font-size: 0.9rem;">
-          <a href="https://www.qrsortable.com/">QrSortable</a> /
-          <a href="https://www.qrsortable.com/articles">Articles</a>
-        </nav>
-        <article>
-          <header>
-            <p style="color: #b45309; font-weight: 700;">Inventory visibility · Expert roundup</p>
-            <h1 id="article-headline" style="font-size: 2.25rem; font-weight: 900; line-height: 1.15;">Know What’s Inside Every Box Before Opening It: What 8 Experts Say</h1>
-            <p style="color: #6b7280;">By the QrSortable team · Updated November 17, 2026 · 6 min read</p>
-            <p id="article-lead" style="font-size: 1.15rem; color: #4b5563;">Opening a box takes seconds. Searching, verifying, moving things around and fixing mistakes takes hours. We asked professionals across industries one question, and their answers were remarkably consistent.</p>
-            <figure>
-              <img src="/images/qr_box_scanner_illustration.png" alt="QrSortable QR code box label scanned by smartphone app revealing box contents" width="1200" height="492" style="max-width: 100%; height: auto;" />
-              <figcaption>One scan replaces three opened cartons.</figcaption>
-            </figure>
-          </header>
-
-          <section id="problem">
-            <h2>The hidden cost of unlabeled boxes</h2>
-            <p>Whether you run a warehouse, pack event gear, stock a medical practice or ship e-commerce orders, you have probably lived this: you know the item exists, you just don’t know which box it’s in.</p>
-            <p>Research on warehouse order picking puts travel at about 55% and searching at about 15% of picking time, and picking itself can eat up to <a href="https://arxiv.org/pdf/2002.00167">60% of warehouse labor</a>. The Auburn University RFID Lab has long put average retail inventory accuracy at <a href="https://www.zebra.com/content/dam/zebra_dam/en/white-paper/retail-white-paper-inventory-visibility-retail-touchpoints-en-us.pdf">around 65%</a>.</p>
-          </section>
-
-          <section id="experts">
-            <h2>What the experts said</h2>
-            <blockquote>“Knowing what is inside every box could save a lot of setup time. The main delay comes from opening several cases, moving them twice and then finding that a cable, microphone or backup item is in another box.” — Callum Gracie, DJ (Events)</blockquote>
-            <blockquote>“Efficiency is reached only when the digital twin is so precise that opening a box becomes a mere formality.” — Girish Songirkar, Delivery manager, enterprise software and supply chain systems (Warehousing)</blockquote>
-            <blockquote>“We fixed it by labelling every bin and box with a clear code and contents, so the picker reads the shelf instead of digging through it.” — Jake Wardle, Founder, EV Cable Hub (Fulfillment)</blockquote>
-            <blockquote>“Receiving time dropped to 11 hours per week. Same volume, 77% less time.” — Joe Spisak, CEO, Fulfill.com (Fulfillment)</blockquote>
-            <blockquote>“Better box-level visibility would also reduce the risk of mixing similar orders, overlooking part of a shipment or opening cartons unnecessarily.” — Charles Liu, Founder, Cubic Promote (Fulfillment)</blockquote>
-            <blockquote>“I’d put the savings at several hours per week for a mid-size practice, easy.” — Ydette Florendo, A-S Medication Solutions (Healthcare)</blockquote>
-            <blockquote>“A well-labeled or searchable box system could cut item-finding time by at least 50%.” — Kruno Sulić, Founder, Cliprise (Tech &amp; startups)</blockquote>
-            <blockquote>“The boxes you haven’t opened are costing you more than the time it takes to open them. They’re costing you clarity.” — Runbo Li, CEO, Magic Hour (Tech &amp; startups)</blockquote>
-          </section>
-
-          <section id="numbers">
-            <h2>The results in numbers</h2>
-            <ul>
-              <li><strong>25%</strong> shorter average pick time (EV Cable Hub)</li>
-              <li><strong>77%</strong> less weekly receiving time (Fulfill.com client — 47 weekly hours down to 11)</li>
-              <li><strong>50%+</strong> faster item finding (Cliprise minimum estimate)</li>
-            </ul>
-          </section>
-
-          <section id="theme">
-            <h2>The common theme across every industry</h2>
-            <ul>
-              <li>Faster retrieval of items</li>
-              <li>Less searching and guesswork</li>
-              <li>Fewer mistakes and returns</li>
-              <li>Better inventory accuracy</li>
-              <li>Lower operational costs</li>
-              <li>Higher productivity</li>
-              <li>Less stress and decision fatigue</li>
-            </ul>
-            <p>Runbo Li’s “cognitive inventory cost” explains why this matters beyond the clock. The faster you know what’s inside a box, the faster you can decide and get work done.</p>
-          </section>
-
-          <section id="faq">
-            <h2>Frequently asked questions</h2>
-            <h3>How much time can box labeling save?</h3>
-            <p>Experts here reported a 25% cut in average pick time, a 77% drop in weekly receiving time (47 hours to 11), and at least 50% faster item finding with a searchable box system.</p>
-            <h3>Why does searching for items cost so much?</h3>
-            <p>In warehouse order picking, academic breakdowns put travel at roughly 55% and searching at about 15% of picking time. Removing guesswork shortens both.</p>
-            <h3>What should a box label include?</h3>
-            <p>A short code, the contents, and where the box belongs. A QR code can add photos, notes and live inventory details without cluttering the label.</p>
-            <h3>Why use QR codes instead of a handwritten list?</h3>
-            <p>A QR code points to details you can update at any time, including photos, notes and location, so the label never goes stale when the contents change.</p>
-            <h3>How accurate is the average retailer’s inventory?</h3>
-            <p>The Auburn University RFID Lab has reported around 65%, which is why many teams re-verify instead of trusting the record.</p>
-          </section>
-
-          <section>
-            <h2>Bring visibility to every box</h2>
-            <p><a href="https://www.qrsortable.com/#products">Explore QrSortable Labels</a> · <a href="https://www.qrsortable.com/get-the-app">Get the App</a></p>
-          </section>
-        </article>
-      </main>
+      ${bodyHtml}
     </div>
   </body>
 </html>
 `;
+}
 
-const articlesDir = path.join(distDir, 'articles');
-fs.mkdirSync(articlesDir, { recursive: true });
-fs.writeFileSync(
-  path.join(articlesDir, 'know-whats-inside-every-box-before-opening-it.html'),
-  prerenderedArticleHtml,
-  'utf8'
+function writePrerenderFile(relFilePath, html) {
+  const fullPath = path.join(distDir, relFilePath);
+  fs.mkdirSync(path.dirname(fullPath), { recursive: true });
+  fs.writeFileSync(fullPath, html, 'utf8');
+  console.log(`prerender-seo: generated dist/${relFilePath}`);
+}
+
+// 1. Article: Know What's Inside Every Box Before Opening It
+const boxArticleUrl = 'https://www.qrsortable.com/articles/know-whats-inside-every-box-before-opening-it';
+const boxArticleImg = 'https://www.qrsortable.com/images/qr_box_scanner_illustration.png';
+const boxArticleDesc =
+  'Eight professionals from events, warehousing, fulfillment and healthcare share how box-level visibility cuts picking time by 25%, receiving time by 77% and removes costly guesswork.';
+
+writePrerenderFile(
+  'articles/know-whats-inside-every-box-before-opening-it.html',
+  buildPageHtml({
+    routePath: '/articles/know-whats-inside-every-box-before-opening-it',
+    title: 'Know What’s Inside Every Box Before Opening It: What 8 Experts Say | QrSortable',
+    description: boxArticleDesc,
+    keywords: 'inventory visibility, box labeling, QR code inventory, warehouse picking time, QR storage labels, box content tracker, QrSortable',
+    ogType: 'article',
+    ogImage: boxArticleImg,
+    extraHead: `<link rel="alternate" type="text/markdown" title="AI & Markdown Version" href="https://www.qrsortable.com/articles/know-whats-inside-every-box-before-opening-it.md" />`,
+    schemas: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'QrSortable', item: 'https://www.qrsortable.com/' },
+          { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://www.qrsortable.com/articles' },
+          { '@type': 'ListItem', position: 3, name: 'Know What’s Inside Every Box Before Opening It: What 8 Experts Say', item: boxArticleUrl }
+        ]
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: 'Know What’s Inside Every Box Before Opening It: What 8 Experts Say',
+        description: boxArticleDesc,
+        image: [boxArticleImg],
+        datePublished: '2026-11-17',
+        dateModified: '2026-11-17',
+        inLanguage: 'en',
+        mainEntityOfPage: { '@type': 'WebPage', '@id': boxArticleUrl },
+        author: { '@type': 'Organization', name: 'QrSortable', url: 'https://www.qrsortable.com' },
+        publisher: {
+          '@type': 'Organization',
+          name: 'QrSortable',
+          url: 'https://www.qrsortable.com',
+          logo: { '@type': 'ImageObject', url: BRAND_LOGO }
+        },
+        about: ['inventory labeling', 'QR code inventory', 'warehouse efficiency', 'box visibility'],
+        citation: [
+          'https://arxiv.org/pdf/2002.00167',
+          'https://www.zebra.com/content/dam/zebra_dam/en/white-paper/retail-white-paper-inventory-visibility-retail-touchpoints-en-us.pdf'
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['#article-headline', '#article-lead', '#numbers', '#theme']
+        }
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'How much time can box labeling save?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Experts here reported a 25% cut in average pick time, a 77% drop in weekly receiving time (47 hours to 11), and at least 50% faster item finding with a searchable box system.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'What should a box label include?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'A short code, the contents, and where the box belongs. A QR code can add photos, notes and live inventory details without cluttering the label.'
+            }
+          }
+        ]
+      }
+    ],
+    bodyHtml: `<main style="max-width: 820px; margin: 0 auto; padding: 3rem 1.5rem; font-family: system-ui, -apple-system, sans-serif; line-height: 1.7;">
+      <nav aria-label="Breadcrumb" style="margin-bottom: 1.5rem; font-size: 0.9rem;">
+        <a href="https://www.qrsortable.com/">QrSortable</a> / <a href="https://www.qrsortable.com/articles">Articles</a>
+      </nav>
+      <article>
+        <h1 id="article-headline">Know What’s Inside Every Box Before Opening It: What 8 Experts Say</h1>
+        <p id="article-lead">Opening a box takes seconds. Searching, verifying, moving things around and fixing mistakes takes hours. We asked professionals across events, warehousing, fulfillment, healthcare and startups how much time clear box-level visibility saves.</p>
+        <section id="numbers">
+          <h2>Key Results Reported</h2>
+          <ul>
+            <li><strong>25%</strong> shorter average pick time (EV Cable Hub)</li>
+            <li><strong>77%</strong> less weekly receiving time (47h to 11h, Fulfill.com client)</li>
+            <li><strong>50%+</strong> faster item finding (Cliprise)</li>
+          </ul>
+        </section>
+      </article>
+    </main>`
+  })
 );
 
-console.log('prerender-seo: generated dist/articles/know-whats-inside-every-box-before-opening-it.html');
+// 2. Feature: Instant PDF Label Sheets (QR & Barcodes) / QR Code Generator for Storage
+const labelStudioUrl = 'https://www.qrsortable.com/features/qr-code-generator-storage';
+const labelStudioImg = 'https://www.qrsortable.com/images/feature_codegenerated.png';
+const labelStudioTitle = 'Instant PDF Label Sheets (QR & Barcodes) – Printable A4 & A5 | QrSortable';
+const labelStudioDesc =
+  'Create Instant PDF Label Sheets (QR & Barcodes) in A4 (€3 · 12 labels) or A5 (€2 · 6 labels). Custom Hex QR colors, Code-128 barcodes, box tags & €0 shipping with auto-download.';
+const digitalPdfShipping = {
+  '@type': 'OfferShippingDetails',
+  shippingRate: { '@type': 'MonetaryAmount', value: '0.00', currency: 'EUR' },
+  deliveryTime: {
+    '@type': 'ShippingDeliveryTime',
+    handlingTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 0, unitCode: 'DAY' },
+    transitTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 0, unitCode: 'DAY' }
+  }
+};
+
+writePrerenderFile(
+  'features/qr-code-generator-storage.html',
+  buildPageHtml({
+    routePath: '/features/qr-code-generator-storage',
+    title: labelStudioTitle,
+    description: labelStudioDesc,
+    keywords:
+      'Instant PDF Label Sheets, printable QR code labels PDF, Code-128 barcode label sheet, A4 A5 sticker sheet generator, storage box QR labels, moving box printable labels, QrSortable',
+    ogType: 'product',
+    ogImage: labelStudioImg,
+    extraHead: `<link rel="alternate" type="text/markdown" title="AI & Markdown Version" href="https://www.qrsortable.com/features/qr-code-generator-storage.md" />
+    <meta property="og:locale:alternate" content="de_DE" />
+    <meta property="og:locale:alternate" content="fr_FR" />
+    <meta property="og:locale:alternate" content="es_ES" />`,
+    schemas: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'QrSortable', item: 'https://www.qrsortable.com/' },
+          { '@type': 'ListItem', position: 2, name: 'Features', item: 'https://www.qrsortable.com/#features' },
+          { '@type': 'ListItem', position: 3, name: 'Instant PDF Label Sheets (QR & Barcodes)', item: labelStudioUrl }
+        ]
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: labelStudioTitle,
+        description: labelStudioDesc,
+        url: labelStudioUrl,
+        inLanguage: 'en',
+        isPartOf: { '@type': 'WebSite', name: 'QrSortable', url: 'https://www.qrsortable.com/' },
+        mainEntity: { '@type': 'Product', name: 'Instant PDF Label Sheets (QR & Barcodes)' },
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['#studio-hero-title', '#studio-summary', '#studio-specs', '#faq-section']
+        }
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'WebApplication',
+        name: 'QrSortable Label Studio',
+        url: labelStudioUrl,
+        operatingSystem: 'Web, iOS, Android',
+        applicationCategory: 'ProductivityApplication',
+        description: labelStudioDesc,
+        offers: {
+          '@type': 'AggregateOffer',
+          lowPrice: '2.00',
+          highPrice: '15.00',
+          priceCurrency: 'EUR'
+        }
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: 'Instant PDF Label Sheets (QR & Barcodes)',
+        sku: 'QRS-PDF-LABELS',
+        category: 'Office Supplies > Labels & Tags > Printable Label Sheets',
+        description: labelStudioDesc,
+        image: labelStudioImg,
+        url: labelStudioUrl,
+        brand: { '@type': 'Brand', name: 'QrSortable' },
+        offers: {
+          '@type': 'AggregateOffer',
+          lowPrice: '2.00',
+          highPrice: '15.00',
+          priceCurrency: 'EUR',
+          offerCount: '2',
+          availability: 'https://schema.org/InStock',
+          url: `${labelStudioUrl}#generator-studio`,
+          offers: [
+            {
+              '@type': 'Offer',
+              name: 'A5 PDF Label Sheet (6 labels/page)',
+              sku: 'QRS-PDF-A5',
+              price: '2.00',
+              priceCurrency: 'EUR',
+              availability: 'https://schema.org/InStock',
+              url: `${labelStudioUrl}?format=A5#generator-studio`,
+              shippingDetails: digitalPdfShipping
+            },
+            {
+              '@type': 'Offer',
+              name: 'A4 PDF Label Sheet (12 labels/page)',
+              sku: 'QRS-PDF-A4',
+              price: '3.00',
+              priceCurrency: 'EUR',
+              availability: 'https://schema.org/InStock',
+              url: `${labelStudioUrl}?format=A4#generator-studio`,
+              shippingDetails: digitalPdfShipping
+            }
+          ]
+        }
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How QrSortable’s QR Code Generator Works',
+        description: labelStudioDesc,
+        step: [
+          {
+            '@type': 'HowToStep',
+            position: 1,
+            name: 'Choose QR Code or Barcode (Web or App)',
+            text: 'Use the Interactive Label Studio on the web or open Home → Generator in the QrSortable app to select color-customizable QR Codes or crisp black Code-128 Barcodes.'
+          },
+          {
+            '@type': 'HowToStep',
+            position: 2,
+            name: 'Customize Format, Pages, Color & Tag',
+            text: 'Pick A4 (12 labels/page, 3 × 4 grid) or A5 (6 labels/page, 2 × 3 grid), select 1 to 5 pages, optionally add a Tag Name and custom Hex QR color, and toggle subtle cut guides.'
+          },
+          {
+            '@type': 'HowToStep',
+            position: 3,
+            name: 'Unlock & Download Your Print-Ready PDF',
+            text: 'Complete fast Mollie checkout (€0.00 shipping, no delivery address needed) to unlock unique encrypted codes and auto-download your print-ready PDF.'
+          },
+          {
+            '@type': 'HowToStep',
+            position: 4,
+            name: 'Print, Apply, and Scan',
+            text: 'Print at 100% Actual Size on adhesive sheets or plain paper, apply to clean flat surfaces, and scan with QrSortable to attach items, photos, remarks, and locations.'
+          },
+          {
+            '@type': 'HowToStep',
+            position: 5,
+            name: 'Re-Download Anytime (Web or App)',
+            text: 'Reprint anytime from Unlocked Printable PDF Orders in your browser or Menu → Orders → Download in the QrSortable mobile app.'
+          }
+        ]
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Can I generate QR codes from both the website and the mobile app?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. Design, preview, pay, and download print-ready A4 or A5 PDF sheets directly in the Interactive Label Studio on this page or via Home → Generator inside the QrSortable iOS/Android app.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'Can I print QR code labels myself on A4 or A5 paper?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. Choose A4 (12 labels/page, 3 × 4 grid, 70 × 67.7 mm) for €3/page or A5 (6 labels/page, 2 × 3 grid, 74 × 66.3 mm) for €2/page, up to 5 pages per order, and print at 100% Actual Size.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'Can I generate barcodes as well as custom-colored QR codes?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. Both the web studio and mobile app support custom Hex QR Codes (#RRGGBB) for room color-coding and high-contrast black Code-128 Barcodes (#000000).'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'Are the generated labels secure and compatible with QrSortable?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. Live previews show a non-scannable watermarked sample, while paid sheets unlock unique encrypted QrSortable codes that link directly to your digital box inventory.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'Can I re-download my generated PDF later?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. Unlocked web orders stay saved on your browser under Unlocked Printable PDF Orders (with Open/Print PDF and cut-guide toggles), and app orders remain available under Menu → Orders → Download.'
+            }
+          }
+        ]
+      }
+    ],
+    bodyHtml: `<main style="max-width: 860px; margin: 0 auto; padding: 3rem 1.5rem; font-family: system-ui, -apple-system, sans-serif; line-height: 1.7;">
+      <nav aria-label="Breadcrumb" style="margin-bottom: 1.5rem; font-size: 0.9rem;">
+        <a href="https://www.qrsortable.com/">Home</a> / <a href="https://www.qrsortable.com/#features">Features</a> / <span>Instant PDF Label Sheets (QR &amp; Barcodes)</span>
+      </nav>
+      <h1 id="studio-hero-title">Instant PDF Label Sheets (QR &amp; Barcodes): QR Code Generator for Storage</h1>
+      <p id="studio-summary">Design and download encrypted A4 (12 labels, €3) or A5 (6 labels, €2) PDF label sheets online in our Interactive Label Studio or inside the QrSortable app. Print at home with €0 shipping and link every box to your searchable digital inventory.</p>
+
+      <section id="studio-specs" style="margin: 2rem 0;">
+        <h2>Instant PDF Label Sheets — Specifications at a Glance</h2>
+        <ul>
+          <li><strong>A4 Sheet Format (SKU: QRS-PDF-A4):</strong> 12 labels / page (3 × 4 grid · 70 × 67.7 mm) · €3.00 / page</li>
+          <li><strong>A5 Sheet Format (SKU: QRS-PDF-A5):</strong> 6 labels / page (2 × 3 grid · 74 × 66.3 mm) · €2.00 / page</li>
+          <li><strong>Supported Codes:</strong> Custom Hex QR Codes (#RRGGBB, ECC Q) &amp; Black Code-128 Barcodes (#000000)</li>
+          <li><strong>Delivery &amp; Printing:</strong> €0.00 shipping · Instant PDF auto-download · Print at 100% Actual Size</li>
+          <li><strong>Pages per Order:</strong> 1 to 5 pages (up to 60 A4 labels or 30 A5 labels) with optional Tag Name &amp; subtle cut guides</li>
+        </ul>
+      </section>
+
+      <section style="margin: 2rem 0;">
+        <h2>How QrSortable’s QR Code Generator Works</h2>
+        <ol>
+          <li><strong>Choose QR Code or Barcode (Web or App):</strong> Open the Interactive Label Studio on the web or go to Home → Generator inside the QrSortable app.</li>
+          <li><strong>Customize Format, Pages, Color &amp; Tag:</strong> Pick A4 or A5, select 1–5 pages, choose a QR Hex color or Code-128 barcode, and add an optional box tag.</li>
+          <li><strong>Unlock &amp; Download Your Print-Ready PDF:</strong> Pay securely via Mollie (€0.00 digital shipping) and auto-download your unique encrypted label PDF.</li>
+          <li><strong>Print, Apply, and Scan:</strong> Print at 100% Actual Size, stick onto clean flat containers, and scan with QrSortable to log items, photos, remarks, and locations.</li>
+          <li><strong>Re-Download Anytime:</strong> Access Unlocked Printable PDF Orders on the web or Menu → Orders → Download in the mobile app.</li>
+        </ol>
+      </section>
+
+      <section style="margin: 2rem 0;">
+        <h2>Printable PDF Labels vs. Pre-Printed Waterproof Packs</h2>
+        <table>
+          <thead>
+            <tr><th>Feature</th><th>Instant PDF Label Sheets</th><th>Waterproof Label Packs</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Fulfillment</td><td>Instant PDF download (€0 shipping)</td><td>Pre-printed packs shipped to your door</td></tr>
+            <tr><td>Pricing</td><td>€2/page (A5, 6 codes) · €3/page (A4, 12 codes)</td><td>€14.99 (48 labels) · €29.99 (100 labels)</td></tr>
+            <tr><td>Customization</td><td>Custom Hex QR color, box Tag Name, cut guides</td><td>Pre-printed color-coded or black heavy-duty sets</td></tr>
+            <tr><td>Best For</td><td>Same-day moving prep, home, office &amp; reprints</td><td>Damp garages, basements &amp; heavy handling</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="faq-section" style="margin: 2rem 0;">
+        <h2>Frequently Asked Questions</h2>
+        <dl>
+          <dt><strong>Can I generate QR codes from both the website and the mobile app?</strong></dt>
+          <dd>Yes. Design, preview, pay, and download directly in the Interactive Label Studio or via Home → Generator inside the iOS and Android app.</dd>
+          <dt><strong>Can I print QR code labels myself on A4 or A5 paper?</strong></dt>
+          <dd>Yes. Choose A4 (12/page) or A5 (6/page), up to 5 pages per order, and print at 100% Actual Size on sticker sheets or plain paper.</dd>
+          <dt><strong>Can I re-download my generated PDF later?</strong></dt>
+          <dd>Yes. Re-download anytime from Unlocked Printable PDF Orders in your browser or Menu → Orders → Download in the mobile app.</dd>
+        </dl>
+      </section>
+
+      <p><a href="https://www.qrsortable.com/">Home</a> · <a href="https://www.qrsortable.com/#products">Shop All Packs</a> · <a href="https://www.qrsortable.com/get-the-app">Get the App</a> · <a href="https://www.qrsortable.com/features/qr-code-generator-storage.md">Markdown Version</a></p>
+    </main>`
+  })
+);
+
+// 3. Product Detail Pages
+const productPrerenders = [
+  {
+    slug: 'starter-pack',
+    name: 'Standard Pack (48 Barcode Labels)',
+    price: '14.99',
+    image: 'https://lh3.googleusercontent.com/d/15PXsmikKti6F-BT7tfpcVlx7bqA0qfnE',
+    desc: 'Keep home, storage, or moving items organized with ease. 48 unique black waterproof Code-128 barcode labels linked to the QrSortable app.'
+  },
+  {
+    slug: 'pro-pack',
+    name: 'Standard Pack (48 QR Labels)',
+    price: '14.99',
+    image: 'https://lh3.googleusercontent.com/d/1KMkk7zFMkMXXF40zllqPNOZASgT39GRd',
+    desc: 'A multi-purpose organization kit for home, storage, or moving. 48 unique color-coded waterproof QR storage labels.'
+  },
+  {
+    slug: 'business-pack',
+    name: 'Large Pack (100 QR Labels)',
+    price: '29.99',
+    image: 'https://lh3.googleusercontent.com/d/12dbFsmeQOr3HmTM4CZB375zZv2JxXVSW',
+    desc: 'Ideal for small businesses, large estates, or professional organizers. 100 heavy-duty waterproof QR labels.'
+  }
+];
+
+for (const prod of productPrerenders) {
+  writePrerenderFile(
+    `product/${prod.slug}.html`,
+    buildPageHtml({
+      routePath: `/product/${prod.slug}`,
+      title: `${prod.name} - QrSortable`,
+      description: prod.desc,
+      ogType: 'product',
+      ogImage: prod.image,
+      schemas: [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'Product',
+          name: prod.name,
+          description: prod.desc,
+          image: prod.image,
+          brand: { '@type': 'Brand', name: 'QrSortable' },
+          offers: {
+            '@type': 'Offer',
+            price: prod.price,
+            priceCurrency: 'EUR',
+            availability: 'https://schema.org/InStock'
+          }
+        }
+      ],
+      bodyHtml: `<main style="max-width: 820px; margin: 0 auto; padding: 3rem 1.5rem; font-family: system-ui, -apple-system, sans-serif; line-height: 1.7;">
+        <h1>${escapeHtml(prod.name)} — €${prod.price}</h1>
+        <p>${escapeHtml(prod.desc)}</p>
+        <p><a href="https://www.qrsortable.com/">Browse All QrSortable Products</a></p>
+      </main>`
+    })
+  );
+}
+
+// 4. Smart QR Code Labels Guide & Key Top-Level Pages
+writePrerenderFile(
+  'articles/smart-qr-code-labels-for-storage-bins.html',
+  buildPageHtml({
+    routePath: '/articles/smart-qr-code-labels-for-storage-bins',
+    title: 'Smart QR Code Labels for Storage Bins: Scan, Search, and Organize Every Box | QrSortable',
+    description: 'Learn how smart QR code labels for storage bins help you track box contents with photos, search across rooms, and avoid opening sealed containers.',
+    ogType: 'article',
+    ogImage: 'https://www.qrsortable.com/images/qr_storage_header.png',
+    schemas: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: 'Smart QR Code Labels for Storage Bins: Scan, Search, and Organize Every Box',
+        image: ['https://www.qrsortable.com/images/qr_storage_header.png'],
+        datePublished: '2026-07-23',
+        dateModified: '2026-07-23',
+        author: [{ '@type': 'Organization', name: 'QrSortable', url: 'https://www.qrsortable.com' }],
+        publisher: {
+          '@type': 'Organization',
+          name: 'QrSortable',
+          logo: { '@type': 'ImageObject', url: BRAND_LOGO }
+        }
+      }
+    ],
+    bodyHtml: `<main style="max-width: 820px; margin: 0 auto; padding: 3rem 1.5rem; font-family: system-ui, -apple-system, sans-serif; line-height: 1.7;">
+      <h1>Smart QR Code Labels for Storage Bins: Scan, Search, and Organize Every Box</h1>
+      <p>Learn how dynamic smart QR storage labels link plastic bins and cardboard boxes to searchable digital item lists and high-res photos.</p>
+    </main>`
+  })
+);
+
+writePrerenderFile(
+  'articles.html',
+  buildPageHtml({
+    routePath: '/articles',
+    title: 'QrSortable Articles - Smart Organization & Inventory Tips',
+    description: 'Practical guides, expert research, and moving tips to organize storage rooms, basements, garages, and small businesses with QR code labels.',
+    ogImage: boxArticleImg,
+    bodyHtml: `<main style="max-width: 820px; margin: 0 auto; padding: 3rem 1.5rem; font-family: system-ui, -apple-system, sans-serif; line-height: 1.7;">
+      <h1>QrSortable Articles &amp; Guides</h1>
+      <ul>
+        <li><a href="https://www.qrsortable.com/articles/know-whats-inside-every-box-before-opening-it">Know What’s Inside Every Box Before Opening It: What 8 Experts Say</a></li>
+        <li><a href="https://www.qrsortable.com/articles/smart-qr-code-labels-for-storage-bins">Smart QR Code Labels for Storage Bins</a></li>
+        <li><a href="https://www.qrsortable.com/articles/the-ultimate-guide-to-qr-code-storage-labels">The Ultimate Guide to QR Code Storage Labels</a></li>
+      </ul>
+    </main>`
+  })
+);
+
+writePrerenderFile(
+  'get-the-app.html',
+  buildPageHtml({
+    routePath: '/get-the-app',
+    title: 'Get the App | QrSortable',
+    description: 'Download QrSortable for iOS and Android to scan smart QR storage labels, log box contents with photos, and find anything in seconds.',
+    schemas: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        name: 'QrSortable',
+        operatingSystem: 'iOS, Android',
+        applicationCategory: 'UtilitiesApplication',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' }
+      }
+    ],
+    bodyHtml: `<main style="max-width: 820px; margin: 0 auto; padding: 3rem 1.5rem; font-family: system-ui, -apple-system, sans-serif; line-height: 1.7;">
+      <h1>Download the QrSortable App (iOS &amp; Android)</h1>
+      <p>Scan smart QR code and Code-128 barcode labels to manage storage boxes, photos, locations, and remarks in English, German, French, and Spanish.</p>
+    </main>`
+  })
+);
+
+writePrerenderFile(
+  'about.html',
+  buildPageHtml({
+    routePath: '/about',
+    title: 'About Us | QrSortable',
+    description: 'Simplifying moves and home organization one scan at a time. Discover how QrSortable connects durable labels to mobile inventory software.',
+    schemas: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'AboutPage',
+        name: 'About Us - QrSortable',
+        url: 'https://www.qrsortable.com/about'
+      }
+    ],
+    bodyHtml: `<main style="max-width: 820px; margin: 0 auto; padding: 3rem 1.5rem; font-family: system-ui, -apple-system, sans-serif; line-height: 1.7;">
+      <h1>About QrSortable</h1>
+      <p>QrSortable helps households, movers, and small businesses track every stored item by connecting physical QR labels to searchable mobile records.</p>
+    </main>`
+  })
+);

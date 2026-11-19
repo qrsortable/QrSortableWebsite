@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { TRANSLATIONS } from '../constants/translations';
 
 interface LanguageContextType {
@@ -74,6 +75,8 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     } catch (e) {}
   };
 
+  const location = useLocation();
+
   useEffect(() => {
     try {
       const pathname = window.location.pathname;
@@ -96,31 +99,44 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     } catch (e) {}
   }, []);
 
-  const t = (section: string, key?: string) => {
-    if (!TRANSLATIONS[language] || !TRANSLATIONS[language][section]) {
-       if (TRANSLATIONS['EN'] && TRANSLATIONS['EN'][section]) {
-           const keys = key ? key.split('.') : [];
-           let value = TRANSLATIONS['EN'][section];
-           for (const k of keys) {
-               if (value === undefined || value === null) return key;
-               value = value[k];
-           }
-           return value !== undefined ? value : key;
-       }
-       return key || section;
-    }
+  useEffect(() => {
+    try {
+      const params = new URLSearchParams(location.search);
+      const langParam = params.get('lang') || params.get('hl');
+      if (langParam) {
+        const upper = langParam.toUpperCase();
+        if (['EN', 'DE', 'FR', 'ES'].includes(upper) && upper !== language) {
+          setLanguage(upper);
+          try {
+            localStorage.setItem('language', upper);
+          } catch (e) {}
+        }
+      }
+    } catch (e) {}
+  }, [location.search, language]);
 
-    if (!key) return TRANSLATIONS[language][section];
-    
-    const keys = key.split('.');
-    let value = TRANSLATIONS[language][section];
-    
-    for (const k of keys) {
-      if (value === undefined || value === null) return key;
-      value = value[k];
-    }
-    
-    return value !== undefined ? value : key;
+  const t = (section: string, key?: string) => {
+    const resolveFromLang = (langCode: string) => {
+      const langData = TRANSLATIONS[langCode];
+      if (!langData || !langData[section]) return undefined;
+      if (!key) return langData[section];
+
+      const keys = key.split('.');
+      let value = langData[section];
+      for (const k of keys) {
+        if (value === undefined || value === null) return undefined;
+        value = value[k];
+      }
+      return value;
+    };
+
+    const localized = resolveFromLang(language);
+    if (localized !== undefined) return localized;
+
+    const fallback = resolveFromLang('EN');
+    if (fallback !== undefined) return fallback;
+
+    return key || section;
   };
 
   const localizePath = (path: string) => {

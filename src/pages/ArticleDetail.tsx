@@ -28,12 +28,12 @@ export const ArticleDetail: React.FC = () => {
   }, [article]);
 
   if (!article) {
-    return <Navigate to="/articles" replace />;
+    return <Navigate to={localizePath('/articles')} replace />;
   }
 
   // Handle SEO redirection from old slug to canonical slug
   if (slug === 'qr-code-storage-labels-the-smarter-way-to-find-what-you-own') {
-    return <Navigate to={`/articles/${article.slug}`} replace />;
+    return <Navigate to={localizePath(`/articles/${article.slug}`)} replace />;
   }
 
   const handleShare = async () => {
@@ -105,13 +105,13 @@ export const ArticleDetail: React.FC = () => {
               {
                 "@type": "ListItem",
                 "position": 1,
-                "name": "Home",
+                "name": t('articles', 'homeBreadcrumb'),
                 "item": "https://www.qrsortable.com"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Articles",
+                "name": t('nav', 'articles'),
                 "item": "https://www.qrsortable.com/articles"
               },
               {
@@ -139,7 +139,7 @@ export const ArticleDetail: React.FC = () => {
               "name": "QrSortable",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.qrsortable.com/logo.png"
+                "url": "https://www.qrsortable.com/images/qrsortable_product.png"
               }
             },
             "description": article.excerpt[language as keyof typeof article.excerpt]
@@ -184,7 +184,7 @@ export const ArticleDetail: React.FC = () => {
                   <div className="font-black text-gray-900">{article.author}</div>
                   <div className="text-sm font-bold text-gray-400 flex items-center gap-1">
                     <Calendar className="h-3 w-3" />
-                    {new Date(article.date).toLocaleDateString()}
+                    {new Date(article.date).toLocaleDateString(language === 'EN' ? 'en-US' : language.toLowerCase())}
                   </div>
                 </div>
               </div>
@@ -193,7 +193,7 @@ export const ArticleDetail: React.FC = () => {
                 <button 
                   onClick={handleShare}
                   className="p-3 rounded-full hover:bg-gray-50 text-gray-400 hover:text-[#FDB623] transition-colors border border-transparent hover:border-gray-100"
-                  title="Share article"
+                  title={t('articles', 'shareTitle')}
                 >
                   <Share2 className="h-5 w-5" />
                 </button>
@@ -204,7 +204,7 @@ export const ArticleDetail: React.FC = () => {
                       ? 'bg-[#FDB623]/10 text-[#FDB623] border-[#FDB623]/20' 
                       : 'hover:bg-gray-50 text-gray-400 hover:text-[#FDB623]'
                   }`}
-                  title={isBookmarked ? "Remove bookmark" : "Save article"}
+                  title={isBookmarked ? t('articles', 'removeBookmarkTitle') : t('articles', 'bookmarkTitle')}
                 >
                   <Bookmark className={`h-5 w-5 ${isBookmarked ? 'fill-current' : ''}`} />
                 </button>
@@ -218,9 +218,9 @@ export const ArticleDetail: React.FC = () => {
                       className="absolute -top-14 right-0 bg-gray-900 shadow-2xl text-white px-4 py-2 rounded-xl text-sm font-black flex items-center gap-2 whitespace-nowrap z-50 border border-white/10"
                     >
                       <Check className="h-4 w-4 text-[#FDB623]" />
-                      {showToast === 'shared' && 'Link copied to clipboard!'}
-                      {showToast === 'saved' && 'Article saved to bookmarks!'}
-                      {showToast === 'removed' && 'Removed from bookmarks'}
+                      {showToast === 'shared' && t('articles', 'toastShared')}
+                      {showToast === 'saved' && t('articles', 'toastSaved')}
+                      {showToast === 'removed' && t('articles', 'toastRemoved')}
                     </motion.div>
                   )}
                 </AnimatePresence>

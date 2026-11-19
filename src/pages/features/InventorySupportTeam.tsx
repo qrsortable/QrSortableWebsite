@@ -91,7 +91,7 @@ export const InventorySupportTeam: React.FC = () => {
     "offers": {
       "@type": "Offer",
       "price": "0.00",
-      "priceCurrency": "USD"
+      "priceCurrency": "EUR"
     }
   };
 
@@ -121,8 +121,13 @@ export const InventorySupportTeam: React.FC = () => {
         <link rel="alternate" hrefLang="es" href="https://www.qrsortable.com/features/support-team?lang=es" />
         <meta property="og:title" content={tData.seoTitle} />
         <meta property="og:description" content={tData.seoDesc} />
+        <meta property="og:image" content="https://www.qrsortable.com/images/qrsortable_product.png" />
         <meta property="og:url" content={`https://www.qrsortable.com/features/support-team${language !== 'EN' ? `?lang=${language.toLowerCase()}` : ''}`} />
         <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={tData.seoTitle} />
+        <meta name="twitter:description" content={tData.seoDesc} />
+        <meta name="twitter:image" content="https://www.qrsortable.com/images/qrsortable_product.png" />
         <meta name="robots" content="index, follow" />
         <script type="application/ld+json">{JSON.stringify(breadcrumbsSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(softwareSchema)}</script>
@@ -457,7 +462,7 @@ export const InventorySupportTeam: React.FC = () => {
                   </Link>
                 </div>
                 <p className="text-xs text-gray-400 mt-6 italic font-bold">
-                  Email support@qrsortable.com for support with labels, setup, scanning, PDFs, and inventory workflows.
+                  {tData.supportEmailFooterNote}
                 </p>
               </div>
             </section>

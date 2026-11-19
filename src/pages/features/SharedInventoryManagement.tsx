@@ -84,7 +84,7 @@ export const SharedInventoryManagement: React.FC = () => {
     "offers": {
       "@type": "Offer",
       "price": "0.00",
-      "priceCurrency": "USD"
+      "priceCurrency": "EUR"
     }
   };
 
@@ -114,8 +114,13 @@ export const SharedInventoryManagement: React.FC = () => {
         <link rel="alternate" hrefLang="es" href="https://www.qrsortable.com/features/shared-inventory-management?lang=es" />
         <meta property="og:title" content={tData.seoTitle} />
         <meta property="og:description" content={tData.seoDesc} />
+        <meta property="og:image" content="https://www.qrsortable.com/images/feature_shared_inventory.png" />
         <meta property="og:url" content={`https://www.qrsortable.com/features/shared-inventory-management${language !== 'EN' ? `?lang=${language.toLowerCase()}` : ''}`} />
         <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={tData.seoTitle} />
+        <meta name="twitter:description" content={tData.seoDesc} />
+        <meta name="twitter:image" content="https://www.qrsortable.com/images/feature_shared_inventory.png" />
         <meta name="robots" content="index, follow" />
         <script type="application/ld+json">{JSON.stringify(breadcrumbsSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(softwareSchema)}</script>
@@ -215,7 +220,7 @@ export const SharedInventoryManagement: React.FC = () => {
                   <div className="absolute -inset-1 bg-gradient-to-r from-[#FDB623] to-[#FDB623]/30 rounded-[2.5rem] blur opacity-15"></div>
                   <img 
                     src="/images/feature_shared_inventory.png" 
-                    alt="QrSortable Shared Inventory Management and Multi-User Sync Setup across devices" 
+                    alt={tData.heading} 
                     className="relative rounded-[2.5rem] border-4 border-gray-900 shadow-2xl w-full h-auto object-contain"
                     referrerPolicy="no-referrer"
                   />

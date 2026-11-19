@@ -8,11 +8,11 @@ export const Hero: React.FC = () => {
   const { t } = useTranslation();
 
   const phoneBoxData = [
-    { id: '2DGPL', room: 'Blue color closet', date: '16 Feb 2026, 9:30 pm', color: 'bg-red-700' },
-    { id: '2DMPX', room: 'Kitchen closet', date: '18 Dec 2025, 10:30 pm', color: 'bg-blue-700' },
-    { id: 'LLV626', room: 'Book closet', date: '23 Jan 2024, 10:30 pm', color: 'bg-[#FDB623]' },
-    { id: 'LLP628', room: 'Spare parts closet', date: '28 Dec 2025, 11:35 am', color: 'bg-emerald-700' },
-    { id: 'LEV636', room: 'Sport closet', date: '23 Nov 2025, 10:30 pm', color: 'bg-pink-700' },
+    { id: '2DGPL', room: t('hero', 'box1Room'), date: '16 Feb 2026, 9:30 pm', color: 'bg-red-700' },
+    { id: '2DMPX', room: t('hero', 'box2Room'), date: '18 Dec 2025, 10:30 pm', color: 'bg-blue-700' },
+    { id: 'LLV626', room: t('hero', 'box3Room'), date: '23 Jan 2024, 10:30 pm', color: 'bg-[#FDB623]' },
+    { id: 'LLP628', room: t('hero', 'box4Room'), date: '28 Dec 2025, 11:35 am', color: 'bg-emerald-700' },
+    { id: 'LEV636', room: t('hero', 'box5Room'), date: '23 Nov 2025, 10:30 pm', color: 'bg-pink-700' },
   ];
 
   return (
@@ -114,7 +114,7 @@ export const Hero: React.FC = () => {
                          <div className="flex items-center justify-between relative">
                             <div className="flex flex-col items-center opacity-50">
                               <Menu className="h-6 w-6 text-gray-400" />
-                              <span className="text-[10px] text-gray-400 mt-1 uppercase font-black">Menu</span>
+                              <span className="text-[10px] text-gray-400 mt-1 uppercase font-black">{t('hero', 'mockupMenu')}</span>
                             </div>
                             <div className="absolute left-1/2 transform -translate-x-1/2 -top-12">
                                <div className="w-20 h-20 bg-[#FDB623] rounded-3xl flex items-center justify-center shadow-[0_0_20px_rgba(253,182,35,0.4)] border-4 border-[#1a1a1a] transition-transform active:scale-95">
@@ -123,7 +123,7 @@ export const Hero: React.FC = () => {
                             </div>
                             <div className="flex flex-col items-center opacity-50">
                               <QrCode className="h-6 w-6 text-gray-400" />
-                              <span className="text-[10px] text-gray-400 mt-1 uppercase font-black">Generate</span>
+                              <span className="text-[10px] text-gray-400 mt-1 uppercase font-black">{t('hero', 'mockupGenerate')}</span>
                             </div>
                          </div>
                      </div>

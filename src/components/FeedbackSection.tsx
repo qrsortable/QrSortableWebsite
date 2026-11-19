@@ -6,7 +6,7 @@ import { Product, Review } from '../types';
 import { StarRating } from './StarRating';
 import { checkRateLimit, recordSubmission, formatDate, sanitizeInput } from '../services/utils';
 
-export const FeedbackSection: React.FC<{ product: Product }> = ({ product }) => {
+export const FeedbackSection: React.FC<{ product: Product; displayName?: string; compact?: boolean }> = ({ product, displayName, compact = false }) => {
   const { reviews, isLoading } = useProductFeedback(product.name);
   const { addLocalReview } = useFeedback();
   const { t } = useTranslation();
@@ -14,6 +14,7 @@ export const FeedbackSection: React.FC<{ product: Product }> = ({ product }) => 
   const [newReview, setNewReview] = useState({ name: '', email: '', rating: 5, comment: '' });
   const [isSending, setIsSending] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [formError, setFormError] = useState<string | null>(null);
   const [mountTime] = useState(Date.now());
   const [honeypot, setHoneypot] = useState('');
 
@@ -21,6 +22,7 @@ export const FeedbackSection: React.FC<{ product: Product }> = ({ product }) => 
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setFormError(null);
     setIsSending(true);
 
     if (honeypot) {
@@ -39,7 +41,7 @@ export const FeedbackSection: React.FC<{ product: Product }> = ({ product }) => 
     }
 
     if (!checkRateLimit('feedback_rate_limit', 3, 60000)) {
-      alert("You are submitting feedback too frequently. Please wait a minute.");
+      setFormError(t('product', 'rateLimitAlert'));
       setIsSending(false);
       return;
     }
@@ -66,7 +68,7 @@ export const FeedbackSection: React.FC<{ product: Product }> = ({ product }) => 
 
       const localReview: Review = {
         id: Math.random().toString(36).substr(2, 9),
-        author: sanitizeInput(newReview.name) || 'Anonymous',
+        author: sanitizeInput(newReview.name) || t('product', 'anonymous'),
         email: newReview.email,
         rating: newReview.rating,
         comment: sanitizeInput(newReview.comment),
@@ -83,15 +85,15 @@ export const FeedbackSection: React.FC<{ product: Product }> = ({ product }) => 
       }, 3000);
     } catch (error) {
       console.error('Submission failed:', error);
-      alert('Error sending feedback. Please try again.');
+      setFormError(t('product', 'submitErrorAlert'));
     } finally {
       setIsSending(false);
     }
   };
 
   return (
-    <div className="mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 border-t border-gray-200">
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-16">
+    <div className={compact ? "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 border-t border-b border-gray-200" : "mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 border-t border-gray-200"}>
+      <div className={compact ? "flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10" : "flex flex-col md:flex-row md:items-center justify-between gap-8 mb-16"}>
         <div>
           <h2 className="text-5xl font-black mb-4 flex items-center">
             <MessageSquare className="h-10 w-10 mr-4 text-[#FDB623]" /> {t('product', 'feedbackTitle')}
@@ -121,7 +123,7 @@ export const FeedbackSection: React.FC<{ product: Product }> = ({ product }) => 
       {isFormOpen && (
         <div className="bg-white rounded-[3rem] p-10 shadow-2xl border-4 border-[#FDB623]/20 mb-16 animate-in slide-in-from-top-10 duration-500">
           <div className="flex justify-between items-start mb-8">
-            <h3 className="text-3xl font-black">{t('product', 'writeReview')} - {product.name}</h3>
+            <h3 className="text-3xl font-black">{t('product', 'writeReview')} - {displayName || product.name}</h3>
             <button onClick={() => setIsFormOpen(false)} className="text-gray-400 hover:text-black" disabled={isSending}><X className="h-8 w-8" /></button>
           </div>
           
@@ -184,6 +186,11 @@ export const FeedbackSection: React.FC<{ product: Product }> = ({ product }) => 
                   className="w-full bg-gray-50 border-2 border-gray-100 rounded-2xl p-4 text-xl font-bold outline-none focus:border-[#FDB623]"
                 ></textarea>
               </div>
+              {formError && (
+                <div className="bg-red-50 border border-red-200 text-red-700 px-5 py-3.5 rounded-2xl font-bold text-base">
+                  {formError}
+                </div>
+              )}
               <button 
                 type="submit" 
                 disabled={isSending}

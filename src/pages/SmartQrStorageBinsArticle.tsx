@@ -171,13 +171,13 @@ export const SmartQrStorageBinsArticle: React.FC = () => {
               {
                 "@type": "ListItem",
                 "position": 1,
-                "name": "Home",
+                "name": t('articles', 'homeBreadcrumb'),
                 "item": "https://www.qrsortable.com"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Articles",
+                "name": t('nav', 'articles'),
                 "item": "https://www.qrsortable.com/articles"
               },
               {
@@ -210,7 +210,7 @@ export const SmartQrStorageBinsArticle: React.FC = () => {
               "name": "QrSortable",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.qrsortable.com/logo.png"
+                "url": "https://www.qrsortable.com/images/qrsortable_product.png"
               }
             },
             "description": metaDescriptionText
@@ -251,7 +251,7 @@ export const SmartQrStorageBinsArticle: React.FC = () => {
           <header className="max-w-4xl mx-auto mb-10">
             <div className="flex flex-wrap items-center gap-3 mb-6">
               <span className="bg-[#FDB623]/15 text-gray-900 font-extrabold text-xs sm:text-sm px-4 py-1.5 rounded-full uppercase tracking-wider border border-[#FDB623]/30">
-                Organization & Storage
+                {t('articles', 'orgStorageBadge')}
               </span>
               <span className="text-gray-300">•</span>
               <div className="flex items-center gap-1.5 text-sm font-bold text-gray-500">
@@ -461,7 +461,15 @@ export const SmartQrStorageBinsArticle: React.FC = () => {
                     <div>
                       <h3 className="font-extrabold text-gray-900 text-lg mb-1">{art.sec3Step1Title}</h3>
                       <p className="text-gray-600 text-base">
-                        {art.sec3Step1Body.split("guidance")[0]}guidance<sup className="text-amber-600 font-extrabold text-xs ml-0.5"><a href="#references">[4]</a></sup>{art.sec3Step1Body.split("guidance")[1] || ""}
+                        {art.sec3Step1Body.includes('guidance') ? (
+                          <>
+                            {art.sec3Step1Body.split('guidance')[0]}guidance<sup className="text-amber-600 font-extrabold text-xs ml-0.5"><a href="#references">[4]</a></sup>{art.sec3Step1Body.split('guidance')[1] || ''}
+                          </>
+                        ) : (
+                          <>
+                            {art.sec3Step1Body}<sup className="text-amber-600 font-extrabold text-xs ml-0.5"><a href="#references">[4]</a></sup>
+                          </>
+                        )}
                       </p>
                     </div>
                   </li>

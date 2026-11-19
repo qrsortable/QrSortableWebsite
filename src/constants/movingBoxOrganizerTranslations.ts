@@ -248,7 +248,7 @@ export const MOVING_BOX_TRANSLATIONS: Record<string, any> = {
       "Hilft beim Finden von Gegenständen vor dem Öffnen physischer Kartons",
       "Sehr nützlich beim Packen, Transportieren, Auspacken und Lagern"
     ],
-    sec7Title: "Best Uses for Moving Box Organizer",
+    sec7Title: "Beste Einsatzmöglichkeiten für den Umzugskarton-Organizer",
     useCases: [
       "Umzug (Haus)",
       "Wohnungsumzüge",
@@ -415,7 +415,7 @@ export const MOVING_BOX_TRANSLATIONS: Record<string, any> = {
       "Aide à trouver des objets avant d'ouvrir les cartons physiques",
       "Très utile pendant l'emballage, le déménagement, le déballage et le stockage"
     ],
-    sec7Title: "Best Uses for Moving Box Organizer",
+    sec7Title: "Meilleures utilisations de l'organisateur de cartons de déménagement",
     useCases: [
       "Déménagement de maison",
       "Déménagement d'appartement",
@@ -582,7 +582,7 @@ export const MOVING_BOX_TRANSLATIONS: Record<string, any> = {
       "Ayuda a encontrar objetos antes de abrir las cajas físicas",
       "Muy útil durante el empaque, la mudanza, el desempaque y el almacenamiento"
     ],
-    sec7Title: "Best Uses for Moving Box Organizer",
+    sec7Title: "Mejores usos para el organizador de cajas de mudanza",
     useCases: [
       "Mudar de casa",
       "Mudanzas de apartamentos",

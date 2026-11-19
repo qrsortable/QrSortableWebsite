@@ -54,13 +54,13 @@ export const AppFeedback: React.FC = () => {
 
     // Security Check: Submission too fast (< 5 seconds)
     if (Date.now() - startTime < 5000) {
-      alert("Please take a moment to fill out the form properly.");
+      alert(t('appFeedback', 'tooFastAlert'));
       return;
     }
 
     // Security Check: Captcha
     if (parseInt(captchaAnswer) !== (captchaNums.a + captchaNums.b)) {
-      alert("Please solve the simple math challenge correctly.");
+      alert(t('appFeedback', 'captchaAlert'));
       return;
     }
 
@@ -77,7 +77,7 @@ export const AppFeedback: React.FC = () => {
     setIsSending(true);
 
     if (!checkRateLimit('app_feedback_limit', 2, 60000)) {
-      alert("Too many submissions. Please wait a minute.");
+      alert(t('appFeedback', 'rateLimitAlert'));
       setIsSending(false);
       return;
     }
@@ -108,7 +108,7 @@ export const AppFeedback: React.FC = () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } catch (error) {
       console.error('Submission failed:', error);
-      alert('Error sending feedback. Please try again.');
+      alert(t('appFeedback', 'submitErrorAlert'));
     } finally {
       setIsSending(false);
     }
@@ -117,15 +117,15 @@ export const AppFeedback: React.FC = () => {
   if (submitted) {
     return (
       <div className="min-h-screen bg-[#fff8e1] flex items-center justify-center p-4 font-sans">
-        <Helmet>
-          <title>Feedback Submitted - QrSortable</title>
+        <Helmet htmlAttributes={{ lang: language.toLowerCase() }}>
+          <title>{t('appFeedback', 'submittedTitleSeo')}</title>
           <meta name="robots" content="noindex, nofollow" />
         </Helmet>
         <div className="max-w-2xl w-full bg-white rounded-2xl shadow-xl p-8 sm:p-12 text-center border-t-8 border-[#FDB623] relative">
           <button 
             onClick={resetForm}
             className="absolute top-4 right-4 p-2 text-gray-400 hover:text-black hover:bg-gray-100 rounded-full transition-colors"
-            aria-label="Close"
+            aria-label={t('appFeedback', 'close')}
           >
             <X className="h-6 w-6 sm:h-8 sm:w-8" />
           </button>
@@ -147,8 +147,8 @@ export const AppFeedback: React.FC = () => {
 
   return (
     <main className="min-h-screen bg-[#fff8e1] py-6 sm:py-12 px-4 sm:px-6 lg:px-8 font-sans">
-      <Helmet>
-        <title>App Feedback - QrSortable</title>
+      <Helmet htmlAttributes={{ lang: language.toLowerCase() }}>
+        <title>{t('appFeedback', 'titleSeo')}</title>
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
       <div className="max-w-3xl mx-auto space-y-4 sm:space-y-6">
@@ -316,9 +316,7 @@ export const AppFeedback: React.FC = () => {
           {/* Security Verification Section */}
           <div className="bg-white rounded-xl shadow-md p-5 sm:p-8">
             <label className="block text-lg sm:text-xl font-black text-gray-900 mb-4 sm:mb-6 font-itim">
-              {language === 'EN' ? 'Security Verification' : 
-               language === 'DE' ? 'Sicherheitsüberprüfung' : 
-               language === 'FR' ? 'Vérification de sécurité' : 'Verificación de seguridad'} *
+              {t('appFeedback', 'securityVerification')} *
             </label>
             <div className="flex items-center gap-4">
               <span className="text-xl font-black text-gray-700">

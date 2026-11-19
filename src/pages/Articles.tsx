@@ -34,12 +34,12 @@ export const Articles: React.FC = () => {
         <meta name="description" content={t('articles', 'seoDesc')} />
         <meta property="og:title" content={t('articles', 'seoTitle')} />
         <meta property="og:description" content={t('articles', 'seoDesc')} />
-        <meta property="og:image" content="https://www.qrsortable.com/articles-og.jpg" />
+        <meta property="og:image" content="https://www.qrsortable.com/images/qr_box_scanner_illustration.png" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('articles', 'seoTitle')} />
         <meta name="twitter:description" content={t('articles', 'seoDesc')} />
-        <meta name="twitter:image" content="https://www.qrsortable.com/articles-og.jpg" />
+        <meta name="twitter:image" content="https://www.qrsortable.com/images/qr_box_scanner_illustration.png" />
         
         <link rel="alternate" hrefLang="en" href="https://www.qrsortable.com/articles" />
         <link rel="alternate" hrefLang="de" href="https://www.qrsortable.com/articles?lang=de" />
@@ -60,7 +60,7 @@ export const Articles: React.FC = () => {
               "name": "QrSortable",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.qrsortable.com/logo.png"
+                "url": "https://www.qrsortable.com/images/qrsortable_product.png"
               }
             }
           })}
@@ -124,7 +124,7 @@ export const Articles: React.FC = () => {
                   <div className="flex items-center gap-4 text-xs font-bold text-gray-400 mb-4 uppercase tracking-tighter">
                     <div className="flex items-center gap-1">
                       <Calendar className="h-3 w-3" />
-                      {new Date(article.date).toLocaleDateString()}
+                      {new Date(article.date).toLocaleDateString(language === 'EN' ? 'en-US' : language.toLowerCase())}
                     </div>
                     <div className="flex items-center gap-1">
                       <Clock className="h-3 w-3" />

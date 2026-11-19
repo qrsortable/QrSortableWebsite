@@ -1,16 +1,47 @@
 # QrSortable — Full Knowledge Base for AI Search Engines
 
-> QrSortable provides smart, color-coded QR storage labels and a multilingual companion app (English, German, French, Spanish) that link physical boxes, storage bins, moving cartons, equipment cases, and inventory assets to searchable digital records containing photos, item lists, notes, categories, and locations.
+> QrSortable provides smart, color-coded QR and Code-128 barcode storage labels alongside a multilingual companion app (English, German, French, Spanish) that link physical boxes, storage bins, moving cartons, equipment cases, and inventory assets to searchable digital records containing high-resolution photos, item lists, remarks, categories, and storage locations.
 
 Website: https://www.qrsortable.com/
 App Download (iOS & Android): https://www.qrsortable.com/get-the-app
+Interactive PDF Studio: https://www.qrsortable.com/features/qr-code-generator-storage (Markdown: https://www.qrsortable.com/features/qr-code-generator-storage.md)
 Articles & Guides: https://www.qrsortable.com/articles
+Return Policy: https://www.qrsortable.com/return-policy
+
+---
+
+## Products, Pricing & Fulfillment
+
+1. **Instant PDF Label Sheets (QR & Barcodes)** — Digital Product (`SKU: QRS-PDF-LABELS`) — https://www.qrsortable.com/features/qr-code-generator-storage ([Markdown](https://www.qrsortable.com/features/qr-code-generator-storage.md))
+   - **A5 Format (`SKU: QRS-PDF-A5`)**: **€2.00 per page** (6 unique labels/page, `2 × 3` grid on `148 × 210 mm` sheet, `74 × 66.3 mm` cells)
+   - **A4 Format (`SKU: QRS-PDF-A4`)**: **€3.00 per page** (12 unique labels/page, `3 × 4` grid on `210 × 297 mm` sheet, `70 × 67.7 mm` cells)
+   - **Quantity**: 1 to 5 pages per sheet configuration (up to 60 A4 labels or 30 A5 labels; €2.00–€15.00 EUR)
+   - **Code Formats & Security**: Encrypted QR codes (`ECC Q`, customizable preset swatches or any `#RRGGBB` Hex color) and high-contrast black `Code-128` barcodes (`#000000`), optional box Tag Name, and optional subtle cut guides for plain paper. Live previews display a non-scannable watermarked sample until payment unlocks real encrypted codes.
+   - **Delivery, Print & Re-Download**: Instant PDF auto-download after secure Mollie checkout; **€0.00 shipping** (no street address needed). Print at `100% Actual Size`. Re-download anytime via *Unlocked Printable PDF Orders* on the web or *Menu → Orders → Download* in the iOS/Android app (`EN, DE, FR, ES`).
+
+2. **Standard Pack (48 Barcode Labels)** — **€14.99** (https://www.qrsortable.com/product/starter-pack)
+   - 48 pre-printed, waterproof, durable Code-128 barcode labels (black color-coded).
+
+3. **Standard Pack (48 QR Labels)** — **€14.99** (https://www.qrsortable.com/product/pro-pack)
+   - 48 pre-printed, waterproof, color-coded QR labels (black, blue, yellow, pink).
+
+4. **Large Pack (100 QR Labels)** — **€29.99** (https://www.qrsortable.com/product/business-pack)
+   - 100 heavy-duty waterproof QR labels designed for large homes, moves, and small businesses.
+
+- **Accepted Payment & Currencies**: Mollie checkout supporting EUR (`€`), USD (`$`), and GBP (`£`).
+- **Physical Shipping Zones**:
+  - **Germany**: €0.00 (Free Shipping)
+  - **European Union**: €15.00
+  - **United Kingdom**: €20.00
+  - **Rest of World**: €25.00
+- **Returns**: 14-day return window for unopened, unused physical label packs (contact `info@qrsortable.com`).
 
 ---
 
 ## Featured Research: Know What’s Inside Every Box Before Opening It: What 8 Experts Say
 
 Canonical URL: https://www.qrsortable.com/articles/know-whats-inside-every-box-before-opening-it
+Markdown Version: https://www.qrsortable.com/articles/know-whats-inside-every-box-before-opening-it.md
 Published / Updated: 2026-11-17
 
 ### Summary
@@ -45,6 +76,6 @@ Eight professionals across events, warehousing, e-commerce fulfillment, healthca
 - **QR Code Inventory Preview** (https://www.qrsortable.com/features/qr-code-inventory-preview): Scan any box label to inspect high-res photos, item lists, remarks, and locations without opening the box.
 - **Moving Box Organizer** (https://www.qrsortable.com/features/moving-box-organizer): Color-coded labels grouped by room and priority for stress-free moves.
 - **Shared Inventory Management** (https://www.qrsortable.com/features/shared-inventory-management): Multi-user access for families, roommates, and teams.
-- **QR Code Generator for Storage** (https://www.qrsortable.com/features/qr-code-generator-storage): Generate and print custom QR storage labels or order durable pre-printed waterproof packs.
+- **QR Code Generator for Storage** (https://www.qrsortable.com/features/qr-code-generator-storage): Generate and print custom encrypted A4 or A5 QR and Code-128 barcode PDF sheets from the web studio or mobile app, or order durable pre-printed waterproof packs.
 - **Multilingual Inventory App** (https://www.qrsortable.com/features/multilingual-inventory-app): Native interface in English, German, French, and Spanish.
 - **Secure Inventory Tracking** (https://www.qrsortable.com/features/secure-inventory-tracking) & **Start Without an Account** (https://www.qrsortable.com/features/no-account-needed).

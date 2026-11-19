@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from '../contexts/LanguageContext';
 
 export const MollieReturn: React.FC = () => {
   const [searchParams] = useSearchParams();
+  const { t, language, localizePath } = useTranslation();
   
   useEffect(() => {
     // Mollie often uses 'id', but we'll check for 'paymentId' too as requested
@@ -30,8 +32,8 @@ export const MollieReturn: React.FC = () => {
   if (!paymentId) {
     return (
       <main className="min-h-screen flex items-center justify-center bg-gray-50 p-4 font-sans">
-        <Helmet>
-          <title>Payment Error - QrSortable</title>
+        <Helmet htmlAttributes={{ lang: language.toLowerCase() }}>
+          <title>{t('mollieReturn', 'errorTitleSeo')}</title>
           <meta name="robots" content="noindex, nofollow" />
         </Helmet>
         <div className="max-w-md w-full bg-white rounded-[2rem] p-8 shadow-xl text-center border-4 border-gray-100">
@@ -40,14 +42,14 @@ export const MollieReturn: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
-          <h1 className="text-2xl font-black text-gray-900 mb-2">Missing Information</h1>
-          <p className="text-gray-600 mb-6 font-medium">We couldn't find your payment details. Please return to the app and try again.</p>
-          <a 
-            href="/" 
+          <h1 className="text-2xl font-black text-gray-900 mb-2">{t('mollieReturn', 'missingTitle')}</h1>
+          <p className="text-gray-600 mb-6 font-medium">{t('mollieReturn', 'missingDesc')}</p>
+          <Link 
+            to={localizePath('/')} 
             className="inline-block bg-[#FDB623] text-gray-900 font-black px-8 py-3 rounded-2xl hover:scale-105 transition-transform"
           >
-            Go to Homepage
-          </a>
+            {t('mollieReturn', 'goHome')}
+          </Link>
         </div>
       </main>
     );
@@ -55,8 +57,8 @@ export const MollieReturn: React.FC = () => {
 
   return (
     <main className="min-h-screen flex items-center justify-center bg-[#FDB623] p-4 font-sans">
-      <Helmet>
-        <title>Returning to App - QrSortable</title>
+      <Helmet htmlAttributes={{ lang: language.toLowerCase() }}>
+        <title>{t('mollieReturn', 'returningTitleSeo')}</title>
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
       <div className="max-w-md w-full bg-white rounded-[2rem] p-8 shadow-2xl text-center border-8 border-white animate-pulse">
@@ -64,14 +66,14 @@ export const MollieReturn: React.FC = () => {
         <div className="flex justify-center mb-6">
           <div className="w-12 h-12 border-4 border-[#FDB623] border-t-transparent rounded-full animate-spin"></div>
         </div>
-        <p className="text-xl font-black text-gray-900">Returning to App...</p>
-        <p className="text-gray-500 mt-2 font-medium">If the app doesn't open automatically, please check your notifications.</p>
+        <p className="text-xl font-black text-gray-900">{t('mollieReturn', 'returningTitle')}</p>
+        <p className="text-gray-500 mt-2 font-medium">{t('mollieReturn', 'returningDesc')}</p>
         <div className="mt-8 pt-8 border-t border-gray-100">
            <a 
             href={`myapp://payment-return?id=${encodeURIComponent(paymentId)}`}
             className="text-gray-900 font-black underline decoration-4 decoration-[#FDB623] underline-offset-4"
           >
-            Open manually
+            {t('mollieReturn', 'openManually')}
           </a>
         </div>
       </div>

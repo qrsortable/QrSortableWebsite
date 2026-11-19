@@ -67,7 +67,7 @@ export const CookieBanner: React.FC = () => {
                       <div className="flex items-center space-x-3 mb-2">
                         <h4 className="font-black text-xl capitalize">{t('cookies', `manager.${cat.key}.title`)}</h4>
                         {cat.disabled && (
-                          <span className="px-3 py-1 bg-white/10 text-[10px] font-black uppercase rounded-lg text-gray-300 tracking-widest">Required</span>
+                          <span className="px-3 py-1 bg-white/10 text-[10px] font-black uppercase rounded-lg text-gray-300 tracking-widest">{t('cookies', 'required')}</span>
                         )}
                       </div>
                       <p className="text-gray-300 font-bold leading-relaxed">{t('cookies', `manager.${cat.key}.desc`)}</p>
@@ -110,7 +110,7 @@ export const CookieBanner: React.FC = () => {
 
   // Initial Banner View (Bottom Floating)
   return (
-    <section aria-label="Cookie consent banner" className="fixed bottom-0 left-0 right-0 z-[100] p-4 sm:p-12 flex justify-center pointer-events-none">
+    <section aria-label={t('cookies', 'banner.ariaLabel')} className="fixed bottom-0 left-0 right-0 z-[100] p-4 sm:p-12 flex justify-center pointer-events-none">
       <div className="w-full max-w-4xl bg-[#0a0a0c] text-white p-8 sm:p-12 rounded-[3.5rem] shadow-[0_40px_100px_rgba(0,0,0,0.8)] border border-white/5 relative overflow-hidden pointer-events-auto animate-slideUp">
         {/* Subtle Background dots/stars effect */}
         <div className="absolute inset-0 opacity-20 pointer-events-none">

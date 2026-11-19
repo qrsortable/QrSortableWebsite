@@ -16,7 +16,12 @@ export const TRANSLATIONS: any = {
       articles: 'Articles',
       getAppSubtitle: 'Download QrSortable and start organizing your storage today.',
       appleStoreDesc: 'Download QrSortable on the Apple App Store.',
-      googlePlayDesc: 'Download QrSortable on the Google Play Store.'
+      googlePlayDesc: 'Download QrSortable on the Google Play Store.',
+      appStoreAlt: 'Download on the App Store',
+      googlePlayAlt: 'Get it on Google Play',
+      openCartAria: 'Open shopping cart',
+      openMenuAria: 'Open navigation menu',
+      closeMenuAria: 'Close navigation menu'
     },
     hero: {
       badge: 'Professional Storage Made Simple',
@@ -30,7 +35,14 @@ export const TRANSLATIONS: any = {
       searchPlaceholder: 'Search inventory..',
       storageRoom: 'Main Storage',
       madeInGermany: 'Sustainably Made',
-      premiumQuality: 'Premium Quality'
+      premiumQuality: 'Premium Quality',
+      mockupMenu: 'Menu',
+      mockupGenerate: 'Generate',
+      box1Room: 'Blue color closet',
+      box2Room: 'Kitchen closet',
+      box3Room: 'Book closet',
+      box4Room: 'Spare parts closet',
+      box5Room: 'Sport closet'
     },
     articles: {
       title: 'Expert Organization Guides',
@@ -48,6 +60,14 @@ export const TRANSLATIONS: any = {
       ctaText: 'Discover the power of digital organization. Explore our',
       ctaLink: 'premium storage labels',
       ctaSuffix: 'and take control of your space.',
+      shareTitle: 'Share article',
+      bookmarkTitle: 'Save article',
+      removeBookmarkTitle: 'Remove bookmark',
+      toastShared: 'Link copied to clipboard!',
+      toastSaved: 'Article saved to bookmarks!',
+      toastRemoved: 'Removed from bookmarks',
+      homeBreadcrumb: 'Home',
+      orgStorageBadge: 'Organization & Storage',
       faq: {
         title: 'Frequently Asked Questions',
         q1: 'How do QR code storage labels help with moving?',
@@ -77,9 +97,9 @@ export const TRANSLATIONS: any = {
       }
     },
     seo: {
-      homeTitle: 'QrSortable | The Smart Way to Organize Home & Moving Storage',
-      homeDesc: 'Modernize your storage with smart QR labels. Perfect for moving, seasonal storage, and small business inventory. See what\'s inside without opening the box.',
-      keywords: 'QR storage labels, moving inventory app, home organization system, smart box labels, warehouse tracking'
+      homeTitle: 'QrSortable | Printable & Smart QR Storage Labels',
+      homeDesc: 'Organize storage and moving boxes effortlessly. Print custom A4/A5 QR & barcode PDF labels instantly from €2 or order waterproof sticker packs.',
+      keywords: 'printable QR storage labels, QR code generator for storage, A4 A5 barcode label PDF, moving inventory app, smart box labels, QrSortable'
     },
     features: {
       title: 'Why QrSortable?',
@@ -103,7 +123,9 @@ export const TRANSLATIONS: any = {
       step2: { title: 'Scan It', desc: 'Open the app and scan the code. Add items and photos.' },
       step3: { title: 'Find It', desc: "Scan later to see what's inside without opening tape." },
       lifestyleTitle: 'Organized Workspace',
-      lifestyleDesc: 'Manage assets in seconds'
+      lifestyleDesc: 'Manage assets in seconds',
+      lifestyleImgAlt: 'Scanning storage bins for smart organization',
+      videoThumbnailAlt: 'Video Tutorial'
     },
     shop: {
       title: 'Our Products',
@@ -139,6 +161,11 @@ export const TRANSLATIONS: any = {
       formRating: 'Rating',
       formComment: 'Comment',
       formSent: 'Feedback Sent!',
+      newRating: 'New',
+      rateLimitAlert: 'You are submitting feedback too frequently. Please wait a minute.',
+      anonymous: 'Anonymous',
+      submitErrorAlert: 'Error sending feedback. Please try again.',
+      videoLabel: 'Product Video'
     },
     cart: {
       title: 'Your Cart',
@@ -168,9 +195,21 @@ export const TRANSLATIONS: any = {
       checkStatus: 'Check Payment Status',
       redirecting: 'Redirecting you to success page shortly...',
       completePayment: 'Please complete your payment in the secure window we opened for you.',
+      titleSeo: 'Checkout - QrSortable',
       selectCountry: 'Select Country',
+      orderIdLabel: 'Order ID',
+      returnToCheckout: 'Return to Checkout Page',
+      tooManyAttempts: 'Too many attempts. Please wait a moment before trying again.',
+      transactionLimit: 'Transaction limit reached. Please wait a minute.',
+      invalidCart: 'Invalid cart detected. Please refresh and try again.',
+      initFailed: 'Payment initialization failed. Please check your connection and try again.',
       statusNotPaid: 'Payment status could not be confirmed yet. Please ensure you finished the transaction.',
-      statusError: 'Could not verify payment status. Please try again.'
+      statusError: 'Could not verify payment status. Please try again.',
+      placeholderName: 'John Doe',
+      placeholderEmail: 'john@example.com',
+      placeholderStreet: 'Main St 123',
+      placeholderCity: 'Berlin',
+      placeholderZip: '10115'
     },
     countries: {
       'Germany': 'Germany',
@@ -220,6 +259,10 @@ export const TRANSLATIONS: any = {
       cookies: 'Cookie Settings',
       payments: 'Payments',
       contactUs: 'Contact us anytime at:',
+      smartLabels: 'Smart labels',
+      officeLocation: 'Office Location',
+      mapTitle: 'QrSortable Location Map',
+      openMapsAria: 'Open in Google Maps',
       rights: 'All rights reserved.'
     },
     about: {
@@ -228,6 +271,7 @@ export const TRANSLATIONS: any = {
       innovationTitle: 'Innovation Meets Order',
       innovationDesc1: 'At QrSortable, we believe organization should not feel like work. Since 2026, we have been on a mission to make home storage, small business, and warehouse organization clear, transparent, and stress-free.',
       innovationDesc2: 'Why open a box and rip through tape when you can peek inside with a single scan? Our smart labels are built for movers, families, and businesses that value their time.',
+      imageAlt: 'Smart storage organization',
       statsUsers: 'Users Organized',
       statsLabels: 'Labels Scanned',
       valuesTitle: 'Our Core Values',
@@ -312,11 +356,14 @@ export const TRANSLATIONS: any = {
       },
       contactUs: {
         title: 'Contact Us',
-        text: 'If you have any questions or concerns regarding our Return & Refund Policy, please reach out to us:'
+        text: 'If you have any questions or concerns regarding our Return & Refund Policy, please reach out to us:',
+        emailLabel: 'Email:',
+        websiteLabel: 'Website:'
       }
     },
     cookies: {
-      banner: { title: 'We respect your privacy', desc: 'We use cookies to enhance your experience, serve personalized content, and analyze our traffic. Your choices help us provide a safer, faster organization experience.', acceptAll: 'Accept All', customize: 'Customize Settings', essentialOnly: 'Essential Only', save: 'Save My Preferences' },
+      banner: { title: 'We respect your privacy', desc: 'We use cookies to enhance your experience, serve personalized content, and analyze our traffic. Your choices help us provide a safer, faster organization experience.', acceptAll: 'Accept All', customize: 'Customize Settings', essentialOnly: 'Essential Only', save: 'Save My Preferences', ariaLabel: 'Cookie consent banner' },
+      required: 'Required',
       manager: {
         essential: { title: 'Essential', desc: 'Required for site functionality (Cart, Security). Always on.' },
         analytics: { title: 'Analytics', desc: 'Helps us understand how you use our site to improve the experience.' },
@@ -324,11 +371,25 @@ export const TRANSLATIONS: any = {
       }
     },
     success: {
+      titleSeo: 'Order Completed - QrSortable',
       title: 'Success!',
       message: 'Your labels are on the way.',
+      orderIdLabel: 'Order ID',
       backHome: 'Back to Home'
     },
+    mollieReturn: {
+      errorTitleSeo: 'Payment Error - QrSortable',
+      missingTitle: 'Missing Information',
+      missingDesc: 'We couldn\'t find your payment details. Please return to the app and try again.',
+      goHome: 'Go to Homepage',
+      returningTitleSeo: 'Returning to App - QrSortable',
+      returningTitle: 'Returning to App...',
+      returningDesc: 'If the app doesn\'t open automatically, please check your notifications.',
+      openManually: 'Open manually'
+    },
     appFeedback: {
+      titleSeo: 'App Feedback - QrSortable',
+      submittedTitleSeo: 'Feedback Submitted - QrSortable',
       title: 'QrShortable Feedback / Feature Request',
       intro1: 'Our smart, color-coded QR label system transforms the way you organize and store your belongings. Simply attach a unique QR label to each box, scan it using our free iOS or Android app, and instantly view what\'s inside – no opening required.',
       intro2: 'Whether you\'re moving, organizing your home, managing storage rooms, or decluttering closets, our system keeps everything digitally cataloged and easy to find.',
@@ -350,7 +411,13 @@ export const TRANSLATIONS: any = {
       successDesc: 'Thank you for helping us improve QrSortable. We read every message!',
       sendAnother: 'Send Another',
       placeholderLong: 'Long-answer text',
-      placeholderShort: 'Short-answer text'
+      placeholderShort: 'Short-answer text',
+      close: 'Close',
+      tooFastAlert: 'Please take a moment to fill out the form properly.',
+      captchaAlert: 'Please solve the simple math challenge correctly.',
+      rateLimitAlert: 'Too many submissions. Please wait a minute.',
+      submitErrorAlert: 'Error sending feedback. Please try again.',
+      securityVerification: 'Security Verification'
     },
     categories: {
       Organization: 'Organization',
@@ -368,7 +435,12 @@ export const TRANSLATIONS: any = {
       articles: 'Artikel',
       getAppSubtitle: 'Laden Sie QrSortable herunter und fangen Sie noch heute an zu organisieren.',
       appleStoreDesc: 'Laden Sie QrSortable im Apple App Store herunter.',
-      googlePlayDesc: 'Laden Sie QrSortable im Google Play Store herunter.'
+      googlePlayDesc: 'Laden Sie QrSortable im Google Play Store herunter.',
+      appStoreAlt: 'Im App Store laden',
+      googlePlayAlt: 'Jetzt bei Google Play',
+      openCartAria: 'Warenkorb öffnen',
+      openMenuAria: 'Navigationsmenü öffnen',
+      closeMenuAria: 'Navigationsmenü schließen'
     },
     hero: {
       badge: 'Professionelle Lagerung leicht gemacht',
@@ -382,7 +454,14 @@ export const TRANSLATIONS: any = {
       searchPlaceholder: 'Inventar durchsuchen..',
       storageRoom: 'Hauptlager',
       madeInGermany: 'Nachhaltig hergestellt',
-      premiumQuality: 'Premium-Qualität'
+      premiumQuality: 'Premium-Qualität',
+      mockupMenu: 'Menü',
+      mockupGenerate: 'Erstellen',
+      box1Room: 'Blauer Schrank',
+      box2Room: 'Küchenschrank',
+      box3Room: 'Bücherschrank',
+      box4Room: 'Ersatzteilschrank',
+      box5Room: 'Sportschrank'
     },
     articles: {
       title: 'Experten-Leitfäden zur Organisation',
@@ -400,6 +479,14 @@ export const TRANSLATIONS: any = {
       ctaText: 'Entdecken Sie die Kraft der digitalen Organisation. Erkunden Sie unsere',
       ctaLink: 'Premium-Lageretiketten',
       ctaSuffix: 'und übernehmen Sie die Kontrolle über Ihren Platz.',
+      shareTitle: 'Artikel teilen',
+      bookmarkTitle: 'Artikel speichern',
+      removeBookmarkTitle: 'Lesezeichen entfernen',
+      toastShared: 'Link in die Zwischenablage kopiert!',
+      toastSaved: 'Artikel in Lesezeichen gespeichert!',
+      toastRemoved: 'Aus Lesezeichen entfernt',
+      homeBreadcrumb: 'Startseite',
+      orgStorageBadge: 'Organisation & Lagerung',
       faq: {
         title: 'Häufig gestellte Fragen',
         q1: 'Wie helfen QR-Code-Lageretiketten beim Umzug?',
@@ -429,9 +516,9 @@ export const TRANSLATIONS: any = {
       }
     },
     seo: {
-      homeTitle: 'QrSortable | QR-Code Lageretiketten & Aufkleber für Lagerboxen',
-      homeDesc: 'Entdecken Sie Smart QR-Code Etiketten & QR-Code Aufkleber für Lagerboxen. Die perfekte QR-Code Beschriftung für Ihr Lager, Ihre Umzugsetiketten und Heimorganisation.',
-      keywords: 'QR-Code Lageretiketten, QR-Code Aufkleber für Lagerboxen, Smart QR-Code Etiketten, QR-Code Umzugsetiketten, QR-Code Beschriftung Lager, Lageretiketten, QR-Code Etiketten, Umzugsetiketten'
+      homeTitle: 'QrSortable | Druckbare & Smarte QR-Lageretiketten',
+      homeDesc: 'Kisten und Umzüge sofort organisieren: Druckbare A4/A5 QR- & Barcode-PDFs ab 2 € direkt herunterladen oder wasserfeste Etiketten-Packs bestellen.',
+      keywords: 'QR-Code Etiketten drucken, QR-Code-Generator Aufbewahrung, A4 A5 Barcode Etiketten PDF, Lageretiketten, Umzugsetiketten, QrSortable'
     },
     features: {
       title: 'Warum QrSortable?',
@@ -455,7 +542,9 @@ export const TRANSLATIONS: any = {
       step2: { title: 'Scannen', desc: 'Öffnen Sie die App, scannen Sie den Code und fügen Sie Gegenstände und Fotos hinzu.' },
       step3: { title: 'Finden', desc: 'Scannen Sie später, um den Inhalt zu sehen, ohne das Klebeband aufzureißen.' },
       lifestyleTitle: 'Organisierter Arbeitsplatz',
-      lifestyleDesc: 'Gegenstände und Bestände in Sekunden verwalten'
+      lifestyleDesc: 'Gegenstände und Bestände in Sekunden verwalten',
+      lifestyleImgAlt: 'Scannen von Lagerboxen für smarte Organisation',
+      videoThumbnailAlt: 'Video-Anleitung'
     },
     shop: {
       title: 'Unsere Produkte',
@@ -491,6 +580,11 @@ export const TRANSLATIONS: any = {
       formRating: 'Bewertung',
       formComment: 'Kommentar',
       formSent: 'Feedback gesendet!',
+      newRating: 'Neu',
+      rateLimitAlert: 'Sie senden zu häufig Feedback. Bitte warten Sie eine Minute.',
+      anonymous: 'Anonym',
+      submitErrorAlert: 'Fehler beim Senden des Feedbacks. Bitte versuchen Sie es erneut.',
+      videoLabel: 'Produktvideo'
     },
     cart: {
       title: 'Warenkorb',
@@ -520,9 +614,21 @@ export const TRANSLATIONS: any = {
       checkStatus: 'Zahlungsstatus prüfen',
       redirecting: 'Weiterleitung zur Erfolgsseite...',
       completePayment: 'Bitte schließen Sie die Zahlung im neuen Fenster ab.',
+      titleSeo: 'Kasse - QrSortable',
       selectCountry: 'Land auswählen',
+      orderIdLabel: 'Bestellnummer',
+      returnToCheckout: 'Zurück zur Zahlungsseite',
+      tooManyAttempts: 'Zu viele Versuche. Bitte warten Sie einen Moment, bevor Sie es erneut versuchen.',
+      transactionLimit: 'Transaktionslimit erreicht. Bitte warten Sie eine Minute.',
+      invalidCart: 'Ungültiger Warenkorb erkannt. Bitte laden Sie die Seite neu und versuchen Sie es erneut.',
+      initFailed: 'Zahlungsinitialisierung fehlgeschlagen. Bitte prüfen Sie Ihre Verbindung und versuchen Sie es erneut.',
       statusNotPaid: 'Der Zahlungsstatus konnte noch nicht bestätigt werden. Bitte stellen Sie sicher, dass Sie die Transaktion abgeschlossen haben.',
-      statusError: 'Zahlungsstatus konnte nicht überprüft werden. Bitte versuchen Sie es erneut.'
+      statusError: 'Zahlungsstatus konnte nicht überprüft werden. Bitte versuchen Sie es erneut.',
+      placeholderName: 'Max Mustermann',
+      placeholderEmail: 'max@beispiel.de',
+      placeholderStreet: 'Hauptstraße 123',
+      placeholderCity: 'München',
+      placeholderZip: '80331'
     },
     countries: {
       'Germany': 'Deutschland',
@@ -572,6 +678,10 @@ export const TRANSLATIONS: any = {
       cookies: 'Cookie-Einstellungen',
       payments: 'Zahlungen',
       contactUs: 'Kontaktieren Sie uns jederzeit unter:',
+      smartLabels: 'Smarte Etiketten',
+      officeLocation: 'Firmensitz',
+      mapTitle: 'QrSortable Standortkarte',
+      openMapsAria: 'In Google Maps öffnen',
       rights: 'Alle Rechte vorbehalten.'
     },
     about: {
@@ -580,6 +690,7 @@ export const TRANSLATIONS: any = {
       innovationTitle: 'Innovation trifft Ordnung',
       innovationDesc1: 'Wir bei QrSortable glauben, dass sich Organisation nicht wie Arbeit anfühlen sollte. Seit 2026 haben wir es uns zur Aufgabe gemacht, die Organisation im Haushalt, in kleinen Unternehmen und Lagern klar, transparent und stressfrei zu gestalten.',
       innovationDesc2: 'Warum eine Box öffnen und mühsam das Klebeband aufreißen, wenn man mit einem einzigen Scan hineinsehen kann? Unsere intelligenten Etiketten wurden für Familien, Umziehende und Unternehmen entwickelt, die ihre Zeit schätzen.',
+      imageAlt: 'Smarte Lagerorganisation',
       statsUsers: 'Benutzer organisiert',
       statsLabels: 'Etiketten gescannt',
       valuesTitle: 'Unsere Grundwerte',
@@ -664,11 +775,14 @@ export const TRANSLATIONS: any = {
       },
       contactUs: {
         title: 'Kontaktieren Sie uns',
-        text: 'Wenn Sie Fragen oder Bedenken zu unserer Rückgabe- und Rückerstattungsrichtlinie haben, wenden Sie sich bitte an uns:'
+        text: 'Wenn Sie Fragen oder Bedenken zu unserer Rückgabe- und Rückerstattungsrichtlinie haben, wenden Sie sich bitte an uns:',
+        emailLabel: 'E-Mail:',
+        websiteLabel: 'Webseite:'
       }
     },
     cookies: {
-      banner: { title: 'Wir respektieren Ihre Privatsphäre', desc: 'Wir verwenden Cookies, um Ihre Erfahrung zu verbessern, personalisierte Inhalte bereitzustellen und unseren Datenverkehr zu analysieren. Ihre Entscheidungen helfen uns, ein schnelleres und sichereres Organisationserlebnis anzubieten.', acceptAll: 'Alle akzeptieren', customize: 'Einstellungen anpassen', essentialOnly: 'Nur Essenzielle', save: 'Meine Einstellungen speichern' },
+      banner: { title: 'Wir respektieren Ihre Privatsphäre', desc: 'Wir verwenden Cookies, um Ihre Erfahrung zu verbessern, personalisierte Inhalte bereitzustellen und unseren Datenverkehr zu analysieren. Ihre Entscheidungen helfen uns, ein schnelleres und sichereres Organisationserlebnis anzubieten.', acceptAll: 'Alle akzeptieren', customize: 'Einstellungen anpassen', essentialOnly: 'Nur Essenzielle', save: 'Meine Einstellungen speichern', ariaLabel: 'Cookie-Einwilligungsbanner' },
+      required: 'Erforderlich',
       manager: {
         essential: { title: 'Essenziell', desc: 'Erforderlich für die Funktionalität der Website (Warenkorb, Sicherheit). Immer aktiviert.' },
         analytics: { title: 'Analyse', desc: 'Hilft uns zu verstehen, wie Sie unsere Website nutzen, um das Erlebnis zu verbessern.' },
@@ -676,11 +790,25 @@ export const TRANSLATIONS: any = {
       }
     },
     success: {
+      titleSeo: 'Bestellung abgeschlossen - QrSortable',
       title: 'Erfolg!',
       message: 'Ihre Etiketten sind auf dem Weg.',
+      orderIdLabel: 'Bestellnummer',
       backHome: 'Zurück zur Startseite'
     },
+    mollieReturn: {
+      errorTitleSeo: 'Zahlungsfehler - QrSortable',
+      missingTitle: 'Fehlende Informationen',
+      missingDesc: 'Wir konnten Ihre Zahlungsdetails nicht finden. Bitte kehren Sie zur App zurück und versuchen Sie es erneut.',
+      goHome: 'Zur Startseite',
+      returningTitleSeo: 'Zurück zur App - QrSortable',
+      returningTitle: 'Zurück zur App...',
+      returningDesc: 'Wenn sich die App nicht automatisch öffnet, überprüfen Sie bitte Ihre Benachrichtigungen.',
+      openManually: 'Manuell öffnen'
+    },
     appFeedback: {
+      titleSeo: 'App-Feedback - QrSortable',
+      submittedTitleSeo: 'Feedback gesendet - QrSortable',
       title: 'QrSortable Feedback / Funktionsanfrage',
       intro1: 'Unser intelligentes, farbcodiertes QR-Etikettensystem transformiert die Art und Weise, wie Sie Ihr Hab und Gut organisieren und lagern. Kleben Sie einfach ein eindeutiges QR-Etikett auf jeden Karton, scannen Sie es mit unserer kostenlosen App und sehen Sie sofort, was sich darin befindet – kein Öffnen erforderlich.',
       intro2: 'Egal ob Sie umziehen, Ihr Zuhause organisieren, Lagerräume verwalten oder Schränke ausmisten, unser System hält alles digital katalogisiert und leicht auffindbar.',
@@ -702,7 +830,13 @@ export const TRANSLATIONS: any = {
       successDesc: 'Vielen Dank, dass Sie uns helfen, QrSortable zu verbessern. Wir lesen jede Nachricht!',
       sendAnother: 'Weiteres senden',
       placeholderLong: 'Langer Antworttext',
-      placeholderShort: 'Kurzer Antworttext'
+      placeholderShort: 'Kurzer Antworttext',
+      close: 'Schließen',
+      tooFastAlert: 'Bitte nehmen Sie sich einen Moment Zeit, um das Formular korrekt auszufüllen.',
+      captchaAlert: 'Bitte lösen Sie die kleine Rechenaufgabe korrekt.',
+      rateLimitAlert: 'Zu viele Einsendungen. Bitte warten Sie eine Minute.',
+      submitErrorAlert: 'Fehler beim Senden des Feedbacks. Bitte versuchen Sie es erneut.',
+      securityVerification: 'Sicherheitsüberprüfung'
     },
     categories: {
       Organization: 'Organisation',
@@ -720,7 +854,12 @@ export const TRANSLATIONS: any = {
       articles: 'Articles',
       getAppSubtitle: 'Téléchargez QrSortable et commencez à organiser votre stockage dès aujourd\'hui.',
       appleStoreDesc: 'Téléchargez QrSortable sur l\'Apple App Store.',
-      googlePlayDesc: 'Téléchargez QrSortable sur le Google Play Store.'
+      googlePlayDesc: 'Téléchargez QrSortable sur le Google Play Store.',
+      appStoreAlt: 'Télécharger dans l\'App Store',
+      googlePlayAlt: 'Disponible sur Google Play',
+      openCartAria: 'Ouvrir le panier',
+      openMenuAria: 'Ouvrir le menu de navigation',
+      closeMenuAria: 'Fermer le menu de navigation'
     },
     hero: {
       badge: 'L\'organisation professionnelle simplifiée',
@@ -734,7 +873,14 @@ export const TRANSLATIONS: any = {
       searchPlaceholder: 'Rechercher dans l\'inventaire..',
       storageRoom: 'Stockage principal',
       madeInGermany: 'Fabriqué de manière durable',
-      premiumQuality: 'Qualité Premium'
+      premiumQuality: 'Qualité Premium',
+      mockupMenu: 'Menu',
+      mockupGenerate: 'Générer',
+      box1Room: 'Placard bleu',
+      box2Room: 'Placard de cuisine',
+      box3Room: 'Bibliothèque',
+      box4Room: 'Placard pièces détachées',
+      box5Room: 'Placard de sport'
     },
     articles: {
       title: 'Guides d\'experts pour l\'organisation',
@@ -752,6 +898,14 @@ export const TRANSLATIONS: any = {
       ctaText: 'Découvrez la puissance de l\'organisation numérique. Explorez nos',
       ctaLink: 'étiquettes de stockage premium',
       ctaSuffix: 'et prenez le contrôle de votre espace.',
+      shareTitle: 'Partager l\'article',
+      bookmarkTitle: 'Enregistrer l\'article',
+      removeBookmarkTitle: 'Retirer des favoris',
+      toastShared: 'Lien copié dans le presse-papiers !',
+      toastSaved: 'Article enregistré dans les favoris !',
+      toastRemoved: 'Retiré des favoris',
+      homeBreadcrumb: 'Accueil',
+      orgStorageBadge: 'Organisation et Stockage',
       faq: {
         title: 'Foire Aux Questions',
         q1: 'Comment les étiquettes QR aident-elles lors d\'un déménagement ?',
@@ -781,9 +935,9 @@ export const TRANSLATIONS: any = {
       }
     },
     seo: {
-      homeTitle: 'QrSortable | Étiquettes QR Code Stockage pour Bacs de Rangement',
-      homeDesc: 'Trouvez les meilleures étiquettes QR code stockage et étiquettes intelligentes QR code. Idéal pour vos étiquettes déménagement QR code et l\'organisation de stockage intelligente de vos bacs.',
-      keywords: 'Étiquettes QR code stockage, Étiquettes QR code pour bacs de rangement, Étiquettes intelligentes QR code, Étiquettes déménagement QR code, QR code étiquettes organisation, étiquettes de stockage, étiquettes QR code, étiquettes déménagement'
+      homeTitle: 'QrSortable | Étiquettes QR Stockage & PDF Imprimables',
+      homeDesc: 'Organisez cartons et déménagements sans ouvrir : créez vos planches PDF QR & codes-barres A4/A5 dès 2 € en ligne ou commandez nos packs durables.',
+      keywords: 'étiquettes QR imprimables, générateur QR stockage, planche PDF A4 A5 code-barres, étiquettes déménagement QR, QrSortable'
     },
     features: {
       title: 'Pourquoi QrSortable ?',
@@ -807,7 +961,9 @@ export const TRANSLATIONS: any = {
       step2: { title: 'Scannez le code', desc: 'Ouvrez l\'application, scannez le code QR et ajoutez vos objets et photos.' },
       step3: { title: 'Trouvez instantanément', desc: 'Scannez l\'étiquette plus tard pour voir le contenu complet sans ouvrir le carton.' },
       lifestyleTitle: 'Espace de travail organisé',
-      lifestyleDesc: 'Gérez vos biens et vos stocks en quelques secondes'
+      lifestyleDesc: 'Gérez vos biens et vos stocks en quelques secondes',
+      lifestyleImgAlt: 'Scan des bacs de rangement pour une organisation intelligente',
+      videoThumbnailAlt: 'Tutoriel vidéo'
     },
     shop: {
       title: 'Nos Produits',
@@ -843,6 +999,11 @@ export const TRANSLATIONS: any = {
       formRating: 'Note',
       formComment: 'Commentaire',
       formSent: 'Merci pour votre avis !',
+      newRating: 'Nouveau',
+      rateLimitAlert: 'Vous envoyez des avis trop fréquemment. Veuillez patienter une minute.',
+      anonymous: 'Anonyme',
+      submitErrorAlert: 'Erreur lors de l\'envoi de l\'avis. Veuillez réessayer.',
+      videoLabel: 'Vidéo du produit'
     },
     cart: {
       title: 'Votre Panier',
@@ -872,9 +1033,21 @@ export const TRANSLATIONS: any = {
       checkStatus: 'Vérifier le statut du paiement',
       redirecting: 'Redirection vers la page de succès...',
       completePayment: 'Veuillez finaliser votre paiement dans la nouvelle fenêtre.',
+      titleSeo: 'Paiement - QrSortable',
       selectCountry: 'Choisir un pays',
+      orderIdLabel: 'N° de commande',
+      returnToCheckout: 'Retourner à la page de paiement',
+      tooManyAttempts: 'Trop de tentatives. Veuillez patienter un instant avant de réessayer.',
+      transactionLimit: 'Limite de transactions atteinte. Veuillez patienter une minute.',
+      invalidCart: 'Panier invalide détecté. Veuillez actualiser la page et réessayer.',
+      initFailed: 'L\'initialisation du paiement a échoué. Vérifiez votre connexion et réessayez.',
       statusNotPaid: 'Le statut de paiement n\'a pas pu être confirmé. Veuillez vérifier que vous avez bien finalisé la transaction.',
-      statusError: 'Erreur lors de la vérification du paiement. Veuillez réessayer.'
+      statusError: 'Erreur lors de la vérification du paiement. Veuillez réessayer.',
+      placeholderName: 'Jean Dupont',
+      placeholderEmail: 'jean@exemple.fr',
+      placeholderStreet: '123 Rue Principale',
+      placeholderCity: 'Paris',
+      placeholderZip: '75001'
     },
     countries: {
       'Germany': 'Allemagne',
@@ -885,7 +1058,7 @@ export const TRANSLATIONS: any = {
       'Croatia': 'Croatie',
       'Cyprus': 'Chypre',
       'Czech Republic': 'République tchèque',
-      'Denmark': 'Dänemark',
+      'Denmark': 'Danemark',
       'Estonia': 'Estonie',
       'Finland': 'Finlande',
       'France': 'France',
@@ -924,6 +1097,10 @@ export const TRANSLATIONS: any = {
       cookies: 'Préférences cookies',
       payments: 'Paiements',
       contactUs: 'Contactez-nous à tout moment :',
+      smartLabels: 'Étiquettes intelligentes',
+      officeLocation: 'Siège social',
+      mapTitle: 'Carte de localisation QrSortable',
+      openMapsAria: 'Ouvrir dans Google Maps',
       rights: 'Tous droits réservés.'
     },
     about: {
@@ -932,13 +1109,14 @@ export const TRANSLATIONS: any = {
       innovationTitle: 'L\'innovation au service de l\'ordre',
       innovationDesc1: 'Chez QrSortable, nous sommes convaincents que l\'organisation ne doit pas être une corvée pénible. Depuis 2026, notre mission est de rendre le rangement dans la maison, les petites entreprises et les entrepôts clair, transparent et sans aucun stress.',
       innovationDesc2: 'Pourquoi ouvrir laborieusement un carton et déchirer son adhésif quand un simple scan suffit pour regarder à l\'intérieur ? Nos étiquettes intelligentes ont été conçues pour les familles, les personnes qui déménagent et les professionnels qui apprécient leur temps.',
+      imageAlt: 'Organisation de stockage intelligente',
       statsUsers: 'Utilisateurs organisés',
       statsLabels: 'Étiquettes scannées',
       valuesTitle: 'Nos valeurs fondamentales',
       values: {
         simplicity: { title: 'Simplicité', desc: 'Si ce n\'est pas simple, ce n\'est pas du QrSortable. Nous concevons des outils accessibles à tous.' },
         quality: { title: 'Qualité', desc: 'Nos étiquettes sont fabriquées avec des matériaux ultra-résistants pour survivre aux greniers, aux caves et aux déménagements.' },
-        userFocused: { title: 'Centré sur l\'utilisateur', desc: 'We listen to our community. Every app update is based directly on your feedback.' }
+        userFocused: { title: 'Centré sur l\'utilisateur', desc: 'Nous écoutons notre communauté. Chaque mise à jour de l\'application est directement guidée par vos retours.' }
       }
     },
     privacy: {
@@ -1016,11 +1194,14 @@ export const TRANSLATIONS: any = {
       },
       contactUs: {
         title: 'Contactez-nous',
-        text: 'Si vous avez des questions ou des préoccupations concernant notre politique de retour et de remboursement, veuillez nous contacter :'
+        text: 'Si vous avez des questions ou des préoccupations concernant notre politique de retour et de remboursement, veuillez nous contacter :',
+        emailLabel: 'E-mail :',
+        websiteLabel: 'Site web :'
       }
     },
     cookies: {
-      banner: { title: 'Nous respectons votre vie privée', desc: 'Nous utilisons des cookies pour optimiser votre navigation, vous proposer des contenus personnalisés et analyser notre trafic. Vos choix nous aident à vous offrir une expérience d\'organisation plus rapide et plus sécurisée.', acceptAll: 'Tout accepter', customize: 'Personnaliser mes choix', essentialOnly: 'Uniquement les cookies essentiels', save: 'Sauvegarder mes choix' },
+      banner: { title: 'Nous respectons votre vie privée', desc: 'Nous utilisons des cookies pour optimiser votre navigation, vous proposer des contenus personnalisés et analyser notre trafic. Vos choix nous aident à vous offrir une expérience d\'organisation plus rapide et plus sécurisée.', acceptAll: 'Tout accepter', customize: 'Personnaliser mes choix', essentialOnly: 'Uniquement les cookies essentiels', save: 'Sauvegarder mes choix', ariaLabel: 'Bannière de consentement aux cookies' },
+      required: 'Requis',
       manager: {
         essential: { title: 'Essentiel', desc: 'Nécessaires aux fonctionnalités de base de la plateforme (panier d\'achat, sécurité). Toujours activés.' },
         analytics: { title: 'Analytique', desc: 'Nous aident à comprendre comment vous interagissez avec notre site afin d\'améliorer votre expérience.' },
@@ -1028,11 +1209,25 @@ export const TRANSLATIONS: any = {
       }
     },
     success: {
+      titleSeo: 'Commande terminée - QrSortable',
       title: 'Félicitations !',
       message: 'Vos étiquettes sont déjà en route.',
+      orderIdLabel: 'N° de commande',
       backHome: 'Retourner à l\'accueil'
     },
+    mollieReturn: {
+      errorTitleSeo: 'Erreur de paiement - QrSortable',
+      missingTitle: 'Informations manquantes',
+      missingDesc: 'Nous n\'avons pas trouvé les détails de votre paiement. Veuillez retourner dans l\'application et réessayer.',
+      goHome: 'Aller à l\'accueil',
+      returningTitleSeo: 'Retour vers l\'application - QrSortable',
+      returningTitle: 'Retour vers l\'application...',
+      returningDesc: 'Si l\'application ne s\'ouvre pas automatiquement, veuillez vérifier vos notifications.',
+      openManually: 'Ouvrir manuellement'
+    },
     appFeedback: {
+      titleSeo: 'Avis sur l\'application - QrSortable',
+      submittedTitleSeo: 'Avis envoyé - QrSortable',
       title: 'Commentaires / Demande de fonctionnalité QrSortable',
       intro1: 'Notre système d\'étiquettes QR intelligentes et colorées transforme radicalement la façon dont vous organisez et stockez vos affaires. Collez simplement une étiquette QR unique sur chaque carton, scannez-la avec notre application gratuite et visualisez instantanément son contenu complet – plus besoin d\'ouvrir aucun carton.',
       intro2: 'Que vous prépariez un déménagement, organisiez vos espaces de rangement, gériez des stocks professionnels ou désencombriez vos placards, notre système vous permet de garder un inventaire numérique clair et accessible d\'un simple scan.',
@@ -1054,7 +1249,13 @@ export const TRANSLATIONS: any = {
       successDesc: 'Un grand merci pour votre aide précieuse à l\'amélioration de QrSortable. Nous lisons attentivement chaque message !',
       sendAnother: 'Envoyer un autre formulaire',
       placeholderLong: 'Votre réponse détaillée ici...',
-      placeholderShort: 'Votre réponse courte ici...'
+      placeholderShort: 'Votre réponse courte ici...',
+      close: 'Fermer',
+      tooFastAlert: 'Veuillez prendre un instant pour remplir le formulaire correctement.',
+      captchaAlert: 'Veuillez résoudre correctement le petit calcul mathématique.',
+      rateLimitAlert: 'Trop d\'envois. Veuillez patienter une minute.',
+      submitErrorAlert: 'Erreur lors de l\'envoi du commentaire. Veuillez réessayer.',
+      securityVerification: 'Vérification de sécurité'
     },
     categories: {
       Organization: 'Organisation',
@@ -1072,7 +1273,12 @@ export const TRANSLATIONS: any = {
       articles: 'Artículos',
       getAppSubtitle: 'Descarga QrSortable y comienza a organizar tu almacenamiento hoy mismo.',
       appleStoreDesc: 'Descarga QrSortable en el Apple App Store.',
-      googlePlayDesc: 'Descarga QrSortable en el Google Play Store.'
+      googlePlayDesc: 'Descarga QrSortable en el Google Play Store.',
+      appStoreAlt: 'Descárgalo en el App Store',
+      googlePlayAlt: 'Disponible en Google Play',
+      openCartAria: 'Abrir carrito de compras',
+      openMenuAria: 'Abrir menú de navegación',
+      closeMenuAria: 'Cerrar menú de navegación'
     },
     hero: {
       badge: 'Organización profesional simplificada',
@@ -1086,7 +1292,14 @@ export const TRANSLATIONS: any = {
       searchPlaceholder: 'Buscar en el inventario..',
       storageRoom: 'Almacenamiento principal',
       madeInGermany: 'Fabricado de manera sostenible',
-      premiumQuality: 'Calidad Premium'
+      premiumQuality: 'Calidad Premium',
+      mockupMenu: 'Menú',
+      mockupGenerate: 'Generar',
+      box1Room: 'Armario azul',
+      box2Room: 'Armario de cocina',
+      box3Room: 'Estantería de libros',
+      box4Room: 'Armario de repuestos',
+      box5Room: 'Armario de deportes'
     },
     articles: {
       title: 'Guías de expertos para la organización',
@@ -1104,6 +1317,14 @@ export const TRANSLATIONS: any = {
       ctaText: 'Descubre el poder de la organización digital. Explora nuestras',
       ctaLink: 'etiquetas de almacenamiento premium',
       ctaSuffix: 'y toma el control de tu espacio.',
+      shareTitle: 'Compartir artículo',
+      bookmarkTitle: 'Guardar artículo',
+      removeBookmarkTitle: 'Quitar de favoritos',
+      toastShared: '¡Enlace copiado al portapapeles!',
+      toastSaved: '¡Artículo guardado en favoritos!',
+      toastRemoved: 'Eliminado de favoritos',
+      homeBreadcrumb: 'Inicio',
+      orgStorageBadge: 'Organización y Almacenamiento',
       faq: {
         title: 'Preguntas Frecuentes',
         q1: '¿Cómo ayudan las etiquetas QR en una mudanza?',
@@ -1133,9 +1354,9 @@ export const TRANSLATIONS: any = {
       }
     },
     seo: {
-      homeTitle: 'QrSortable | Etiquetas QR Almacenamiento & Etiquetas QR Mudanza',
-      homeDesc: 'Descubre las mejores etiquetas QR almacenamiento y etiquetas QR para contenedores. Optimiza tu inventario con etiquetas inteligentes QR y pegatinas QR de organización para mudanzas.',
-      keywords: 'Etiquetas QR almacenamiento, Etiquetas QR para contenedores, Etiquetas inteligentes QR, Etiquetas QR mudanza, QR etiquetas organización, etiquetas almacenamiento, etiquetas QR, etiquetas mudanza'
+      homeTitle: 'QrSortable | Etiquetas QR Imprimibles y de Almacenamiento',
+      homeDesc: 'Organiza cajas y mudanzas al instante: diseña hojas PDF A4/A5 de QR y códigos de barras desde 2 € para imprimir o pide packs resistentes al agua.',
+      keywords: 'etiquetas QR imprimibles, generador QR almacenamiento, hojas PDF A4 A5 código de barras, etiquetas QR mudanza, QrSortable'
     },
     features: {
       title: '¿Por qué QrSortable?',
@@ -1159,7 +1380,9 @@ export const TRANSLATIONS: any = {
       step2: { title: 'Escanea el código', desc: 'Abre la app, escanea el código QR y añade tus artículos y fotos.' },
       step3: { title: 'Encuéntralo al instante', desc: 'Escanea la etiqueta más tarde para ver todo el contenido sin abrir la caja.' },
       lifestyleTitle: 'Espacio de trabajo organizado',
-      lifestyleDesc: 'Gestiona tus pertenencias e inventario en segundos'
+      lifestyleDesc: 'Gestiona tus pertenencias e inventario en segundos',
+      lifestyleImgAlt: 'Escaneo de cajas para una organización inteligente',
+      videoThumbnailAlt: 'Videotutorial'
     },
     shop: {
       title: 'Nuestros Productos',
@@ -1195,6 +1418,11 @@ export const TRANSLATIONS: any = {
       formRating: 'Calificación',
       formComment: 'Comentario',
       formSent: '¡Gracias por tu opinión!',
+      newRating: 'Nuevo',
+      rateLimitAlert: 'Estás enviando comentarios con demasiada frecuencia. Espera un minuto.',
+      anonymous: 'Anónimo',
+      submitErrorAlert: 'Error al enviar comentarios. Inténtalo de nuevo.',
+      videoLabel: 'Vídeo del producto'
     },
     cart: {
       title: 'Tu Carrito',
@@ -1224,9 +1452,21 @@ export const TRANSLATIONS: any = {
       checkStatus: 'Comprobar estado del pago',
       redirecting: 'Redirigiendo a la página de éxito...',
       completePayment: 'Por favor, completa el pago en la nueva ventana.',
+      titleSeo: 'Pago - QrSortable',
       selectCountry: 'Seleccionar país',
+      orderIdLabel: 'ID de pedido',
+      returnToCheckout: 'Volver a la página de pago',
+      tooManyAttempts: 'Demasiados intentos. Espera un momento antes de volver a intentarlo.',
+      transactionLimit: 'Límite de transacciones alcanzado. Espera un minuto.',
+      invalidCart: 'Carrito no válido. Actualiza la página e inténtalo de nuevo.',
+      initFailed: 'Error al inicializar el pago. Comprueba tu conexión e inténtalo de nuevo.',
       statusNotPaid: 'No se ha podido confirmar el estado del pago. Asegúrate de haber finalizado la transacción.',
-      statusError: 'Error al comprobar el estado del pago. Inténtelo de nuevo.'
+      statusError: 'Error al comprobar el estado del pago. Inténtelo de nuevo.',
+      placeholderName: 'Juan Pérez',
+      placeholderEmail: 'juan@ejemplo.es',
+      placeholderStreet: 'Calle Mayor 123',
+      placeholderCity: 'Madrid',
+      placeholderZip: '28001'
     },
     countries: {
       'Germany': 'Alemania',
@@ -1276,6 +1516,10 @@ export const TRANSLATIONS: any = {
       cookies: 'Preferencias de cookies',
       payments: 'Pagos',
       contactUs: 'Contáctenos en cualquier momento:',
+      smartLabels: 'Etiquetas inteligentes',
+      officeLocation: 'Sede central',
+      mapTitle: 'Mapa de ubicación de QrSortable',
+      openMapsAria: 'Abrir en Google Maps',
       rights: 'Todos los derechos reservados.'
     },
     about: {
@@ -1284,6 +1528,7 @@ export const TRANSLATIONS: any = {
       innovationTitle: 'Innovación al servicio del orden',
       innovationDesc1: 'En QrSortable, creemos que la organización no debe sentirse como una tarea pesada. Desde 2026, nuestra misión es hacer que la organización del almacenamiento en el hogar, las pequeñas empresas y los almacenes sea clara, transparente y libre de estrés.',
       innovationDesc2: '¿Por qué abrir una caja y romper la cinta de embalar cuando puedes mirar dentro con un solo escaneo? Nuestras etiquetas inteligentes están creadas para mudanzas, familias y profesionales que valoran su tiempo.',
+      imageAlt: 'Organización inteligente de almacenamiento',
       statsUsers: 'Usuarios organizados',
       statsLabels: 'Etiquetas escaneadas',
       valuesTitle: 'Nuestros valores fundamentales',
@@ -1368,11 +1613,14 @@ export const TRANSLATIONS: any = {
       },
       contactUs: {
         title: 'Contáctenos',
-        text: 'Si tiene alguna pregunta o inquietud con respecto a nuestra Política de devolución y reembolso, comuníquese con nosotros:'
+        text: 'Si tiene alguna pregunta o inquietud con respecto a nuestra Política de devolución y reembolso, comuníquese con nosotros:',
+        emailLabel: 'Correo:',
+        websiteLabel: 'Sitio web:'
       }
     },
     cookies: {
-      banner: { title: 'Respetamos tu privacidad', desc: 'Usamos cookies para optimizar tu experiencia, ofrecer contenidos personalizados y analizar nuestro tráfico. Tus elecciones nos ayudan a ofrecer un servicio de organización más rápido y seguro.', acceptAll: 'Aceptar todo', customize: 'Personalizar', essentialOnly: 'Solo esenciales', save: 'Guardar mis elecciones' },
+      banner: { title: 'Respetamos tu privacidad', desc: 'Usamos cookies para optimizar tu experiencia, ofrecer contenidos personalizados y analizar nuestro tráfico. Tus elecciones nos ayudan a ofrecer un servicio de organización más rápido y seguro.', acceptAll: 'Aceptar todo', customize: 'Personalizar', essentialOnly: 'Solo esenciales', save: 'Guardar mis elecciones', ariaLabel: 'Banner de consentimiento de cookies' },
+      required: 'Obligatorio',
       manager: {
         essential: { title: 'Esencial', desc: 'Requeridas para las funciones básicas del sitio (Carrito, Seguridad). Siempre activadas.' },
         analytics: { title: 'Analítica', desc: 'Nos ayuda a comprender cómo interactúas con nuestra web para mejorar tu experiencia.' },
@@ -1380,11 +1628,25 @@ export const TRANSLATIONS: any = {
       }
     },
     success: {
+      titleSeo: 'Pedido completado - QrSortable',
       title: '¡Éxito!',
       message: 'Tus etiquetas ya están en camino.',
+      orderIdLabel: 'ID de pedido',
       backHome: 'Volver al inicio'
     },
+    mollieReturn: {
+      errorTitleSeo: 'Error de pago - QrSortable',
+      missingTitle: 'Falta información',
+      missingDesc: 'No pudimos encontrar los detalles de tu pago. Vuelve a la aplicación e inténtalo de nuevo.',
+      goHome: 'Ir al inicio',
+      returningTitleSeo: 'Volviendo a la app - QrSortable',
+      returningTitle: 'Volviendo a la app...',
+      returningDesc: 'Si la aplicación no se abre automáticamente, revisa tus notificaciones.',
+      openManually: 'Abrir manualmente'
+    },
     appFeedback: {
+      titleSeo: 'Comentarios de la app - QrSortable',
+      submittedTitleSeo: 'Comentarios enviados - QrSortable',
       title: 'Comentarios de QrSortable / Sugerencia de funciones',
       intro1: 'Nuestro sistema de etiquetas QR inteligentes y codificadas por colores transforma la forma en que organiza y almacena sus pertenencias. Simplemente pegue una etiqueta QR única en cada caja, escanéela con nuestra aplicación gratuita y vea instantáneamente lo que hay dentro, sin tener que abrirla.',
       intro2: 'Ya sea que se esté mudando, organizando su hogar, administrando trasteros o despejando armarios, nuestro sistema mantiene todo catalogado digitalmente y fácil de encontrar.',
@@ -1406,7 +1668,13 @@ export const TRANSLATIONS: any = {
       successDesc: 'Gracias por ayudarnos a mejorar QrSortable. ¡Leemos todos los mensajes!',
       sendAnother: 'Enviar otro',
       placeholderLong: 'Texto de respuesta larga',
-      placeholderShort: 'Texto de respuesta corta'
+      placeholderShort: 'Texto de respuesta corta',
+      close: 'Cerrar',
+      tooFastAlert: 'Por favor, tómese un momento para completar el formulario correctamente.',
+      captchaAlert: 'Por favor, resuelva correctamente la operación matemática.',
+      rateLimitAlert: 'Demasiados envíos. Por favor, espere un minuto.',
+      submitErrorAlert: 'Error al enviar comentarios. Inténtelo de nuevo.',
+      securityVerification: 'Verificación de seguridad'
     },
     categories: {
       Organization: 'Organización',

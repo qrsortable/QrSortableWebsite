@@ -92,6 +92,7 @@ export interface SupportTeamTranslations {
 
   finalCtaHeading: string;
   finalCtaBody: string;
+  supportEmailFooterNote: string;
 }
 
 export const SUPPORT_TEAM_TRANSLATIONS: Record<string, SupportTeamTranslations> = {
@@ -255,7 +256,8 @@ export const SUPPORT_TEAM_TRANSLATIONS: Record<string, SupportTeamTranslations> 
     ],
 
     finalCtaHeading: "Need Help with QrSortable?",
-    finalCtaBody: "Whether you are setting up your first box, printing QR code labels, scanning storage bins, downloading generated PDFs, adding photos, or syncing shared inventory, the QrSortable Support Team is here to help with practical guidance."
+    finalCtaBody: "Whether you are setting up your first box, printing QR code labels, scanning storage bins, downloading generated PDFs, adding photos, or syncing shared inventory, the QrSortable Support Team is here to help with practical guidance.",
+    supportEmailFooterNote: "Email support@qrsortable.com for support with labels, setup, scanning, PDFs, and inventory workflows."
   },
   DE: {
     seoTitle: "Support-Team | QrSortable Hilfe für Etiketten und App-Einrichtung",
@@ -417,7 +419,8 @@ export const SUPPORT_TEAM_TRANSLATIONS: Record<string, SupportTeamTranslations> 
     ],
 
     finalCtaHeading: "Benötigen Sie Hilfe bei QrSortable?",
-    finalCtaBody: "Egal, ob Sie Ihren ersten Karton einrichten, QR-Code-Etiketten drucken, Lagerbehälter scannen, generierte PDFs herunterladen, Fotos hinzufügen oder das geteilte Inventar synchronisieren – das QrSortable Support-Team unterstützt Sie mit praktischen Ratschlägen."
+    finalCtaBody: "Egal, ob Sie Ihren ersten Karton einrichten, QR-Code-Etiketten drucken, Lagerbehälter scannen, generierte PDFs herunterladen, Fotos hinzufügen oder das geteilte Inventar synchronisieren – das QrSortable Support-Team unterstützt Sie mit praktischen Ratschlägen.",
+    supportEmailFooterNote: "Schreiben Sie an support@qrsortable.com für Hilfe zu Etiketten, Einrichtung, Scannen, PDFs und Inventar-Workflows."
   },
   FR: {
     seoTitle: "Équipe support | QrSortable Aide pour les étiquettes et l'application",
@@ -579,7 +582,8 @@ export const SUPPORT_TEAM_TRANSLATIONS: Record<string, SupportTeamTranslations> 
     ],
 
     finalCtaHeading: "Besoin d'aide avec QrSortable ?",
-    finalCtaBody: "Que vous configuriez votre premier carton, imprimiez des étiquettes QR, scanniez des bacs, téléchargiez des PDF, ajoutiez des photos ou synchronisiez un inventaire partagé, l'équipe support QrSortable est là pour vous guider."
+    finalCtaBody: "Que vous configuriez votre premier carton, imprimiez des étiquettes QR, scanniez des bacs, téléchargiez des PDF, ajoutiez des photos ou synchronisiez un inventaire partagé, l'équipe support QrSortable est là pour vous guider.",
+    supportEmailFooterNote: "Écrivez à support@qrsortable.com pour toute assistance concernant les étiquettes, la configuration, le scan, les PDF et la gestion d'inventaire."
   },
   ES: {
     seoTitle: "Equipo de soporte | QrSortable Ayuda para Etiquetas y App",
@@ -741,6 +745,7 @@ export const SUPPORT_TEAM_TRANSLATIONS: Record<string, SupportTeamTranslations> 
     ],
 
     finalCtaHeading: "¿Necesita ayuda con QrSortable?",
-    finalCtaBody: "Tanto si está configurando su primera caja, imprimiendo etiquetas, escaneando contenedores, descargando PDF generados, cargando fotos o sincronizando el inventario, el equipo de soporte de QrSortable está aquí para guiarle."
+    finalCtaBody: "Tanto si está configurando su primera caja, imprimiendo etiquetas, escaneando contenedores, descargando PDF generados, cargando fotos o sincronizando el inventario, el equipo de soporte de QrSortable está aquí para guiarle.",
+    supportEmailFooterNote: "Escriba a support@qrsortable.com para recibir asistencia con etiquetas, configuración, escaneo, archivos PDF y flujos de inventario."
   }
 };

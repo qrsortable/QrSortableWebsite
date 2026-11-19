@@ -1,16 +1,21 @@
-# QrSortable - Smart QR Code Storage & Organizing Labels
+# QrSortable - Smart QR Code & Barcode Storage Labels
 
-> QrSortable connects physical QR code labels to digital inventory records (contents, high-resolution photos, notes, locations, and categories) so households, movers, warehouses, event teams, and small businesses know what is inside every box before opening it.
+> QrSortable connects physical QR code and Code-128 barcode labels (available as pre-printed waterproof packs and instant printable A4/A5 PDF sheets) to digital inventory records containing item lists, high-resolution photos, remarks, locations, and categories—so households, movers, warehouses, and businesses know what is inside every box before opening it.
 
 ## Navigation & Key Pages
 
 - [Home](https://www.qrsortable.com/) - Overview of product capabilities, features, and dynamic QR visualizers.
-- [Shop Section](https://www.qrsortable.com/#products) - Purchase physical premium organizer packs (Starter Pack, Pro Pack, Business Pack).
-- [Get The App](https://www.qrsortable.com/get-the-app) - Download the free mobile companion app for iOS and Android.
-- [Articles](https://www.qrsortable.com/articles) - Practical organization tips, expert research, packing guides, and moving resources.
-- [About Us](https://www.qrsortable.com/about) - Discover our story and values.
-- [Contact](https://www.qrsortable.com/contact) - Support and inquiries.
-- [Privacy Policy](https://www.qrsortable.com/privacy) - Information on user data protection.
+- [Shop & Packs](https://www.qrsortable.com/#products) - Purchase instant printable PDF sheets or pre-printed waterproof label packs:
+  - [Instant PDF Label Sheets (QR & Barcodes)](https://www.qrsortable.com/features/qr-code-generator-storage) ([Markdown](https://www.qrsortable.com/features/qr-code-generator-storage.md)) — **€2.00/A5 page (6 labels)** · **€3.00/A4 page (12 labels)** (`SKU: QRS-PDF-A5 / QRS-PDF-A4`, €0 shipping, instant PDF auto-download)
+  - [Standard Pack (48 Barcode Labels)](https://www.qrsortable.com/product/starter-pack) — **€14.99** (48 unique Code-128 barcodes, black color-coded)
+  - [Standard Pack (48 QR Labels)](https://www.qrsortable.com/product/pro-pack) — **€14.99** (48 unique QR codes in black, blue, yellow, pink)
+  - [Large Pack (100 QR Labels)](https://www.qrsortable.com/product/business-pack) — **€29.99** (100 heavy-duty waterproof QR labels, black color-coded)
+- [Get The App](https://www.qrsortable.com/get-the-app) - Download the free companion app for iOS and Android (EN, DE, FR, ES).
+- [Articles](https://www.qrsortable.com/articles) - Organization tips, expert research, packing guides, and moving resources.
+- [About Us](https://www.qrsortable.com/about) - Our story and values.
+- [Contact](https://www.qrsortable.com/contact) - Support and inquiries (`info@qrsortable.com`).
+- [Return Policy](https://www.qrsortable.com/return-policy) - 14-day return & refund terms and shipping zones (`DE €0`, `EU €15`, `UK €20`, `Rest of World €25`).
+- [Privacy Policy](https://www.qrsortable.com/privacy) - Information on user data protection and GDPR compliance.
 - [Terms & Conditions](https://www.qrsortable.com/terms) - Standard terms of service.
 
 ## Featured Articles & Research
@@ -24,10 +29,10 @@
 
 ## Core Product Features
 
+- [QR Code Generator for Storage (Interactive Web Studio)](https://www.qrsortable.com/features/qr-code-generator-storage) ([Markdown](https://www.qrsortable.com/features/qr-code-generator-storage.md)) - Design custom Hex-color QR or Code-128 barcode A4/A5 PDF sheets online or in the app.
 - [QR Code Inventory Preview](https://www.qrsortable.com/features/qr-code-inventory-preview)
 - [Moving Box Organizer](https://www.qrsortable.com/features/moving-box-organizer)
 - [Shared Inventory Management](https://www.qrsortable.com/features/shared-inventory-management)
-- [QR Code Generator for Storage](https://www.qrsortable.com/features/qr-code-generator-storage)
 - [Multilingual Inventory App (EN, DE, FR, ES)](https://www.qrsortable.com/features/multilingual-inventory-app)
 - [Secure Inventory Tracking](https://www.qrsortable.com/features/secure-inventory-tracking)
 - [Start Without an Account](https://www.qrsortable.com/features/no-account-needed)
@@ -35,4 +40,4 @@
 
 ## Full AI Search Context
 
-- [LLMs Full Text](https://www.qrsortable.com/llms-full.txt) - Complete structured knowledge base and full text of QrSortable research and guides for AI search engines.
+- [LLMs Full Text](https://www.qrsortable.com/llms-full.txt) - Complete structured knowledge base, full SKU catalog, shipping rates, and expert research for AI search engines.
